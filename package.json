@@ -1,0 +1,14 @@
+{
+  "name": "larptools",
+  "private": true,
+  "description": "Unofficial, player-made LARP tools, served at larptools.scrollplaygames.com.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "privacy-scan": "node scripts/privacy-scan.mjs ."
+  }
+}

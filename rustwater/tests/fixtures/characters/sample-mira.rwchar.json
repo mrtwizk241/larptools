@@ -1,0 +1,29 @@
+{
+  "format": "rustwater-character",
+  "formatVersion": 1,
+  "exportedAt": "2026-10-03T18:00:00.000Z",
+  "appVersion": "0.1.0",
+  "character": {
+    "id": "8f3c2a1e-5b7d-4c9a-9e21-3d4f6a7b8c90",
+    "schemaVersion": 1,
+    "rulesetId": "2026-2.0",
+    "createdAt": "2026-10-03T17:45:00.000Z",
+    "updatedAt": "2026-10-03T17:45:00.000Z",
+    "actions": [
+      {
+        "id": "0b6e4d2a-1c3f-4a5b-8d7e-9f0a1b2c3d4e",
+        "seq": 1,
+        "at": "2026-10-03T17:45:00.000Z",
+        "actor": { "role": "staff", "name": "Check-in desk" },
+        "type": "character.created",
+        "payload": {
+          "characterName": "Mira Voss",
+          "playerName": "Sam Hollis",
+          "ancestryId": "elf",
+          "subtypeId": "elf-windwalker",
+          "extraInfection": 0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+/*
+ * Print stylesheet. Any screen prints black on white without the app chrome: the app header,
+ * character header, navigation, footer, buttons, tabs, and toasts are hidden. Mark anything
+ * else that is screen-only with a `data-print-hide` attribute. Paper layout for the character
+ * sheet and receipt lives in src/ui/routes/character/print/print.module.css.
+ */
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+@media print {
+  :root,
+  :root[data-theme] {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  header,
+  nav,
+  footer,
+  button,
+  [role='tablist'],
+  [role='status'],
+  [data-bottom-nav],
+  [data-print-hide] {
+    display: none !important;
+  }
+
+  body {
+    min-height: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  /* The app shell: drop the full-height minimum and the room kept for the bottom nav. */
+  :has(> * > [data-bottom-nav]) {
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  body * {
+    box-shadow: none !important;
+  }
+
+  /* Cards and other leaf sections, table rows, list items. */
+  section:not(:has(section)),
+  tr,
+  li,
+  dl > div {
+    break-inside: avoid;
+  }
+
+  h2,
+  h3,
+  h4 {
+    break-after: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+}

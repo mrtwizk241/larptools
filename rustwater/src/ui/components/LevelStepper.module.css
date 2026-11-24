@@ -1,0 +1,37 @@
+.stepper {
+  display: inline-grid;
+  gap: var(--space-1);
+  justify-items: start;
+}
+
+.controls {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.value {
+  min-width: 3ch;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.note {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.blocked {
+  color: var(--color-text);
+  font-weight: var(--weight-semibold);
+}
+
+.readOnly {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+}

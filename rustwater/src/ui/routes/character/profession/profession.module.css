@@ -1,0 +1,180 @@
+/* Profession and extras screens. Shared parts come from character.module.css. */
+.cards {
+  display: grid;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.tiers {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.tier {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--color-border);
+  overflow-wrap: break-word;
+}
+
+/* Unlocked tiers: primary rule plus the "Unlocked" text, not color alone. */
+.tierUnlocked {
+  border-left-color: var(--color-primary);
+}
+
+.tierName {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--weight-semibold);
+}
+
+.statusIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.ok {
+  color: var(--color-success);
+}
+
+.blocked {
+  color: var(--color-danger);
+}
+
+.items {
+  display: grid;
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: var(--border-width) solid var(--color-border);
+  overflow-wrap: break-word;
+}
+
+.item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.itemHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+
+.itemName {
+  min-width: 0;
+  font-weight: var(--weight-bold);
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+}
+
+/* Starting items picker: one row per option with a count control. */
+.countRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+  min-height: 56px;
+  padding: var(--space-2) 0;
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.countName {
+  flex: 1 1 12rem;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.count {
+  min-width: 2ch;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.total {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.select {
+  width: 100%;
+}
+
+.history {
+  display: grid;
+  gap: var(--space-2);
+  padding-left: var(--space-5);
+}
+
+/* Checkbox rows: the whole row is the label, at least 44px tall. */
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.checkRow input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}

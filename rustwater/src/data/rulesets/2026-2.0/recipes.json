@@ -1,0 +1,3220 @@
+[
+  {
+    "id": "basic-scope",
+    "name": "Basic Scope",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Common Junk",
+    "marks": ["E", "C"],
+    "text": "Enhancement for a Projectile Weapon. Adds +2 Damage for a single Encounter. A projectile weapon can only benefit from one scope enhancement.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "egg-timer-bomb",
+    "name": "Egg Timer Bomb",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Common Junk",
+    "marks": ["C"],
+    "text": "Set or throw this Item. This Item must be physrepped with a packet. After a 5 Count, this will do \"Lash 50 Damage\". The player throwing the bomb must announce \"Egg Timer\" when they throw the packet. Then they must complete the 5 Count and call the Effect.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "lock",
+    "name": "Lock",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "4 Common Junk",
+    "marks": ["P"],
+    "text": "Basic Lock. Requires Lock-Picking to open. Permanent if made Stable.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "potion-injector",
+    "name": "Potion Injector",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Common Junk",
+    "marks": [],
+    "text": "Activate this Item and Attach it to a target.This can be filled with tonic). At any time the character can activate the potion injector and instantly gain the effect of the tonic as if they consumed it. They can also activate the injector in response to falling to bleedout status. The Injector will fall apart at the end of the Repop if not used after being Activated. Any unused tonic can be recovered.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "pulse-bomb",
+    "name": "Pulse Bomb",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Common Junk",
+    "marks": ["C"],
+    "text": "Create a small Bomb that releases a wave of energy that knocks people away. To use, throw a packet and call \"Pulse Bomb - Lash Knockback 10\".",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "slingshot",
+    "name": "Slingshot",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Common Junk",
+    "marks": ["C"],
+    "text": "You may Activate this item and use it to throw 2 packets and call either \"10 Stone\" or \"10 Steel\" in succession.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "taser",
+    "name": "Taser",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Common Junk",
+    "marks": ["C"],
+    "text": "You may use this item to throw a packet and call \"Stun 5 Seconds\".",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "better-lock",
+    "name": "Better Lock",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "4 Uncommon Junk or 2 for upgrade",
+    "marks": ["P"],
+    "text": "Create an Adept Lock. May also be used to upgrade a Basic Lock to Adept for half the Resource cost. Requires Adept Lockpicking to open. Permanent if made Stable.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "better-scope",
+    "name": "Better Scope",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Junk",
+    "marks": ["E", "C"],
+    "text": "Enhancement for a projectile weapon. Adds +3 damage for a single Encounter. A projectile weapon can only benefit from one scope enhancement.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "catapult",
+    "name": "Catapult",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Must take a 10 Count without moving to Set Up. After the 10 count, you must plant your feet. While your feet are planted, you may throw packets for \"5 Piercing Steel\". If you move your feet, the Item's Effect ends. For the purposes of Evasion skills this counts as having a movement impairing effect. You may not wield a weapon or shield while using the catapult.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "cymbal-monkey",
+    "name": "Cymbal Monkey",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Create a Device that once Activated, emits a loud noise to Attract the attention of any Mindless enemies. Once Activated it will produce “Voice Radius Attract Mindless 10 Seconds”. Can be set on a timer to Activate after 5 mins has passed or it can be set as a Trap that is Activated when Triggered.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "fist-on-a-spring",
+    "name": "Fist on a Spring",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Use this to do a small action from a distance (Up to 10 feet away). Cannot be used for combat purposes. Can open an Unlocked door, push over an Item from a distance, or to try to set off a trap.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "pressurized-spring",
+    "name": "Pressurized Spring",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Junk",
+    "marks": ["C"],
+    "text": "You may spend a 10 Count to Prepare this Item. While this is Prepared, the first time you are hit with a Physical Movement Impairing Effect, you call \"Grant Freedom\" and immediately break out of the effect. The Item is destroyed after this use or at the end of the Event during which it was Prepared.",
+    "source": "Rulebook p.70"
+  },
+  {
+    "id": "stun-bomb",
+    "name": "Stun Bomb",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Create an explosive device that can be thrown as a packet to call “Stun Bomb, Lash Stun 5 Seconds”",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "best-lock",
+    "name": "Best Lock",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "4 Rare Junk, 2 for upgrade",
+    "marks": ["P"],
+    "text": "Create an Advanced Lock. Can also be used to Upgrade an Adept Lock to Advanced for half the Resource Cost. Requires Advanced Lockpicking to open. Permanent if made Stable.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "best-scope",
+    "name": "Best Scope",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Rare Junk",
+    "marks": ["E", "C"],
+    "text": "Enhancement for a Projectile Weapon. Adds +4 damage for a single Encounter. A projectile weapon can only benefit from one scope enhancement",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "cannon",
+    "name": "Cannon",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Rare Junk",
+    "marks": ["C"],
+    "text": "Must spend a 10 Count without moving to set up. After the 10 count, plant your feet. While your feet are planted, you may throw packets for \"10 Crush Stone\". If you move your feet, the Item's Effect ends. For the purposes of Evasion skills this counts as having a movement impairing effect. You may not wield a weapon or shield while using the cannon.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "lock-trap",
+    "name": "Lock Trap",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Rare Junk",
+    "marks": ["C"],
+    "text": "Add an Advanced Trap to a Lock. If the Lock is opened without a Key or Disarming the Trap, the Trap is set off for \"30 Piercing Steel\". You may also create the Key for the Lock Trap as part of creating the Trap.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "potion-disperser",
+    "name": "Potion Disperser",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Rare Junk",
+    "marks": ["C"],
+    "text": "This Item can be used to give a single Tonic the modifier \"Lash\".",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "trigger-bomb",
+    "name": "Trigger Bomb",
+    "mastery": false,
+    "discipline": "engineering",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Rare Junk",
+    "marks": ["C"],
+    "text": "Create a Bomb that can be remotely Triggered by the one who placed it.Takes a 5 Count to set the bomb, but once Set, the user can Detonate it at any time that they can see it and call \"Trigger - Lash Fire Bleed\". A player may only have one Trigger Bomb set at a time.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "basic-acid-vial",
+    "name": "Basic Acid Vial",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of acidic gas that can be thrown as a packet for \"Crush 10 Acid\".",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "caffeine-shot",
+    "name": "Caffeine Shot",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Chemical",
+    "marks": ["C", "I"],
+    "text": "Brew a tonic that when ingested grants the drinker the \"Haste\" Buff for the next Count they perform.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "gunk",
+    "name": "Gunk",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of gunk that can be thrown as a packet for \"Slick 10 Seconds\".",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "lock-acid",
+    "name": "Lock Acid",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial that, when poured on a Basic Lock, will weaken the lock so that picking it does not take a skill use. Lock affected by this cannot be dismantled for resources.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "pin-slime",
+    "name": "Pin Slime",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of very sticky slime that can be thrown as a packet for \"Pin 1 minute\".",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "taunt-gas",
+    "name": "Taunt Gas",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that enrages others. Can be thrown as a packet for “Crush Taunt 10 Seconds”.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "adhesive-vial",
+    "name": "Adhesive Vial",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of glue that can be thrown for \"Crush Slow 10 Seconds\".",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "better-acid",
+    "name": "Better Acid",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of stronger acidic gas that can be thrown as a packet for \"Crush Acid Wound\"",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "better-lock-acid",
+    "name": "Better Lock Acid",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial that when poured on an Adept or lower lock it will lower the Rank of the lock by 1 rank (Adept > Basic) If the lock would be reduced below basic it will be weakened so that picking it does not take a skill use. A lock affected by this cannot be dismantled for resources.",
+    "source": "Rulebook p.71"
+  },
+  {
+    "id": "deadly-insult-gas",
+    "name": "Deadly Insult Gas",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that angers enemies. Vial can be thrown for \"Crush Frenzy 10 Seconds\"",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "definitely-not-chloroform",
+    "name": "Definitely “not” Chloroform",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that can be thrown as a packet for “Crush Sleep”",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "fear-gas",
+    "name": "Fear Gas",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that makes people afraid. Can be thrown as a packet for “Crush Fear 10 seconds”",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "best-acid",
+    "name": "Best Acid",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of very powerful acidic gas that can be thrown as a packet for \"Crush 50 Acid\"",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "best-lock-acid",
+    "name": "Best Lock Acid",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial that when poured on any lock it will lower the Rank of the lock by 1 rank (Advanced > Adept, etc) If the lock would be reduced below basic it will be weakened so that picking it does not take a skill use. A lock affected by this cannot be dismantled for resources.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "deadly-acid",
+    "name": "Deadly Acid",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of deadly liquid that can be thrown as a packet for \"Acid Bleed\"",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "dissolving-bomb",
+    "name": "Dissolving Bomb",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Brew a chemical bomb that melts weaker targets. May be thrown as a packet for \"Lash 20 Slay\".",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "exploding-pin-slime",
+    "name": "Exploding Pin Slime",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of sticky slime that will explode over a wide area on impact. May be thrown as a packet for \"Lash Pin 1 minutes\".",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "smell-dead",
+    "name": "Smell Dead",
+    "mastery": false,
+    "discipline": "chemistry",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Brew a smelly chunky liquid that can be applied on a 10 Count to a target. As long as the affected target remains still, Risen will not attack them. Lasts one Encounter.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "absorbing-cloth",
+    "name": "Absorbing Cloth",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Common Organic",
+    "marks": ["C"],
+    "text": "Create an Item that can be used on a target to remove a Detrimental Ailment after a 3 Count.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "aware-healing-tonic",
+    "name": "Aware Healing Tonic",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Common Organic",
+    "marks": ["C", "I"],
+    "text": "Brew a tonic that when ingested grants “Spirit Heal 20”.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "health-tonic",
+    "name": "Health Tonic",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Common Organic",
+    "marks": ["C", "I"],
+    "text": "Brew a tonic that when ingested grants “Heal 20”.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "smelling-salts",
+    "name": "Smelling Salts",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Common Organic",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that can be thrown as a packet for “Lash Remove Sleep and Stun”",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "stabilization-gas",
+    "name": "Stabilization Gas",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Common Organic",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that can be thrown as a packet to perform a “Lash Stabilize”. All affected targets in Bleedouts have their counts stopped and their Health is set to 0.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "will-to-live-brew",
+    "name": "Will to Live Brew",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Common Organic",
+    "marks": ["B", "C", "I"],
+    "text": "Brew a tonic that when ingested grants a use of Basic Endurance in a Buff Slot.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "aware-full-healing-tonic",
+    "name": "Aware Full Healing Tonic",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Uncommon Organic",
+    "marks": ["C", "I"],
+    "text": "Brew a tonic that when ingested grants “Spirit Heal Full”.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "fast-body-brew",
+    "name": "Fast Body Brew",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Uncommon Organic",
+    "marks": ["B", "C", "I"],
+    "text": "Brew a tonic that when ingested grants a single use of Basic Dash in a Buff Slot.",
+    "source": "Rulebook p.72"
+  },
+  {
+    "id": "full-healing-tonic",
+    "name": "Full Healing Tonic",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Uncommon Organic",
+    "marks": ["C", "I"],
+    "text": "Brew a tonic that when ingested grants “Heal Full”.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "painkillers",
+    "name": "Painkillers",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Uncommon Organic",
+    "marks": ["C", "I"],
+    "text": "Brew a tonic that when ingested will automatically “Delay Effect” the next Status Effect that hits you. The Delayed Effect will take Effect at the end of the Encounter. Does not require a buff slot.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "regeneration-vial",
+    "name": "Regeneration Vial",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Uncommon Organic",
+    "marks": ["C", "I"],
+    "text": "Brew a tonic that when ingested grants “Regenerate All Limbs and Remove all Age effects”.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "strong-body-brew",
+    "name": "Strong Body Brew",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Uncommon Organic",
+    "marks": ["B", "C", "I"],
+    "text": "Brew a tonic that when ingested grants +10 Health in a Buff Slot.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "absorbing-hose",
+    "name": "Absorbing Hose",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Rare Organic",
+    "marks": ["C"],
+    "text": "User may perform a 10 Count and plant their feet to Activate this Item. While Activated they may throw packets and call “Remove Weakness”, “Remove Disease”, \"Remove Poison”, or “Remove Sleep”. This effect ends when their feet are moved or the user makes any other call.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "endurance-draught",
+    "name": "Endurance Draught",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Rare Organic",
+    "marks": ["B", "C"],
+    "text": "Brew a Vial of gas that can be thrown as a packet for “Lash Grant Buff: Adept Endurance\" in a Buff Slot.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "jumper-cable-defibrillator",
+    "name": "Jumper Cable Defibrillator",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Rare Organic",
+    "marks": ["C"],
+    "text": "Perform a 5 Count to use this Item on a target. They are affected by a \"Raise Dead Full Heal\" and are brought back to life at full health without gaining an Infection Level. When Crafted, this Item can either be Crafted to call \"Spirit Raise Dead Full Heal\" or \"Raise Dead Full Heal\".",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "magic-in-a-bottle",
+    "name": "Magic in a bottle",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Rare Organic",
+    "marks": ["B", "C", "I"],
+    "text": "Brew a tonic that when ingested grants \"Transfer Health\" in the user's Buff Slot. Until the end of the Encounter, make a 10 Count and touch a willing or Unconscious target and call \"Transfer X Health\" where X is the amount of Health transferred. The user of the Buff loses the amount of health that they transferred and the target heals that amount.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "rage-vial",
+    "name": "Rage Vial",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Rare Organic",
+    "marks": ["B", "C", "I"],
+    "text": "Brew a tonic that can be ingested to grant a use of “Adept Assault” in a Buff Slot.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "sponge-and-tape",
+    "name": "Sponge and Tape",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Rare Organic",
+    "marks": ["C"],
+    "text": "Create an Item that can be applied to a single target. Spend a 3 count and call \"Remove all Ailments - Grant Resist Ailment”",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "super-strength-slush",
+    "name": "Super Strength Slush",
+    "mastery": false,
+    "discipline": "medicine",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      }
+    ],
+    "costText": "2 Rare Organic",
+    "marks": ["C"],
+    "text": "Brew a vial of Gas that can be thrown as a packet for “Lash Heal Half of Max Health”",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "acid-round",
+    "name": "Acid Round",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Common Scrap",
+    "marks": ["C"],
+    "text": "Create a single round of ammo that can be loaded into a Projectile Weapon. The next Attack with that Weapon gains +30 Damage.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "basic-armor",
+    "name": "Basic Armor",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Scrap",
+    "marks": ["P"],
+    "text": "Create a set of Basic Armor or a Basic Shield. Basic Items have 1 Enhancement Slot. Permanent if made Stable.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "basic-weapon",
+    "name": "Basic Weapon",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Scrap",
+    "marks": ["P"],
+    "text": "You create a Basic Throwing, Short, Long, or Great Melee Weapon. Basic Items have 1 Enhancement Slot. Permanent if made Stable.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "basic-projectile-weapon",
+    "name": "Basic Projectile Weapon",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Scrap",
+    "marks": ["P"],
+    "text": "Create a Basic Projectile Weapon. Basic Items have 1 Enhancement Slot. Permanent if made Stable.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "resist-shatter",
+    "name": "Resist Shatter",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Common Scrap",
+    "marks": ["E", "C"],
+    "text": "Strengthen a Weapon, Shield, or Armor and give it a single use of “Resist Shatter” in an Enhancement Slot.",
+    "source": "Rulebook p.73"
+  },
+  {
+    "id": "spikey-bits",
+    "name": "Spikey Bits",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Common Scrap",
+    "marks": ["E", "C"],
+    "text": "Attach spikes to Armor. Grants the Armor the ability to “Reflect 10 Piercing Steel” once when hit into an Enhancement Slot. You must take the Damage to your Armor to use the effect",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "staples-and-tape",
+    "name": "Staples & Tape",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Common Scrap",
+    "marks": ["E", "C"],
+    "text": "Modify a Weapon to temporarily increase its Damage by +1. This modification lasts until the end of the Encounter once activated and takes up one of the Weapon's Enhancement Slots. Does not Stack with Barbed Wire or itself",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "adept-armor",
+    "name": "Adept Armor",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Scrap, 2 if upgrading",
+    "marks": ["P"],
+    "text": "Create a set of Adept Armor or an Adept Shield. Adept Items have 2 Enhancement Slots. Can also be used to Upgrade a Basic Armor or Shield to Adept for half the Resource Cost. Permanent if made Stable.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "adept-weapon",
+    "name": "Adept Weapon",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Scrap, 2 if upgrading",
+    "marks": ["P"],
+    "text": "Create an Adept Throwing, Short, Long, or Great Melee Weapon. All Adept Items have 2 Enhancement Slots. Can also be used to Upgrade a Basic Weapon to Adept for half the Resource Cost. Permanent if made Stable.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "barbed-wire",
+    "name": "Barbed Wire",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Uncommon Scrap",
+    "marks": ["E", "C"],
+    "text": "Modify a Weapon to temporarily increase its Damage by +2. This modification lasts until the end of the Encounter once Activated and takes up one of the Weapon's Enhancement Slots. Does not stack with Staples & Tape or itself",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "dentable",
+    "name": "Dentable",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Uncommon Scrap",
+    "marks": ["E", "C"],
+    "text": "Spray a coating on Armor that strengthens it enough to dent instead of being punctured. Until the end of the encounter, the affected Armor will take any Piercing Damage as Armor Damage",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "it-will-cut",
+    "name": "It Will Cut",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Uncommon Scrap",
+    "marks": ["E", "C"],
+    "text": "Apply this to a Melee Weapon to grant it +30 Damage on its next Attack in an Enhancement Slot.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "adept-projectile-weapon",
+    "name": "Adept Projectile Weapon",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Scrap, 2 if upgrading",
+    "marks": ["P"],
+    "text": "Create an Adept Projectile Weapon. Adept Items have 2 Enhancement Slots. May also be used to upgrade a Basic Projectile Weapon to Adept for half the Resource Cost. Permanent if made Stable.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "scatter-shot",
+    "name": "Scatter Shot",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Uncommon Scrap",
+    "marks": ["E", "C"],
+    "text": "Apply a single series of ammunition for a Projectile Weapon in an Enhancement Slot. Its next 5 consecutive Attacks have +5 Damage.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "advanced-armor",
+    "name": "Advanced Armor",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Scrap, 2 If upgrading",
+    "marks": ["P"],
+    "text": "Create a set of Advanced Armor or an Advanced Shield. All Advanced Items have 3 Enhancement Slots. May also upgrade an Adept Armor or Shield to Advanced for half the Resource Cost. Permanent if made Stable.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "advanced-weapon",
+    "name": "Advanced Weapon",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Scrap, 2 If upgrading",
+    "marks": ["P"],
+    "text": "Create an Advanced Throwing, Short, Long, or Great Melee Weapon. All Advanced Items have 3 Enhancement Slots. May also upgrade an Adept Melee Weapon to Advanced for half the Resource Cost. Permanent if made Stable.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "futuristic-projectile-weapon",
+    "name": "Futuristic Projectile Weapon",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "upgradeCost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Scrap, 2 If upgrading",
+    "marks": ["P"],
+    "text": "Create an Advanced Projectile Weapon. Advanced Items have 3 Enhancement Slots. May also be used to Upgrade an Adept Projectile Weapon to Advanced for half the Resource Cost. Permanent if made Stable.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "railroad-spike",
+    "name": "Railroad Spike",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Rare Scrap",
+    "marks": ["E", "C"],
+    "text": "Modify a weapon to deal pierce damage for the encounter. This takes up an enhancement slot.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "spiked-armor",
+    "name": "Spiked Armor",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Rare Scrap",
+    "marks": ["E", "C"],
+    "text": "Modify Armor with spikes that can be Refit after use. Call \"Reflect 10 Piercing\" when you are hit by a melee attack. Must Refit by doing a 5 Count after this call.Takes an Enhancement Slot and lasts until the next Repop.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "the-big-one",
+    "name": "The Big One",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Rare Scrap",
+    "marks": ["C"],
+    "text": "A single round of +60 Damage to be used with a Projectile Weapon. Takes a 3 count to load into a Projectile Weapon.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "impact-resistance",
+    "name": "Impact Resistance",
+    "mastery": false,
+    "discipline": "gearcraft",
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "2 Rare Scrap",
+    "marks": ["E", "C"],
+    "text": "Can be applied to a single Melee Weapon or Shield. Until the end of the Encounter, the Weapon or Shield causes all \"Crush\" Attacks that hit it to deal Reduced damage. This takes up an Enhancement Slot.",
+    "source": "Rulebook p.74"
+  },
+  {
+    "id": "faulty-pepper-spray",
+    "name": "Faulty Pepper Spray",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Junk",
+    "marks": ["C"],
+    "text": "Create an explosive that can be thrown as a packet or placed as a Basic trap to deliver \"Lash Stun 5 Seconds.\"",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "haze-grenade",
+    "name": "Haze Grenade",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Junk",
+    "marks": ["C"],
+    "text": "Create an explosive that can be thrown as a packet to deliver \"Lash Invisibility 10 Seconds\"",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "poisoned-nail-bomb",
+    "name": "Poisoned Nail Bomb",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Junk",
+    "marks": ["C"],
+    "text": "Create an explosive that can be thrown as a packet or placed as a Basic trap to deliver \"Lash 25 Piercing Acid\"",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "poison-mousetrap",
+    "name": "Poison Mousetrap",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Junk",
+    "marks": ["C"],
+    "text": "Create a Basic trap that, when triggered, deals \"Crush 50 Acid.\"",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "acid-rain-bomb",
+    "name": "Acid Rain Bomb",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Create an explosive that can be thrown as a packet or set as an Adept trap for “Lash 50 Acid”",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "exploding-flour-trap",
+    "name": "Exploding Flour Trap",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Create an Adept trap that sets off a “Voice Radius Alarm” followed by 3 consecutive “Lash Reveal Hidden” when Triggered. This trap resists the first attempt to Disarm it.",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "goo-bomb",
+    "name": "Goo Bomb",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Create an explosive that can be thrown as a packet or set as an Adept trap for “Lash Slow 30 Seconds”",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "poison-bear-trap",
+    "name": "Poison Bear Trap",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Create an Adept trap that when triggered deals “Crush 50 Acid, Delimb Leg”",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "acidic-chains",
+    "name": "Acidic Chains",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Rare Chemical + 1 Rare Junk",
+    "marks": ["C"],
+    "text": "Create an Advanced trap that when triggered deals “Lash Pin Acid Wound\".",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "deadly-trap",
+    "name": "Deadly Trap",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Rare Chemical + 1 Rare Junk",
+    "marks": ["C"],
+    "text": "Create an Advanced trap that when triggered deals “Death” to whoever triggered the trap.",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "mook-bomb",
+    "name": "Mook Bomb",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Rare Chemical + 1 Rare Junk",
+    "marks": ["C"],
+    "text": "Create an explosive that can be thrown as a packet or set as an Advanced trap. Deals “Lash Bleed”.",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "one-of-us",
+    "name": "One of Us",
+    "mastery": true,
+    "masterySkill": "chemical-engineering",
+    "components": ["chemistry", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Rare Chemical + 1 Rare Junk",
+    "marks": ["C"],
+    "text": "Create an explosive that can be thrown as a packet or set as an Advanced trap. Deals “Lash Charm Ignore All 30 Seconds” The affected will not be aware of anything changing around them for 30 seconds.",
+    "source": "Rulebook p.75"
+  },
+  {
+    "id": "anticoagulant-gas",
+    "name": "Anticoagulant Gas",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "1 Common Organic + 1 Common Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that can be thrown as a packet for “Crush Curse 30 seconds”.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "baby-health-boon",
+    "name": "Baby Health Boon",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Organic + 2 Common Chemical",
+    "marks": ["C", "I"],
+    "text": "Create a vial of liquid that when consumed grants \"Baby Health Boon\" in a Boon Slot. The Boon grants the ability to call \"Heal 10\" after spending a 10 Count. This Boon lasts until the end of the Event if never used, or until the end of the Encounter once used.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "cure-boon",
+    "name": "Cure Boon",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "1 Common Organic + 1 Common Chemical",
+    "marks": ["C", "I"],
+    "cannotBeUnstable": true,
+    "text": "Create a vial of liquid that when consumed removes a Permanent Boon of the user's choice from one of their Boon Slots. This Item cannot be made Unstable.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "slap-in-the-face",
+    "name": "Slap in the Face",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "common",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Common Organic + 2 Common Chemical",
+    "marks": ["C", "I"],
+    "text": "Create a vial of liquid that when consumed grants the \"Slap in the Face\" Boon in a Boon Slot. The Boon grants you the ability to remove a Sleep Effect from yourself after spending a 10 Count. This Boon lasts until the end of the Event if never used, or until the end of the Encounter once used.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "charcoal-gas",
+    "name": "Charcoal Gas",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Organic + 2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Brew a vial of gas that can be thrown as a packet for “Lash Remove Ailment”.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "raging-healer",
+    "name": "Raging Healer",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Organic + 2 Uncommon Chemical",
+    "marks": ["C", "I"],
+    "text": "Create a vial of liquid that when consumed grants the \"Raging Healer\" Boon in a Boon Slot. You may activate this Boon at any time to grant +5 Health to all Healing you provide or Receive. This Boon lasts until the end of the Event if never used, or until the end of the Encounter once Activated.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "tougher-stuff",
+    "name": "Tougher Stuff",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Organic + 2 Uncommon Chemical",
+    "marks": ["C", "I"],
+    "text": "Create a vial of liquid that when consumed grants \"Tougher Stuff\" Boon in a Boon Slot. The Boon grants you the ability to remove a Disease or Weakness Effect from yourself after spending a 10 Count. This Boon lasts until the end of the Event if never used, or until the end of the Encounter once used.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "zone-of-vigor",
+    "name": "Zone of Vigor",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Uncommon Organic + 2 Uncommon Chemical",
+    "marks": ["C"],
+    "text": "Create a device that creates a 10 foot diameter chemical Cloud that grants \"Remove Disease, Remove Weakness\" whenever anyone enters it. While in the Cloud you are immune to Disease and Weakness Effects. The Cloud lasts until the end of the Encounter and requires a physreped circle. (The player who created the circle is responsible for marshaling the circle)",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "bloodline-enhancer",
+    "name": "Bloodline Enhancer",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Organic + 2 Rare Chemical",
+    "marks": ["C", "I"],
+    "text": "Create a vial of liquid that when consumed grants \"Bloodline Enhancement\" Boon in a Boon Slot. The user may Activate this Boon at any time to choose an Ancestry Ability. Until the end of the Encounter, when the user uses the chosen Ancestry Ability, they gain an additional use of the Ability (additional uses granted by this ability do not trigger this effect). Any additional remaining uses are lost at the end of the Encounter. This Boon lasts until the end of the Event if never used, or until the end of the Encounter once used.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "boon-extender",
+    "name": "Boon Extender",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "4 Rare Organic + 4 Rare Chemical",
+    "marks": ["C"],
+    "cannotBeUnstable": true,
+    "text": "Mix this with a Stable Biologic Intervention Crafted Item that grants a Boon in a Boon Slot. This will make the Boon Lasting. The Boon will now become a Permanent Boon that can be activated once per Repop instead disappearing at the Event or Encounter it is activated. Cannot be made Unstable.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "breath-of-life",
+    "name": "Breath of life",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Organic + 2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Mix this consumable with a Consumable that restores Health. This consumable will add the \"Voice Radius\" modifier to the Consumable. This will affect all NPCs in the Range as well regardless of if they are friendly or Hostile. Cannot be mixed with Jumper Cable Defibrillator, Bionic Cure Infection, or Spiritual Essence Purifier.",
+    "source": "Rulebook p.76"
+  },
+  {
+    "id": "zone-of-caffeine",
+    "name": "Zone of Caffeine",
+    "mastery": true,
+    "masterySkill": "biologic-intervention",
+    "components": ["medicine", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "chemical"
+      }
+    ],
+    "costText": "2 Rare Organic + 2 Rare Chemical",
+    "marks": ["C"],
+    "text": "Create a device that creates a 10 foot diameter chemical Cloud that performs a \"Remove Sleep\" to any that enter the Circle. Players in the Circle are under the effect of \"Haste\". The player who created the Circle is responsible for marshaling the Circle. The Circle lasts until the end of the Encounter.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "boom-stick",
+    "name": "Boom!-Stick",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Scrap",
+    "marks": ["C"],
+    "text": "Create a vial of volatile oil that can be applied to a weapon on a 3 Count. The next regular Attack with the weapon gains \"Lash\" and \"Knockback 10\". Does not work on Projectile Weapons. (Clarification: Wielder is not immune from the Lash Effect)",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "coated-rounds",
+    "name": "Coated Rounds",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Scrap",
+    "marks": ["C"],
+    "text": "Upon creation, choose Wood, Steel, Stone, Fire, Earth, Air or Water. A clip of rounds that can be applied to a Projectile Weapon after a 3 Count. The next 3 regular Attacks you make with the Weapon gain +5 Damage and the Damage Type is changed to the Type chosen at Creation. A Projectile Weapon can only have a single Rounds consumable applied on it at a time.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "explosive-rounds",
+    "name": "Explosive Rounds",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Scrap",
+    "marks": ["C"],
+    "text": "A small clip of rounds that can be loaded into a projectile weapon after a 3 Count. The next 3 regular attacks you make with the Weapon become Fire Damage and gain the \"Lash\" keyword. A Projectile Weapon can only have a single Rounds consumable applied on it at a time.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "oil-of-blasting",
+    "name": "Oil of Blasting",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Common Chemical + 1 Common Scrap",
+    "marks": ["C"],
+    "text": "Create a vial of explosive oil that can be applied to a Weapon after a 3 Count. The next Attack with the Weapon becomes \"Crush Stun 5 Second\". Does not work on Projectile Weapons.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "knockout-rounds",
+    "name": "Knockout Rounds",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Scrap",
+    "marks": ["C"],
+    "text": "A small clip of rounds that can be loaded into a projectile weapon after a 3 Count. The next 3 regular attacks you make with the Weapon add \"Sleep\" to the call. A Projectile Weapon can only have a single Rounds consumable applied on it at a time.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "oil-of-acid",
+    "name": "Oil of Acid",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Scrap",
+    "marks": ["C"],
+    "text": "Create a vial of acidic oil that can be applied to a Weapon after a 3 Count. The next Attack with the Weapon gets +60 Damage and adds \"Acid\" as the Damage Type. Does not work on Projectile Weapons.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "oil-of-sleep",
+    "name": "Oil of Sleep",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Scrap",
+    "marks": ["C"],
+    "text": "Create a vial of oil that can be applied to a Weapon after a 3 Count. The next Attack with the Weapon becomes \"Sleep\". Does not work on Projectile Weapons.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "sticky-rounds",
+    "name": "Sticky Rounds",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Uncommon Chemical + 1 Uncommon Scrap",
+    "marks": ["C"],
+    "text": "A small clip of rounds that can be loaded into a projectile weapon after a 3 Count. The next 3 regular attacks you make with the Weapon add \"Slow 10 seconds\" to the call. A Projectile Weapon can only have a single Rounds consumable applied on it at a time.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "clip-extender",
+    "name": "Clip Extender",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Chemical + 4 Rare Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Lasting Enhancement that can be added to a Projectile Weapon. Gains an additional attack for any Rounds consumables applied to the Weapon. Takes an Enhancement Slot. This Item cannot be made Unstable.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "deadly-oil",
+    "name": "Deadly Oil",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Rare Chemical + 1 Rare Scrap",
+    "marks": ["C"],
+    "text": "Create a vial of deadly poison that can be applied to a Weapon after a 3 Count. The next Attack with the Weapon gains \"Bleed\" to the Call. Does not work on Projectile Weapons.",
+    "source": "Rulebook p.77"
+  },
+  {
+    "id": "deadly-rounds",
+    "name": "Deadly Rounds",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "1 Rare Chemical + 1 Rare Scrap",
+    "marks": ["C"],
+    "text": "A small clip of rounds that can be loaded into a projectile weapon after a 3 Count. The next 3 regular attacks you make with the Weapon deal double damage and add \"Slay\" to the call. A Projectile Weapon can only have a single Rounds consumable applied on it at a time.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "oil-vein",
+    "name": "Oil Vein",
+    "mastery": true,
+    "masterySkill": "chemcraft",
+    "components": ["gearcraft", "chemistry"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "chemical"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Chemical + 4 Rare Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Lasting Enhancement that can be added to a Melee Weapon. The Weapon may now store up to 3 Weapon Oils in the Weapon. You no longer need to make a Count to Activate one of the Oils and you can choose when to apply the oils to an Attack. Any Oils still in the Vein at the end of the Event are lost. Takes an enhancement slot. This Item cannot be made Unstable.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "auto-medkit",
+    "name": "Auto Medkit",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Organic + 1 Common Junk",
+    "marks": ["C"],
+    "text": "Once this Item is Activated, the user gets 5 Charges of \"Heal 5\". This Item is destroyed at the end of the Encounter it is Activated.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "healing-relay",
+    "name": "Healing Relay",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Organic + 1 Common Junk",
+    "marks": ["C"],
+    "text": "When the user is affected by a Healing Effect, they may Activate this Item to duplicate the Healing Effect to another target via touch or packet and call \"Echo\".",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "med-splicer",
+    "name": "Med Splicer",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Organic + 1 Common Junk",
+    "marks": ["C"],
+    "text": "May apply the Med Splicer to any Consumable that grants a Buff or Healing Effect. You may apply the Effect to two targets at the same time that are next to each other.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "spiritual-restoration-kit",
+    "name": "Spiritual Restoration Kit",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "common",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Common Organic + 1 Common Junk",
+    "marks": ["C"],
+    "text": "Once this Item is Activated, the user gets 5 Charges of \"Spirit Heal 5\". This Item is destroyed at the end of the Encounter it is Activated.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "healing-battery",
+    "name": "Healing Battery",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Organic + 2 Uncommon Junk",
+    "marks": ["C"],
+    "text": "This item contains 100 Health worth of Healing. Once this Item is Activated, the user may perform a 10 Count and may then spend any amount of Stored Healing in this device in multiples of 10 and Heal the target that amount. This Item is destroyed at the end of the Encounter it is Activated.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "puppeteer",
+    "name": "Puppeteer",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Uncommon Organic + 1 Uncommon Junk",
+    "marks": ["C"],
+    "text": "Activate this device to call \"Point Control Risen 1 Minute\" to a Risen within Melee Weapon range. After the minute you must call \"Point Taunt 1 Minute\" on the target Risen if it is still alive. This Item is destroyed after use.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "spirit-battery",
+    "name": "Spirit Battery",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Uncommon Organic + 2 Uncommon Junk",
+    "marks": ["C"],
+    "text": "This item contains 100 Health worth of Spirit Healing. Once this Item is Activated, the user may perform a 10 Count and may then spend any amount of Stored Healing in this device in multiples of 10 and Heal the target Spirit that amount. This Item is destroyed at the end of the Encounter it is Activated.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "vial-blaster",
+    "name": "Vial Blaster",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "uncommon",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Uncommon Organic + 1 Uncommon Junk",
+    "marks": ["C"],
+    "text": "May pour any liquid or gas vial that would normally be thrown into this machine after a 3 Count. The user may then Activate this Item to call \"Frontal Cone\" with the original Effect of the vial.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "bionic-cure-infection",
+    "name": "Bionic Cure Infection",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 10,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 10,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "10 Rare Organic + 10 Rare Junk",
+    "marks": ["C"],
+    "cannotBeUnstable": true,
+    "text": "Create a mechanical device that can be swallowed to remove an Infection Level. This device takes time to work and will take Effect at the beginning of the next Event after the device is consumed. Health modifiers do not apply to this Craft. This Item cannot be made Unstable. A character cannot benefit from more than one Bionic Cure Infection a Repop.",
+    "source": "Rulebook p.78"
+  },
+  {
+    "id": "healing-hydrant",
+    "name": "Healing Hydrant",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 2,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "2 Rare Organic + 2 Rare Junk",
+    "marks": ["C"],
+    "text": "The user may Activate this item by spending a 10 Count and planting their feet. While activated, the user may throw packets for \"Heal 5\". Effect ends if they move their feet or make any other call.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "pain-channeler",
+    "name": "Pain Channeler",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 1,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "1 Rare Organic + 1 Rare Junk",
+    "marks": ["C"],
+    "text": "Activate this device to deal \"Lash Slay.\" If any creature in range is Effected, immediately perform a \"Lash Heal to Full.\" Destroyed after use.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "spiritual-essence-purifier",
+    "name": "Spiritual Essence Purifier",
+    "mastery": true,
+    "masterySkill": "medical-engineering",
+    "components": ["medicine", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 10,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 10,
+        "rarity": "rare",
+        "type": "junk"
+      }
+    ],
+    "costText": "10 Rare Organic + 10 Rare Junk",
+    "marks": ["C"],
+    "cannotBeUnstable": true,
+    "text": "Create a mechanical device that can be swallowed by an Aware to remove a Connection Damage from the Aware's beacon. This device takes time to work and will take Effect at the beginning of the next Event after the device is consumed. Health modifiers do not apply to this Craft. This Item cannot be made Unstable. A character cannot benefit from more than one Spiritual Essence Purifier a Repop.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "armor-un-denter",
+    "name": "Armor Un-Denter",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Junk + 4 Common Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create an Enhancement for Armor that can be activated once per Repop to Refit the Armor after a 3 Count. This is a Lasting Enhancement that goes into an Armor Enhancement Slot. This Item cannot be made Unstable.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "damage-enhancement",
+    "name": "Damage Enhancement",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Junk + 4 Common Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create a Lasting Enhancement in a Weapon Enhancement Slot that provides a Weapon with permanent +1 passive damage. A weapon may only have a single 'Damage Enhancement' on it. This Item cannot be made Unstable.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "enhancement-extension",
+    "name": "Enhancement Extension",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Junk + 4 Common Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "Modify a Stable Basic Enhancement on a Weapon or Armor to become Lasting. Lasting changes the use of the Enhancement to once per Repop and the Duration of the Effect becomes until the end of the Encounter. This Item cannot be made Unstable",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "weapon-coating",
+    "name": "Weapon Coating",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Junk + 4 Common Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create an Enhancement for a Weapon that allows the wielder to add an Elemental Damage Type to the Weapon for an Encounter once per Repop. The valid options for Damage Types are Fire, Earth, Water, or Air. This is a Lasting Enhancement that goes into a Weapon's Enhancement Slot. This Item cannot be made Unstable.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "adept-enhancement-extension",
+    "name": "Adept Enhancement Extension",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Junk + 4 Uncommon Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "Modify a Stable Adept Enhancement on a Weapon or Armor to become Lasting. Lasting changes the use of the Enhancement to once per Repop and the Duration of the Effect becomes until the end of the Encounter. This Item cannot be made Unstable.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "better-damage-enhancement",
+    "name": "Better Damage Enhancement",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Junk + 4 Uncommon Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create a Lasting Enhancement in a Weapon Enhancement Slot that provides a Weapon with permanent +2 passive damage. May also Upgrade a Basic Damage Enhancement for half the Resource Cost. A weapon may only have a single 'Damage Enhancement' on it. This Item cannot be made Unstable.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "shield-bracing",
+    "name": "Shield Bracing",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Junk + 4 Uncommon Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create an Enhancement for a Shield that allows you to grant yourself the “Shielded” Buff for an encounter 1/repop (you may only use the buff granted by shield bracing while you are wielding the shield). The Shielded buff can be expended to call “Brace” on a numerical damaging attack that hits a target within melee range. The Shielded buff remains in the Buff slot when expended and can be refit on a 10 count. This is a Lasting Enhancement that goes into a Shield's Enhancement Slot. This Item cannot be made Unstable.",
+    "source": "Rulebook p.79"
+  },
+  {
+    "id": "swing-booster",
+    "name": "Swing Booster",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Junk + 4 Uncommon Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create an Enhancement for a Weapon that allows you to add \"Crush\" to a use of a Melee Skill or a single Melee Attack made with the Enhanced Weapon once per Repop. This is a Lasting Enhancement that goes into a Weapon's Enhancement Slot. This Item cannot be made Unstable.",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "advanced-enhancement-extension",
+    "name": "Advanced Enhancement Extension",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Junk + 4 Rare Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Modify a Stable Advanced Enhancement on a Weapon or Armor to become Lasting. Lasting changes the use of the Enhancement to once per Repop and the Duration of the Effect becomes until the end of the Encounter. This Item cannot be made Unstable.",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "best-damage-enhancement",
+    "name": "Best Damage Enhancement",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Junk + 4 Rare Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create a Lasting Enhancement in a Weapon Enhancement Slot that provides a Weapon with permanent +3 passive damage. May also Upgrade a Adept Damage Enhancement for half the Resource Cost. A weapon may only have a single 'Damage Enhancement' on it. This Item cannot be made Unstable.",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "echoing-impact-device",
+    "name": "Echoing Impact Device",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Junk + 4 Rare Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create an Enhancement for a Weapon that allows you to call \"Echo\" and repeat the last Attack performed with the Enhanced Weapon once per Repop. This is a Lasting Enhancement that goes into a Weapon's Enhancement Slot. This Item cannot be made Unstable,",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "reactive-shield",
+    "name": "Reactive Shield",
+    "mastery": true,
+    "masterySkill": "gearcraft-engineering",
+    "components": ["gearcraft", "engineering"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "junk"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Junk + 4 Rare Scrap",
+    "marks": ["E", "P"],
+    "cannotBeUnstable": true,
+    "text": "Create an Enhancement for an Armor or Shield that allows the wielder gain a use of Resist Damage once per Repop. This is a Lasting Enhancement that goes into an Armor's or Shield's Enhancement Slot. This Item cannot be made Unstable,",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "bionic-ears",
+    "name": "Bionic Ears",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Organic + 4 Common Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. This Boon grants the user the ability to call Sidestep in response to any surprise attack. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "bionic-eyes",
+    "name": "Bionic Eyes",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Organic + 4 Common Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. This Boon grants the user the ability to call \"Point Reveal\" on a hidden character. After use you must spend a 10 count to recharge the eye before using it again. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "bionic-arms",
+    "name": "Bionic Arms",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Organic + 4 Common Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. This Boon grants the user \"+1 Damage to all Melee and Ranged Attacks\". This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "coagulation-response-device",
+    "name": "Coagulation Response Device",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "basic",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "common",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Common Organic + 4 Common Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. The Boon increases your Bleedout Count by a minute. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.80"
+  },
+  {
+    "id": "aware-healing-patch",
+    "name": "Aware Healing Patch",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Organic + 4 Uncommon Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "An augmentation that can be applied to an Aware's beacon and takes a Boon Slot for the Aware. The Boon allows the Aware to gain the Effects of normal Healing at half effectiveness. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable. (Example. If the Aware were to be targeted with \"Heal 10\" they would restore 5 Health. They will Heal to half Max Health if affected by a Heal to Full)",
+    "source": "Rulebook p.81"
+  },
+  {
+    "id": "bionic-limbs",
+    "name": "Bionic Limbs",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Organic + 4 Uncommon Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. The Boon grants the user the ability to call \"Resist Interrupt\" once per attempt while using the Rip Free Skill. If the user has Level 5 Rip-Free, their Rip Free Skills become Instant and no longer need a Count. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.81"
+  },
+  {
+    "id": "biomod-patch",
+    "name": "Biomod Patch",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Organic + 4 Uncommon Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that takes up a Boon Slot and is linked to another Medcraft Augmentation Boon. This Boon increases the effectiveness of the linked Boon. Any gained benefits are doubled and any Counts related to the Boon are halved. An Augmentation Boon can only have one Biomod Patch attached to it. If the linked Bio Mod is removed, this Boon is also destroyed. This Item cannot be made Unstable.",
+    "source": "Rulebook p.81"
+  },
+  {
+    "id": "vigor-stimulant-injector",
+    "name": "Vigor Stimulant Injector",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "adept",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "uncommon",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Uncommon Organic + 4 Uncommon Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. The Boon grants the user +10 Max Health. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.81"
+  },
+  {
+    "id": "auto-defibrillator",
+    "name": "Auto-Defibrillator",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Organic + 4 Rare Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. This Boon grants the user a single use of Endurance followed immediately by a single use of Dash once per Encounter. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.81"
+  },
+  {
+    "id": "bionic-fist",
+    "name": "Bionic Fist",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Organic + 4 Rare Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. This Boon grants the user +3 Steel Damage when attacking with their fists. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable. (Clarification, Must still use contact safe boffers to Attack)",
+    "source": "Rulebook p.81"
+  },
+  {
+    "id": "bionic-muscles",
+    "name": "Bionic Muscles",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Organic + 4 Rare Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. This Boon grants the user the ability to copy any Physical Attack or Defense call they see another character perform once per Encounter. The user will call \"Mimic\" followed by the call being copied. You can only use this ability on Skills found in the Rulebook. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.81"
+  },
+  {
+    "id": "built-in-armor",
+    "name": "Built-in Armor",
+    "mastery": true,
+    "masterySkill": "medcraft",
+    "components": ["medicine", "gearcraft"],
+    "rank": "advanced",
+    "cost": [
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "organic"
+      },
+      {
+        "qty": 4,
+        "rarity": "rare",
+        "type": "scrap"
+      }
+    ],
+    "costText": "4 Rare Organic + 4 Rare Scrap",
+    "marks": ["P"],
+    "cannotBeUnstable": true,
+    "text": "A biological augmentation that must be installed in a person in one of their Boon Slots. This Boon grants the user +10 Armor. This Boon may be removed by the user after a 60 Count but the Item will be destroyed on removal. This Boon is otherwise permanent and cannot be made Unstable.",
+    "source": "Rulebook p.81"
+  }
+]

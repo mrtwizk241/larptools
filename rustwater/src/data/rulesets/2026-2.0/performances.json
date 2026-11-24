@@ -1,0 +1,307 @@
+{
+  "performances": [
+    {
+      "id": "opening-act",
+      "name": "Opening Act",
+      "tier": "basic",
+      "lengthMinutes": {
+        "min": 2,
+        "max": 2
+      },
+      "targetEffects": [
+        {
+          "stat": "buffSlots",
+          "add": 1,
+          "duration": "repop"
+        }
+      ],
+      "text": "All characters affected by this performance are affected by \"Gain an additional buff slot for the Repop.\"",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "quickness",
+      "name": "Quickness",
+      "tier": "basic",
+      "lengthMinutes": {
+        "min": 2,
+        "max": 2
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "grants": {
+            "skill": "sidestep",
+            "part": "main",
+            "uses": 1
+          }
+        }
+      ],
+      "text": "All characters affected by this performance are granted a use of \"Sidestep\" in a buff slot.",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "restful-sleep",
+      "name": "Restful Sleep",
+      "tier": "basic",
+      "lengthMinutes": {
+        "min": 2,
+        "max": 2
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "name": "Restful Sleep"
+        }
+      ],
+      "text": "All characters affected by this performance are granted the \"Restful Sleep\" buff in a buff slot. This skill can be expended when affected by a sleep effect to immediately wake up and become immune to sleep effects for the encounter. Alternatively once a character with this buff goes to sleep, if they sleep at least 4 hours the buff will be expended when they wake up and they will be healed to full health, be granted +10 Temp HP, and gain +1 Basic level in a skill of their choice for the repop.",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "spell-enhancement",
+      "name": "Spell Enhancement",
+      "tier": "basic",
+      "lengthMinutes": {
+        "min": 2,
+        "max": 2
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "grantsOneOf": [
+            {
+              "skill": "spell-manipulation",
+              "part": "basic"
+            },
+            {
+              "skill": "focus",
+              "part": "basic"
+            },
+            {
+              "skill": "channeling",
+              "part": "basic"
+            }
+          ],
+          "uses": 1
+        }
+      ],
+      "text": "All characters affected by the performance gain a basic use of Spell Manipulation, Focus, or Channeling in a buff slot. The buff granted is chosen by the performer.",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "protected-mind",
+      "name": "Protected Mind",
+      "tier": "adept",
+      "lengthMinutes": {
+        "min": 3,
+        "max": 3
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "name": "Resist Charm or Fear",
+          "stacks": 2
+        }
+      ],
+      "text": "All characters affected by this performance gain a double-stacked use of \"Resist Charm or Fear\" in a buff slot. Stacked expendable buffs may be expended a number of times equal to the number implied in their title before they are fully expended from your buff slot. A double-stacked buff may be used twice before it is expended.",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "tier": "adept",
+      "lengthMinutes": {
+        "min": 3,
+        "max": 3
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "grants": {
+            "skill": "dash",
+            "part": "basic",
+            "uses": 1
+          }
+        }
+      ],
+      "text": "All characters affected by this performance gain a basic use of the \"Dash\" skill in a buff slot.",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "prepared-for-battle",
+      "name": "Prepared for Battle",
+      "tier": "adept",
+      "lengthMinutes": {
+        "min": 3,
+        "max": 3
+      },
+      "targetEffects": [
+        {
+          "stat": "damage",
+          "add": 1,
+          "duration": "next-encounter",
+          "slot": "buff"
+        }
+      ],
+      "text": "All characters affected by this performance gain a +1 passive damage boost to all attacks for their next encounter in a buff slot.",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "spell-strengthening",
+      "name": "Spell Strengthening",
+      "tier": "adept",
+      "lengthMinutes": {
+        "min": 3,
+        "max": 3
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "name": "Spell Strengthening"
+        }
+      ],
+      "text": "All characters affected by this performance are granted \"Spell Strengthening\" in a Buff slot. They may expend this buff in order to double the numerical effect of a cast spell. This effect cannot be used to double the numerical effect of a spell that occupies a buff slot.",
+      "source": "Rulebook p.95"
+    },
+    {
+      "id": "inspirational-performance",
+      "name": "Inspirational Performance",
+      "tier": "advanced",
+      "lengthMinutes": {
+        "min": 4,
+        "max": 4
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "name": "Inspired",
+          "maxHeld": 1
+        }
+      ],
+      "text": "All characters affected by this performance are granted the \"Inspired\" Buff in a buff slot. This buff can be expended when a player would expend a per/encounter Adept or Advanced skill instead of expending the use of the Adept or Advanced Skill. A character may only have one \"Inspired\" buff at a time. This skill cannot be used to affect the Bardic Performance skill.",
+      "source": "Rulebook p.95-96"
+    },
+    {
+      "id": "restored-energy",
+      "name": "Restored Energy",
+      "tier": "advanced",
+      "lengthMinutes": {
+        "min": 2,
+        "max": 6
+      },
+      "scaling": {
+        "stepMinutes": 2,
+        "maxSteps": 3
+      },
+      "targetEffects": [
+        {
+          "stat": "restoreBasicUses",
+          "perStep": 1
+        }
+      ],
+      "text": "All characters affected by the performance are inspired and regain some of their spent energy. All targets Regain 1 Basic skill of their choice per 2 Min spent performing. Crafting Skills can only have 1 level restored per Repop. Players can only benefit from the Inspiration Performance once per repop. You cannot restore uses of Bardic Performance with this skill.",
+      "source": "Rulebook p.96"
+    },
+    {
+      "id": "burst-of-energy",
+      "name": "Burst of Energy",
+      "tier": "advanced",
+      "lengthMinutes": {
+        "min": 2,
+        "max": 6
+      },
+      "scaling": {
+        "stepMinutes": 2,
+        "maxSteps": 3
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "name": "Burst of Energy",
+          "maxStacks": 3,
+          "stacksPerStep": 1
+        }
+      ],
+      "text": "All characters affected by the performance gain a stack of the \"Burst of Energy\" Buff per 2 minutes of the performance (up to 3 total stacks). The \"Burst of Energy\" Buff may be expended to grant haste to a single action. This must be applied to actions that are eligible to be hastened. This haste may not be applied to actions that are already hastened. This takes a single buff slot regardless of the length of the performance.",
+      "source": "Rulebook p.96"
+    },
+    {
+      "id": "echoing-magic",
+      "name": "Echoing Magic",
+      "tier": "advanced",
+      "lengthMinutes": {
+        "min": 2,
+        "max": 6
+      },
+      "scaling": {
+        "stepMinutes": 2,
+        "maxSteps": 3
+      },
+      "targetEffects": [
+        {
+          "stat": "buff",
+          "name": "Echoing Magic",
+          "maxStacks": 3,
+          "stacksPerStep": 1
+        }
+      ],
+      "text": "All characters affected by the performance are granted up to 3 stacks of \"Echoing Magic\" in a single buff slot. They gain 1 stack per 2 mins of the performance. A stack of echoing magic can be expended after casting a spell to immediately cast a spell of one level lower without expending any additional uses. (example if you cast an advanced tech spell you could expend a stack of \"Echoing Magic\" to then cast an adept spell). You may not have \"Echoing Magic\" in more than one buff slot at a time.",
+      "source": "Rulebook p.96"
+    }
+  ],
+  "rituals": [
+    {
+      "id": "ritual-circle",
+      "name": "Ritual Circle",
+      "frequency": "passive",
+      "autoLearned": true,
+      "circleMaxPeople": 12,
+      "text": "This skill is automatically learned once you have learned any ritual skill. You may spend 5 minutes in focus and create a Ritualism circle that can be used as a target for other Ritualism abilities. The circle will expand the ability to be able to include up to 12 people.",
+      "source": "Rulebook p.97"
+    },
+    {
+      "id": "forget-knowledge",
+      "name": "Forget Knowledge",
+      "frequency": "per-event",
+      "circleCastable": true,
+      "notes": "target may lock, then lose, levels of one skill (refund rules not stated)",
+      "text": "You may spend 10 minutes either focusing on a single person or on a Ritualism circle in which case it targets everyone in the circle. All characters in the circle gain the ability to choose to forget any number of levels for a single skill. At the end of the ritual the skill levels will be locked from use for the character and then they will fade entirely at the end of the event.",
+      "source": "Rulebook p.97"
+    },
+    {
+      "id": "face-trauma",
+      "name": "Face Trauma",
+      "frequency": "per-event",
+      "circleCastable": true,
+      "text": "You may spend 1 minute focusing on a specific target character. After the minute you and the target will fall unconscious and your minds will manifest in the Cognitive Realm connected to the target's mind. You can use this to help someone face a \"Death's Door\" Trauma or other effects. Beware any damage or effects you take in the Cognitive Realm will be transferred to your body in the Physical Realm and vice versa. If this skill is used in a circle all characters in the circle will be drawn into the target's mind. Please try to notify the GM staff if you plan on using this skill during an event so we can try and have something prepared ahead of time.",
+      "source": "Rulebook p.97"
+    },
+    {
+      "id": "manifest",
+      "name": "Manifest",
+      "frequency": "per-event",
+      "text": "You may spend up to 10 minutes focusing on the target and then can attempt to directly manifest an entity that is connected to the target through the Cognitive Realm into the Physical Realm. Generally the manifested entity can only stay manifested as long as the Ritualist is focusing on the ritual but depending on the situation it may stay after the ritual. Certain powerful entities might resist this effect.",
+      "source": "Rulebook p.97"
+    },
+    {
+      "id": "age-transfer-ritual",
+      "name": "Age Transfer Ritual",
+      "frequency": "per-event",
+      "circleCastable": false,
+      "effects": [
+        {
+          "stat": "ageRank",
+          "add": 1,
+          "who": "caster",
+          "optional": true
+        },
+        {
+          "stat": "ageRank",
+          "add": -1,
+          "who": "target"
+        }
+      ],
+      "text": "You may spend 10 minutes focusing on a willing target of the ritual. After completing the ritual the caster may permanently gain 1 Age rank and the target will lose one age rank. This ritual cannot be circle cast.",
+      "source": "Rulebook p.97"
+    }
+  ]
+}

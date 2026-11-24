@@ -1,0 +1,13 @@
+larptools: unofficial, player-made LARP tools.
+
+The MIT License in LICENSE covers the source code only.
+
+Rustwater
+  The Rustwater names, rules, rule text, costs, and setting (mostly in
+  rustwater/src/data/) belong to Rustwater LARP. They are used in this fan
+  project with the permission of Rustwater LARP staff. They are not covered by
+  the MIT License: do not reuse them outside this project without asking
+  Rustwater LARP.
+
+  This project is not made, checked, or endorsed by Rustwater LARP. If anything
+  here disagrees with the rulebook or staff, the rulebook and staff win.

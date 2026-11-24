@@ -1,0 +1,158 @@
+/* Phone: bottom bar, --nav-height tall plus the safe area. */
+.nav {
+  position: fixed;
+  z-index: var(--z-nav);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  border-top: var(--border-width) solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.list {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: var(--content-max);
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each item is as wide as its word (at least 64px); the bar scrolls sideways when they do not
+   all fit. On phones labels stay on one line: the bar scrolls instead of wrapping words. */
+.listItem {
+  flex: 1 0 auto;
+  min-width: 64px;
+}
+
+@media (max-width: 899.98px) {
+  .item {
+    padding: 0 var(--space-2);
+  }
+
+  .label {
+    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+}
+
+.long {
+  display: none;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: auto;
+  min-height: var(--nav-height);
+  padding: 0 2px;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-tight);
+  text-decoration: none;
+}
+
+.item:hover {
+  color: var(--color-text);
+}
+
+.item:focus-visible {
+  outline-offset: calc(-1 * var(--focus-offset) - 3px);
+}
+
+.icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+}
+
+/* Labels wrap instead of clipping when the text is large (a11y A-05). */
+.label {
+  max-width: 100%;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  text-align: center;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+/* Current item: bold text plus a 3px bar, not color alone. */
+.item[aria-current='page'] {
+  color: var(--color-text);
+  font-weight: var(--weight-bold);
+}
+
+.item[aria-current='page'] .icon {
+  color: var(--color-primary);
+}
+
+.item[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 20%;
+  left: 20%;
+  height: 3px;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  background: var(--color-primary);
+}
+
+/* Desktop: the same items as a left rail. */
+@media (min-width: 900px) {
+  .nav {
+    position: sticky;
+    top: var(--space-4);
+    align-self: start;
+    margin-top: var(--space-5);
+    width: 96px;
+    padding: var(--space-2) 0;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .list {
+    flex-direction: column;
+    gap: var(--space-1);
+    overflow-x: visible;
+  }
+
+  .listItem {
+    flex: none;
+    min-width: 0;
+  }
+
+  .short {
+    display: none;
+  }
+
+  .long {
+    display: inline;
+  }
+
+  .item {
+    height: auto;
+    min-height: 64px;
+    padding: var(--space-2) var(--space-1);
+  }
+
+  .item[aria-current='page']::before {
+    top: 20%;
+    right: auto;
+    bottom: 20%;
+    left: 0;
+    width: 3px;
+    height: auto;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+}

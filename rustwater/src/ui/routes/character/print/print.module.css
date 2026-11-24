@@ -1,0 +1,533 @@
+/*
+ * Print view. On screen the sheet is a white paper card on the app background so staff can
+ * preview it; when printing the card fills the page (margins come from @page in print.css).
+ * Paper colors are fixed black on white in both themes: no images or textures.
+ */
+.section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.hint {
+  color: var(--color-text-muted);
+}
+
+.empty {
+  margin-top: var(--space-4);
+}
+
+.receiptTab {
+  display: grid;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.picker {
+  max-width: 28rem;
+}
+
+.paper {
+  --paper-ink: #000;
+  --paper-muted: #3d3d3d;
+  --paper-rule: #8a8a8a;
+
+  width: 100%;
+  max-width: 8.5in;
+  margin: var(--space-4) auto 0;
+  padding: 0.5in;
+  background: #fff;
+  color: var(--paper-ink);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+  font-family: var(--font-body);
+  font-size: 10.5pt;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.receiptTab .paper {
+  margin-top: 0;
+}
+
+.paper p + p {
+  margin-top: 2pt;
+}
+
+.n {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--paper-muted);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12pt;
+  padding-bottom: 4pt;
+  margin-bottom: 6pt;
+  border-bottom: 1.5pt solid var(--paper-ink);
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 16pt;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.15;
+}
+
+.vitals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4pt 14pt;
+  text-align: right;
+}
+
+.vitals dt {
+  font-family: var(--font-mono);
+  font-size: 7.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.vitals dd {
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4pt 0.3in;
+  align-items: start;
+  margin-bottom: 6pt;
+}
+
+.flow {
+  columns: 2;
+  column-gap: 0.3in;
+}
+
+.block {
+  break-inside: avoid;
+  margin-bottom: 6pt;
+}
+
+.h {
+  font-family: var(--font-mono);
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1pt solid var(--paper-ink);
+  margin-bottom: 2pt;
+  padding-bottom: 1pt;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 1pt 4pt 1pt 0;
+  border-bottom: 0.5pt solid var(--paper-rule);
+}
+
+.table th {
+  font-weight: 600;
+}
+
+.table thead th {
+  font-family: var(--font-mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1pt solid var(--paper-ink);
+}
+
+.table tfoot th,
+.table tfoot td {
+  border-top: 1pt solid var(--paper-ink);
+  border-bottom: none;
+  font-weight: 700;
+}
+
+/* Totals with several currencies wrap between currencies, never inside one. */
+.table td.totals {
+  white-space: normal;
+}
+
+.totals > span {
+  white-space: nowrap;
+}
+
+.table td.n,
+.table th.right {
+  text-align: right;
+  padding-right: 0;
+  padding-left: 4pt;
+}
+
+.pre {
+  white-space: pre-wrap;
+}
+
+.footer {
+  margin-top: 8pt;
+  padding-top: 3pt;
+  border-top: 0.5pt solid var(--paper-rule);
+  font-size: 8pt;
+  color: var(--paper-muted);
+}
+
+/* Receipt. Words wrap at spaces (break-word keeps each word's width as the minimum, so table
+   columns and list rows never squeeze a word into pieces on a phone); only a word wider than the
+   whole line breaks. */
+.receipt {
+  overflow-wrap: break-word;
+}
+
+.receipt > * + * {
+  margin-top: 6pt;
+}
+
+.receipt .tables {
+  margin-bottom: 0;
+}
+
+.checks {
+  list-style: none;
+  padding: 0;
+}
+
+.checks li {
+  display: flex;
+  gap: 6pt;
+  align-items: baseline;
+}
+
+.checkText {
+  flex: 1;
+  min-width: 0;
+}
+
+.checks li + li {
+  margin-top: 2pt;
+}
+
+.box {
+  display: inline-block;
+  flex: none;
+  width: 9pt;
+  height: 9pt;
+  border: 1pt solid var(--paper-ink);
+  font-size: 8pt;
+  line-height: 8pt;
+  text-align: center;
+  margin-right: 4pt;
+}
+
+.checks .box {
+  margin-right: 0;
+}
+
+.upkeep {
+  font-weight: 600;
+}
+
+/* A box to tick by hand with its label, kept together on one line. */
+.tick {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.signature {
+  display: flex;
+  align-items: flex-end;
+  gap: 6pt;
+  padding-top: 16pt;
+}
+
+.line {
+  flex: 1;
+  border-bottom: 1pt solid var(--paper-ink);
+}
+
+.lineShort {
+  width: 1.4in;
+  border-bottom: 1pt solid var(--paper-ink);
+}
+
+/* Phones: one column so nothing scrolls sideways. */
+@media screen and (max-width: 640px) {
+  .paper {
+    padding: 12px;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .vitals {
+    text-align: left;
+  }
+
+  .tables {
+    grid-template-columns: 1fr;
+  }
+
+  .flow {
+    columns: 1;
+  }
+}
+
+@media print {
+  .section {
+    display: block;
+  }
+
+  .paper,
+  .receiptTab .paper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .receiptTab {
+    display: block;
+    padding: 0;
+  }
+}
+
+/* Character sheet (I-16). */
+.left {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--paper-muted);
+}
+
+.topRight {
+  text-align: right;
+}
+
+.eventLine {
+  margin-top: 2pt;
+  white-space: nowrap;
+}
+
+.writeIn {
+  display: inline-block;
+  width: 1.5in;
+  margin: 0 4pt;
+  border-bottom: 1pt solid var(--paper-ink);
+}
+
+.points {
+  display: grid;
+  gap: 1pt;
+  margin-bottom: 6pt;
+  font-size: 9pt;
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 12pt;
+  list-style: none;
+  padding: 0;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* The main focus: Max Health, Armor, and damage lines, large and boxed. */
+.focus {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6pt 0.3in;
+  align-items: start;
+  margin-bottom: 8pt;
+  padding: 6pt 8pt;
+  border: 1.5pt solid var(--paper-ink);
+  break-inside: avoid;
+}
+
+.bigStats {
+  display: flex;
+  gap: 18pt;
+}
+
+.bigStats dt {
+  font-family: var(--font-mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.big {
+  font-family: var(--font-mono);
+  font-size: 26pt;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.damage {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12pt;
+}
+
+.damage th {
+  font-family: var(--font-mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1pt solid var(--paper-ink);
+}
+
+.damage th.right {
+  text-align: right;
+}
+
+.damage td {
+  padding: 2pt 6pt 2pt 0;
+  border-bottom: 0.5pt solid var(--paper-rule);
+}
+
+.damage td.call {
+  padding-right: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Blank lines to write a damage line in by hand. */
+.blankRow td {
+  height: 17pt;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+}
+
+.skills > li + li {
+  margin-top: 3pt;
+}
+
+.mark {
+  font-family: var(--font-mono);
+  font-size: 8pt;
+}
+
+/* Rows of empty boxes under a skill: one box per use, a row per period and per upgrade. */
+.useRows {
+  list-style: none;
+  padding: 0 0 0 10pt;
+  font-size: 9pt;
+}
+
+.useRows li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2pt 6pt;
+}
+
+.useRows li + li {
+  margin-top: 1pt;
+}
+
+.useLabel {
+  color: var(--paper-muted);
+}
+
+.boxes {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3pt;
+}
+
+.useBox {
+  display: inline-block;
+  width: 10pt;
+  height: 10pt;
+  background: #fff;
+  border: 1pt solid var(--paper-ink);
+}
+
+.lines {
+  list-style: none;
+  padding: 0;
+  font-size: 9.5pt;
+}
+
+.lines li + li {
+  margin-top: 1pt;
+}
+
+/* Page 2: memory. On screen a dashed rule marks where the second page starts. */
+.page2 {
+  margin-top: 10pt;
+  padding-top: 8pt;
+  border-top: 1pt dashed var(--paper-rule);
+}
+
+@media screen and (max-width: 640px) {
+  .topRight {
+    text-align: left;
+  }
+
+  .eventLine {
+    white-space: normal;
+  }
+
+  .focus {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .page2 {
+    break-before: page;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}

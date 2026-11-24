@@ -1,0 +1,342 @@
+/* Skills list, skill detail, and the starting skills picker. */
+
+.tabBody {
+  display: grid;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.tabBody > :global(*) {
+  min-width: 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+/* Skills list: a tighter top so the first skill row shows on a phone. */
+.listBody {
+  gap: var(--space-3);
+}
+
+/* Pools on one mono line: "CXP 190 · W 3 · D 0". Full wording is visually hidden. */
+.pools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.pools > li {
+  white-space: nowrap;
+}
+
+.pools > li + li::before {
+  margin-right: var(--space-2);
+  color: var(--color-text-muted);
+  content: '·' / '';
+}
+
+.poolValue {
+  font-weight: var(--weight-bold);
+}
+
+.poolOver {
+  color: var(--color-danger);
+}
+
+.poolIcon {
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+}
+
+/* Search and "Owned only" share a row where there is room; they stack under 360px. */
+.searchRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-2) var(--space-4);
+}
+
+.search {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+@media (max-width: 359.98px) {
+  .search {
+    flex-basis: 100%;
+  }
+}
+
+/* Archetype filter chips: toggle buttons; pressed shows a check icon, not color alone. */
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap);
+  padding: 0 var(--space-4);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+}
+
+.filterChip:hover {
+  background: var(--color-surface-2);
+}
+
+.filterChip[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.filterIcon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  cursor: pointer;
+}
+
+.check input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.count {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* List rows: name on top, type badge and owned levels below. */
+.rowMain {
+  display: grid;
+  flex: 1;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.rowName {
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+.rowMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.typeBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--space-2);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Detail page */
+.detail {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.detail > :global(*) {
+  min-width: 0;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap);
+  justify-self: start;
+}
+
+.backIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  overflow-wrap: anywhere;
+}
+
+.metaLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.marks {
+  display: grid;
+  gap: var(--space-1);
+  padding-left: var(--space-5);
+}
+
+.part {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Starting skills picker */
+.picker {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.picker > :global(*) {
+  min-width: 0;
+}
+
+/* CXP left and AP chips stay in view while scrolling the picker. */
+.sticky {
+  position: sticky;
+  z-index: var(--z-nav);
+  top: 0;
+  margin: 0 calc(-1 * var(--space-4));
+  padding: var(--space-2) var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.group {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.groupTitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pickList {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.pickSkill {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.pickHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.pickName {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  text-transform: none;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+
+.pickParts {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 600px) {
+  .pickParts {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.pickPart {
+  display: grid;
+  gap: var(--space-1);
+  align-content: start;
+}
+
+.pickPartName {
+  font-weight: var(--weight-semibold);
+}
+
+.warning {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius);
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+.warningIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+/* Player rows: the skill link and a + to send a learning to staff. */
+.rowWithAdd {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rowWithAdd > :first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.addButton {
+  flex: none;
+  border: var(--border-width) solid var(--color-border);
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}

@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+# Read-only token: CI only checks out code and runs checks.
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      # Actions are pinned to full commit SHAs; the comment names the release tag.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: rustwater/package-lock.json
+      - run: npm run privacy-scan
+      - name: Rustwater checks
+        working-directory: rustwater
+        run: |
+          npm ci --ignore-scripts
+          npm audit --omit=dev --audit-level=high
+          npm run lint
+          npm run typecheck
+          npm run format:check
+          npm test
+      - name: Rustwater browser tests
+        working-directory: rustwater
+        run: |
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+      - run: node scripts/build.mjs --no-install

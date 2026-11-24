@@ -1,0 +1,19 @@
+.heading {
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+  border-bottom: var(--border-width) solid var(--color-border);
+  font-family: var(--font-mono);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.level2 {
+  font-size: var(--text-lg);
+}
+
+.level3,
+.level4 {
+  font-size: var(--text-md);
+}

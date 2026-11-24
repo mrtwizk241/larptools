@@ -1,0 +1,198 @@
+{
+  "rules": {
+    "picks": 10,
+    "picksAreMaximum": true,
+    "warnIfFewer": true,
+    "repeatsAllowed": true,
+    "chosenAt": "creation",
+    "itemQuality": "basic",
+    "assumed": true,
+    "assumptionNote": "Assumed; see Q-PLAY-2. The current sheet example takes the spell blueprint option 7 times.",
+    "source": "Rulebook p.18"
+  },
+  "options": [
+    {
+      "id": "basic-melee-weapon",
+      "name": "Basic Melee Weapon (short/long/great)",
+      "grants": [
+        {
+          "kind": "weapon",
+          "category": "melee",
+          "quality": "basic",
+          "qty": 1
+        }
+      ],
+      "choices": [
+        {
+          "field": "size",
+          "options": ["short", "long", "great"]
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "basic-armor",
+      "name": "Basic Armor",
+      "grants": [
+        {
+          "kind": "armor",
+          "quality": "basic",
+          "qty": 1
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "basic-shield",
+      "name": "Basic Shield",
+      "grants": [
+        {
+          "kind": "shield",
+          "quality": "basic",
+          "qty": 1
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "basic-projectile-weapon",
+      "name": "Basic Projectile Weapon",
+      "grants": [
+        {
+          "kind": "weapon",
+          "category": "projectile",
+          "quality": "basic",
+          "qty": 1
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "common-resources",
+      "name": "3 common resources (your choice)",
+      "grants": [
+        {
+          "kind": "resource",
+          "rarity": "common",
+          "qty": 3
+        }
+      ],
+      "choices": [
+        {
+          "field": "type",
+          "perUnit": true,
+          "options": ["chemical", "organic", "scrap", "junk"]
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "uncommon-resources",
+      "name": "2 uncommon resources (your choice)",
+      "grants": [
+        {
+          "kind": "resource",
+          "rarity": "uncommon",
+          "qty": 2
+        }
+      ],
+      "choices": [
+        {
+          "field": "type",
+          "perUnit": true,
+          "options": ["chemical", "organic", "scrap", "junk"]
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "rare-resource",
+      "name": "1 Rare resource (your choice)",
+      "grants": [
+        {
+          "kind": "resource",
+          "rarity": "rare",
+          "qty": 1
+        }
+      ],
+      "choices": [
+        {
+          "field": "type",
+          "perUnit": true,
+          "options": ["chemical", "organic", "scrap", "junk"]
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "spell-blueprint-or-memorized",
+      "name": "1 Spell Blueprint or Memorized spell",
+      "oneOf": [
+        {
+          "kind": "spell-blueprint",
+          "qty": 1
+        },
+        {
+          "kind": "memorized-spell",
+          "qty": 1,
+          "requiresMemorizationSlotOrAp": true
+        }
+      ],
+      "text": "1 Spell Blueprint or Memorized spell (still must pay the AP or have the skill level to memorize the spell)",
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "crafting-blueprint-or-memorized",
+      "name": "1 Crafting Blueprint or Memorized Recipe",
+      "oneOf": [
+        {
+          "kind": "recipe-blueprint",
+          "qty": 1
+        },
+        {
+          "kind": "memorized-recipe",
+          "qty": 1,
+          "requiresMemorizationSlotOrAp": true
+        }
+      ],
+      "text": "1 Crafting Blueprint or Memorized Recipe (still must pay the AP or have the skill level to memorize the recipe)",
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "basic-consumable",
+      "name": "Basic Consumable Item",
+      "grants": [
+        {
+          "kind": "consumable",
+          "quality": "basic",
+          "qty": 1
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "bits",
+      "name": "10 Bits",
+      "grants": [
+        {
+          "kind": "bits",
+          "qty": 10
+        }
+      ],
+      "source": "Rulebook p.18"
+    },
+    {
+      "id": "memorized-performance",
+      "name": "1 Memorized performance",
+      "grants": [
+        {
+          "kind": "memorized-performance",
+          "qty": 1,
+          "requiresMemorizationSlotOrAp": true
+        }
+      ],
+      "text": "1 Memorized performance (still must pay the AP or have the skill level to memorize the performance)",
+      "source": "Rulebook p.18"
+    }
+  ]
+}

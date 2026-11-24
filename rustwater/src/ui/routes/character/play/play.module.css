@@ -1,0 +1,425 @@
+/* Play screen: use groups, rows, and 44px tracker pips. No animation. */
+.group {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Heading and its Reset button on one row; the button wraps under on narrow screens. */
+.groupHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+
+.groupTitle {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.groupTitle > * {
+  margin-bottom: 0;
+}
+
+.items {
+  display: grid;
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+/* Adept and Advanced uses hang under their skill's Basic use. */
+.upgrade {
+  margin-top: calc(-1 * var(--space-2));
+  margin-left: var(--space-5);
+  border-left: 3px solid var(--color-border-strong);
+}
+
+.blocked {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.itemHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+
+.name {
+  min-width: 0;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+/* The item name doubles as the button that opens its rule text. */
+.nameButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  min-height: var(--tap);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nameButton:hover .name {
+  text-decoration: underline;
+}
+
+.chevron {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  color: var(--color-text-muted);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.details {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-left: 3px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.detailTitle {
+  font-weight: var(--weight-semibold);
+}
+
+.detailText {
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.detailLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+}
+
+.left {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-semibold);
+}
+
+.note {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.pips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+/* Filled square: available. Empty square with a cross: spent (the label says which). */
+.pip {
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* An upgrade with no Basic use left: dimmed; the note above says why. */
+.pip[data-blocked] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pip[data-spent] {
+  background: var(--color-bg);
+}
+
+.cross {
+  width: 32px;
+  height: 32px;
+  stroke-width: 3;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--space-4);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.error {
+  color: var(--color-danger);
+  font-weight: var(--weight-semibold);
+}
+
+/* Health, armor, and damage: checkbox lists, the call, the attack pickers. */
+.checks {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.checks legend {
+  margin-bottom: var(--space-1);
+  font-weight: var(--weight-semibold);
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  padding: var(--space-2) 0;
+  cursor: pointer;
+}
+
+.check input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.check > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.call {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+}
+
+.selects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.selectField {
+  display: grid;
+  flex: 1 1 12rem;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.selectField label {
+  font-weight: var(--weight-semibold);
+}
+
+.selectField select {
+  width: 100%;
+  min-height: var(--tap);
+}
+
+/* Mastery magic: a Use button that spends every use the ability needs. */
+.moveHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+/* Health and Armor side by side from 768px with Damage full width under them; stacked on phones. */
+.cards {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .damageCard {
+    grid-column: 1 / -1;
+  }
+}
+
+.statCard {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.statCard > h3,
+.statCard > h4 {
+  margin-bottom: 0;
+}
+
+.total {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--leading-tight);
+}
+
+/* Permanent, Repop, Encounter: small headings over each group of buffs. */
+.timing {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.timingTitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Read-only bonuses from the sheet and a damage line's breakdown. */
+.fixed {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  overflow-wrap: anywhere;
+}
+
+.damageLines {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.damageLine {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-3);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+}
+
+.lineHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+
+.lineName {
+  min-width: 0;
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+.addLine {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selectField input {
+  width: 100%;
+  min-height: var(--tap);
+}
+
+/* Raw Magic Enhancement stacks: minus, count, plus. */
+.stepper {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.stepperControls {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stepperValue {
+  min-width: 3ch;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+/* One disclosure per card: buffs and details, or the damage line editors. */
+.disclosure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--tap);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+  font-weight: var(--weight-semibold);
+  text-align: left;
+  cursor: pointer;
+}
+
+.disclosure:hover {
+  background: var(--color-surface-2);
+}
+
+.disclosureBody {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Damage: each saved line's name and call, always shown. */
+.calls {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.callRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}

@@ -1,0 +1,684 @@
+{
+  "rules": {
+    "startingAbilityLevel": 1,
+    "lxpCostPerLevel": 1,
+    "usesPerLevel": 1,
+    "passiveLeveled": false,
+    "subtypePassiveOverridesAncestryPassive": true,
+    "ageNumber": {
+      "scale": 10,
+      "rounding": "floor"
+    },
+    "costumeDeadlineEvent": 3,
+    "source": "Rulebook p.11, p.17-19"
+  },
+  "ancestries": [
+    {
+      "id": "human",
+      "name": "Human",
+      "baseInfection": 3,
+      "infectionTrack": "infection",
+      "ages": true,
+      "maxAge": 100,
+      "ageBracket": "standard",
+      "costumeRequirements": "None",
+      "passive": {
+        "id": "human-passive",
+        "name": "Ancestry Passive",
+        "sheetName": "Scavenger",
+        "frequency": "per-event",
+        "timing": "check-in",
+        "leveled": false,
+        "checkInGrant": {
+          "resources": 2,
+          "rarity": "common",
+          "orBits": 10
+        },
+        "text": "Collect 2 random basic Resources at check-in. You may choose to gain 10 bits instead of Resources.",
+        "source": "Rulebook p.20"
+      },
+      "sharedAbility": {
+        "id": "human-resilience",
+        "name": "Human Resilience",
+        "sheetName": "Human Resilience (E)",
+        "frequency": "per-encounter",
+        "leveled": true,
+        "text": "Perform one of the following actions during bleed out. Use a consumable or use a single skill that does not take a counted action.",
+        "source": "Rulebook p.20"
+      },
+      "subtypes": [
+        {
+          "id": "human-wastelander",
+          "name": "Wastelander",
+          "aliases": ["Wasteland", "Wasteland Human"],
+          "sheetName": "Wasteland Human",
+          "ability": {
+            "id": "make-it-work",
+            "name": "Make It Work",
+            "sheetName": "Make it Work (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "Use this Skill to treat any single Resource as a different Resource of the same Rarity. You may also combine 2 Resources into 1 Resource of a higher Rarity.",
+            "source": "Rulebook p.20"
+          },
+          "source": "Rulebook p.15, p.19-20"
+        },
+        {
+          "id": "human-sheltered",
+          "name": "Sheltered",
+          "aliases": ["Sheltered Human"],
+          "sheetName": "Sheltered Human",
+          "ability": {
+            "id": "deep-pockets",
+            "name": "Deep Pockets",
+            "sheetName": "Deep pockets (P)",
+            "frequency": "per-event",
+            "timing": "check-in",
+            "leveled": true,
+            "checkInGrant": {
+              "resourcesPerLevel": 2,
+              "rarity": "common",
+              "orBitsPerLevel": 10,
+              "stackForHigherRarity": true
+            },
+            "text": "Collect 2 additional Resources per level at Check-In. You may instead stack additional uses to collect higher level Resources. You may choose to gain 10 Bits instead of resources per level of this skill.",
+            "source": "Rulebook p.20"
+          },
+          "source": "Rulebook p.15, p.19-20"
+        },
+        {
+          "id": "human-bloodborne",
+          "name": "Bloodborne",
+          "aliases": ["Bloodborne Human"],
+          "sheetName": "Bloodborne Human",
+          "ability": {
+            "id": "engineered-metabolism",
+            "name": "Engineered Metabolism",
+            "sheetName": "Engineered Matabolism (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "Use this Skill to also Heal 10 when you use any consumable or eat food. If the item would cause a negative effect, it is negated.",
+            "source": "Rulebook p.20"
+          },
+          "source": "Rulebook p.15, p.19-20"
+        }
+      ],
+      "source": "Rulebook p.19-20"
+    },
+    {
+      "id": "elf",
+      "name": "Elf",
+      "baseInfection": 2,
+      "infectionTrack": "infection",
+      "ages": true,
+      "maxAge": 400,
+      "ageBracket": "long-lived",
+      "costumeRequirements": "Pointed ears. These do not have to be a certain size as there is significant variation in ear lengths among elves.",
+      "passive": {
+        "id": "elf-passive",
+        "name": "Ancestry Passive",
+        "sheetName": "Highly Trained",
+        "frequency": "passive",
+        "leveled": false,
+        "effects": [
+          {
+            "stat": "weaponDamage",
+            "add": 1
+          }
+        ],
+        "text": "Deal +1 damage with any weapon.",
+        "source": "Rulebook p.22"
+      },
+      "sharedAbility": {
+        "id": "quick-reflexes",
+        "name": "Quick Reflexes",
+        "sheetName": "Quick Reflexes (E)",
+        "frequency": "per-encounter",
+        "leveled": true,
+        "text": "Use this Skill as a Sidestep. You may use this Skill with a use of Sidestep to Upgrade it to an Evade. (You can also use 2 Uses of this Skill to use 1 Evade)",
+        "source": "Rulebook p.22"
+      },
+      "subtypes": [
+        {
+          "id": "elf-windwalker",
+          "name": "Windwalker",
+          "aliases": ["Windwalkers", "Wind Walker Elf", "Path of the Windwalker"],
+          "sheetName": "Wind Walker Elf",
+          "ability": {
+            "id": "accuracy",
+            "name": "Accuracy",
+            "sheetName": "Accuracy (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "multiUse": true,
+            "text": "Spend a use of this Skill to regain a use of a Basic Offensive Skill immediately after it is resisted. (You may spend multiple uses at once to reuse a higher-level Skill)",
+            "source": "Rulebook p.22"
+          },
+          "source": "Rulebook p.15, p.21-22"
+        },
+        {
+          "id": "elf-stonewalker",
+          "name": "Stonewalker",
+          "aliases": ["Stonewalkers", "Stone Walker Elf", "Path of the Stonewalker"],
+          "sheetName": "Stone Walker Elf",
+          "ability": {
+            "id": "shrug-it-off",
+            "name": "Shrug It Off",
+            "sheetName": "Shrug It Off (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "When hit with a Slow effect or any effect that affects the damage you do or take you may call \"Resist X\" where X is the status being resisted.",
+            "source": "Rulebook p.22"
+          },
+          "source": "Rulebook p.15, p.21-22"
+        }
+      ],
+      "source": "Rulebook p.20-22"
+    },
+    {
+      "id": "fae",
+      "name": "Fae",
+      "baseInfection": 2,
+      "infectionTrack": "infection",
+      "ages": true,
+      "maxAge": 200,
+      "ageBracket": "above-average",
+      "costumeRequirements": "Wings and/or horns.",
+      "passive": {
+        "id": "fae-passive",
+        "name": "Ancestry Passive",
+        "sheetName": "That tingles!",
+        "frequency": "passive",
+        "leveled": false,
+        "text": "May reduce any magical numerical effect that affects them by 2 to a minimum of 1.",
+        "source": "Rulebook p.23"
+      },
+      "sharedAbility": {
+        "id": "made-from-magic",
+        "name": "Made From Magic",
+        "sheetName": "Made from Magic (E)",
+        "frequency": "per-encounter",
+        "leveled": true,
+        "text": "May use this skill as a basic use of Resist Magic. (This may not be upgraded to adept or advanced)",
+        "source": "Rulebook p.23"
+      },
+      "subtypes": [
+        {
+          "id": "fae-dusk",
+          "name": "Dusk",
+          "aliases": ["Dusk Fae"],
+          "sheetName": "Dusk Fae",
+          "ability": {
+            "id": "you-saw-nothing",
+            "name": "You Saw Nothing",
+            "sheetName": "You Saw Nothing (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "multiUse": true,
+            "text": "Spend a use of this Skill to regain a use of a Basic Magic Skill immediately after it is resisted. (You may spend multiple uses at once to reuse a higher-level Skill)",
+            "source": "Rulebook p.23"
+          },
+          "source": "Rulebook p.15, p.23"
+        },
+        {
+          "id": "fae-dawn",
+          "name": "Dawn",
+          "aliases": ["Dawn Fae"],
+          "sheetName": "Dawn Fae",
+          "ability": {
+            "id": "fae-blessing",
+            "name": "Fae Blessing",
+            "sheetName": "Fae Blessing (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "Spend a use of this Skill to grant the target an additional Buff Slot.",
+            "source": "Rulebook p.23"
+          },
+          "source": "Rulebook p.15, p.23"
+        }
+      ],
+      "source": "Rulebook p.23"
+    },
+    {
+      "id": "hybrid",
+      "name": "Hybrid",
+      "baseInfection": 1,
+      "infectionTrack": "infection",
+      "ages": true,
+      "maxAge": 100,
+      "ageBracket": "standard",
+      "costumeRequirements": "Incorporate obvious plant AND animal features into your costuming and/or makeup. Animal-dominant Hybrids should have more animal elements than plant elements and plant-dominant Hybrids should incorporate more plant elements than animal elements.",
+      "sharedAbility": {
+        "id": "made-for-this",
+        "name": "Made for This",
+        "sheetName": "Made for this (R)",
+        "frequency": "per-repop",
+        "leveled": true,
+        "text": "Transfer a disease or poison effect from someone else to yourself or resist a disease or poison effect.",
+        "source": "Rulebook p.25"
+      },
+      "subtypes": [
+        {
+          "id": "hybrid-plant",
+          "name": "Plant Dominant",
+          "aliases": ["Plant Hybrid", "Plant-dominant", "Hybrid Plant Dominant"],
+          "sheetName": "Hybrid Plant Dominant",
+          "passive": {
+            "id": "hybrid-plant-passive",
+            "name": "Ancestry Passive",
+            "sheetName": "It almost worked...",
+            "frequency": "passive",
+            "leveled": false,
+            "text": "Halve any disease, poison or corruption numerical effect.",
+            "source": "Rulebook p.25"
+          },
+          "ability": {
+            "id": "natural-medicine",
+            "name": "Natural Medicine",
+            "sheetName": "Natural Medicine (E)",
+            "frequency": "per-encounter",
+            "leveled": true,
+            "text": "Heal anyone but yourself 20 Health on a 5 count.",
+            "source": "Rulebook p.25"
+          },
+          "source": "Rulebook p.15, p.25"
+        },
+        {
+          "id": "hybrid-animal",
+          "name": "Animal Dominant",
+          "aliases": ["Animal Hybrid", "Animal-dominant", "Hybrid Animal Dominant"],
+          "sheetName": "Hybrid Animal Dominant",
+          "passive": {
+            "id": "hybrid-animal-passive",
+            "name": "Ancestry Passive",
+            "sheetName": "Animal Claws",
+            "frequency": "passive",
+            "leveled": false,
+            "text": "Gain 2 Short Claws or 1 Great Claw. Claws count as Weapons for the purpose of Weapon Abilities.",
+            "source": "Rulebook p.25"
+          },
+          "ability": {
+            "id": "animal-charm",
+            "name": "Animal Charm",
+            "sheetName": "Animal Charm (E)",
+            "frequency": "per-encounter",
+            "leveled": true,
+            "text": "May \"Point Charm Befriend\" a target after at least 10 seconds of conversation and you have not taken a hostile action towards them this encounter.",
+            "source": "Rulebook p.26"
+          },
+          "source": "Rulebook p.15, p.25-26"
+        }
+      ],
+      "source": "Rulebook p.25-26"
+    },
+    {
+      "id": "conscious",
+      "name": "Conscious",
+      "baseInfection": 1,
+      "infectionTrack": "infection",
+      "ages": true,
+      "maxAge": 200,
+      "ageBracket": "above-average",
+      "costumeRequirements": "For both varieties, have makeup and clothing that appear corpse-like (but not just pale). For mushroom variety, have a significant number of mushrooms on your body or clothing. For insect variety, have fake insects on your body or clothing; these should be clearly visible. Spiders are not an option.",
+      "passive": {
+        "id": "conscious-passive",
+        "name": "Ancestry Passive",
+        "sheetName": "Sturdy Body",
+        "frequency": "passive",
+        "leveled": false,
+        "effects": [
+          {
+            "stat": "maxHealth",
+            "add": 10
+          }
+        ],
+        "text": "Get +10 Max HP.",
+        "source": "Rulebook p.27"
+      },
+      "sharedAbility": {
+        "id": "durable-body",
+        "name": "Durable Body",
+        "sheetName": "Durable Body (E)",
+        "frequency": "per-encounter",
+        "leveled": true,
+        "text": "May be used as a use of Basic Endurance or at the end of your Bleedout Count spend a use to reset your Bleedout Count. (This use of basic endurance may not be upgraded to adept or advanced)",
+        "source": "Rulebook p.28"
+      },
+      "subtypes": [
+        {
+          "id": "conscious-fungal",
+          "name": "Fungal",
+          "aliases": ["Fungal Conscious", "Mushroom"],
+          "sheetName": "Fungal Conscious",
+          "ability": {
+            "id": "fungal-growth",
+            "name": "Fungal Growth",
+            "sheetName": "Fungal Growth (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "Spend a 3 count to heal 20 Health on yourself.",
+            "source": "Rulebook p.28"
+          },
+          "source": "Rulebook p.16, p.27-28"
+        },
+        {
+          "id": "conscious-swarm",
+          "name": "Swarm",
+          "aliases": ["Swarm Conscious", "Insect"],
+          "sheetName": "Swarm Conscious",
+          "ability": {
+            "id": "chitinous-carapace",
+            "name": "Chitinous Carapace",
+            "sheetName": "Chitinous Carapace (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "Spend a 3 count to either refit your armor fully or gain +20 Temp armor if you have none. Temp armor cannot be refitted.",
+            "source": "Rulebook p.28"
+          },
+          "source": "Rulebook p.16, p.27-28"
+        }
+      ],
+      "source": "Rulebook p.27-28"
+    },
+    {
+      "id": "aware",
+      "name": "Aware",
+      "baseInfection": 0,
+      "infectionTrack": "connection",
+      "ages": false,
+      "maxAge": null,
+      "ageBracket": "varied",
+      "costumeRequirements": "Pale makeup and white, gray, and light blue color clothing. Items that Aware have put over their death attire do not have to be in this color scheme. Their Beacons are not required to be white, gray, or light blue.",
+      "passive": {
+        "id": "aware-passive",
+        "name": "Ancestry Passive",
+        "sheetName": "Already Dead",
+        "frequency": "passive",
+        "leveled": false,
+        "effects": [
+          {
+            "stat": "upkeep",
+            "set": 0
+          }
+        ],
+        "text": "All upkeep costs are zero. Immune to Infection and disease effects (but not damage) and can always see Spirits but cannot be healed by normal means. Only healing that specifically specifies that it heals Aware will work. Gains Connection Damage instead of Infection.",
+        "source": "Rulebook p.30"
+      },
+      "sharedAbility": {
+        "id": "ghostly",
+        "name": "Ghostly",
+        "sheetName": "Ghostly (R)",
+        "frequency": "per-repop",
+        "leveled": true,
+        "multiUse": true,
+        "text": "You may call \"Passwall\" and do a 3 Count to pass through a 5 foot wall. If the wall is too thick, the Passwall will fail. You may spend additional uses to extend the length of the Passwall.",
+        "source": "Rulebook p.30"
+      },
+      "subtypes": [
+        {
+          "id": "aware-personal-memory",
+          "name": "Personal Memory",
+          "aliases": ["Personal Memory Aware", "Positive Memory Aware"],
+          "sheetName": "Positive Memory Aware",
+          "ability": {
+            "id": "protective-memory",
+            "name": "Protective Memory",
+            "sheetName": "Protective Memory (E)",
+            "frequency": "per-encounter",
+            "leveled": true,
+            "text": "You may Hero Resist a Status effect for someone else hit within Melee Weapon range of you.",
+            "source": "Rulebook p.30"
+          },
+          "source": "Rulebook p.16, p.29-30"
+        },
+        {
+          "id": "aware-death-memory",
+          "name": "Death Memory",
+          "aliases": ["Death Memory Aware"],
+          "sheetName": "Death Memory Aware",
+          "ability": {
+            "id": "vengeful-persistence",
+            "name": "Vengeful Persistence",
+            "sheetName": "Vengeful Persistence (E)",
+            "frequency": "per-encounter",
+            "leveled": true,
+            "text": "Remove any movement impairing effect on yourself.",
+            "source": "Rulebook p.30"
+          },
+          "source": "Rulebook p.16, p.29-30"
+        }
+      ],
+      "source": "Rulebook p.29-30"
+    },
+    {
+      "id": "burrower",
+      "name": "Burrower",
+      "baseInfection": 2,
+      "infectionTrack": "infection",
+      "ages": true,
+      "maxAge": 400,
+      "ageBracket": "long-lived",
+      "costumeRequirements": "Large mouse-like ears, tail, and a dark circle at the end of your nose.",
+      "passive": {
+        "id": "burrower-passive",
+        "name": "Ancestry Passive",
+        "sheetName": "Cooked Meal",
+        "frequency": "passive",
+        "leveled": false,
+        "text": "If you serve someone food and then they spend 5 minutes eating it and resting they will heal half their max HP. A single character may only benefit from this effect once an hour.",
+        "source": "Rulebook p.31"
+      },
+      "sharedAbility": {
+        "id": "you-didnt-see-me",
+        "name": "You Didn't See Me",
+        "sheetName": "You didn't see me (E)",
+        "frequency": "per-encounter",
+        "leveled": true,
+        "text": "Throw a single packet for \"Charm Ignore 10 seconds\".",
+        "source": "Rulebook p.31"
+      },
+      "subtypes": [
+        {
+          "id": "burrower-keeper",
+          "name": "Keeper",
+          "aliases": ["Keeper Burrower", "Burrower Keepers"],
+          "sheetName": "Burrower Keepers",
+          "ability": {
+            "id": "look-what-i-made",
+            "name": "Look What I made!",
+            "sheetName": "Look what I Made! (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "multiUse": true,
+            "text": "Expend an ingestible Basic Consumable along with this Skill to prepare the Consumable into snacks. One use of this Skill will allow you to make the Consumable into snacks that will serve 2 people. Anyone who eats the snacks gains the benefit of the ingestible you expended along with this Skill. The snacks will last until the end of the Repop. You may spend additional uses to upgrade the level of Consumable this works with.",
+            "source": "Rulebook p.31"
+          },
+          "source": "Rulebook p.16, p.31"
+        },
+        {
+          "id": "burrower-borrower",
+          "name": "Borrower",
+          "aliases": ["Borrower Burrower", "Burrower Borrowers"],
+          "sheetName": "Burrower Borrowers",
+          "ability": {
+            "id": "look-what-i-found",
+            "name": "Look What I found!",
+            "sheetName": "Look what I Found! (P)",
+            "frequency": "per-event",
+            "timing": "check-in",
+            "leveled": true,
+            "checkInGrant": {
+              "randomDrawsPerLevel": 2,
+              "drawPool": ["random-resource", "unstable-consumable"]
+            },
+            "text": "For each level of this Skill you may draw 2 random Items at Check-In. It could either be a random Resource or a non-mastery Consumable that can only be used for this event after which it falls apart.",
+            "source": "Rulebook p.31"
+          },
+          "source": "Rulebook p.16, p.31"
+        }
+      ],
+      "source": "Rulebook p.31"
+    },
+    {
+      "id": "cryptid",
+      "name": "Cryptid",
+      "baseInfection": 2,
+      "infectionTrack": "infection",
+      "ages": true,
+      "maxAge": null,
+      "maxAgeSetByGm": true,
+      "ageBracket": "varied",
+      "costumeRequirements": "Clearly not a member of another playable Ancestry. Particular requirements will be set by GMs on a case-by-case basis and final costuming must be approved by at least 2 GMs to ensure they are larp safe, player safe, and not accidentally offensive in any way.",
+      "passive": {
+        "id": "cryptid-passive",
+        "name": "Ancestry Passive",
+        "sheetName": "Claws",
+        "frequency": "passive",
+        "leveled": false,
+        "text": "Gain 2 Short Claws or 1 Great Claw. Claws count as Weapons for the purpose of Weapon Abilities.",
+        "source": "Rulebook p.32"
+      },
+      "sharedAbility": {
+        "id": "from-legends",
+        "name": "From Legends",
+        "sheetName": "From Legends",
+        "frequency": "other",
+        "frequencyFrom": "chosen-ability",
+        "leveled": true,
+        "choice": {
+          "field": "fromLegendsChoice",
+          "allowedAbilityIds": [
+            "human-resilience",
+            "make-it-work",
+            "engineered-metabolism",
+            "quick-reflexes",
+            "accuracy",
+            "shrug-it-off",
+            "made-from-magic",
+            "you-saw-nothing",
+            "fae-blessing",
+            "made-for-this",
+            "natural-medicine",
+            "animal-charm",
+            "durable-body",
+            "fungal-growth",
+            "chitinous-carapace",
+            "ghostly",
+            "protective-memory",
+            "vengeful-persistence",
+            "you-didnt-see-me",
+            "look-what-i-made"
+          ],
+          "excludedAbilityIds": ["deep-pockets", "look-what-i-found"],
+          "chosenAt": "creation",
+          "text": "any sharedAbility or subtype ability of a non-cryptid ancestry whose frequency is per-encounter or per-repop",
+          "assumed": true,
+          "assumptionNote": "Q-ANC-2: whether the choice can change later is not stated."
+        },
+        "text": "Replace this with any Per/Encounter or Per/Repop Ancestry Ability of a non-cryptid Ancestry.",
+        "source": "Rulebook p.32"
+      },
+      "subtypes": [
+        {
+          "id": "cryptid-humanoid",
+          "name": "Humanoid",
+          "aliases": ["Humanoid Cryptid"],
+          "sheetName": "Humanoid Cryptid",
+          "ability": {
+            "id": "quick-blend-in",
+            "name": "Quick! Blend In!",
+            "sheetName": "Quick! Blend in! (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "hasPassivePart": true,
+            "text": "May Disguise themselves as any Ancestry. The Disguise lasts for an Encounter. Passive: May choose a specific ancestry at the beginning of the event and wear a costume disguise that simulates that ancestry.",
+            "source": "Rulebook p.32"
+          },
+          "source": "Rulebook p.32"
+        },
+        {
+          "id": "cryptid-reptilian",
+          "name": "Reptilian",
+          "aliases": ["Reptilian Cryptid"],
+          "sheetName": "Reptilian Cryptid",
+          "ability": {
+            "id": "chameleon-skin",
+            "name": "Chameleon Skin",
+            "sheetName": "Chameleon Skin (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "May call \"Invisibility\" and cross your arms in front of you to Hide in any location. As long as you remain still you count as being fully Hidden. If you move it will break the Hide.",
+            "source": "Rulebook p.32"
+          },
+          "source": "Rulebook p.32"
+        },
+        {
+          "id": "cryptid-aquatic",
+          "name": "Aquatic",
+          "aliases": ["Aquatic Cryptid"],
+          "sheetName": "Aquatic Cryptid",
+          "ability": {
+            "id": "water-bubble",
+            "name": "Water Bubble",
+            "sheetName": "Water Bubble (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "Throw a packet with the call \"Slow 10\". The target struck is slowed for 10 seconds.",
+            "source": "Rulebook p.32"
+          },
+          "source": "Rulebook p.32"
+        },
+        {
+          "id": "cryptid-feline",
+          "name": "Feline",
+          "aliases": ["Feline Cryptid"],
+          "sheetName": "Feline Cryptid",
+          "ability": {
+            "id": "land-on-your-feet",
+            "name": "Land on your feet",
+            "sheetName": "Land on your feet (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "May resist any Knockback, Trip, Slick, or Pull effect.",
+            "source": "Rulebook p.32"
+          },
+          "source": "Rulebook p.32"
+        },
+        {
+          "id": "cryptid-canine",
+          "name": "Canine",
+          "aliases": ["Canine Cryptid"],
+          "sheetName": "Canine Cryptid",
+          "ability": {
+            "id": "a-little-sniff",
+            "name": "A little Sniff!",
+            "sheetName": "A little Sniff! (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "multiUse": true,
+            "text": "When attempting to Track via smell gain +2 to your tracking. You may stack this effect with additional uses.",
+            "source": "Rulebook p.32"
+          },
+          "source": "Rulebook p.32"
+        },
+        {
+          "id": "cryptid-winged",
+          "name": "Winged",
+          "aliases": ["Winged Cryptid"],
+          "sheetName": "Winged Cryptid",
+          "ability": {
+            "id": "take-wing",
+            "name": "Take Wing",
+            "sheetName": "Take Wing (R)",
+            "frequency": "per-repop",
+            "leveled": true,
+            "text": "May be used as a 6 Second Basic Dash or extend any use of Dash to 6 Seconds.",
+            "source": "Rulebook p.33"
+          },
+          "source": "Rulebook p.32-33"
+        }
+      ],
+      "source": "Rulebook p.16, p.32-33"
+    }
+  ]
+}

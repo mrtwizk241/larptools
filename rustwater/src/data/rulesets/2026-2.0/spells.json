@@ -1,0 +1,1304 @@
+[
+  {
+    "id": "elemental-bolt",
+    "name": "Elemental Bolt",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "basic",
+    "call": "20 “Chosen Element”",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 20 Damage to the target. Damage Type can Fire, Air, Earth, or Water and is chosen on Cast.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "air-release",
+    "name": "Air Release",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "basic",
+    "call": "Grant Air Release",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Removes any movement impairing Status Effect on the target.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "elemental-barrier",
+    "name": "Elemental Barrier",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "basic",
+    "call": "Grant Resist Spell",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grants the target a use of \"Resist Spell\" in a Buff Slot. Buff lasts until the next Repop or until used.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "earth-bind",
+    "name": "Earth Bind",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "basic",
+    "call": "Pin 5 minutes",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Target takes the “Pinned” Status Effect for 5 minutes",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "elemental-blade",
+    "name": "Elemental Blade",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "basic",
+    "call": "Grant Elemental Blade “chosen element”",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant \"Elemental Blade <Element>\" in the target's Buff Slot. This allows the target to change their Damage Type to the chosen Elemental Type. The choices are Fire, Air, Earth, Water and are chosen at the time of Casting. This Buff may be expended to make an Attack for +5 Damage of the chosen Type.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "elemental-blast",
+    "name": "Elemental Blast",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "adept",
+    "call": "40 “Chosen Element”",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 40 Damage to the target. Damage Type can Fire, Air, Earth, or Water and is chosen on Cast.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "stoneskin",
+    "name": "Stoneskin",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "adept",
+    "call": "Grant Resist Damage",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target a use of \"Resist Damage\" in one of their Buff Slots",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "guidance-of-water",
+    "name": "Guidance of Water",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "adept",
+    "call": "Grant Water’s Guidance",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target \"Water's Guidance\" in a buff slot. When the target uses a Skill that missed or was Resisted, they expend this Buff by calling \"Guidance <Ability name>\" and regaining the use of a missed or Resisted Skill.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "cutting-elements",
+    "name": "Cutting Elements",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "adept",
+    "call": "20 Piercing “Chosen Element”",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 20 Piercing Damage to the target that ignores Armor. Damage type can Fire, Air, Earth, or Water and is chosen on Cast.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "chill-to-the-bone",
+    "name": "Chill To the Bone",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "adept",
+    "call": "Water Slow 10 Seconds",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Target takes the “Slow” Status Effect for 10 seconds.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "rock-tomb",
+    "name": "Rock Tomb",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "advanced",
+    "call": "Earth Encase 1 minute",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Target takes the \"Encase\" Status Effect for up to 1 minute. Target cannot move, attack, or use Skills other than Rip Free.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "reflective-barrier",
+    "name": "Reflective Barrier",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "advanced",
+    "call": "Grant Reflect Magic",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target a use of \"Reflect Magic\" in a Buff Slot.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "elemental-burst",
+    "name": "Elemental Burst",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "advanced",
+    "call": "60 “Chosen Element”",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 60 Damage to the target. Damage Type can Fire, Air, Earth, or Water and is chosen on Cast.",
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "elemental-alignment",
+    "name": "Elemental Alignment",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "advanced",
+    "call": "Grant Elemental Alignment",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant \"Elemental Alignment\" into the target's Buff Slot. This Buff allows for passive magic packets to deal +1 Damage. The target may expend this Buff to call \"Resist Element\". This Negates the Effect of any call that includes Fire, Air, Earth or Water, including damage.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "elemental-eruption",
+    "name": "Elemental Eruption",
+    "mastery": false,
+    "school": "elemental",
+    "rank": "advanced",
+    "call": "Lash 30 “Chosen Element” Slay",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals Lash 30 Slay Damage. Damage Type can Fire, Air, Earth, or Water and is chosen on Cast.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "health-spring",
+    "name": "Health Spring",
+    "mastery": false,
+    "school": "life",
+    "rank": "basic",
+    "call": "Heal 10",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Heal a Living target for 10 Health.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "amplify-healing",
+    "name": "Amplify Healing",
+    "mastery": false,
+    "school": "life",
+    "rank": "basic",
+    "call": "Grant Amplify Healing",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target \"Amplify Healing\" in a buff slot. Doubles the effect of all Healing Effects done to the target.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "bolster-toughness",
+    "name": "Bolster Toughness",
+    "mastery": false,
+    "school": "life",
+    "rank": "basic",
+    "call": "Grant +10 Health",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target +10 Health in a Buff Slot. This Buff lasts until the next Repop.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "life-bolt",
+    "name": "Life Bolt",
+    "mastery": false,
+    "school": "life",
+    "rank": "basic",
+    "call": "20 Essence",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 20 Essence Damage. Essence Damage does not harm living things.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "invigorate-spirit",
+    "name": "Invigorate Spirit",
+    "mastery": false,
+    "school": "life",
+    "rank": "basic",
+    "call": "Spirit Heal 10",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Heals an Aware, Restless, or Spirit for 10 Health.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "restore-spirit",
+    "name": "Restore Spirit",
+    "mastery": false,
+    "school": "life",
+    "rank": "adept",
+    "call": "Spirit Heal 30",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Heals an Aware, Restless, or Spirit for 30 Health.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "remove-ailment",
+    "name": "Remove Ailment",
+    "mastery": false,
+    "school": "life",
+    "rank": "adept",
+    "call": "Remove “Chosen Ailment”",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Removes 1 detrimental ailment from the target. Removed ailment is chosen on Cast.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "fortify-toughness",
+    "name": "Fortify Toughness",
+    "mastery": false,
+    "school": "life",
+    "rank": "adept",
+    "call": "Grant +20 Health",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target +20 Health in a Buff Slot. This Buff lasts until the end of the Encounter.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "restore-health",
+    "name": "Restore Health",
+    "mastery": false,
+    "school": "life",
+    "rank": "adept",
+    "call": "Heal 30",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Heal a Living target for 30 Health.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "life-blast",
+    "name": "Life Blast",
+    "mastery": false,
+    "school": "life",
+    "rank": "adept",
+    "call": "40 Essence",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 40 Essence Damage. Essence Damage does not harm living things.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "restore-life",
+    "name": "Restore Life",
+    "mastery": false,
+    "school": "life",
+    "rank": "advanced",
+    "call": "Restore Life",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Bring a Dead Creature back to life at 1 Health without them gaining any Infection Levels. This spell will also affect an Aware and prevent them gaining Connection Damage to their Beacon Item.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "regenerate",
+    "name": "Regenerate",
+    "mastery": false,
+    "school": "life",
+    "rank": "advanced",
+    "call": "Regenerate",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Regenerate a single Limb and remove one unnatural Aging Effect on the target.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "wave-of-health",
+    "name": "Wave of Health",
+    "mastery": false,
+    "school": "life",
+    "rank": "advanced",
+    "call": "Lash Heal 30",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Heals 30 in lash range from the spell.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "purge-ailment",
+    "name": "Purge Ailment",
+    "mastery": false,
+    "school": "life",
+    "rank": "advanced",
+    "call": "Remove “Chosen Ailment” Grant resist “Chosen Ailment”",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Removes 1 Detrimental Aliment from the target and grants them a use of Resist X for the removed Ailment in the target's Buff Slot. Removed Ailment is chosen on Cast.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "bastion-of-life",
+    "name": "Bastion of Life",
+    "mastery": false,
+    "school": "life",
+    "rank": "advanced",
+    "call": "Grant Bastion of Life",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Cast \"Bastion of Life\" into the target's Buff Slot. While a character has this Buff it grants the target an unslotted buff to weapons or Essence damage packets of +1 Essence. They may expend this Buff to cast \"Spell Lash Essence Stun 10\" This Buff Lasts for an Encounter. This Spell may not be modified by Channeling or Manipulation.",
+    "source": "Rulebook p.88"
+  },
+  {
+    "id": "harm-bolt",
+    "name": "Harm Bolt",
+    "mastery": false,
+    "school": "death",
+    "rank": "basic",
+    "call": "20 Harm",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 20 Harm Damage. Harm Damage does not hurt Undead creatures.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "curse-of-vulnerability",
+    "name": "Curse of Vulnerability",
+    "mastery": false,
+    "school": "death",
+    "rank": "basic",
+    "call": "Curse 30 seconds",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Inflicts target with the “Curse” Status Effect for 30 Seconds.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "see-last-moments",
+    "name": "See Last Moments",
+    "mastery": false,
+    "school": "death",
+    "rank": "basic",
+    "call": "See Last Moments",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "See the last 5 minutes of a target's life. This Spell may only target a corpse.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "death-mask",
+    "name": "Death Mask",
+    "mastery": false,
+    "school": "death",
+    "rank": "basic",
+    "call": "Grant Death Mask",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grants the target \"Death Mask\" in their Buff Slot. This Buff may be expended to make the user appear as a Risen until the end of the Encounter. Mindless undead will ignore the character with the Death Mask as long the character does not attack them.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "curse-of-weakness",
+    "name": "Curse of Weakness",
+    "mastery": false,
+    "school": "death",
+    "rank": "basic",
+    "call": "Weakness",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Inflicts the target with the \"Weakness\" Status Effect until the end of the Encounter.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "undead-marionette",
+    "name": "Undead Marionette",
+    "mastery": false,
+    "school": "death",
+    "rank": "adept",
+    "call": "Charm Undead - Attack your allies 10 Seconds",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Inflicts an Undead target with “Charm Undead - Attack your allies 10 Seconds”",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "curse-of-withering",
+    "name": "Curse of Withering",
+    "mastery": false,
+    "school": "death",
+    "rank": "adept",
+    "call": "Wither “Limb” 30 seconds",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Target takes the \"Wither\" effect on the chosen Limb for 30 seconds. Limb options are Left Arm, Right Arm, Left Leg, or Right Leg and is chosen on Cast.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "siphon-life",
+    "name": "Siphon Life",
+    "mastery": false,
+    "school": "death",
+    "rank": "adept",
+    "call": "Lash 10 harm - ‘if effective’ Heal 5",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals Lash 10 Harm. If one or more targets are affected, the caster Heals 5 Health.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "speak-with-dead",
+    "name": "Speak with Dead",
+    "mastery": false,
+    "school": "death",
+    "rank": "adept",
+    "call": "Speak with Dead",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Caster may speak with a corpse and ask a single question. The creature will answer to the best of its ability and as truthfully as it can within its capabilities.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "siphon-strength",
+    "name": "Siphon Strength",
+    "mastery": false,
+    "school": "death",
+    "rank": "adept",
+    "call": "Weakness - ‘if effective’ Lash +1 Damage for encounter",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals \"Weakness\" Status Effect. If an enemy target is affected by the Effect, the caster then can call \"Lash +1 Damage for Encounter\" centered on themselves. This effect does not stack with itself. The increased Damage Effect does not use a Buff Slot.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "outside-the-cycle",
+    "name": "Outside the Cycle",
+    "mastery": false,
+    "school": "death",
+    "rank": "advanced",
+    "call": "Outside the Cycle",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target \"Outside the Cycle\" into a Buff Slot. When the target is in bleed out they can expend this buff to become an incorporeal spirit along with all of their items. They cannot be directly touched, damaged, or healed and can passwall once per the Aware Passwall Ancestry ability. Their bleedout count is paused and they may move freely for up to a minute. They may end it at any time before the minute expires. Once the effect ends they become corporeal again and their bleedout will continue from where it was stopped",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "bolt-of-death",
+    "name": "Bolt of Death",
+    "mastery": false,
+    "school": "death",
+    "rank": "advanced",
+    "call": "Harm Bleed",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals “Harm Bleed” to the target.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "exchange-of-life",
+    "name": "Exchange of Life",
+    "mastery": false,
+    "school": "death",
+    "rank": "advanced",
+    "call": "40 Harm - ‘if effective’ Lash Heal 10",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 40 Harm Damage to the target. If the target is affected by the Effect, the caster may immediately call \"Lash Heal 10\" Centered on themselves.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "mantle-of-death",
+    "name": "Mantle of Death",
+    "mastery": false,
+    "school": "death",
+    "rank": "advanced",
+    "call": "Grant Mantle of Death",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Cast \"Mantle of Death\" in a Buff Slot. while a character has this Buff it grants an unslotted +1 passive damage buff to weapons or packets granted by the death magic passive effect and Damage Type is Harm until the end of the Encounter. The target may expend this Buff to call \"Spell Lash 30 Harm\". This spell may not be modified by Channeling or Manipulation.",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "profane-curse",
+    "name": "Profane Curse",
+    "mastery": false,
+    "school": "death",
+    "rank": "advanced",
+    "call": "Lash Curse",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals Curse in lash range of the packet (or weapon if spellstruck)",
+    "source": "Rulebook p.89"
+  },
+  {
+    "id": "enhance-weapon",
+    "name": "Enhance Weapon",
+    "mastery": false,
+    "school": "tech",
+    "rank": "basic",
+    "call": "Grant +1 Damage",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grants \"+1 Damage\" into the target's Buff Slot. Lasts until the next Repop.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "contact-other",
+    "name": "Contact Other",
+    "mastery": false,
+    "school": "tech",
+    "rank": "basic",
+    "call": "Contact “Target name”",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Allows the caster to send a up to 10 word message to a target. The target may then respond with an up to 10 word message back.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "heavy-hammer",
+    "name": "Heavy Hammer",
+    "mastery": false,
+    "school": "tech",
+    "rank": "basic",
+    "call": "5 Steel Knockback 10",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deals 5 Steel Damage to a target and then knocks them back 10 Steps.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "screen-visions",
+    "name": "Screen Visions",
+    "mastery": false,
+    "school": "tech",
+    "rank": "basic",
+    "call": "Screen Visions",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "The caster asks a question and will project a single frame image related to the question.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "protective-metal",
+    "name": "Protective Metal",
+    "mastery": false,
+    "school": "tech",
+    "rank": "basic",
+    "call": "Grant +10 Armor",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grant the target \"+10 Armor\" into a Buff Slot. This Buff lasts until the next Repop.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "stun-bolt",
+    "name": "Stun Bolt",
+    "mastery": false,
+    "school": "tech",
+    "rank": "adept",
+    "call": "Stun 10 seconds",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Target takes the \"Stunned\" Status Effect for 10 seconds.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "reinforced-metal",
+    "name": "Reinforced Metal",
+    "mastery": false,
+    "school": "tech",
+    "rank": "adept",
+    "call": "Grant +20 Armor",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grants the target \"+20 Armor\" in a Buff Slot. Buff lasts until the end of the Encounter.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "roadrunner-travel",
+    "name": "Roadrunner Travel",
+    "mastery": false,
+    "school": "tech",
+    "rank": "adept",
+    "call": "Roadrunner Travel “Location Name”",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "The caster manifests a small Vehicle that will transport up to 3 people to a specific destination that the caster has been to before extremely quickly and safely. This will remove any distance travel requirements. Location is chosen when this Spell is Cast. Clarifications: The vehicle summoned takes a 3 count to enter or exit, the caster can decide when to send the vehicle away. While people are waiting inside the vehicle they can attack and be attacked but are unable to move from their spot.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "destroy-weapon",
+    "name": "Destroy Weapon",
+    "mastery": false,
+    "school": "tech",
+    "rank": "adept",
+    "call": "Shatter Weapon",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "The target's Weapon takes a \"Shatter\" Effect.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "sharpen-weapon",
+    "name": "Sharpen Weapon",
+    "mastery": false,
+    "school": "tech",
+    "rank": "adept",
+    "call": "Grant +2 Damage",
+    "marks": ["B"],
+    "usesBuffSlot": true,
+    "text": "Grants \"+2 Damage\" into the target's Buff Slot. Lasts until the end of the Encounter.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "manifest-transportation",
+    "name": "Manifest Transportation",
+    "mastery": false,
+    "school": "tech",
+    "rank": "advanced",
+    "call": "Manifest Transportation",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "The caster creates a large land, water, or air Vehicle that will transport up to 8 occupants to a specific destination that the caster has been to before extremely quickly and safely. This will remove any distance travel requirements. Clarifications: The vehicle summoned takes a 3 count to enter or exit, the caster can decide when to send the vehicle away. While people are waiting inside the vehicle they can attack and be attacked but are unable to move from their spot.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "impervious-body",
+    "name": "Impervious Body",
+    "mastery": false,
+    "school": "tech",
+    "rank": "advanced",
+    "call": "Grant +25 Temp Armor",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Grants +25 Temp Armor that does not require a buff slot. This armor will fade at the end of an encounter. Temp armor cannot be repaired.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "destroy-armor",
+    "name": "Destroy Armor",
+    "mastery": false,
+    "school": "tech",
+    "rank": "advanced",
+    "call": "Sunder Armor",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Deal a “Sunder Armor” Effect to the target. Sunder Armor reduces Armor of the target to 0",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "visual-playback",
+    "name": "Visual Playback",
+    "mastery": false,
+    "school": "tech",
+    "rank": "advanced",
+    "call": "Visual Playback",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Allows the caster to ask a question about something that had happened within the last 24 hours in the area they are casting this spell in. They will be able to project a small flat TV sized 10 second moving Image of what happened in the area. The moving image has no sound. The caster can maintain the Image for up to 1 minute but it will loop the same 10 second video.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "iron-prison",
+    "name": "Iron Prison",
+    "mastery": false,
+    "school": "tech",
+    "rank": "advanced",
+    "call": "Imprison 5 minutes",
+    "marks": [],
+    "usesBuffSlot": false,
+    "text": "Target takes the \"Imprisoned\" Status Effect for 5 minutes. The target cannot move or attack,but they are able to see and speak to those around them. The target cannot be Attacked while in the Status Effect. The caster of the spell may end the effect early on a 3 count.",
+    "source": "Rulebook p.90"
+  },
+  {
+    "id": "blood-magic-passive",
+    "name": "Blood Magic: Passive",
+    "mastery": true,
+    "masterySkill": "blood-magic",
+    "components": ["life", "death"],
+    "rank": "passive",
+    "expends": [],
+    "text": "When Casting a Life or Death Spell, you may take 5 Damage that cannot be reduced or resisted in any way, and add 5 to the numerical Effect of the Spell. This cannot raise passive damage granted by spells.",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "blood-magic-basic",
+    "name": "Blood Magic: Basic",
+    "mastery": true,
+    "masterySkill": "blood-magic",
+    "components": ["life", "death"],
+    "rank": "basic",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "When any target within Lash range of you is Damaged, or a target of one of your Spells is Damaged, you may expend a use of both Life Magic and Death Magic to call \"Spell Lash Heal X\" where X equals half the damage used to trigger this Effect with the Lash Effect centered on you. (If this is triggered from a Wound, Bleed, or Death effect, then X is 25)",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "blood-magic-adept",
+    "name": "Blood Magic: Adept",
+    "mastery": true,
+    "masterySkill": "blood-magic",
+    "components": ["life", "death"],
+    "rank": "adept",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "When you take numerical Damage, you may expend a use of Adept Life Magic and Adept Death Magic as well as a Basic use of both Magics to call \"Spell Point X Drain\" where X is the Damage you took. The damage cannot be resisted or avoided to use this Skill.",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "blood-magic-advanced",
+    "name": "Blood Magic: Advanced",
+    "mastery": true,
+    "masterySkill": "blood-magic",
+    "components": ["life", "death"],
+    "rank": "advanced",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "When you are dropped to Bleedout, you may expend a use of Advanced Life Magic and Advanced Death Magic as well as a Basic use of both Magics to call \"Spell Endurance\". You may then immediately call \"Spell Lash Bleed\" as either a Spell Packet or centered on yourself.",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "nature-magic-passive",
+    "name": "Nature Magic: Passive",
+    "mastery": true,
+    "masterySkill": "nature-magic",
+    "components": ["life", "elemental"],
+    "rank": "passive",
+    "expends": [],
+    "text": "You may deal any of your Elemental or Life damaging spells as Nature damage instead of standard damage type. Gain the ability to speak to a specific animal species permanently. Additionally per encounter you can extend this ability to talk to a single plant or animal of any type.",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "nature-magic-basic",
+    "name": "Nature Magic: Basic",
+    "mastery": true,
+    "masterySkill": "nature-magic",
+    "components": ["life", "elemental"],
+    "rank": "basic",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "You may expend a use of Life Magic and Elemental Magic to call \"Frontal Cone Spell Befriend Animal/Plant\". The affected creature type is chosen when using this Skill. Any affected Creature responds in a friendly or positive way towards you. In a combat situation, it will view you as friendly and not attack you, but Befriend does not specifically make it see anyone but you as friendly.",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "nature-magic-adept",
+    "name": "Nature Magic: Adept",
+    "mastery": true,
+    "masterySkill": "nature-magic",
+    "components": ["life", "elemental"],
+    "rank": "adept",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Adept Life Magic and Adept Elemental Magic as well as a Basic use of both Magics to grant a Blessing of Nature on a target. You choose the effect when you use this ability. Blessings of Nature do not take a Buff Slot and fade at the end of an Encounter. A target can only Benefit from a single Bless of Nature at a time. Effects below: -Beasts Might: +1 Nature Damage to all the target's weapon or unarmed attacks. -Barkskin: +40 Temp Armor cannot be refit and fades once empty -Thick Fur: +40 Temp Health cannot be healed and fades once empty -Scenting: +2 to tracking skill -Chamelonskin: Gain a refittable use of instant hide. Refits on a 60 count.",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "nature-magic-advanced",
+    "name": "Nature Magic: Advanced",
+    "mastery": true,
+    "masterySkill": "nature-magic",
+    "components": ["life", "elemental"],
+    "rank": "advanced",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Advanced Life Magic and Advanced Elemental Magic as well as a Basic use of both Magics to call \"Spell Create Druid's Circle\". The Circle lasts until the end of the Encounter. Any creature in the Circle is immediately Stabilized if in Bleedout. If you are within your own Circle, you may touch any target and spend a 10 Count to call \"Spell Heal 10\" or \"Spell Spirit Heal 10\" (caster must provide the circle physrep)",
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "stalwart-magic-passive",
+    "name": "Stalwart Magic: Passive",
+    "mastery": true,
+    "masterySkill": "stalwart-magic",
+    "components": ["life", "tech"],
+    "rank": "passive",
+    "expends": [],
+    "text": "Your Armor Refit counts are 10 Seconds faster",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "stalwart-magic-basic",
+    "name": "Stalwart Magic: Basic",
+    "mastery": true,
+    "masterySkill": "stalwart-magic",
+    "components": ["life", "tech"],
+    "rank": "basic",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "You may expend a use of Life Magic and Tech Magic to instantly Refit all Armor on a target and Grant them +20 Armor in a Buff Slot. If the target already has a Buff that grants less Armor, it is increased to +20 Armor. This Buff lasts for the Repop.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "stalwart-magic-adept",
+    "name": "Stalwart Magic: Adept",
+    "mastery": true,
+    "masterySkill": "stalwart-magic",
+    "components": ["life", "tech"],
+    "rank": "adept",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Adept Life Magic and Adept Tech Magic as well as a Basic use of both Magics to Grant the target the “Shielded” Buff in a Buff Slot for the Encounter. The Shielded buff can be expended to call “Brace” on a numerical damaging attack that hits a target within melee range. After it’s expended, the “Shielded” buff remains in the buff slot and can be refitted on a 10 count.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "stalwart-magic-advanced",
+    "name": "Stalwart Magic: Advanced",
+    "mastery": true,
+    "masterySkill": "stalwart-magic",
+    "components": ["life", "tech"],
+    "rank": "advanced",
+    "expends": [
+      {
+        "skill": "life-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "life-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Advanced Life Magic and Advanced Tech Magic as well as a Basic use of both Magics to choose a Damage Type and call “Spell Grant X Bulwark\" into the target's Buff Slot. While the target has the Buff, they can call “Resilience” for all Damage of the chosen Type for the Encounter. A target cannot benefit from more than a single Bulwark at a time.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "ruin-magic-passive",
+    "name": "Ruin Magic: Passive",
+    "mastery": true,
+    "masterySkill": "ruin-magic",
+    "components": ["elemental", "death"],
+    "rank": "passive",
+    "expends": [],
+    "text": "Your Fire/Water/Earth/Air and Harm packets get +1 damage.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "ruin-magic-basic",
+    "name": "Ruin Magic: Basic",
+    "mastery": true,
+    "masterySkill": "ruin-magic",
+    "components": ["elemental", "death"],
+    "rank": "basic",
+    "expends": [
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "You may expend a use of Elemental Magic and Death Magic to throw a packet for \"Spell X Wound\" where X is Fire, Water, Earth, Air, or Harm chosen when this ability is used.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "ruin-magic-adept",
+    "name": "Ruin Magic: Adept",
+    "mastery": true,
+    "masterySkill": "ruin-magic",
+    "components": ["elemental", "death"],
+    "rank": "adept",
+    "expends": [
+      {
+        "skill": "elemental-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Adept Elemental Magic and Adept Death Magic as well as a Basic use of both Magics to throw 2 packets for \"Spell X Bleed\".",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "ruin-magic-advanced",
+    "name": "Ruin Magic: Advanced",
+    "mastery": true,
+    "masterySkill": "ruin-magic",
+    "components": ["elemental", "death"],
+    "rank": "advanced",
+    "expends": [
+      {
+        "skill": "elemental-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Advanced Elemental Magic and Advanced Death Magic as well as a Basic use of both Magics to throw 2 packets for \"Spell Death\".",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "disruption-magic-passive",
+    "name": "Disruption Magic: Passive",
+    "mastery": true,
+    "masterySkill": "disruption-magic",
+    "components": ["tech", "death"],
+    "rank": "passive",
+    "expends": [],
+    "text": "You may touch an object or creature and spend a 60 Count while focusing on it to call \"Spell Disenchant\". Disenchant will disrupt the flow of magic on an object and reduce or remove its magical properties. If a Character is Disenchanted, all Buffs in their Buff Slots are removed and they cannot Cast Magic or use any Effects with the call 'Spell' in them for 1 minute. If a Magical Item is Disenchanted it will lose its Magical Abilities, Many Enchantments or Items are too powerful to be fully Disenchanted and may instead be weakened or regenerate their magic over time.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "disruption-magic-basic",
+    "name": "Disruption Magic: Basic",
+    "mastery": true,
+    "masterySkill": "disruption-magic",
+    "components": ["tech", "death"],
+    "rank": "basic",
+    "expends": [
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "You may expend a use of Tech Magic and Death Magic to make your next Disenchant Effect Instant. Until the end of this Encounter, you may deliver your Disenchant Effects via a Weapon or Packet.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "disruption-magic-adept",
+    "name": "Disruption Magic: Adept",
+    "mastery": true,
+    "masterySkill": "disruption-magic",
+    "components": ["tech", "death"],
+    "rank": "adept",
+    "expends": [
+      {
+        "skill": "tech-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Adept Tech Magic and Adept Death Magic as well as a Basic use of both Magics to either have your next Disenchant be Instant and add Frontal Cone to the call, or to respond to being effected by a Spell Effect with the call \"Counter Spell\" and then immediately call \"Redirect Spell\" and throw a Spell Effect for the same Spell Effect that was Resisted. A countered spell's entire effect is negated. (Clarification: All delivery modifiers are removed. If you Negate a Lash, Voice Radius, or Spellstrike, you still only throw a single target packet.)",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "disruption-magic-advanced",
+    "name": "Disruption Magic: Advanced",
+    "mastery": true,
+    "masterySkill": "disruption-magic",
+    "components": ["tech", "death"],
+    "rank": "advanced",
+    "expends": [
+      {
+        "skill": "tech-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "death-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Advanced Tech Magic and Advanced Death Magic as well as a Basic use of both Magics to create a 10 foot diameter Circle or a 10 foot Wall made of Disruption Energy that lasts until the end of the Encounter. Anyone that enters the Wall or Circle will be hit by a \"Spell Disenchant\" Effect, and will be hit with another \"Spell Disenchant\" every second while inside it. Caster must provide the Phys rep",
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "warding-magic-passive",
+    "name": "Warding Magic: Passive",
+    "mastery": true,
+    "masterySkill": "warding-magic",
+    "components": ["tech", "elemental"],
+    "rank": "passive",
+    "expends": [],
+    "text": "You may refit an expended elemental ward on a 60 count.",
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "warding-magic-basic",
+    "name": "Warding Magic: Basic",
+    "mastery": true,
+    "masterySkill": "warding-magic",
+    "components": ["tech", "elemental"],
+    "rank": "basic",
+    "expends": [
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "You may expend a use of Tech Magic and Elemental Magic and spend a 5 Count to call \"X Ward\" where X is Fire, Air, Earth, or Water chosen when this Skill is used into a Buff Slot on the target. When the target takes a Damaging Effect and has an active Ward, they call \"Resilience Reflect <Element> X\" with the Element that was chosen when the Ward was made and X is the Damage taken from the Attack. X is 50 if it was a Wound, Bleed, or Death effect. After this call, the Ward is expended and no longer Active. The Ward will remain expended in the target's Buff Slot until it is Refit, or until the end of the Encounter.",
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "warding-magic-adept",
+    "name": "Warding Magic: Adept",
+    "mastery": true,
+    "masterySkill": "warding-magic",
+    "components": ["tech", "elemental"],
+    "rank": "adept",
+    "expends": [
+      {
+        "skill": "tech-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "adept",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Adept Tech Magic and Adept Elemental Magic as well as a Basic use of both Magics to grant the target an Explosive Elemental Ward in a Buff Slot instead. The Explosive Ward functions the same as an Elemental Ward, but the call becomes \"Resilience Frontal Cone <Element> X\"",
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "warding-magic-advanced",
+    "name": "Warding Magic: Advanced",
+    "mastery": true,
+    "masterySkill": "warding-magic",
+    "components": ["tech", "elemental"],
+    "rank": "advanced",
+    "expends": [
+      {
+        "skill": "tech-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "advanced",
+        "count": 1
+      },
+      {
+        "skill": "tech-magic",
+        "part": "basic",
+        "count": 1
+      },
+      {
+        "skill": "elemental-magic",
+        "part": "basic",
+        "count": 1
+      }
+    ],
+    "text": "Expend a use of Advanced Tech Magic and Advanced Elemental Magic as well as a Basic use of both Magics to grant the target an Enhanced Elemental Ward instead. The Enhanced Ward functions the same as an Elemental Ward, but the call becomes \"Resist Damage Reflect <Element> X\".",
+    "source": "Rulebook p.93"
+  }
+]

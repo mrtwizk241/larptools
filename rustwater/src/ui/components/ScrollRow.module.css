@@ -1,0 +1,59 @@
+/* One scrollable row of chips. The wrapper's negative margin and the row's padding leave room for
+   focus rings, which the scroll container would otherwise clip. */
+.wrap {
+  position: relative;
+  min-width: 0;
+  margin: calc(-1 * var(--space-2));
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-2);
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--space-2);
+  scrollbar-width: none;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.row > * {
+  flex: none;
+  scroll-snap-align: start;
+}
+
+/* Fade on the right edge while more items are hidden. Decoration only. */
+.wrap::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: var(--space-7);
+  background: linear-gradient(to right, transparent, var(--color-bg));
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease;
+}
+
+.more::after {
+  opacity: 1;
+}
+
+@media (min-width: 900px) {
+  .desktopWrap .row {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .desktopWrap::after {
+    display: none;
+  }
+}

@@ -1,0 +1,56 @@
+/* Soak and Damage Calculator: the page, and the "Your Character" form sections. */
+.page {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.page > * {
+  min-width: 0;
+}
+
+/* Ancestry, Weapon Skills, Defense Skills, Magic, Boons and Familiar: stacked on phones, two
+   columns from 768px, like the Health and Armor cards. */
+.sections {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .sections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.group {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding-top: var(--space-2);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.groupTitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Skill name on the left, its level stepper on the right; wraps under on narrow screens. */
+.levelRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+
+.levelName {
+  min-width: 0;
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}

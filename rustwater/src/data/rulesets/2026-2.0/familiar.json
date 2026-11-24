@@ -1,0 +1,472 @@
+{
+  "familiarPoints": {
+    "abbr": "FP",
+    "spend": {
+      "breakBond": 1,
+      "forgetSkill": 1
+    },
+    "notes": "FP are earned at check-in (see awards.json attendance bundles). Level costs are in levels.table.",
+    "source": "Rulebook p.100-102"
+  },
+  "levels": {
+    "min": 1,
+    "max": 10,
+    "table": [
+      {
+        "level": 1,
+        "fpCost": 0,
+        "essenceGained": 1,
+        "step": "bond"
+      },
+      {
+        "level": 2,
+        "fpCost": 5,
+        "essenceGained": 2,
+        "step": "awaken"
+      },
+      {
+        "level": 3,
+        "fpCost": 3,
+        "essenceGained": 3
+      },
+      {
+        "level": 4,
+        "fpCost": 3,
+        "essenceGained": 4
+      },
+      {
+        "level": 5,
+        "fpCost": 3,
+        "essenceGained": 5
+      },
+      {
+        "level": 6,
+        "fpCost": 3,
+        "essenceGained": 6
+      },
+      {
+        "level": 7,
+        "fpCost": 3,
+        "essenceGained": 7
+      },
+      {
+        "level": 8,
+        "fpCost": 3,
+        "essenceGained": 8
+      },
+      {
+        "level": 9,
+        "fpCost": 3,
+        "essenceGained": 9
+      },
+      {
+        "level": 10,
+        "fpCost": 3,
+        "essenceGained": 10
+      }
+    ],
+    "source": "Rulebook p.101-102"
+  },
+  "essence": {
+    "name": "Essence",
+    "abbr": "AE",
+    "baseSkillSlots": 4,
+    "extraSlotCost": 5,
+    "maxExtraSlots": 2,
+    "teacherRequired": false,
+    "source": "Rulebook p.101-102"
+  },
+  "bonding": {
+    "maxBonds": 1,
+    "physrepMinInches": 4,
+    "canAwakenSameEvent": true,
+    "source": "Rulebook p.100"
+  },
+  "awakenedSkills": [
+    {
+      "id": "gather",
+      "name": "Gather",
+      "frequency": "passive",
+      "text": "Your familiar can find a few useful items. Gain 3 random resources at check in.",
+      "source": "Rulebook p.101"
+    },
+    {
+      "id": "restore-energy",
+      "name": "Restore Energy",
+      "frequency": "per-repop",
+      "text": "Your familiar can grant you a little bit of spent energy back. After a skill misses or is resisted you may regain a basic use of that skill. This skill must be used in the encounter it is regained.",
+      "source": "Rulebook p.101"
+    },
+    {
+      "id": "push",
+      "name": "Push",
+      "frequency": "per-repop",
+      "text": "Your familiar can swarm around an enemy to give you some space. You may throw a packet for “Crush Knockback 5” steps.",
+      "source": "Rulebook p.101"
+    },
+    {
+      "id": "vanish",
+      "name": "Vanish",
+      "frequency": "per-repop",
+      "text": "Your familiar can use its connection with you to cover you with its ghostly essence. Gain invisibility for 5 seconds.",
+      "source": "Rulebook p.101"
+    }
+  ],
+  "skills": [
+    {
+      "id": "fam-hasten-armor-refit",
+      "name": "Hasten Armor Refits",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "sheetName": "1/repop Hasten Armor Refits",
+      "text": "Once per repop your Familiar may hasten all your armor refit counts for an encounter (Haste cannot be stacked)",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-amplify-healing",
+      "name": "Amplify Healing",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "sheetName": "1/repop Amplify Healing",
+      "text": "Once per repop for an encounter Your familiar amplifies all healing you recieve.",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-feint",
+      "name": "Grant Feint",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "sheetName": "1/repop Feint",
+      "text": "Once per repop your Familiar grants you a use of feint.",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-health-buff",
+      "name": "+10 Health Buff",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "sheetName": "1/repop +10 Health (B)",
+      "text": "Once per repop your Familiar may grant you +10 Health in a Buff Slot",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-armor-buff",
+      "name": "+10 Armor Buff",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "sheetName": "1/repop +10 Armor (B)",
+      "text": "Once Per repop your Familiar may grant you +10 Armor in a Buff slot",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-craft-unstable-basic",
+      "name": "Craft Unstable Basic Item",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "choiceOnLearn": "recipe",
+      "sheetName": "1/repop craft unstable basic",
+      "text": "Once per repop your Familiar may create a single specific unstable basic crafted item from a non-mastery craft. (item is chosen when skill is learned)",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-tracking",
+      "name": "+1 Tracking",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "passive",
+      "sheetName": "Passive: +1 Tracking/Countertracking",
+      "text": "Passive: Grants you +1 to all tracking/counter tracking",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-use-consumable",
+      "name": "Use a Consumable",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-encounter",
+      "sheetName": "1/Encoutner Familar use a consumable (hands free or unconcious use of an item)",
+      "text": "Once per encounter your Familiar can use a consumable item (allowing hands free use).",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-damage-buff",
+      "name": "+1 Passive Damage Buff",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "text": "Once per repop your familiar may grant you +1 passive damage in a buff slot.",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-store-basic",
+      "name": "Store a Basic Skill",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "sheetName": "1/repop store basic",
+      "text": "Once Per repop your familiar can store a basic use of a skill (the skill must be expended on the familiar). You may now use the Basic skill as if you had a use of the skill. All stored skills are lost at the end of the event.",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-extra-buff-slot",
+      "name": "Extra Buff Slot",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "per-repop",
+      "sheetName": "1/repop grant buff slot",
+      "text": "Once per repop your familiar may grant you an additional Buff slot",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-haste-craft",
+      "name": "Haste Crafting",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "passive",
+      "choiceOnLearn": "craft",
+      "sheetName": "Passive: Haste Craft",
+      "text": "Passive: Your familiar hastens all crafting time for a single craft.",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-haste-performance",
+      "name": "Haste Performances",
+      "tier": 5,
+      "costEssence": 5,
+      "frequency": "passive",
+      "sheetName": "Passive: Performance",
+      "text": "Passive: Your familiar hastens all performances you do.",
+      "source": "Rulebook p.102"
+    },
+    {
+      "id": "fam-deliver-message",
+      "name": "Deliver Message",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "repeatable": true,
+      "sheetName": "1/repop Deliver Message",
+      "text": "Once per repop your familiar may deliver a single message of no more than 10 words per purchase of this skill.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-craft-stable-basic",
+      "name": "Craft Stable Basic Item",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "choiceOnLearn": "recipe",
+      "sheetName": "1/repop craft stable basic",
+      "text": "Once per repop your familiar may create a single specific stable basic crafted item from a non-mastery crafting skill. (item is chosen when this skill is learned)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-craft-unstable-adept",
+      "name": "Craft Unstable Adept Item",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "choiceOnLearn": "recipe",
+      "sheetName": "1/repop craft unstable adept",
+      "text": "Once per repop your familiar may create a single specific unstable Adept crafting item from a non-mastery crafting skill. (item is chosen when this skill is learned)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-frontal-cone",
+      "name": "Frontal Cone Attack",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "sheetName": "1/repop convert frontal cone",
+      "text": "Once per repop your familiar can enhance your next melee attack into a frontal cone effect.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-claws",
+      "name": "Grant Claws",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "passive",
+      "sheetName": "Passive: Grant Claws",
+      "text": "Passive: the familiar and their person bond allowing the person to use claws without being a cryptid or hybrid.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-apply-items",
+      "name": "Apply Consumables",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "sheetName": "1/repop apply items",
+      "text": "One per repop for an encounter your Familiar helps apply or administer consumables removing the count required for applying these items in combat.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-reset-bleedout",
+      "name": "Reset Bleedout",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "sheetName": "1/repop reset bleedout",
+      "text": "Once Per repop your familiar may reset your bleedout count once it reaches its end.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-retrieve-items",
+      "name": "Retrieve Items",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "sheetName": "1/repop retrieve items",
+      "text": "Once Per repop your familiar may grab your items if you are killed and return them to a location of your choosing.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-upgrade-adept",
+      "name": "Upgrade to Adept",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "choiceOnLearn": "skill",
+      "repeatable": true,
+      "sheetName": "1/repop upgrade to adept",
+      "text": "Choose a Skill you know, once per repop your familiar may upgrade the use of this skill to Adept. (if purchased more then once cannot upgrade the same skill more then once per repop)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-store-adept",
+      "name": "Store an Adept Skill",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "sheetName": "1/repop store adept",
+      "text": "Once Per Repop your Familiar may store an adept skill. You may now expend the stored skill at a later time. All stored skills are lost at the end of the event",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-hasten-medical",
+      "name": "Hasten Medical Counts",
+      "tier": 10,
+      "costEssence": 10,
+      "frequency": "per-repop",
+      "sheetName": "1/repop hasten medical counts",
+      "text": "Once per repop for an encounter your familiar may hasten all first aid counts you perform and hasten all counts to use any item that uses the medicine skill to be crafted. (Haste cannot be stacked).",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-store-buff",
+      "name": "Store a Buff",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "per-repop",
+      "sheetName": "1/repop store buff",
+      "text": "Once Per repop your familiar my store a Buff you have in one of your buff slots. (The buff will be removed from your buff slot). You may then later reapply the stored buff to yourself as if it had just been granted to you. Your familiar may only have 1 stored buff at a time and all stored buffs go away at the end of the event.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-assist-count",
+      "name": "Assist an Action (-5 Count)",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "per-repop",
+      "sheetName": "1/repop -5 to count",
+      "text": "Once Per repop your familiar may assist you with an action removing up to 5 seconds from the count. If this would reduce the count to 0 the effect becomes instant. (this may not be used with killing blow)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-max-health",
+      "name": "+10 Health",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "passive",
+      "maxPurchases": 1,
+      "sheetName": "Passive: +10 Health",
+      "text": "Passive: Gain +10 Health (this skill cannot be learned by a familiar more than once.)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-max-armor",
+      "name": "+10 Armor",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "passive",
+      "maxPurchases": 1,
+      "sheetName": "Passive: +10 Armor",
+      "text": "Passive: Gain +10 Armor (this skill cannot be learned by a familiar more than once.)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-passive-damage",
+      "name": "+1 Passive Damage",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "passive",
+      "maxPurchases": 1,
+      "sheetName": "Passive: +1 Passive Damage",
+      "text": "Passive: Gain +1 Passive damage (this skill cannot be learned by a familiar more than once)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-craft-stable-adept",
+      "name": "Craft Stable Adept Item",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "per-repop",
+      "choiceOnLearn": "recipe",
+      "sheetName": "1/repop craft stable adept",
+      "text": "Once per repop your familiar may create a single specific stable Adept crafted item from a non-mastery crafting skill. (item is chosen when this skill is learned)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-craft-unstable-advanced",
+      "name": "Craft Unstable Advanced Item",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "per-repop",
+      "choiceOnLearn": "recipe",
+      "sheetName": "1/repop craft unstable advanced",
+      "text": "Once per repop your familiar may create a single unstable Advanced crafted item from a non-mastery crafting skill. (item is chosen when this skill is learned)",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-stabilize",
+      "name": "Stabilize at 1 Health",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "per-repop",
+      "sheetName": "1/repop stabalize at 1 Health",
+      "text": "Once per repop your familiar may stabilize you at 1 Health during a bleedout count.",
+      "source": "Rulebook p.103"
+    },
+    {
+      "id": "fam-upgrade-advanced",
+      "name": "Upgrade to Advanced",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "per-repop",
+      "choiceOnLearn": "skill",
+      "repeatable": true,
+      "sheetName": "1/repop upgrade to advanced",
+      "text": "Choose a Skill you know, once per repop your familiar may upgrade the use of this skill to Advanced. (if purchased more then once cannot upgrade the same skill more then once per repop)",
+      "source": "Rulebook p.104"
+    },
+    {
+      "id": "fam-basic-unknown-skill",
+      "name": "Borrow a Basic Skill",
+      "tier": 15,
+      "costEssence": 15,
+      "frequency": "per-repop",
+      "choiceOnLearn": "skill",
+      "repeatable": true,
+      "sheetName": "1/repop basic unknown skill",
+      "text": "Your familiar may provide you a single use of a single basic skill that you do not have once per repop. This skill cannot be a crafting or mastery skill. (if purchased more than once cannot grant the same skills more than once per repop)",
+      "source": "Rulebook p.104"
+    }
+  ]
+}

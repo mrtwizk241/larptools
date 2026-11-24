@@ -1,0 +1,90 @@
+.field {
+  display: grid;
+  width: 100%;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* Shared by input, select, and textarea. */
+.control {
+  width: 100%;
+  min-height: var(--tap-lg);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-md);
+  line-height: var(--leading);
+}
+
+/* Grows with the text size; min-height keeps 48px (a11y A-05). */
+input.control {
+  height: auto;
+}
+
+/* Chromium focuses an inner date segment, so ring the whole field (a11y A-02). */
+input.control[type='date']:focus-within {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+textarea.control {
+  min-height: calc(var(--tap-lg) * 2);
+  resize: vertical;
+}
+
+/* Native select, styled to match: custom chevron in the text color. */
+select.control {
+  height: auto;
+  padding-right: calc(var(--space-3) + 28px);
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) 50%,
+    calc(100% - 14px) 50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.control::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+.control:disabled {
+  opacity: 0.6;
+}
+
+.control[aria-invalid='true'] {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-1);
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.errorIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}

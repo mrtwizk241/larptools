@@ -1,0 +1,243 @@
+{
+  "rules": {
+    "slots": 3,
+    "acceptWhenFull": false,
+    "uniquePerBoonId": true,
+    "defaultExpiry": "event",
+    "text": "Boons are a special kind of buff generally created by powerful magical or crafting effects that physically alter the character in some way. Players have 3 total boon slots and cannot accept any more until a boon is removed. Boons expire at the end of the event unless otherwise stated in the boon. A player may not have more than 1 instance of the same boon.",
+    "source": "Rulebook p.45"
+  },
+  "expiryKinds": [
+    {
+      "id": "event",
+      "text": "Expires at the end of the event (default)."
+    },
+    {
+      "id": "event-or-encounter-after-use",
+      "text": "Lasts until the end of the Event if never used, or until the end of the Encounter once used or activated."
+    },
+    {
+      "id": "permanent",
+      "text": "Permanent. May be removed by the user after a 60 Count; the item is destroyed on removal."
+    },
+    {
+      "id": "lasting",
+      "text": "Made permanent by Boon Extender; can be activated once per Repop instead of disappearing."
+    }
+  ],
+  "origins": [
+    {
+      "id": "biologic-intervention",
+      "name": "Biologic Intervention",
+      "masterySkill": "biologic-intervention"
+    },
+    {
+      "id": "medcraft-augmentation",
+      "name": "Medcraft Augmentation",
+      "masterySkill": "medcraft"
+    }
+  ],
+  "modifiers": [
+    {
+      "id": "cure-boon",
+      "name": "Cure Boon",
+      "recipeId": "cure-boon",
+      "text": "Removes a Permanent Boon of the user's choice from one of their Boon Slots.",
+      "source": "Rulebook p.76"
+    },
+    {
+      "id": "boon-extender",
+      "name": "Boon Extender",
+      "recipeId": "boon-extender",
+      "appliesToOrigin": "biologic-intervention",
+      "setsExpiry": "lasting",
+      "text": "Mixed with a stable Biologic Intervention item that grants a boon; the boon becomes a Permanent (Lasting) boon usable once per Repop.",
+      "source": "Rulebook p.76"
+    }
+  ],
+  "boons": [
+    {
+      "id": "baby-health-boon",
+      "name": "Baby Health Boon",
+      "recipeId": "baby-health-boon",
+      "origin": "biologic-intervention",
+      "expiry": "event-or-encounter-after-use",
+      "text": "Call \"Heal 10\" after spending a 10 Count.",
+      "source": "Rulebook p.76"
+    },
+    {
+      "id": "slap-in-the-face",
+      "name": "Slap in the Face",
+      "recipeId": "slap-in-the-face",
+      "origin": "biologic-intervention",
+      "expiry": "event-or-encounter-after-use",
+      "text": "Remove a Sleep Effect from yourself after spending a 10 Count.",
+      "source": "Rulebook p.76"
+    },
+    {
+      "id": "raging-healer",
+      "name": "Raging Healer",
+      "recipeId": "raging-healer",
+      "origin": "biologic-intervention",
+      "expiry": "event-or-encounter-after-use",
+      "text": "Activate at any time to grant +5 Health to all Healing you provide or receive.",
+      "source": "Rulebook p.76"
+    },
+    {
+      "id": "tougher-stuff",
+      "name": "Tougher Stuff",
+      "recipeId": "tougher-stuff",
+      "origin": "biologic-intervention",
+      "expiry": "event-or-encounter-after-use",
+      "text": "Remove a Disease or Weakness Effect from yourself after spending a 10 Count.",
+      "source": "Rulebook p.76"
+    },
+    {
+      "id": "bloodline-enhancement",
+      "name": "Bloodline Enhancement",
+      "recipeId": "bloodline-enhancer",
+      "origin": "biologic-intervention",
+      "expiry": "event-or-encounter-after-use",
+      "trackerEffect": "ancestry-ability-extra-uses",
+      "text": "Activate to choose an Ancestry Ability. Until the end of the Encounter, each use of it gives an additional use (extra uses do not trigger this). Remaining extra uses are lost at the end of the Encounter.",
+      "source": "Rulebook p.76"
+    },
+    {
+      "id": "bionic-ears",
+      "name": "Bionic Ears",
+      "recipeId": "bionic-ears",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "text": "Call Sidestep in response to any surprise attack.",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "bionic-eyes",
+      "name": "Bionic Eyes",
+      "recipeId": "bionic-eyes",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "text": "Call \"Point Reveal\" on a hidden character; then a 10 count to recharge.",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "bionic-arms",
+      "name": "Bionic Arms",
+      "recipeId": "bionic-arms",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "effects": [
+        {
+          "stat": "weaponDamage",
+          "add": 1
+        }
+      ],
+      "text": "+1 Damage to all Melee and Ranged Attacks.",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "coagulation-response-device",
+      "name": "Coagulation Response Device",
+      "recipeId": "coagulation-response-device",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "effects": [
+        {
+          "stat": "bleedOutSeconds",
+          "add": 60
+        }
+      ],
+      "text": "Bleedout Count increased by a minute.",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "aware-healing-patch",
+      "name": "Aware Healing Patch",
+      "recipeId": "aware-healing-patch",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "restrictedTo": ["aware"],
+      "text": "The Aware gains the effects of normal Healing at half effectiveness (Heal 10 restores 5; Heal to Full heals to half max Health).",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "bionic-limbs",
+      "name": "Bionic Limbs",
+      "recipeId": "bionic-limbs",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "text": "Call \"Resist Interrupt\" once per attempt while using Rip Free. With Level 5 Rip-Free, Rip Free becomes instant.",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "biomod-patch",
+      "name": "Biomod Patch",
+      "recipeId": "biomod-patch",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "linksToOrigin": "medcraft-augmentation",
+      "maxPerLinkedBoon": 1,
+      "text": "Doubles gained benefits and halves counts of the linked augmentation boon. Destroyed if the linked boon is removed.",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "vigor-stimulant-injector",
+      "name": "Vigor Stimulant Injector",
+      "recipeId": "vigor-stimulant-injector",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "effects": [
+        {
+          "stat": "maxHealth",
+          "add": 10
+        }
+      ],
+      "text": "+10 Max Health.",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "auto-defibrillator",
+      "name": "Auto-Defibrillator",
+      "recipeId": "auto-defibrillator",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "frequency": "per-encounter",
+      "text": "Once per Encounter, a single use of Endurance followed immediately by a single use of Dash.",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "bionic-fist",
+      "name": "Bionic Fist",
+      "recipeId": "bionic-fist",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "text": "+3 Steel Damage when attacking with fists (contact-safe boffers still required).",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "bionic-muscles",
+      "name": "Bionic Muscles",
+      "recipeId": "bionic-muscles",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "frequency": "per-encounter",
+      "text": "Once per Encounter, call \"Mimic\" and copy a Physical Attack or Defense call you see another character perform (Rulebook skills only).",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "built-in-armor",
+      "name": "Built-in Armor",
+      "recipeId": "built-in-armor",
+      "origin": "medcraft-augmentation",
+      "expiry": "permanent",
+      "effects": [
+        {
+          "stat": "armor",
+          "add": 10
+        }
+      ],
+      "text": "+10 Armor.",
+      "source": "Rulebook p.81"
+    }
+  ]
+}

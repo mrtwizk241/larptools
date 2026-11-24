@@ -1,0 +1,466 @@
+{
+  "attendance": [
+    {
+      "id": "player",
+      "name": "Player",
+      "eventCxp": true,
+      "grants": [
+        {
+          "currency": "fp",
+          "amount": 1,
+          "kind": "attendance"
+        }
+      ],
+      "source": "Rulebook p.12, p.100"
+    },
+    {
+      "id": "npc-unpaid",
+      "name": "Full Event NPC (Un-Paid)",
+      "eventCxp": true,
+      "npcTimeMax": true,
+      "grants": [
+        {
+          "currency": "fp",
+          "amount": 1,
+          "kind": "attendance"
+        }
+      ],
+      "items": [
+        {
+          "kind": "resource",
+          "rarity": "common",
+          "qty": 3
+        },
+        {
+          "kind": "resource",
+          "rarity": "uncommon",
+          "qty": 2
+        },
+        {
+          "kind": "resource",
+          "rarity": "rare",
+          "qty": 1
+        }
+      ],
+      "assumed": true,
+      "assumptionNote": "Q-PTS-7: the bundle's \"+1 Familiar Point\" is read as the same point every attendee earns, not an extra one. Q-PTS-6: all six resources are owed.",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "npc-paid",
+      "name": "Full Event NPC (Paid)",
+      "eventCxp": true,
+      "npcTimeMax": true,
+      "grants": [
+        {
+          "currency": "fp",
+          "amount": 1,
+          "kind": "attendance"
+        }
+      ],
+      "items": [
+        {
+          "kind": "resource",
+          "rarity": "common",
+          "qty": 3
+        },
+        {
+          "kind": "resource",
+          "rarity": "uncommon",
+          "qty": 2
+        },
+        {
+          "kind": "resource",
+          "rarity": "rare",
+          "qty": 1
+        }
+      ],
+      "craftingAllowance": {
+        "fullEventOfCraftingSkills": true,
+        "otherwiseItems": [
+          {
+            "kind": "resource",
+            "rarity": "rare",
+            "qty": 1
+          }
+        ]
+      },
+      "assumed": true,
+      "assumptionNote": "Q-PTS-7: the bundle's \"+1 Familiar Point\" is read as the same point every attendee earns, not an extra one. Q-PTS-6: all six resources are owed.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "gm-staff",
+      "name": "Full Event GM-Staff",
+      "eventCxp": true,
+      "npcTimeMax": false,
+      "grants": [
+        {
+          "currency": "cxp",
+          "amount": 10,
+          "kind": "staff"
+        },
+        {
+          "currency": "pxp",
+          "amount": 10,
+          "kind": "staff"
+        },
+        {
+          "currency": "shinies",
+          "amount": 500,
+          "kind": "staff"
+        },
+        {
+          "currency": "fp",
+          "amount": 1,
+          "kind": "attendance"
+        }
+      ],
+      "items": [
+        {
+          "kind": "resource",
+          "rarity": "common",
+          "qty": 3
+        },
+        {
+          "kind": "resource",
+          "rarity": "uncommon",
+          "qty": 2
+        },
+        {
+          "kind": "resource",
+          "rarity": "rare",
+          "qty": 1
+        }
+      ],
+      "assumed": true,
+      "assumptionNote": "Q-PTS-7: the bundle's \"+1 Familiar Point\" is read as the same point every attendee earns, not an extra one. Q-PTS-6: all six resources are owed.",
+      "source": "Rulebook p.12"
+    }
+  ],
+  "npcTime": {
+    "cxpPerHour": 1,
+    "pxpPerHour": 1,
+    "shiniesPerHour": 10,
+    "maxHours": 5,
+    "shiniesPerHourAfterMax": 50,
+    "shiniesCap": 500,
+    "preSignedShift": {
+      "shiftHours": 4,
+      "creditedHours": 5
+    },
+    "ledgerKind": "npc",
+    "assumed": true,
+    "assumptionNote": "The 500 Shinies cap applies to all NPC-time Shinies (full-event NPC lines value NPC Time at 500).",
+    "source": "Rulebook p.13"
+  },
+  "extras": [
+    {
+      "id": "marshal",
+      "name": "Marshal",
+      "grants": [
+        {
+          "currency": "shinies",
+          "amount": 50,
+          "kind": "volunteer"
+        }
+      ],
+      "maxPerEvent": 1,
+      "assumed": true,
+      "assumptionNote": "Q-PTS-12: once per event assumed.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "set-up",
+      "name": "Set-Up",
+      "grants": [
+        {
+          "currency": "shinies",
+          "amount": 50,
+          "kind": "volunteer"
+        }
+      ],
+      "maxPerEvent": 1,
+      "assumed": true,
+      "assumptionNote": "Q-PTS-12: once per event assumed.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "sunday-clean-up",
+      "name": "Sunday Clean Up",
+      "grants": [
+        {
+          "currency": "shinies",
+          "amount": 100,
+          "kind": "volunteer"
+        }
+      ],
+      "maxPerEvent": 1,
+      "assumed": true,
+      "assumptionNote": "Q-PTS-12: once per event assumed.",
+      "source": "Rulebook p.13"
+    }
+  ],
+  "betweenGamesRoles": [
+    {
+      "id": "gm-level-staff-monthly",
+      "name": "GM Level Staff",
+      "per": "month",
+      "grants": [
+        {
+          "currency": "pxp",
+          "amount": 5,
+          "kind": "staff"
+        },
+        {
+          "currency": "shinies",
+          "amount": 500,
+          "kind": "staff"
+        }
+      ],
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "narrator-monthly",
+      "name": "Narrator (Non-GM)",
+      "per": "month-with-event",
+      "grants": [
+        {
+          "currency": "pxp",
+          "amount": 2,
+          "kind": "staff"
+        },
+        {
+          "currency": "shinies",
+          "amount": 300,
+          "kind": "staff"
+        }
+      ],
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "logistics-monthly",
+      "name": "Logistics/Production",
+      "per": "month-with-event",
+      "grants": [
+        {
+          "currency": "pxp",
+          "amount": 2,
+          "kind": "staff"
+        },
+        {
+          "currency": "shinies",
+          "amount": 300,
+          "kind": "staff"
+        }
+      ],
+      "source": "Rulebook p.13"
+    }
+  ],
+  "otherShinySources": [
+    {
+      "id": "plot-writing",
+      "name": "Plot Writing",
+      "per": "plot-run",
+      "shiniesPerUnit": 50,
+      "cap": {
+        "amount": 200,
+        "scope": "per-plot"
+      },
+      "kind": "volunteer",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "donation-money",
+      "name": "Donations (money)",
+      "per": "dollar",
+      "shiniesPerUnit": 10,
+      "cap": {
+        "amount": 500,
+        "scope": "per-donation",
+        "waivable": true
+      },
+      "requiresReceipt": true,
+      "kind": "donation",
+      "notes": "Cap waived if the GMs requested the item or approved it before the donation.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "donation-packets",
+      "name": "Donations (packets)",
+      "per": "packet",
+      "shiniesPerUnit": 1,
+      "cap": {
+        "amount": 500,
+        "scope": "per-donation"
+      },
+      "kind": "donation",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "volunteer-help",
+      "name": "Volunteer Help",
+      "per": "hour",
+      "shiniesPerUnit": 50,
+      "requiresGmApproval": true,
+      "kind": "volunteer",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "good-grades-a",
+      "name": "Good Grades (A / 4.0)",
+      "per": "grade",
+      "shiniesPerUnit": 100,
+      "reportCardMaxAgeYears": 1,
+      "kind": "grades",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "good-grades-b",
+      "name": "Good Grades (B / 3.0)",
+      "per": "grade",
+      "shiniesPerUnit": 50,
+      "reportCardMaxAgeYears": 1,
+      "kind": "grades",
+      "source": "Rulebook p.13"
+    }
+  ],
+  "shinyPurchases": [
+    {
+      "id": "buy-cxp",
+      "name": "CXP",
+      "price": 50,
+      "grants": [
+        {
+          "currency": "cxp",
+          "amount": 1,
+          "kind": "shiny-purchase"
+        }
+      ],
+      "capPerEvent": 5,
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "buy-pxp",
+      "name": "PXP",
+      "price": 100,
+      "grants": [
+        {
+          "currency": "pxp",
+          "amount": 1,
+          "kind": "shiny-purchase"
+        }
+      ],
+      "capPerEvent": 1,
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "buy-bits",
+      "name": "Bits",
+      "price": 5,
+      "items": [
+        {
+          "kind": "bits",
+          "qty": 1
+        }
+      ],
+      "capPerEvent": 20,
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "buy-basic-resource",
+      "name": "Basic Resource",
+      "price": 20,
+      "items": [
+        {
+          "kind": "resource",
+          "rarity": "common",
+          "qty": 1
+        }
+      ],
+      "capPerEvent": 6,
+      "capScope": "per-rarity",
+      "assumed": true,
+      "assumptionNote": "Q-PTS-8: the cap is per rarity in total, not per resource type.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "buy-uncommon-resource",
+      "name": "Uncommon Resource",
+      "price": 40,
+      "items": [
+        {
+          "kind": "resource",
+          "rarity": "uncommon",
+          "qty": 1
+        }
+      ],
+      "capPerEvent": 4,
+      "capScope": "per-rarity",
+      "assumed": true,
+      "assumptionNote": "Q-PTS-8: the cap is per rarity in total, not per resource type.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "buy-rare-resource",
+      "name": "Rare Resource",
+      "price": 60,
+      "items": [
+        {
+          "kind": "resource",
+          "rarity": "rare",
+          "qty": 1
+        }
+      ],
+      "capPerEvent": 2,
+      "capScope": "per-rarity",
+      "assumed": true,
+      "assumptionNote": "Q-PTS-8: the cap is per rarity in total, not per resource type.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "buy-upkeep",
+      "name": "Upkeep Covered",
+      "price": 40,
+      "items": [
+        {
+          "kind": "upkeep-covered",
+          "qty": 1
+        }
+      ],
+      "capPerEvent": 1,
+      "assumed": true,
+      "assumptionNote": "Once per event is implied, not stated.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "buy-missed-event-cxp",
+      "name": "Missed Event CXP",
+      "price": 500,
+      "eventCxp": true,
+      "condition": "missed-event",
+      "source": "Rulebook p.13, p.11"
+    },
+    {
+      "id": "buy-alt-character-event-cxp",
+      "name": "Alternate Character Event CXP",
+      "price": 500,
+      "eventCxp": true,
+      "capPerCalendarYear": 3,
+      "condition": "alt-character",
+      "source": "Rulebook p.14"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "missed-event",
+      "text": "The character has no Event CXP for that event, the player attended at least one other event in the same calendar year, and the event is not inside a recorded ban period.",
+      "source": "Rulebook p.11, p.13"
+    },
+    {
+      "id": "alt-character",
+      "text": "Credits Event CXP to another character of the same player. At most 3 per calendar year, and no more than the events the player attended that year.",
+      "source": "Rulebook p.14"
+    }
+  ]
+}

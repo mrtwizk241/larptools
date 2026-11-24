@@ -1,0 +1,5116 @@
+[
+  {
+    "id": "assault",
+    "name": "Assault",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this skill to make your next 2 attacks do +10 damage."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "assault",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this skill while you expend a use of Assault to upgrade it to Adept. Your next 2 attacks instead do +20 damage."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "assault",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this skill while you expend a use of Assault to upgrade it to Advanced. Your next 2 attacks instead do +30 damage."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "assault",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "assault",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "You gain 1 additional Assault Attack per use of Assault. You must have Level 9 Assault to learn this skill. Gain an additional use of Basic Assault during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Assault",
+      "adept": "Adept Assault",
+      "advanced": "Advanced Assault",
+      "mastery": "Assualt Mastery"
+    },
+    "source": "Rulebook p.48"
+  },
+  {
+    "id": "bash",
+    "name": "Bash",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to add \"Crush\" to your next Attack. The Attack will count as hitting if it hits any part of a Character, Costume, or Weapon. (Must be using a 2-handed Melee Weapon)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "bash",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Bash to Upgrade it to Adept. Change your \"Crush\" Attack to a flurry and instead add \"Crush\" to your next 3 numerical damage attacks. (Must be using a 2-handed Melee Weapon)"
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "bash",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Bash to Upgrade it to Advanced. Change your \"Crush\" Attack to a \"Crush Stance\". You may call \"Crush\" before every numerical damaging Attack as long as your feet remain planted. The stance ends if you move your feet or use any Skill that isn't an Attack. (Must be using a 2-handed Melee Weapon)"
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "bash",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "bash",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Once per Attack when one of your Bash Attacks misses or is Resisted you may call \"Echo\" then repeat the missed Attack again with the original call without spending any additional Skill uses. You must have Level 9 Bash to learn this Skill. Gain an additional use of Basic Bash during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Bash",
+      "adept": "Adept Bash",
+      "advanced": "Advanced Bash",
+      "mastery": "Bash Mastery"
+    },
+    "notes": "Advanced heading reads \"Lv Cost 5 AP\" (level number missing); treated as Lv 1 Cost 5 AP like every other Advanced part.",
+    "source": "Rulebook p.48-49"
+  },
+  {
+    "id": "delay-effect",
+    "name": "Delay Effect",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "basic",
+    "marks": ["R"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "You may expend a use of this Skill when hit by any Ailment to call \"Delay Effect\" and Delay the Effect until the end of the Encounter, at which point you must take the full Effect and may not Negate it. Once you have Delayed a Status Effect this way you may not use this Skill to Delay a different Status Effect for the remainder of the Encounter. (Ex: if you delay a \"Stun 10\" you can use this skill to delay another stun effect but not any other status effect)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "delay-effect",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Delay Effect to Upgrade it to Adept. If you already have one or more Delayed Effects, you may now Delay an additional Effect. Once an additional Effect is Delayed, you may use Basic Delay Effect to Delay any further instances of that Effect."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "delay-effect",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Delay Effect to Upgrade it to Advanced. You may call \"Delay Death\" and Delay any Death Effect until the end of the Encounter at which point you must take the full Effect and may not Negate it. For the remainder of the Encounter you may call \"Resist Death\" to any Death Effect that hits you (Only Death Effects, this Skill does not work on regular Damage). While you have a Death Delayed, you are Slowed. This Slow effect cannot be resisted or delayed in any way other then Delay Effect Mastery."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "delay-effect",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "delay-effect",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "After the Encounter all numerical Delayed Effects you take are halved. You are no longer slowed while under the effect of Delayed Death. You must have Level 9 Delay Effect to learn this Skill. Gain an additional use of Basic Delay Effect during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Delay Effect",
+      "adept": "Adept Delay Effect",
+      "advanced": "Advanced Delay Effect",
+      "mastery": "Delay Effect Mastery"
+    },
+    "source": "Rulebook p.49"
+  },
+  {
+    "id": "knockback",
+    "name": "Knockback",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and call \"Knockback 10 Steps\" on your next Melee Weapon Attack. If the Attack is successful, the target is knocked back 10 steps in the opposite direction. If they hit any form of obstacle the target stops moving and is Stunned for 2 seconds."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "knockback",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Knockback to Upgrade it to Adept. You may add \"Crush\" to the Knockback Attack."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "knockback",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Knockback to Upgrade it to Advanced. You may add \"Lash\" to your Knockback Attack."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "knockback",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "knockback",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Double the distance of your Knockback Attacks. You must have Level 9 Knockback to learn this Skill. Gain an additional use of Basic Knockback per Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Knockback",
+      "adept": "Adept Knockback",
+      "advanced": "Advanced Knockback",
+      "mastery": "Knockback Mastery"
+    },
+    "source": "Rulebook p.49"
+  },
+  {
+    "id": "resistance",
+    "name": "Resistance",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "basic",
+    "marks": ["R"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "You may expend a use of this Skill when hit by a numerical damaging Attack to call \"Resist Pain\" and resist the damage of the Attack. You may call this effect even if you are Stunned, Asleep, or Unconscious."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "resistance",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Resistance to Upgrade it to Adept. You may instead call \"Resist Damage\" and resist any damaging Attack."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "resistance",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Resistance to Upgrade it to Advanced. You may instead call \"Resist Effect\" and Resist any Effect."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "resistance",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "resistance",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Whenever you use Resistance, you may also use the Rage Skill once without expending a use. You must have Level 9 Resistance to learn this Skill. Gain an additional use of Basic Resistance during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Resistance",
+      "adept": "Adept Resistance",
+      "advanced": "Advanced Resistance",
+      "mastery": "Resistance Mastery"
+    },
+    "source": "Rulebook p.49-50"
+  },
+  {
+    "id": "slay",
+    "name": "Slay",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and your next Weapon Attack becomes \"Slay\". If the Attack is successful, it executes a minor enemy. Does not work on Named or higher tier enemies."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "slay",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Slay to Upgrade it to Adept. You may add \"Crush\" to your Slay Attack."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "slay",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Slay to Upgrade it to Advanced. You may instead perform a Slay Flurry and your next two Attacks become \"Slay\"."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "slay",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "slay",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "If all of the targets affected by your Slay Attack are Immune to the Effect, you will regain a use of Basic Slay. You must have Level 9 Slay to learn this skill. Gain an additional use of Basic Slay during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Slay",
+      "adept": "Adept Slay",
+      "advanced": "Advanced Slay",
+      "mastery": "Slay Mastery"
+    },
+    "source": "Rulebook p.50"
+  },
+  {
+    "id": "stun",
+    "name": "Stun",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and call \"Stun 5 seconds\" on your next Melee Weapon Attack. If the Attack is successful, the target is Stunned for 5 seconds."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "stun",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Stun to Upgrade it to Adept. You may add \"Crush\" to your Stun Attack."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "stun",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "When you successfully land a Stun Attack, you may expend a use of this Skill and a use of Basic Stun and call \"Enhance Stun\". For the rest of the Encounter your Stun Attack duration is increased by +5 seconds."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "stun",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "damage",
+            "add": 5,
+            "condition": "numerical attacks against a Stunned target"
+          },
+          {
+            "stat": "uses",
+            "skill": "stun",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "All numerical Attacks you deal against a Stunned target deal an additional +5 damage. You must have Level 9 Stun to learn this Skill. Gain an additional Basic Stun during each encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Stun",
+      "adept": "Adept Stun",
+      "advanced": "Advanced Stun",
+      "mastery": "Stun Mastery"
+    },
+    "source": "Rulebook p.50"
+  },
+  {
+    "id": "double-attack",
+    "name": "Double Attack",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "Expend a use of this Skill immediately after using a Non-Stance Attack Skill and call \"Double Attack\" and immediately repeat the Skill. (You may not use Double Attack twice in a row without expending a different Skill first). At Level 5 you may use this Skill a second time on the same Attack and the call will be \"Triple Attack\" and then repeating the Skill."
+      }
+    },
+    "sheetNames": {
+      "main": "Double Attack"
+    },
+    "source": "Rulebook p.50"
+  },
+  {
+    "id": "rage",
+    "name": "Rage",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to call \"Rage\" and add +10 damage to your next weapon Attack. At Level 5 the bonus becomes +20 damage. You have 5 seconds after activating to use the rage attack or it is lost."
+      }
+    },
+    "sheetNames": {
+      "main": "Rage"
+    },
+    "source": "Rulebook p.50"
+  },
+  {
+    "id": "resilience",
+    "name": "Resilience",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "encounter",
+    "marks": ["R"],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "resilience",
+            "part": "main",
+            "add": 1,
+            "atLevel": 5
+          }
+        ],
+        "text": "When you are hit by a numerical damaging Attack, you may expend a use of this Skill and call \"Resilience\" and only take half the damage effect. You may use this Skill even if you are Stunned, Asleep, or Unconscious. At level 5 gain an additional use of this Skill."
+      }
+    },
+    "sheetNames": {
+      "main": "Resilience"
+    },
+    "source": "Rulebook p.50"
+  },
+  {
+    "id": "rip-free",
+    "name": "Rip Free",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "Expend a use of this skill and a 3 count to free yourself from any bind or pin effect. At Level 5 you gain a single resist interrupt per use that can be used while ripping free."
+      }
+    },
+    "sheetNames": {
+      "main": "Rip Free"
+    },
+    "source": "Rulebook p.51"
+  },
+  {
+    "id": "toughness-warrior",
+    "name": "Toughness",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "passive",
+    "marks": [],
+    "skillGroup": "toughness",
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "maxHealth",
+            "perLevel": 10
+          },
+          {
+            "stat": "maxHealth",
+            "add": 10,
+            "atLevel": 5
+          }
+        ],
+        "text": "You gain +10 Max Health per Level. At level 5 gain an additional +10 Max Health."
+      }
+    },
+    "sheetNames": {
+      "main": "Toughness (Warrior)"
+    },
+    "source": "Rulebook p.51"
+  },
+  {
+    "id": "weapon-damage",
+    "name": "Weapon Damage",
+    "category": "standard",
+    "archetype": "warrior",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "weaponDamage",
+            "perLevel": 1
+          },
+          {
+            "stat": "weaponDamage",
+            "add": 1,
+            "atLevel": 5
+          },
+          {
+            "stat": "weaponDamage",
+            "perLevel": 0.5,
+            "condition": "great weapon",
+            "rounding": "down-when-attacking"
+          },
+          {
+            "stat": "weaponDamage",
+            "add": 0.5,
+            "atLevel": 5,
+            "condition": "great weapon",
+            "rounding": "down-when-attacking"
+          }
+        ],
+        "text": "You gain +1 permanent Weapon Damage per Level. At level 5 gain an additional +1 Weapon Damage. Great weapons gain an additional 1/2 Weapon Damage per Level and an additional 1/2 at Level 5 (Weapon Damage is rounded down when Attacking)."
+      }
+    },
+    "sheetNames": {
+      "main": "Weapon Damage"
+    },
+    "source": "Rulebook p.51"
+  },
+  {
+    "id": "deflection",
+    "name": "Deflection",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "basic",
+    "marks": ["Av"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill when you are hit by a Physical numerical damaging Attack to call \"Block\" and avoid the damage of the Attack. If someone within Melee Weapon range is hit by a Physical numerical damaging Attack, you may also call \"Hero Block\" and avoid the damage of the Attack for them. You must be wielding a weapon (including claw and fist physreps) or shield to use this skill. Calls with the \"Spell\" modifier are not physical attacks."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "deflection",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Deflection to Upgrade it to Adept. You may instead call \"Parry\" and it now avoids all the Effects of a physical Attack."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "deflection",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Deflection to Upgrade it to Advanced. You may instead call \"Riposte\" and avoid the Effect of the Attack. After you Riposte an Effect, if it was a Physical Melee Attack you may call \"Reflect\" and repeat the Effect call. The Character that used the Riposted Attack takes the Effect instead. (If you Riposte a Reflected Attack, the Effect is Negated but it does not Reflect again.)"
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "deflection",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "deflection",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "When using a Deflection skill you gain a free basic use that must be used within the next 3 seconds and cannot be used to protect the same target. You must have Level 9 Deflection to learn this Skill. Gain an additional use of Basic Deflection during each Encounter. (Uses granted from Deflection Mastery do not grant additional uses)"
+      }
+    },
+    "sheetNames": {
+      "basic": "Deflection",
+      "adept": "Adept Deflection",
+      "advanced": "Advanced Deflection",
+      "mastery": "Deflection Mastery"
+    },
+    "source": "Rulebook p.51"
+  },
+  {
+    "id": "disarm",
+    "name": "Disarm",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill, perform a Weapon Attack at a Weapon or Shield your target is wielding, and call \"Disarm 5 Seconds\". If the Attack is successful and not resisted, the target will be forced to hold the Weapon or Shield behind them or to their side. They cannot use it to Attack or Block for 5 Seconds. This Skill does not work on any form of natural Weapons or Claws."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "disarm",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Disarm to Upgrade it to Adept. The call changes to \"Disarm Claw 5 seconds\". If this Attack hits either the Enemy or the Claws/Natural Weapons and is not Resisted, they will be Disarmed for 5 seconds. This ability only works on Claws/Natural Weapons."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "disarm",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Disarm to Upgrade it to Advanced. Perform a \"Sunder Armor\" Attack. If this Attack successfully hits the enemy and is not resisted, it will set their Armor to 0 if they have any. (The Attack will have to hit their armor directly. If blocked by a Weapon or Shield it will be considered unsuccessful.)"
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "disarm",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "disarm",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Increase the duration of your Disarm skills by 5 Seconds. You must have Level 9 Disarm to learn this Skill. Gain an additional use of Basic Disarm during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Disarm",
+      "adept": "Adept Disarm",
+      "advanced": "Advanced Disarm",
+      "mastery": "Disarm Mastery"
+    },
+    "source": "Rulebook p.51-52"
+  },
+  {
+    "id": "endurance",
+    "name": "Endurance",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "You may expend a use of this Skill within 5 seconds of being reduced to 0 Health or lower to call \"Endurance\". You set your Health back to 1 Health."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "endurance",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Endurance to Upgrade it to Adept. Your Health is set to half of your Max Health instead."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "endurance",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Endurance to Upgrade it to Advanced. When reduced to 0 Health or lower, you may call \"Endurance - Last Stand\" instead of falling. For 5 seconds you may continue moving and are immune to numerical damage. After the 5 seconds, you will fall to Bleedout with half your Bleedout Count lost. You may not use Endurance when falling to bleedout after a Last Stand. (Cannot use in response to Instant Death Effects)"
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "endurance",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "bleedOutSeconds",
+            "add": 60
+          },
+          {
+            "stat": "deathCountSeconds",
+            "add": 300
+          },
+          {
+            "stat": "uses",
+            "skill": "endurance",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Extend your Bleedout Count by 60 seconds, your Death Count by 5 min, and you also have 10 seconds to call your Endurance Skill. You must have Level 9 Endurance to learn this Skill. Gain an additional use of Basic Endurance Skill during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Endurance",
+      "adept": "Adept Endurance",
+      "advanced": "Advanced Endurance",
+      "mastery": "Endurance Mastery"
+    },
+    "source": "Rulebook p.52"
+  },
+  {
+    "id": "intercept",
+    "name": "Intercept",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "You may expend a use of this Skill when an Ally within Melee Weapon range is hit by any Attack to call \"Intercept\". You take the Effect of the Attack instead of the original target. Any Effect that you Intercept cannot be avoided, but may be Resisted."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "intercept",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Intercept to Upgrade it to Adept. You change your Intercept call to \"Intercept-Reduced\". Any numerical part of the Intercepted Effect is halved."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "intercept",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Intercept to Upgrade it to Advanced. You change your Intercept call to \"Intercept Stance\" and plant both of your feet. As long as you remain in range of the targeted Ally, keep both feet planted, and do not use any Non-Defensive skill, you repeat the \"Intercept\" call."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "intercept",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "intercept",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "After using the Intercept skill, you may immediately call \"Reflect Knockback 3 Steps\" to the character who made the Intercepted Attack as long as they are within Melee Weapon range. You must have Level 9 Intercept to learn this skill. Gain an additional use of Basic Intercept during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Intercept",
+      "adept": "Adept Intercept",
+      "advanced": "Advanced Intercept",
+      "mastery": "Intercept Mastery"
+    },
+    "source": "Rulebook p.52"
+  },
+  {
+    "id": "rally-defender",
+    "name": "Rally",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "basic",
+    "marks": [],
+    "skillGroup": "rally",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this skill to target a Character within touch range who is affected by a Sleep or Fear Effect to call \"Rally Remove X\" where X is the Status Effect. The Status Effect is removed."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "rally-defender",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Rally to Upgrade it to Adept. You may change the Rally call to \"Rally Remove Charm\" and remove a Charm Effect."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "rally-defender",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Rally to Upgrade it to Advanced. You may add \"Lash\" to your Rally call. The Rally call can be used to remove Sleep, Fear, or Charm Effects."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "rally-defender",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "rally-defender",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "When you use Rally to remove a Status Effect, you may grant the target a use of \"Resist X\" where X is the removed Status Effect in a Buff slot. You must have Level 9 Rally to learn this Skill. Gain an additional use of Basic Rally during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Rally (Defender)",
+      "adept": "Adept Rally (Defender)",
+      "advanced": "Advanced Rally (Defender)",
+      "mastery": "Rally Mastery (Defender)"
+    },
+    "source": "Rulebook p.52-53"
+  },
+  {
+    "id": "taunt",
+    "name": "Taunt",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and Roleplay an interaction intended to be Taunting (either verbal or physical) with a target enemy within Melee Weapon range and call \"Point Taunt 10 seconds\". The target will be forced to Attack you for the duration of the Taunt or when you Disengage with the target."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "taunt",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Taunt to Upgrade it to Adept. You may instead call \"Point Taunt 20 Seconds\"."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "taunt",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Taunt to Upgrade it to Advanced. You may instead call \"Frontal Cone Taunt 10 Seconds\"."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "taunt",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "taunt",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "After using the Taunt skill, you gain the ability to call \"Brace\" against all numerical attacks from any target affected by Taunt for the duration of the Taunt. You must have Level 9 Taunt to learn this Skill. Gain an additional use of Basic Taunt during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Taunt",
+      "adept": "Adept Taunt",
+      "advanced": "Advanced Taunt",
+      "mastery": "Taunt Mastery"
+    },
+    "source": "Rulebook p.53"
+  },
+  {
+    "id": "armor",
+    "name": "Armor",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "armor",
+            "perLevel": 5
+          },
+          {
+            "stat": "armor",
+            "add": 10,
+            "atLevel": 5
+          },
+          {
+            "stat": "armorLocationsUpgraded",
+            "perLevel": 1,
+            "note": "number of armor physrep locations worth +5 instead of +2"
+          },
+          {
+            "stat": "armorLocationsUpgraded",
+            "atLevel": 5,
+            "all": true
+          }
+        ],
+        "text": "You gain +5 permanent Armor per level. For each level of this skill one location bonus from armor physreps becomes +5 instead of +2. At level 5, gain an additional +10 armor and all armor locations grant +5 armor instead of +2."
+      }
+    },
+    "sheetNames": {
+      "main": "Armor"
+    },
+    "source": "Rulebook p.53"
+  },
+  {
+    "id": "brace",
+    "name": "Brace",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "encounter",
+    "marks": ["Av"],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "When you are hit by a Physical numerical damaging Attack, you may expend a use of this Skill and call \"Brace\" and reduce the damage of the Attack by half. If someone within Melee Weapon range is hit by a Physical numerical damaging Attack, you may expend a use of this skill and call \"Hero Brace\" and reduce the damage of the Attack by half. You must have a Weapon or Shield in your hand to use this Skill."
+      }
+    },
+    "sheetNames": {
+      "main": "Brace"
+    },
+    "source": "Rulebook p.53"
+  },
+  {
+    "id": "restore-defense",
+    "name": "Restore Defense",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "You may expend a use of this skill immediately after you expend a Defensive Skill to gain an additional Basic use of the expended Skill that is only usable during this Encounter. At level 5, you instead gain an additional use of the expended Skill. A Defensive Skill is any Skill that Resists or Avoids an Effect."
+      }
+    },
+    "sheetNames": {
+      "main": "Restore Defense"
+    },
+    "source": "Rulebook p.53"
+  },
+  {
+    "id": "second-wind",
+    "name": "Second Wind",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "Expend a use of this skill and make a 3 Count to restore 5 Health to yourself. If this Count is interrupted, this Skill is not expended. At level 5, the Count to use this Skill becomes instant and you restore 10 Health instead."
+      }
+    },
+    "sheetNames": {
+      "main": "Second Wind"
+    },
+    "source": "Rulebook p.53"
+  },
+  {
+    "id": "stubborn",
+    "name": "Stubborn",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "If you are hit by a numerical damaging Attack that would reduce you to 0 or less Health, you may expend a use of this Skill to immediately call \"Stubborn\". The attack will not reduce you below 1 Health. At Level 5, the first time per encounter you use this Skill, it becomes \"Improved Stubborn\" and the attack will not reduce you below 10 Health. (If you are below 10 Health when Improved Endure is used, you do not gain any health. It will only prevent the health from going any lower.)"
+      }
+    },
+    "sheetNames": {
+      "main": "Stubborn"
+    },
+    "notes": "Text says \"Improved Endure\" in the last sentence; it almost certainly means Improved Stubborn.",
+    "source": "Rulebook p.54"
+  },
+  {
+    "id": "tauntstrike",
+    "name": "Tauntstrike",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to call \"Taunt 5 seconds\" on your next Weapon Attack. If the attack is successful, the target will be Taunted for 5 Seconds or until you Disengage with the target. At level 5, the duration of this skill is 10 Seconds."
+      }
+    },
+    "sheetNames": {
+      "main": "Tauntstrike"
+    },
+    "source": "Rulebook p.54"
+  },
+  {
+    "id": "toughness-defender",
+    "name": "Toughness",
+    "category": "standard",
+    "archetype": "defender",
+    "type": "passive",
+    "marks": [],
+    "skillGroup": "toughness",
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "maxHealth",
+            "perLevel": 10
+          },
+          {
+            "stat": "maxHealth",
+            "add": 10,
+            "atLevel": 5
+          }
+        ],
+        "text": "You gain +10 Max Health per Level. At level 5 gain an additional +10 Max Health."
+      }
+    },
+    "sheetNames": {
+      "main": "Toughness (Defender)"
+    },
+    "source": "Rulebook p.54"
+  },
+  {
+    "id": "aimed-strike",
+    "name": "Aimed Strike",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this skill and spend 3 Count analyzing a target, this count can be made from hiding without breaking your hide. Your next Attack against the target gets +10 passive damage. If you are attacking from behind or from hiding, you may add \"Slay\" to the call and the damage becomes double the original passive damage of the Attack. (after you spend your 3 count analyzing a target, if you attack, take damage, or use another skill, you must analyze the target again before using this skill)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "aimed-strike",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Aimed Strike to Upgrade it to Adept. Your Attack deals +20 passive damage instead."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "aimed-strike",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Aimed Strike to Upgrade it to Advanced. Your Attack deals +30 passive damage instead."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "aimed-strike",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "aimed-strike",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Once you have analyzed a target for Aimed Strike, you do not need to analyze them again for every additional Aimed Strike against the same target for the rest of the Encounter. You must have Level 9 Aimed Strike to learn this Skill. Gain an additional use of Basic Aimed Strike during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Aimed Strike",
+      "adept": "Adept Aimed Strike",
+      "advanced": "Advanced Aimed Strike",
+      "mastery": "Aimed Strike Mastery"
+    },
+    "notes": "The rulebook labels the mastery part \"Master\" instead of \"Mastery\".",
+    "source": "Rulebook p.54"
+  },
+  {
+    "id": "dash",
+    "name": "Dash",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to call \"Dash\". Put a hand over your head for 3 seconds. While you are Dashing, you are immune to non-AOE numerical effects. If a damaging or negative Status Effect affects you, or you stop moving while you are Dashing, the Dash is immediately ended. You may not use any additional Dash uses for 3 seconds after you use one. You cannot use other Skills while Dashing unless specifically stated in the Skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "dash",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Dash to Upgrade it to Adept. If any Effect would affect you while Dashing you may call \"Phase\" and Avoid the Effect. If you use this Skill while Hidden, you may call \"Hidden-Dash\" and you will be Hidden while Dashing. If you end the Dash in a viable hiding spot while Hiding you will remain Hidden."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "dash",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "When you are hit with a Non-AoE numerical damaging Effect, you may expend a use of this Skill and use of Basic Dash to call \"Evade-Dash\" and avoid the Effect and then Dash."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "dash",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "dash",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Increase the duration of all your dashes by 2 seconds. You must have Level 9 Dash to learn this Skill. Gain an additional use of Basic Dash during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Dash",
+      "adept": "Adept Dash",
+      "advanced": "Advanced Dash",
+      "mastery": "Dash Mastery"
+    },
+    "source": "Rulebook p.54-55"
+  },
+  {
+    "id": "evasion",
+    "name": "Evasion",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "basic",
+    "marks": ["Av"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "When you are hit by a numerical Effect, you may expend a use of this Skill and call \"Evade\" and Avoid the Effects. You may not use this Skill if your movement is Restricted in any way (Bind/Pin/Slow/etc). You also may not use this Skill to respond to any AoE Effect (Frontal Cone, Lash, Voice Radius, etc)."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "evasion",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Evasion to Upgrade it to Adept. You may instead call \"Dodge\" and Avoid any Effect. (This still may not be used while movement restricted or in response to an AoE effect)."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "evasion",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Evasion to Upgrade it to Advanced. You may instead call \"Phase\" and Avoid any Effect, even an AoE Effect (This still may not be used while movement restricted)."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "evasion",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "evasion",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "assumed": true,
+        "assumptionNote": "Cost assumed from the Skill Cost Chart (10 AP); the rulebook states none for this part.",
+        "text": "Whenever you use the Evasion skill, you gain an additional use of Sidestep you can use during this Encounter. You may only learn this Skill if you have at least Level 9 Evasion. Gain an additional use of Basic Evasion during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Evasion",
+      "adept": "Adept Evasion",
+      "advanced": "Advanced Evasion",
+      "mastery": "Evasion Mastery"
+    },
+    "notes": "The mastery heading gives no cost; 10 AP is taken from the Skill Cost Chart.",
+    "source": "Rulebook p.55"
+  },
+  {
+    "id": "execute",
+    "name": "Execute",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "You may analyze a target for 3 seconds and expend a use of this Skill to make an Attack on the target from behind or from hiding and call \"Wound\". If the Attack lands, the target loses half of their Maximum Health as Damage. If the target is already below half their Max Health, this Attack puts them into Bleedout. You may only use this skill with a short weapon or ranged weapon. (after you spend your 3 count analyzing a target, if you attack, take damage, or use another skill, you must analyze the target again before using this skill)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "execute",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Execute to Upgrade it to Adept. The Attack call is now \"Bleed\"."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "execute",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Execute to Upgrade it to Advanced. The Attack call is now \"Death\"."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "execute",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "execute",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Reduce the time required to analyze a target to use an Execute attack to a 1 Count. You must have Level 9 Execute in order to learn this Skill. Gain an additional use of Basic Execute during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Execute",
+      "adept": "Adept Execute",
+      "advanced": "Advanced Execute",
+      "mastery": "Execute Mastery"
+    },
+    "source": "Rulebook p.55"
+  },
+  {
+    "id": "stealth-rogue",
+    "name": "Stealth",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "basic",
+    "marks": [],
+    "skillGroup": "stealth",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "While in a Hiding Spot, you may expend a use of this Skill by calling \"Instant Hide\" and cross your arms/weapons in front of you. You become Hidden from anyone that didn't watch you hide. Anyone that watched you Stealth may \"Point Reveal\" and break your Stealth. If you move, your Stealth will be broken. If you speak above a whisper, anyone within range will be able to \"Point Reveal\" you."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "stealth-rogue",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Stealth to Upgrade it to Adept. You may call \"Resist Reveal\" against an attempt to break your Stealth. You may instead call \"Hidden-Dash\" and take a 3 second Dash to move while Hidden without breaking your Stealth. You will remain Hidden as long as where you end the Dash is also a viable Hiding Spot."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "stealth-rogue",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Stealth to Upgrade it to Advanced. You may call \"Resist Surprise\" if you are hit by a Melee Attack from a target that was Hiding or from behind. (You may only \"Resist Surprise\" an Attack from a specific source once every 10 seconds.) You may also use this to enter 'Advanced stealth': as long as you remain in a viable hiding spot you may move slowly, approx 1 step per second. If you are already in Hiding you may use just a use of Advanced to change it to an advanced hide without using an additional use of basic."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "stealth-rogue",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "stealth-rogue",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "When you perform an Attack from the Rogue Archetype or a standard Attack while Stealthed, you may call \"Hidden\" at the beginning of the Attack. As long as the enemy isn't facing you, you remain Hidden. You must have Level 9 Stealth to learn this Skill. Gain an additional use of Basic Stealth during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Stealth (Rogue)",
+      "adept": "Adept Stealth (Rogue)",
+      "advanced": "Advanced Stealth (Rogue)",
+      "mastery": "Stealth Mastery (Rogue)"
+    },
+    "source": "Rulebook p.55-56"
+  },
+  {
+    "id": "waylay",
+    "name": "Waylay",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this skill and Attack a target from behind to call \"Sleep\". If not Resisted, the target falls Asleep for 5 min or until someone wakes them up. This Attack can only be done with a Melee Short Weapon or Claw. (Reminder. It takes a 100 Count to wake someone from a Sleep Effect)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "waylay",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Waylay to Upgrade it to Adept. You may perform the \"Sleep\" attack from any direction."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "waylay",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Waylay to Upgrade it to Advanced. You may throw a packet for your \"Sleep\" Attack."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "waylay",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "waylay",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Once per use of the Waylay skill, if your Attack is Resisted, you may call \"Press\" and force the target to Resist the Attack a second time. Gain an additional use of Basic Waylay during each Encounter. You must have Level 9 Waylay to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Waylay",
+      "adept": "Adept Waylay",
+      "advanced": "Advanced Waylay",
+      "mastery": "Waylay Mastery"
+    },
+    "source": "Rulebook p.56"
+  },
+  {
+    "id": "feint",
+    "name": "Feint",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "feint",
+            "part": "main",
+            "add": 1,
+            "atLevel": 5
+          }
+        ],
+        "text": "You may expend a use of this skill and call \"Feint\" in front of any call that would normally require you to Attack from behind the target. The Attack will count as an Attack from behind the target, no matter what direction you Attack from. At Level 5, you gain an additional use of this skill."
+      }
+    },
+    "sheetNames": {
+      "main": "Feint"
+    },
+    "source": "Rulebook p.56"
+  },
+  {
+    "id": "distract",
+    "name": "Distract",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "After you are hit by an Effect, you may expend a use of this Skill to call \"Reflect Ignore 3 Seconds\" and force the target to Ignore you for 3 seconds. The target of the Effect must be within Melee Weapon range. At Level 5, the time on the Effect becomes 5 seconds."
+      }
+    },
+    "sheetNames": {
+      "main": "Distract"
+    },
+    "source": "Rulebook p.56"
+  },
+  {
+    "id": "hide",
+    "name": "Hide",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "countSeconds",
+            "skill": "hide",
+            "base": 30
+          },
+          {
+            "stat": "countSeconds",
+            "skill": "hide",
+            "add": -10,
+            "atLevel": 5
+          }
+        ],
+        "text": "Once you are in a viable Hiding Spot, you may expend a use of this Skill and spend a 30 Count to become Hidden. At level 5 the Count is reduced to a 20 Count to become Hidden."
+      }
+    },
+    "sheetNames": {
+      "main": "Hide"
+    },
+    "source": "Rulebook p.56"
+  },
+  {
+    "id": "precision",
+    "name": "Precision",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "damage",
+            "perLevel": 2,
+            "condition": "fist or short weapon attack from behind"
+          },
+          {
+            "stat": "damage",
+            "add": 2,
+            "atLevel": 5,
+            "condition": "fist or short weapon attack from behind"
+          },
+          {
+            "stat": "damage",
+            "perLevel": 1,
+            "condition": "ranged weapon attack"
+          },
+          {
+            "stat": "damage",
+            "add": 1,
+            "atLevel": 5,
+            "condition": "ranged weapon attack"
+          }
+        ],
+        "text": "You gain +2 Damage per Level while attacking an enemy with a Fist or Short Weapon from behind. Ranged weapon attacks get +1 Damage per Level and don't need to Attack from behind. At level 5, gain an additional +2 Damage with Fist or Short Weapons from behind and +1 Damage with ranged weapons."
+      }
+    },
+    "sheetNames": {
+      "main": "Precision"
+    },
+    "source": "Rulebook p.56-57"
+  },
+  {
+    "id": "press",
+    "name": "Press",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "After one of your Melee Attacks is Resisted, you may expend a use of this Skill to call \"Press\" and force the target to Resist the Effect a second time. You may only Press an Effect once per Effect. At Level 5, you may Press an Effect a second time by expending another use of this skill. The call is \"Improved Press\" on the second press."
+      }
+    },
+    "sheetNames": {
+      "main": "Press"
+    },
+    "source": "Rulebook p.57"
+  },
+  {
+    "id": "reflexes",
+    "name": "Reflexes",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "reflexArmor",
+            "perLevel": 5
+          },
+          {
+            "stat": "reflexArmor",
+            "add": 5,
+            "atLevel": 5
+          },
+          {
+            "stat": "reflexArmor",
+            "exclusiveWith": ["armor-skill", "worn-armor"],
+            "note": "no benefit while benefiting from the Armor skill or wearing armor"
+          }
+        ],
+        "text": "You gain 5 reflex armor per level of this skill. You cannot benefit from this skill while benefiting from the Armor skill or wearing armor. AOE effects that hit you are considered piercing. Your armor refit counts for this armor are hasted. At level 5 gain an additional +5 reflex armor."
+      }
+    },
+    "sheetNames": {
+      "main": "Reflexes"
+    },
+    "source": "Rulebook p.57"
+  },
+  {
+    "id": "sidestep",
+    "name": "Sidestep",
+    "category": "standard",
+    "archetype": "rogue",
+    "type": "encounter",
+    "marks": ["Av"],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "sidestep",
+            "part": "main",
+            "add": 1,
+            "atLevel": 5
+          }
+        ],
+        "text": "When you are hit by a numerical effect, you may expend a use of this Skill to call \"Sidestep\". This reduces the Effect by half. You may not use this Skill if your movement is impaired in any way. You may not Sidestep AoE Effects. At level 5 you gain an additional use of this Skill."
+      }
+    },
+    "sheetNames": {
+      "main": "Sidestep"
+    },
+    "source": "Rulebook p.57"
+  },
+  {
+    "id": "ancient-history-research",
+    "name": "Ancient History Research",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "betweenEventQuestions",
+            "perLevel": 1
+          }
+        ],
+        "text": "Between each Event, you may ask a question about Ancient (modern day or early post virus) Information for each Level of this Skill. You will receive an, at maximum, 1 sentence answer of basic information. Information must be potentially findable in recorded information. May instead use this Skill to create Basic Recipe Notes for either Chemistry, Engineering, or Medicine recipes between events. During an Event, this Skill is a Per/Repop Skill. You may expend a use to ask a yes/no question regarding Ancient Information relevant to the current Encounter. (GM Discretion - If a question is complicated, it may take multiple uses to get an answer)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "ancient-history-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may Upgrade one of your Basic Ancient History Research questions to an Adept Ancient History Research Question per Level of this Skill. You will receive a somewhat detailed answer to the question. May instead use this Skill to create Adept Recipe Notes for either Chemistry, Engineering, or Medicine. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Ancient History Research to ask a question with a 1-3 word answer instead of a yes/no question."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "ancient-history-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may upgrade one of your Basic Ancient History Research questions to an Advanced Ancient History Research Question per Level of this Skill. This can include questions about specific names/items/or places. You will receive a detailed answer to the question. May instead use this Skill to create Advanced Recipe Notes for either Chemistry, Engineering, or Medicine. Two uses may be expended to find Mastery Craft Recipe Notes for any Mastery Crafts that include at least one of those crafts. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Ancient History Research to ask a question that gets a few words to a sentence as an answer."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "ancient-history-research",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "ancient-history-research",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Gain a use of Basic Ancient History Research Per/Repop Skill as a Per/Encounter effect. All of your uses of the Per/Repop use of this skill become upgraded. Basics become Adept, and Adept become Advanced, Advanced become upgraded to allow a single follow up Yes/No question without spending an additional use of the skill. You must have Level 9 Ancient History Research to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Ancient History Research",
+      "adept": "Adept Ancient History Research",
+      "advanced": "Advanced Ancient History Research",
+      "mastery": "Ancient History Research Mastery"
+    },
+    "source": "Rulebook p.57-58"
+  },
+  {
+    "id": "biology-research",
+    "name": "Biology Research",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "betweenEventQuestions",
+            "perLevel": 1
+          }
+        ],
+        "text": "Between each Event, you may ask a question about a creature or monster for each Level of this Skill. You will receive an, at maximum, 1 sentence answer of basic information. Information must be potentially findable in recorded information. May instead use this Skill to create Basic Recipe Notes for either Chemistry or Medicine between events. During an Event, this Skill is a Per/Repop Skill. You may expend a use to ask a yes/no question regarding a creature or monster relevant to the current Encounter. (GM Discretion - If a question is complicated, it may take multiple uses to get an answer)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "biology-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may Upgrade one of your Basic Biology Research questions to an Adept Biology Research Question per Level of this Skill. You will receive a somewhat detailed answer to the question. May instead use this Skill to create Adept Recipe Notes for either Chemistry or Medicine. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Biology Research to ask a question with a 1-3 word answer instead of a yes/no question."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "biology-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may upgrade one of your Basic Biology Research questions to an Advanced Biology Research Question per Level of this Skill. This can include questions about specific names/items/or places. You will receive a detailed answer to the question. May instead use this Skill to create Advanced Recipe Notes for either Chemistry or Medicine. Two uses may be expended to find Mastery Craft Recipe Notes for any Mastery Crafts that include at least one of those crafts. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Biology Research to ask a question that gets a few words to a sentence as an answer."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "biology-research",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "biology-research",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Gain a use of Basic Biology Research Per/Repop Skill as a Per/Encounter effect. All of your uses of the Per/Repop use of this skill become upgraded. Basics become Adept, and Adept become Advanced, Advanced become upgraded to allow a single follow up Yes/No question without spending an additional use of the skill. You must have Level 9 Biology Research to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Biology Research",
+      "adept": "Adept Biology Research",
+      "advanced": "Advanced Biology Research",
+      "mastery": "Biology Research Mastery"
+    },
+    "source": "Rulebook p.58"
+  },
+  {
+    "id": "disguise",
+    "name": "Disguise",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "disguises",
+            "perLevel": 1
+          }
+        ],
+        "text": "You may expend a use of this skill and a 100 count to create a disguise to make yourself appear as a different Ancestry. The disguise lasts for an encounter. Passive: You gain one disguise per level of this skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "prereqs": [
+          {
+            "skill": "disguise",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "You may expend a use of this skill while expending a use of Basic Disguise to upgrade it to adept. You may disguise another person convincingly as well as yourself. Passive: You may now choose to appear as a specific faction for your disguises."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "prereqs": [
+          {
+            "skill": "disguise",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "You may expend a use of this skill while expending a use of Basic Disguise to upgrade it to advanced. You may disguise up to 4 people convincingly. Passive: You may now choose monster or wasteland creatures as your disguise types."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "disguise",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "text": "You may choose a single disguise to use at the beginning of each repop. You may wear that disguise instead of your standard character for the event. You must have Level 9 Disguise to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Disguise",
+      "adept": "Adept Disguise",
+      "advanced": "Advanced Disguise"
+    },
+    "notes": "Adept and Advanced Disguise are Per/Repop, not Per/Encounter. The sheet has no Disguise Mastery entry.",
+    "source": "Rulebook p.58-59"
+  },
+  {
+    "id": "disarm-unlock-device",
+    "name": "Disarm/Unlock Device",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "You may expend a use of this Skill and spend a 3 Count to Disarm or Unlock a Basic Device. This skill may also be used to prevent a trap from going off, if used this way you may immediately begin disarming the trap without spending an additional use of this skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "disarm-unlock-device",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Basic Disarm/Unlock to Upgrade it to Adept. You may instead Disarm or Unlock an Adept Device. If used to prevent a trap from going off you may immediately begin disarming the trap without spending an additional use of this skill."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "disarm-unlock-device",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Basic Disarm/Unlock to Upgrade it to Advanced. You may instead disarm or unlock an Advanced Device or Spend 2 uses of this Skill to disarm or unlock a Master Lock. If used to prevent a trap from going off you may immediately begin disarming the trap without spending an additional use of this skill."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "disarm-unlock-device",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "disarm-unlock-device",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "All of your Disarm/Unlock uses become upgraded: Basic uses disarm or unlock Adept devices, Adept uses disarm or unlock Advanced locks, and Advanced uses only take one use to disarm or unlock Master Devices. Passive: Basic Devices no longer take skill uses to disarm or unlock but you still need to perform the 3 count. You must have Disarm/Unlock Device at Level 9 to learn this Skill. Gain an additional use of Disarm/Unlock per Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Disarm/Unlock Device",
+      "adept": "Adept Disarm/Unlock Device",
+      "advanced": "Advanced Disarm/Unlock Device"
+    },
+    "notes": "The sheet lists two masteries here, \"Lockpicking Mastery\" and \"Disarm Trap Mastery\", instead of one Disarm/Unlock Device Mastery.",
+    "source": "Rulebook p.59"
+  },
+  {
+    "id": "mystical-research",
+    "name": "Mystical Research",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "betweenEventQuestions",
+            "perLevel": 1
+          }
+        ],
+        "text": "Between each Event, you may ask a question about magic or magic history for each Level of this Skill. You will receive an, at maximum, 1 sentence answer of basic information. Information must be potentially findable in recorded information. May instead use this Skill to create Basic Spell or performance notes. During an Event, this Skill is a Per/Repop Skill. You may expend a use to ask a yes/no question regarding magic or magic history relevant to the current Encounter. (GM Discretion - If a question is complicated, it may take multiple uses to get an answer)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "mystical-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may Upgrade one of your Basic Mystical Research questions to an Adept Mystical Research Question per Level of this Skill. You will receive a somewhat detailed answer to the question. May instead use this Skill to create Adept Spell or performance Notes. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Mystical Research to ask a question with a 1-3 word answer instead of a yes/no question."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "mystical-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may upgrade one of your Basic Mystical Research questions to an Advanced Mystical Research Question per Level of this Skill. This can include questions about specific names/items/or places. You will receive a detailed answer to the question. May instead use this Skill to create Advanced Spell or performance Notes. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Mystical Research to ask a question that gets a few words to a sentence as an answer."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "mystical-research",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "mystical-research",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Gain a use of Basic Mystical Research Per/Repop Skill as a Per/Encounter effect. All of your uses of the Per/Repop use of this skill become upgraded. Basics become Adept, and Adept become Advanced, Advanced become upgraded to allow a single follow up Yes/No question without spending an additional use of the skill. You must have Level 9 Mystical Research to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Mystical Research",
+      "adept": "Adept Mystical Research",
+      "advanced": "Advanced Mystical Research",
+      "mastery": "Mystical Research Mastery"
+    },
+    "source": "Rulebook p.59-60"
+  },
+  {
+    "id": "rally-utility",
+    "name": "Rally",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "skillGroup": "rally",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this skill to target a Character within touch range who is affected by a Sleep or Fear Effect to call \"Rally Remove X\" where X is the Status Effect. The Status Effect is removed."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "rally-utility",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Rally to Upgrade it to Adept. You may change the Rally call to \"Rally Remove Charm\" and remove a Charm Effect."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "rally-utility",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Rally to Upgrade it to Advanced. You may add \"Lash\" to your Rally call. The Rally call can be used to remove Sleep, Fear, or Charm Effects."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "rally-utility",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "rally-utility",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "When you use Rally to remove a Status Effect, you may grant the target a use of \"Resist X\" where X is the removed Status Effect in a Buff slot. You must have Level 9 Rally to learn this Skill. Gain an additional use of Basic Rally during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Rally (Utility)",
+      "adept": "Adept Rally (Utility)",
+      "advanced": "Advanced Rally (Utility)",
+      "mastery": "Rally Mastery (Utility)"
+    },
+    "source": "Rulebook p.60"
+  },
+  {
+    "id": "scavenging",
+    "name": "Scavenging",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "other",
+        "timing": "check-in",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "checkInResources",
+            "perLevel": 1,
+            "rarity": "common",
+            "alternative": {
+              "stat": "checkInBits",
+              "perLevel": 10
+            }
+          }
+        ],
+        "text": "At Check-In, you receive 1 random Common Resources per Level of this Skill. You may choose to gain 10 bits per level of this skill instead of the Resources."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "other",
+        "timing": "check-in",
+        "prereqs": [
+          {
+            "skill": "scavenging",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "effects": [
+          {
+            "stat": "checkInUpgrades",
+            "perLevel": 1,
+            "rarity": "uncommon",
+            "alternative": {
+              "stat": "checkInBits",
+              "perLevel": 15
+            }
+          }
+        ],
+        "text": "At Check-In, you may Upgrade a use of Scavenging to Adept for each Level of this Skill. For each Level, you get 1 random Uncommon Resources. You may gain 15 Bits per level of this skill instead of Resources."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "other",
+        "timing": "check-in",
+        "prereqs": [
+          {
+            "skill": "scavenging",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "effects": [
+          {
+            "stat": "checkInUpgrades",
+            "perLevel": 1,
+            "rarity": "rare",
+            "alternative": {
+              "stat": "checkInBits",
+              "perLevel": 20
+            }
+          }
+        ],
+        "text": "At Check-In, you may Upgrade a use of Scavenging to Advanced for each Level of this Skill. For each Level, you get 1 random Rare Resources. You may gain 20 Bits per level of this skill instead of Resources."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "scavenging",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "checkInResources",
+            "perLevel": 1,
+            "levelOf": {
+              "skill": "scavenging",
+              "part": "basic"
+            },
+            "note": "rarity no higher than the use it comes from"
+          }
+        ],
+        "text": "Gain 1 additional random resource per level of this skill. The rarity of the Resource cannot be higher than the highest rarity possible from that use. (If you use an Adept use to get uncommon Resource you can get an additional Uncommon Resource or a Common Resource) You must have Scavenging at Level 9 to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Scavenging",
+      "adept": "Adept Scavenging",
+      "advanced": "Advanced Scavenging",
+      "mastery": "Scavenging Mastery"
+    },
+    "notes": "Bits are presumably the in-game currency (also called shinies); see Q-SKL in 05-skills.md.",
+    "source": "Rulebook p.60"
+  },
+  {
+    "id": "search",
+    "name": "Search",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "If you possess this skill you may stand still and activate a blacklight. (Blacklights for this skill must either be GM provided or approved by a GM before the event) If you find a UV reactive item with your blacklight you may expend a use of this skill and perform a 3 count to reveal the item. This skill may also be used to reveal hidden individuals that are within arms reach by performing a 3 count and expending a use. (objects found with the blacklight are still considered hidden until a use of this skill is expended to reveal them)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "search",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "You may expend an adept use of Search along with the basic to instantly reveal hidden objects or hidden characters at weapon range. Passive: You are now able to move slowly, approximately 1 step per second, while using a blacklight to search."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "search",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "You may expend an advanced use of Search along with the basic to instantly \"point reveal\" a hidden object or character within 10 feet. You may instead use the advanced use of this skill to \"Resist Surprise\" or \"Resist Trap\" an effect that hits you while it is hidden."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "search",
+            "part": "basic",
+            "minLevel": 9,
+            "assumed": true
+          }
+        ],
+        "text": "You are able to call \"Press\" when you perform a reveal action with the search skill. When you use a use of Search you gain an additional basic use that can only be used on this encounter.",
+        "assumptionNote": "Q-SKL-13: the rulebook states no prerequisite; level 9 Search assumed like every other mastery.",
+        "assumed": true
+      }
+    },
+    "sheetNames": {
+      "basic": "Search",
+      "adept": "Adept Search",
+      "advanced": "Advanced Search",
+      "mastery": "Search Mastery"
+    },
+    "notes": "Search Mastery states no prerequisite; Level 9 Search is assumed like every other mastery.",
+    "source": "Rulebook p.60-61"
+  },
+  {
+    "id": "stealth-utility",
+    "name": "Stealth",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "skillGroup": "stealth",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "While in a Hiding Spot, you may expend a use of this Skill by calling \"Instant Hide\" and cross your arms/weapons in front of you. You become Hidden from anyone that didn't watch you hide. Anyone that watched you Stealth may \"Point Reveal\" and break your Stealth. If you move, your Stealth will be broken. If you speak above a whisper, anyone within range will be able to \"Point Reveal\" you."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "stealth-utility",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Stealth to Upgrade it to Adept. You may call \"Resist Reveal\" against an attempt to break your Stealth. You may instead call \"Hidden-Dash\" and take a 3 second Dash to move while Hidden without breaking your Stealth. You will remain Hidden as long as where you end the Dash is also a viable Hiding Spot."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "stealth-utility",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Stealth to Upgrade it to Advanced. You may call \"Resist Surprise\" if you are hit by a Melee Attack from a target that was Hiding or from behind. (You may only \"Resist Surprise\" an Attack from a specific source once every 10 seconds.) You may also use this to enter 'Advanced stealth': as long as you remain in a viable hiding spot you may move slowly, approx 1 step per second. If you are already in Hiding you may use just a use of Advanced to change it to an advanced hide without using an additional use of basic."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "stealth-utility",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "stealth-utility",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "When you perform an Attack from the Rogue Archetype or a standard Attack while Stealthed, you may call \"Hidden\" at the beginning of the Attack. As long as the enemy isn't facing you, you remain Hidden. You must have Level 9 Stealth to learn this Skill. Gain an additional use of Basic Stealth during each Encounter."
+      }
+    },
+    "sheetNames": {
+      "basic": "Stealth (Utility)",
+      "adept": "Adept Stealth (Utility)",
+      "advanced": "Advanced Stealth (Utility)",
+      "mastery": "Stealth Mastery (Utility)"
+    },
+    "source": "Rulebook p.61"
+  },
+  {
+    "id": "tactics",
+    "name": "Tactics",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and spend 5 minutes to form a Tactical Unit of 1 person per Level of this Skill plus yourself. While all members of the Tactics Unit stay within 15 feet of the user of this Skill they all get +1 Damage to all Weapon Attacks. Players may only be in one Tactical Unit at a time. Tactical Units last until the end of the encounter after which all bonuses from the unit are lost if not used."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "tactics",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Tactics to Upgrade it to Adept. You can either form a new Tactical Unit of 1 person per Level of your Tactics Skill when using this Skill or use it on an existing Tactical Unit you are part of. You may expend a use of an Offensive Skill while using this Skill to grant all other members of the Tactical Unit a use of the Offensive Skill spent. Members of the unit can only gain one use of any specific skill this way. (Clarification: An Offensive Skill is a Skill that either damages or affects a target with a Non-Beneficial Status Effect)"
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "prereqs": [
+          {
+            "skill": "tactics",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Tactics to Upgrade it to Advanced. You can either form a new Tactical Unit of 1 person per Level of your Tactics Skill when using this Skill or use it on an existing Tactical Unit you are part of. You may expend a use of a Defensive Skill while using this Skill to grant all other members of the Tactical Unit a use of the Defensive Skill spent. Members of the Unit can only gain one use of any specific skill this way."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "tactics",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "text": "When you grant a Skill to a Tactical Unit or grant a Tactical Unit +1 damage, you instead grant 2 uses of the Skill or +2 Damage. You must have Level 9 Tactics to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Tactics",
+      "adept": "Adept Tactics",
+      "advanced": "Advanced Tactics",
+      "mastery": "Tactics Mastery"
+    },
+    "source": "Rulebook p.61-62"
+  },
+  {
+    "id": "wasteland-research",
+    "name": "Wasteland Research",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "betweenEventQuestions",
+            "perLevel": 1
+          }
+        ],
+        "text": "Between each Event, you may ask a question about the wasteland or current information for each Level of this Skill. You will receive an, at maximum, 1 sentence answer of basic information. Information must be potentially findable in recorded information. May instead use this Skill to create Basic Recipe Notes for either Gearcraft or Engineering. During an Event, this Skill is a Per/Repop Skill. You may expend a use to ask a yes/no question regarding the wasteland knowledge relevant to the current Encounter. (GM Discretion - If a question is complicated, it may take multiple uses to get an answer)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "wasteland-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may Upgrade one of your Basic Wasteland Research questions to an Adept Wasteland Research Question per Level of this Skill. You will receive a somewhat detailed answer to the question. May instead use this Skill to create Adept Recipe Notes for either Gearcraft or Engineering. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Wasteland Research to ask a question with a 1-3 word answer instead of a yes/no question."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "betweenEvents": true,
+        "prereqs": [
+          {
+            "skill": "wasteland-research",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Between Events, you may upgrade one of your Basic Wasteland Research questions to an Advanced Wasteland Research Question per Level of this Skill. This can include questions about specific names/items/or places. You will receive a detailed answer to the question. May instead use this Skill to create Advanced Recipe Notes for either Gearcraft or Engineering. Two uses may be expended to find Mastery Craft Recipe Notes for any Mastery Crafts that include at least one of those crafts. During the event, this Skill is a Per/Repop Skill. You may expend a use of this Skill while expending a use of Wasteland Research to ask a question that gets a few words to a sentence as an answer."
+      },
+      "mastery": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "wasteland-research",
+            "part": "basic",
+            "minLevel": 9
+          }
+        ],
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "wasteland-research",
+            "part": "basic",
+            "add": 1,
+            "per": "encounter"
+          }
+        ],
+        "text": "Gain a use of Basic Wasteland Research Per/Repop Skill as a Per/Encounter effect. All of your uses of the Per/Repop use of this skill become upgraded. Basics become Adept, and Adept become Advanced, Advanced become upgraded to allow a single follow up Yes/No question without spending an additional use of the skill. You must have Level 9 Wasteland Research to learn this Skill."
+      }
+    },
+    "sheetNames": {
+      "basic": "Wasteland Research",
+      "adept": "Adept Wasteland Research",
+      "advanced": "Advanced Wasteland Research",
+      "mastery": "Wasteland Research Mastery"
+    },
+    "source": "Rulebook p.62"
+  },
+  {
+    "id": "first-aid",
+    "name": "First Aid",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "countSeconds",
+            "skill": "first-aid",
+            "base": 100
+          },
+          {
+            "stat": "countSeconds",
+            "skill": "first-aid",
+            "perLevel": -10
+          }
+        ],
+        "text": "While someone is in Bleedout, you may spend a 100 Count to stabilize them. After the 100 Count they go to 0 Health and are Unconscious. Once you start doing First Aid, the person's Bleedout Count is stopped, but it will continue again from where it left off if the First Aid is interrupted. Each Level of this ability reduces the Count required to complete the First Aid by 10 seconds. At level 5, you may choose for the target of the effect to go to 1 Health and be conscious instead of 0 HP. Passive: You may spend a 3 count to determine how much below their max HP a character is and what status effects are affecting them."
+      }
+    },
+    "sheetNames": {
+      "main": "First Aid"
+    },
+    "source": "Rulebook p.62"
+  },
+  {
+    "id": "inspire",
+    "name": "Inspire",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "You may expend a use of this Skill and spend a minute roleplaying with a target to Inspire them and Restore one use of a Basic Skill that must be used in this Encounter. A single character cannot have a crafting skill restored more than once per repop with the inspire skill. You may expend multiple uses of this Skill to restore higher Levels of Skills (Expend 2 uses to restore an Adept Skill or 3 uses to restore an Advanced Skill). At level 5, the roleplaying time to use this Skill becomes 30 seconds."
+      }
+    },
+    "sheetNames": {
+      "main": "Inspire"
+    },
+    "source": "Rulebook p.62"
+  },
+  {
+    "id": "knowledge",
+    "name": "Knowledge",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "prereqs": [],
+        "text": "You may expend a use of this skill to ask a yes/no question about something pertaining to a Research skill you have. At level 5, you may ask one additional yes/no question based on the initial question without an additional Skill use."
+      }
+    },
+    "sheetNames": {
+      "main": "Knowledge"
+    },
+    "notes": "Only useful with at least one Research skill; the rulebook does not make that a purchase prerequisite.",
+    "source": "Rulebook p.63"
+  },
+  {
+    "id": "100-count-search",
+    "name": "100 Count Search",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "countSeconds",
+            "skill": "100-count-search",
+            "base": 100
+          },
+          {
+            "stat": "countSeconds",
+            "skill": "100-count-search",
+            "perLevel": -10
+          },
+          {
+            "stat": "countSeconds",
+            "skill": "100-count-search",
+            "add": -10,
+            "atLevel": 5
+          }
+        ],
+        "text": "You may stand in place and locate a hidden object or character within arms reach with a 100 count. While standing in place you are able to turn on a blacklight and use it to search for hidden objects (an object located with the blacklight will still require the 100 count in order to reveal it). Each level of this skill reduces the time it takes for you to use this skill to reveal an object by 10 seconds. At level 5 this skill is reduced by an additional 10 seconds."
+      }
+    },
+    "sheetNames": {
+      "main": "100 Count Search"
+    },
+    "notes": "Heading in the text extract reads \"100 Count Search Search - Passive\".",
+    "source": "Rulebook p.63"
+  },
+  {
+    "id": "tracking",
+    "name": "Tracking",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [],
+        "effects": [
+          {
+            "stat": "countertrackingLevel",
+            "perLevel": 1
+          },
+          {
+            "stat": "countertrackingLevel",
+            "add": 1,
+            "atLevel": 5
+          }
+        ],
+        "text": "You can follow or locate a target based on tracks/signs/etc in the wilderness/wasteland. May also countertrack or prevent followers up to your Level of Tracking. Higher Levels are able to follow more difficult trails or defeat lower Level Countertracking. At level 5, your Countertracking counts as 1 Level higher."
+      }
+    },
+    "sheetNames": {
+      "main": "Tracking"
+    },
+    "source": "Rulebook p.63"
+  },
+  {
+    "id": "100-count-disarm-unlock-device",
+    "name": "100 Count Disarm/Unlock Device",
+    "category": "standard",
+    "archetype": "utility",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "disarm-unlock-device",
+            "part": "basic",
+            "minLevel": 1
+          }
+        ],
+        "effects": [
+          {
+            "stat": "countSeconds",
+            "skill": "100-count-disarm-unlock-device",
+            "base": 100
+          },
+          {
+            "stat": "countSeconds",
+            "skill": "100-count-disarm-unlock-device",
+            "perLevel": -10,
+            "fromLevel": 2
+          },
+          {
+            "stat": "countSeconds",
+            "skill": "100-count-disarm-unlock-device",
+            "add": -10,
+            "atLevel": 5
+          }
+        ],
+        "text": "Must have Disarm/Unlock Device. You may spend a 100 Count to disarm or unlock a device. The highest level of a device that you can disarm or unlock is equal to your highest level of Disarm/Unlock Device. Additional levels of this skill reduce the time it takes for you to Disarm/unlock the device by 10 seconds per level. At level 5 the time it takes to use this skill is reduced by an additional 10 seconds."
+      }
+    },
+    "sheetNames": {
+      "main": "100 Count Disarm/Unlock Device"
+    },
+    "notes": "\"Additional levels\" read as levels 2 and up; see open questions.",
+    "source": "Rulebook p.63"
+  },
+  {
+    "id": "elemental-magic",
+    "name": "Elemental Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "school": "elemental",
+    "packetDamageTypes": ["fire", "air", "earth", "water"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "elemental",
+          "perLevel": 1
+        },
+        "text": "You may expend a use of this Skill to cast a Basic Elemental Spell. Passive: Gain the ability to throw packets for 1 Fire/Air/Earth/Water. Passive: You may memorize 1 Elemental spell per level of this skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "elemental-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "elemental",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Elemental Magic to Upgrade it to Adept. You may cast an Adept Elemental Spell. Passive: You may memorize 1 Elemental spell per level of this skill."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "elemental-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "elemental",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Elemental Magic to Upgrade it to Advanced. You may cast an Advanced Elemental Spell. Passive: You may memorize 1 Elemental spell per level of this skill."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.84"
+  },
+  {
+    "id": "life-magic",
+    "name": "Life Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "school": "life",
+    "packetDamageTypes": ["essence"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "life",
+          "perLevel": 1
+        },
+        "text": "You may expend a use of this Skill to cast a Basic Life Spell. Passive: Gain the ability to throw packets for 1 Essence. Passive: You may memorize 1 Life spell per level of this skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "life-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "life",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Life Magic to Upgrade it to Adept. You may cast an Adept Life Spell. Passive: You may memorize 1 Life spell per level of this skill."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "life-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "life",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Life Magic to Upgrade it to Advanced. You may cast an Advanced Life Spell. Passive: You may memorize 1 Life spell per level of this skill."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.84"
+  },
+  {
+    "id": "death-magic",
+    "name": "Death Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "school": "death",
+    "packetDamageTypes": ["harm"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "death",
+          "perLevel": 1
+        },
+        "text": "You may expend a use of this Skill to cast a Basic Death Spell. Passive: Gain the ability to throw packets for 1 Harm. Passive: You may memorize 1 Death spell per level of this skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "death-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "death",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Death Magic to Upgrade it to Adept. You may cast an Adept Death Spell Passive: You may memorize 1 Death spell per level of this skill."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "death-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "death",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Death Magic to Upgrade it to Advanced. You may cast an Advanced Death Spell. Passive: You may memorize 1 Death spell per level of this skill."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.84"
+  },
+  {
+    "id": "tech-magic",
+    "name": "Tech Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "school": "tech",
+    "packetDamageTypes": ["zap"],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "tech",
+          "perLevel": 1
+        },
+        "text": "You may expend a use of this Skill to cast a Basic Tech Spell. Passive: Gain the ability to throw packets for 1 Zap. Passive: You may memorize 1 Tech spell per level of this skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "tech-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "tech",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Tech Magic to Upgrade it to Adept. You may cast an Adept Tech Spell. Passive: You may memorize 1 Tech spell per level of this skill."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "tech-magic",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "tech",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this Skill while expending a use of Tech Magic to Upgrade it to Advanced. You may cast an AdvancedTech Spell. Passive: You may memorize 1 Tech spell per level of this skill."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.85"
+  },
+  {
+    "id": "resist-spell",
+    "name": "Resist Spell",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to Resist any numerical effect with Spell in the call by calling \"Resist Spell\""
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "resist-spell",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Resist Spell to Upgrade it to Adept. You can respond to any call with \"Spell\" in the call that you are hit by with \"Negate Spell\". This will resist any effect of the spell."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "resist-spell",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Resist Spell to Upgrade it to Advanced. You can respond to any call with \"Spell\" in the call that you are hit by with \"Negate Spell Reflect X\". X is the original call of the spell. The original caster takes the effect of the spell instead."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.85"
+  },
+  {
+    "id": "channeling",
+    "name": "Channeling",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to change your delivery method of a Spell to a Spellstrike. The Spell is cast as normal, but instead of throwing a packet, you deliver the Spell with a Weapon. Any damage call from the Weapon is replaced with the Spell call."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "channeling",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Channeling to Upgrade it to Adept. You add \"Frontal Cone\" to the call of any Spell. Cannot be used with spells that occupy a buff slot"
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "channeling",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Channeling to Upgrade it to Advanced. You add \"Lash\" to the call of any Spell. Cannot be used on spells that occupy a buff slot."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.85"
+  },
+  {
+    "id": "spell-manipulation",
+    "name": "Spell Manipulation",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and call \"Echo\" and immediately recast a Spell you just cast again."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "spell-manipulation",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "If a Spell you Cast is Resisted you may expend a use of this Skill while expending a use of Spell Manipulation to Upgrade it to Adept. You may call \"Press Spell\" and force them to Resist the Effect again."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "spell-manipulation",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Spell Manipulation to Upgrade it to Advanced. You may call \"Spell Flurry\" and cast the next Spell you cast 3 times in a row. Cannot be used on Spells that occupy a Buff Slot."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.85"
+  },
+  {
+    "id": "overcharge",
+    "name": "Overcharge",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this skill and take 5 damage or an additional 10 seconds charging the spell to add +10 to the Damage of your next Spell or add +5 Seconds to any Duration Effect of the next Spell you Cast."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "overcharge",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Overcharge to Upgrade it to Adept. The bonus becomes +20 Damage to the next Spell you Cast or add +10 Seconds to any Duration Effect of the next Spell you Cast."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "overcharge",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Overcharge to Upgrade it to Advanced. The bonus becomes +40 Damage to the next Spell you Cast or add +20 Seconds to any Duration Effect of the next Spell you Cast."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.86"
+  },
+  {
+    "id": "focus",
+    "name": "Focus",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to call \"Focus\" instead of speaking the Spell Incant for the next spell you cast."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "focus",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Focus to Upgrade it to Adept. You may now call \"Focus\" instead of speaking the Spell Incant for all Spells of a chosen Magic School until the end of the Encounter."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "focus",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Focus to Upgrade it to Advanced. You may now call \"Focus\" instead of speaking the Spell Incant for all Spells until the end of the Encounter."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.86"
+  },
+  {
+    "id": "raw-magic-enhancement",
+    "name": "Raw Magic Enhancement",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to gain +1 damage for all packet damage for the Passive effects of your Magic Skills until the end of the Encounter. (This skill may stack up to a +10 damage bonus)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "raw-magic-enhancement",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Raw Magic Enhancement to Upgrade it to Adept. Add \"Lash\" to the next 3 packets thrown with the Passive effect of your Magic Skills."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "raw-magic-enhancement",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Raw Magic Enhancement to Upgrade it to Advanced. You may call \"X Storm\" where X is a Damage Type you can throw from one of the Passive effects of one of your Magic Skills. Plant your feet and enter a Raw Magic Storm and throw a packet with the call \"10 Spell X\" where X is the Damage Type chosen when starting the Storm followed by calling \"Echo\" to throw an additional packet with the same effect. While you are under this effect, you may continue to repeat these calls. You may continue throwing packets with these calls until you move your feet, are hit with any Damage or Effect, make any other call, or 10 seconds have passed without using these calls."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.86"
+  },
+  {
+    "id": "raw-magic-proficiency",
+    "name": "Raw Magic Proficiency",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "passive",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "passive",
+        "frequency": "passive",
+        "costText": "Passive - Lv 1 Cost 3 AP",
+        "prereqs": [],
+        "text": "Your packets from a passive effect from your Magic Skills gain +1 Damage per Level. At level 5 of this skill your packets do an additional +1 passive damage.",
+        "effects": [
+          {
+            "stat": "packetDamage",
+            "perLevel": 1
+          },
+          {
+            "stat": "packetDamage",
+            "add": 1,
+            "atLevel": 5
+          }
+        ]
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.86"
+  },
+  {
+    "id": "spell-resilience",
+    "name": "Spell Resilience",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 2 AP",
+        "prereqs": [],
+        "text": "Expend a use to call \"Spell Resilience\" and take half from any numerical spell effect. At level 5 of this skill gain an additional use of “Spell Resilience” per encounter.",
+        "effects": [
+          {
+            "stat": "uses",
+            "skill": "spell-resilience",
+            "part": "main",
+            "add": 1,
+            "atLevel": 5
+          }
+        ]
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.86"
+  },
+  {
+    "id": "spell-memorization",
+    "name": "Spell Memorization",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "memorization",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "memorization",
+        "frequency": "passive",
+        "costText": "Passive - Always cost 1 AP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "spell",
+          "pool": "any",
+          "perLevel": 1
+        },
+        "text": "May memorize 1 Spell of any kind per level of this skill. This skill always only costs 1 AP and has no limit to the number of times you can purchase it."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "detect-magic",
+    "name": "Detect Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "costText": "Per/Encounter - Lv 1 Cost 2 AP",
+        "prereqs": [],
+        "text": "You may touch an object and spend a 3 count to determine if it is magical and what type of magic is on it. Passive: You may also spend a 100 count to detect magic per the normal use of the skill and identify an item to determine what the magical effects on the item are. Passive: at Lv 5 in this ability you may detect magic from up to 5 ft from an object and your 100 count to use the passive of this skill is reduced to a 50 count.",
+        "effects": [
+          {
+            "stat": "countSeconds",
+            "skill": "detect-magic",
+            "base": 100,
+            "condition": "identify (passive)"
+          },
+          {
+            "stat": "countSeconds",
+            "skill": "detect-magic",
+            "add": -50,
+            "atLevel": 5,
+            "condition": "identify (passive)"
+          }
+        ]
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.87"
+  },
+  {
+    "id": "blood-magic",
+    "name": "Blood Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "mastery",
+    "marks": [],
+    "components": ["life", "death"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "life-magic",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "death-magic",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "abilities": [
+          "blood-magic-passive",
+          "blood-magic-basic",
+          "blood-magic-adept",
+          "blood-magic-advanced"
+        ],
+        "text": "Blood magic is the ability to draw on your own and others' life force to empower its effects. To use mastery magic, you must expend a use of each of the two magic skills that make up that mastery magic. It has four abilities: a passive and a basic, adept, and advanced ability."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.83-84, 91"
+  },
+  {
+    "id": "nature-magic",
+    "name": "Nature Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "mastery",
+    "marks": [],
+    "components": ["life", "elemental"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "life-magic",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "elemental-magic",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "abilities": [
+          "nature-magic-passive",
+          "nature-magic-basic",
+          "nature-magic-adept",
+          "nature-magic-advanced"
+        ],
+        "text": "Nature magic is the ability to connect with the natural world. Using this connection to heal others, bolster yourself, or heal others. To use mastery magic, you must expend a use of each of the two magic skills that make up that mastery magic. It has four abilities: a passive and a basic, adept, and advanced ability."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.83-84, 91"
+  },
+  {
+    "id": "stalwart-magic",
+    "name": "Stalwart Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "mastery",
+    "marks": [],
+    "components": ["life", "tech"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "life-magic",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "tech-magic",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "abilities": [
+          "stalwart-magic-passive",
+          "stalwart-magic-basic",
+          "stalwart-magic-adept",
+          "stalwart-magic-advanced"
+        ],
+        "text": "Stalwart Magic is the magic of protection. Protecting your targets with powerful shields that enhance their armor. To use mastery magic, you must expend a use of each of the two magic skills that make up that mastery magic. It has four abilities: a passive and a basic, adept, and advanced ability."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.83-84, 92"
+  },
+  {
+    "id": "ruin-magic",
+    "name": "Ruin Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "mastery",
+    "marks": [],
+    "components": ["elemental", "death"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "elemental-magic",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "death-magic",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "abilities": [
+          "ruin-magic-passive",
+          "ruin-magic-basic",
+          "ruin-magic-adept",
+          "ruin-magic-advanced"
+        ],
+        "text": "Ruin Magic is the power of destruction, tearing through your targets at a molecular level. To use mastery magic, you must expend a use of each of the two magic skills that make up that mastery magic. It has four abilities: a passive and a basic, adept, and advanced ability."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.83-84, 92"
+  },
+  {
+    "id": "disruption-magic",
+    "name": "Disruption Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "mastery",
+    "marks": [],
+    "components": ["tech", "death"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "tech-magic",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "death-magic",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "abilities": [
+          "disruption-magic-passive",
+          "disruption-magic-basic",
+          "disruption-magic-adept",
+          "disruption-magic-advanced"
+        ],
+        "text": "Disruption magic is the understanding of the core structure or weave of magic. You are able to unravel other spells or magical protections. To use mastery magic, you must expend a use of each of the two magic skills that make up that mastery magic. It has four abilities: a passive and a basic, adept, and advanced ability."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.83-84, 92"
+  },
+  {
+    "id": "warding-magic",
+    "name": "Warding Magic",
+    "category": "magic",
+    "archetype": "magic",
+    "type": "mastery",
+    "marks": [],
+    "components": ["tech", "elemental"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "tech-magic",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "elemental-magic",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "abilities": [
+          "warding-magic-passive",
+          "warding-magic-basic",
+          "warding-magic-adept",
+          "warding-magic-advanced"
+        ],
+        "text": "Magical wards are reactive shields that when triggered protect whatever they are around and then respond back to whatever triggered them. To use mastery magic, you must expend a use of each of the two magic skills that make up that mastery magic. It has four abilities: a passive and a basic, adept, and advanced ability."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.83-84, 93"
+  },
+  {
+    "id": "chemistry",
+    "name": "Chemistry",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "discipline": "chemistry",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "chemistry",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill to craft an item from a basic Chemistry recipe, Passive: You may memorize 1 Chemistry recipe per level of this skill"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "chemistry",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "chemistry",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Chemistry to upgrade the use to Adept. You can craft an item from an adept Chemistry recipe. Passive: You may memorize 1 Chemistry recipe per level of this skill"
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "chemistry",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "chemistry",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Chemistry to upgrade the use to Advanced. You can craft an item from an advanced Chemistry recipe. Passive: You may memorize 1 Chemistry recipe per level of this skill"
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.67"
+  },
+  {
+    "id": "dismantle",
+    "name": "Dismantle",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and spend a 100 Count to Dismantle a Disarmed Trap or a Picked Lock that came from a Plot Encounter, or a Basic Item crafted by Engineering or Gearcraft to gain 1 Common Scrap or Junk Resources of your choice. Passive - at check in you will gain 2 common scrap or junk of your choice per level of this skill)",
+        "effects": [
+          {
+            "stat": "checkInResources",
+            "perLevel": 2,
+            "rarity": "common",
+            "resourceTypes": ["scrap", "junk"]
+          }
+        ]
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "dismantle",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Dismantle to Upgrade it to Adept. You may now also Dismantle an Adept Crafted Item in addition to Plot Encountered Locks & Traps and you now gain 1 Uncommon Scrap or Junk Resources. Passive - at check in will upgrade one of your levels of basic dismantle per level to adept to get 2 uncommon scrap or junk of your choice.",
+        "effects": [
+          {
+            "stat": "checkInUpgrades",
+            "perLevel": 1,
+            "rarity": "uncommon",
+            "qty": 2,
+            "resourceTypes": ["scrap", "junk"]
+          }
+        ]
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "dismantle",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Dismantle to Upgrade it to Advanced. You may now also Dismantle an Advanced Crafted Item in addition to Plot Encountered Locks & Traps and you now gain 1 Rare Scrap or Junk Resources. Passive - at check in will upgrade one of your levels of basic dismantle per level to advanced to get 1 rare scrap or junk of your choice per level)",
+        "effects": [
+          {
+            "stat": "checkInUpgrades",
+            "perLevel": 1,
+            "rarity": "rare",
+            "qty": 1,
+            "resourceTypes": ["scrap", "junk"]
+          }
+        ]
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.67"
+  },
+  {
+    "id": "efficient-crafting",
+    "name": "Efficient Crafting",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill to reduce the Resource cost while crafting an Item by 1 Common Resource. Additional uses of this Skill can upgrade the Tier of the Reduced Resource. (2 uses for uncommon, 3 uses for rare)"
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "efficient-crafting",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Efficient Crafting to Upgrade it to Adept. You may also expend a use to combine 2 Common Resources of the same type to Upgrade them into a single Uncommon Resource of that type."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "efficient-crafting",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Efficient Crafting to Upgrade it to Advanced. You may also expend a use to combine 2 Uncommon Resources of the same type to Upgrade them into a single Rare Resource of that type."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.67"
+  },
+  {
+    "id": "emergency-craft",
+    "name": "Emergency Craft",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "encounter",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "encounter",
+        "frequency": "per-encounter",
+        "costText": "Per Encounter",
+        "prereqs": [],
+        "assumed": true,
+        "assumptionNote": "Cost assumed from the Skill Cost Chart (2 AP x level); the rulebook states none for this part.",
+        "text": "You may expend a use of this skill to create a basic item that you have the recipe memorized on a 100 count. The item must be used within 60 seconds of the completion of the count. Buffs granted by these crafted items fade at the end of the encounter if not already expended. Component costs for the items must be paid even though the item is not stable."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.68"
+  },
+  {
+    "id": "engineering",
+    "name": "Engineering",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "discipline": "engineering",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "engineering",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill to craft an item from a basic Engineering recipe. You may memorize 1 Engineering recipe per level of this skill. Passive: You may spend 5 minutes working on an item to repair a shattered weapon, shield, or armor."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "engineering",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "engineering",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Engineering to upgrade the use to Adept. You can craft an item from an adept engineering recipe. You may memorize 1 Engineering recipe per level of this skill"
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "engineering",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "engineering",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Engineering to upgrade the use to Advanced. You can craft an item from an advanced engineering recipe. You may memorize 1 Engineering recipe per level of this skill"
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.68"
+  },
+  {
+    "id": "gearcraft",
+    "name": "Gearcraft",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "discipline": "gearcraft",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "gearcraft",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill to craft an item from a basic Gearcraft recipe, You may memorize 1 Gearcraft recipe per level of this skill. Passive: You may spend 5 minutes working on an item to repair a shattered weapon, shield, or armor."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "gearcraft",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "gearcraft",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Gearcraft to upgrade the use to Adept. You can craft an item from an adept Gearcraft recipe. You may memorize 1 Gearcraft recipe per level of this skill"
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lev 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "gearcraft",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "gearcraft",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Gearcraft to upgrade the use to Advanced. You can craft an item from an advanced Gearcraft recipe. You may memorize 1 Gearcraft recipe per level of this skill"
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.68"
+  },
+  {
+    "id": "harvesting",
+    "name": "Harvesting",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this Skill and spend a 100 Count to harvest a Non-Sentient and Non-Risen Creature to gain 1 Common Chemical or Organic Resources. Passive: At check in gain 2 common chemical or organic resources of your choice per level of this skill",
+        "effects": [
+          {
+            "stat": "checkInResources",
+            "perLevel": 2,
+            "rarity": "common",
+            "resourceTypes": ["chemical", "organic"]
+          }
+        ]
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "harvesting",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Harvesting to Upgrade it to Adept. You may now instead gain 1 Uncommon Chemical or Organic Resources. Passive: At check in upgrade one use of basic harvesting to adept per level to gain 2 uncommon chemical or organic resources of your choice.",
+        "effects": [
+          {
+            "stat": "checkInUpgrades",
+            "perLevel": 1,
+            "rarity": "uncommon",
+            "qty": 2,
+            "resourceTypes": ["chemical", "organic"]
+          }
+        ]
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "harvesting",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Harvesting to Upgrade it to Advanced. You may now instead gain 1 Rare Chemical or Organic Resources. Passive: At check in upgrade one use of basic harvesting to advanced per level to gain 1 rare chemical or organic resource of your choice.",
+        "effects": [
+          {
+            "stat": "checkInUpgrades",
+            "perLevel": 1,
+            "rarity": "rare",
+            "qty": 1,
+            "resourceTypes": ["chemical", "organic"]
+          }
+        ]
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.68"
+  },
+  {
+    "id": "improve-item",
+    "name": "Improve Item",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this skill to add a temporary Enhancement Slot in an Item. This Slot will last for the Repop. An Item can only have a single \"Improve Item\" Enhancement Slot."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "improve-item",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Improve Item to Upgrade it to Adept. When you create the temporary Enhancement Slot in an Item, you may immediately fill it with a copy of any Enhancement that is already on the Item. The copied Enhancement will only last until the end of the Encounter."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "improve-item",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Improve Item to Upgrade it to Advanced. You may now create a copy of any Consumable or Enhancement that you used in this Encounter. This copied Item or Enhancement will only last until the end of the Encounter."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.69"
+  },
+  {
+    "id": "medicine",
+    "name": "Medicine",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "discipline": "medicine",
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "medicine",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill to craft an item from a basic Medicine recipe. You may memorize 1 Medicine recipe per level of this skill."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "medicine",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "medicine",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Medicine to upgrade the use to Adept. You can craft an item from an adept Medicine recipe. You may memorize 1 Medicine recipe per level of this skill"
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "medicine",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "medicine",
+          "perLevel": 1
+        },
+        "text": "Expend a use of this skill and a use of Medicine to upgrade the use to Advanced. You can craft an item from an advanced Medicine recipe. You may memorize 1 Medicine recipe per level of this skill"
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.69"
+  },
+  {
+    "id": "quick-crafting",
+    "name": "Quick Crafting",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 10 CXP",
+        "prereqs": [],
+        "text": "Expend a use of this skill to change the time it takes to craft a single basic item to a 100 count and you may craft the item away from a safe crafting location. Passive: You may temporarily repair a shattered weapon or shield on a 100 count. The Item will still need to be repaired fully once in a safe crafting location by a gearcrafter or engineer."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 3 AP",
+        "prereqs": [
+          {
+            "skill": "quick-crafting",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Quick Crafting to Upgrade it to Adept. You may now use Quick Crafting for Adept Items. Passive: your ability to temporarily repair shattered weapons and shields is now a 60 count."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "costText": "Per/Repop - Lv 1 Cost 5 AP",
+        "prereqs": [
+          {
+            "skill": "quick-crafting",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "text": "Expend a use of this Skill while expending a use of Quick Crafting to Upgrade it to Advanced. You may now use Quick Crafting for Advanced Items. Passive: Your repair shattered weapons and shields action during an encounter is now hasted."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.69"
+  },
+  {
+    "id": "recipe-memorization",
+    "name": "Recipe Memorization",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "memorization",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "memorization",
+        "frequency": "passive",
+        "costText": "Passive - Always Cost 1 AP",
+        "prereqs": [],
+        "memorizationSlots": {
+          "kind": "recipe",
+          "pool": "any",
+          "perLevel": 1
+        },
+        "text": "May memorize 1 Recipe of any kind per level of this skill. This skill always only costs 1 AP and has no limit to the number of times you can purchase it."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.69"
+  },
+  {
+    "id": "medcraft",
+    "name": "Medcraft",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "mastery",
+    "marks": [],
+    "components": ["gearcraft", "medicine"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "gearcraft",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "medicine",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "text": "To use master crafting, you must expend a use of each of the two crafts that make up that mastery craft. By additionally expending a use of Adept or Advanced for both skills, you can Craft a Medcraft Item of the same Tier as the additionally expended uses."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.66",
+    "notes": "No free slots. Each mastery recipe costs 1 AP to memorize."
+  },
+  {
+    "id": "chemcraft",
+    "name": "Chemcraft",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "mastery",
+    "marks": [],
+    "components": ["gearcraft", "chemistry"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "gearcraft",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "chemistry",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "text": "To use master crafting, you must expend a use of each of the two crafts that make up that mastery craft. By additionally expending a use of Adept or Advanced for both skills, you can Craft a Medcraft Item of the same Tier as the additionally expended uses."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.66",
+    "notes": "No free slots. Each mastery recipe costs 1 AP to memorize."
+  },
+  {
+    "id": "gearcraft-engineering",
+    "name": "Gearcraft Engineering",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "mastery",
+    "marks": [],
+    "components": ["gearcraft", "engineering"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "gearcraft",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "engineering",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "text": "To use master crafting, you must expend a use of each of the two crafts that make up that mastery craft. By additionally expending a use of Adept or Advanced for both skills, you can Craft a Medcraft Item of the same Tier as the additionally expended uses."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.66",
+    "notes": "No free slots. Each mastery recipe costs 1 AP to memorize."
+  },
+  {
+    "id": "biologic-intervention",
+    "name": "Biologic Intervention",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "mastery",
+    "marks": [],
+    "components": ["medicine", "chemistry"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "medicine",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "chemistry",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "text": "To use master crafting, you must expend a use of each of the two crafts that make up that mastery craft. By additionally expending a use of Adept or Advanced for both skills, you can Craft a Medcraft Item of the same Tier as the additionally expended uses."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.66",
+    "notes": "No free slots. Each mastery recipe costs 1 AP to memorize."
+  },
+  {
+    "id": "medical-engineering",
+    "name": "Medical Engineering",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "mastery",
+    "marks": [],
+    "components": ["medicine", "engineering"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "medicine",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "engineering",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "text": "To use master crafting, you must expend a use of each of the two crafts that make up that mastery craft. By additionally expending a use of Adept or Advanced for both skills, you can Craft a Medcraft Item of the same Tier as the additionally expended uses."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.66",
+    "notes": "No free slots. Each mastery recipe costs 1 AP to memorize."
+  },
+  {
+    "id": "chemical-engineering",
+    "name": "Chemical Engineering",
+    "category": "crafting",
+    "archetype": "crafting",
+    "type": "mastery",
+    "marks": [],
+    "components": ["chemistry", "engineering"],
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "prereqs": [
+          {
+            "skill": "chemistry",
+            "part": "basic",
+            "minLevel": 6
+          },
+          {
+            "skill": "engineering",
+            "part": "basic",
+            "minLevel": 6
+          }
+        ],
+        "teacherRequired": true,
+        "notAtCreation": true,
+        "text": "To use master crafting, you must expend a use of each of the two crafts that make up that mastery craft. By additionally expending a use of Adept or Advanced for both skills, you can Craft a Medcraft Item of the same Tier as the additionally expended uses."
+      }
+    },
+    "sheetNames": {},
+    "source": "Rulebook p.66",
+    "notes": "No free slots. Each mastery recipe costs 1 AP to memorize."
+  },
+  {
+    "id": "bardic-performance",
+    "name": "Bardic Performance",
+    "category": "multi",
+    "archetypeOptions": ["utility", "magic"],
+    "archetypeRule": {
+      "kind": "locked-on-first-purchase"
+    },
+    "type": "basic",
+    "marks": [],
+    "parts": {
+      "basic": {
+        "costKind": "basic",
+        "frequency": "per-repop",
+        "prereqs": [],
+        "targets": {
+          "max": 4
+        },
+        "unlocks": {
+          "performanceTier": "basic"
+        },
+        "effects": [
+          {
+            "stat": "performanceSlots",
+            "perLevel": 1,
+            "note": "free memorized performances"
+          }
+        ],
+        "text": "You may expend a use of this skill to perform a basic Performance. The Performance may target up to 4 targets and call \"Group - 'Performance Name' - Effect\". Passive: For each level of Basic Bardic Performance you have you may memorize one additional Performance for no additional cost."
+      },
+      "adept": {
+        "costKind": "adept",
+        "frequency": "per-repop",
+        "prereqs": [
+          {
+            "skill": "bardic-performance",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "targets": {
+          "max": 10
+        },
+        "unlocks": {
+          "performanceTier": "adept"
+        },
+        "assumed": true,
+        "assumptionNote": "Cost assumed from the Skill Cost Chart (3 AP x level); the rulebook states none for this part.",
+        "text": "When you expend a use of Bardic Performance you may also expend a use of this skill to upgrade it to Adept. The Performance now may target up to 10 people. Passive: You are now capable of memorizing and performing Adept level performances."
+      },
+      "advanced": {
+        "costKind": "advanced",
+        "frequency": "per-repop",
+        "prereqs": [
+          {
+            "skill": "bardic-performance",
+            "part": "basic",
+            "minLevel": 1,
+            "assumed": true
+          }
+        ],
+        "targets": {
+          "area": "voice-radius"
+        },
+        "unlocks": {
+          "performanceTier": "advanced"
+        },
+        "assumed": true,
+        "assumptionNote": "Cost assumed from the Skill Cost Chart (5 AP x level); the rulebook states none for this part.",
+        "text": "When you expend a use of Bardic Performance you may also expend a use of this skill to upgrade it to Advanced. The Performance now becomes a Voice Radius effect. Passive: You are now capable of memorizing and performing Advanced level performances."
+      }
+    },
+    "text": "Bardic Performance can be purchased in either the Utility or Magic Archetypes and represents your skill to inspire others with some sort of performance. In order to benefit from a Bardic Performance all targets must have listened or watched the entire performance. Performances do not need to be specifically musically related. They can be Singing, Dancing, Storytelling, etc. Just need to be some sort of performance or presentation for the required performance time. The Bardic Performance skill cannot be used in combat.",
+    "sheetNames": {
+      "basic": "Bardic Performance",
+      "adept": "Adept Bardic Performance",
+      "advanced": "Advanced Bardic Performance"
+    },
+    "notes": "Chapter 7 gives no AP cost or level cap for Adept and Advanced; the standard Adept (3 AP) and Advanced (5 AP) costs and the level 5 cap are assumed. Unlike standard Adept and Advanced parts these are Per/Repop.",
+    "source": "Rulebook p.94-95"
+  },
+  {
+    "id": "bardic-performance-memorization",
+    "name": "Memorize Performance",
+    "category": "multi",
+    "archetypeOptions": ["utility", "magic"],
+    "archetypeRule": {
+      "kind": "same-as-skill",
+      "skill": "bardic-performance"
+    },
+    "type": "memorization",
+    "marks": [],
+    "parts": {
+      "main": {
+        "costKind": "memorization",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "bardic-performance",
+            "part": "basic",
+            "minLevel": 1
+          }
+        ],
+        "text": "Always costs 1 AP. You may memorize an additional Bardic performance."
+      }
+    },
+    "sheetNames": {
+      "main": "Bardic Performance Memorization"
+    },
+    "source": "Rulebook p.95"
+  },
+  {
+    "id": "ritualism",
+    "name": "Ritualism",
+    "category": "multi",
+    "archetypeOptions": ["crafting", "magic"],
+    "archetypeRule": {
+      "kind": "one-of-prereq-archetypes"
+    },
+    "type": "mastery",
+    "marks": [],
+    "cognitivePower": true,
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "count": 2,
+                    "from": {
+                      "archetype": "crafting"
+                    },
+                    "part": "basic",
+                    "minLevel": 6
+                  },
+                  {
+                    "count": 1,
+                    "from": {
+                      "archetype": "magic"
+                    },
+                    "part": "basic",
+                    "minLevel": 6
+                  }
+                ]
+              },
+              {
+                "allOf": [
+                  {
+                    "count": 2,
+                    "from": {
+                      "archetype": "magic"
+                    },
+                    "part": "basic",
+                    "minLevel": 6
+                  },
+                  {
+                    "count": 1,
+                    "from": {
+                      "archetype": "crafting"
+                    },
+                    "part": "basic",
+                    "minLevel": 6
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "grants": [
+          {
+            "ritual": "ritual-circle"
+          },
+          {
+            "chooseRituals": 1
+          }
+        ],
+        "text": "Prereqs for all ritualism skills: Requires either Lv 6 in two Crafting Skills and Lv 6 in one Magic Skill or Lv 6 in two Magic Skills and Lv 6 in one Crafting Skill. Represents your character's ability to use their knowledge and skill of both magic and various crafted items to achieve a higher mental state, create a connection to the Cognitive Realm and then more directly manipulate the energies within it. Upon learning this skill you automatically learn the Ritual Circle ritual and a single ritual from the list.",
+        "notAtCreation": true
+      }
+    },
+    "sheetNames": {
+      "main": "Ritualism"
+    },
+    "source": "Rulebook p.96-97"
+  },
+  {
+    "id": "ritual-memorization",
+    "name": "Memorize Additional Ritual",
+    "category": "multi",
+    "archetypeOptions": ["crafting", "magic"],
+    "archetypeRule": {
+      "kind": "same-as-skill",
+      "skill": "ritualism"
+    },
+    "type": "memorization",
+    "marks": [],
+    "cognitivePower": true,
+    "parts": {
+      "main": {
+        "costKind": "memorization",
+        "frequency": "passive",
+        "prereqs": [
+          {
+            "skill": "ritualism",
+            "part": "main",
+            "minLevel": 1
+          }
+        ],
+        "teacherRequired": true,
+        "text": "You may spend 1 AP to Memorize an additional Ritual after being taught it.",
+        "notAtCreation": true
+      }
+    },
+    "sheetNames": {
+      "main": "Ritual Memorization"
+    },
+    "source": "Rulebook p.97"
+  },
+  {
+    "id": "meditation-skill-refresh",
+    "name": "Skill Refresh",
+    "category": "multi",
+    "archetypeOptions": ["warrior", "defender", "rogue", "utility", "magic", "crafting"],
+    "archetypeRule": {
+      "kind": "one-of-prereq-archetypes"
+    },
+    "type": "mastery",
+    "marks": [],
+    "skillGroup": "meditation",
+    "cognitivePower": true,
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "per-repop",
+        "prereqs": [
+          {
+            "allOf": [
+              {
+                "count": 2,
+                "from": {
+                  "archetypes": ["warrior", "defender", "rogue", "utility"],
+                  "sameArchetype": true
+                },
+                "part": "basic",
+                "minLevel": 6
+              },
+              {
+                "count": 1,
+                "from": {
+                  "archetypes": ["magic", "crafting"]
+                },
+                "part": "basic",
+                "minLevel": 6
+              }
+            ]
+          }
+        ],
+        "usesPerRepop": 1,
+        "text": "You may spend time meditating on one of your non-crafting skills. For each minute spent meditating you may restore 1 level of the skill. You may not restore more than half of your known skill levels in a specific skill using this ability.",
+        "notAtCreation": true
+      }
+    },
+    "text": "Prereqs for all Meditation skills: Requires Lv 6 in two skills in a single non-magic/non-crafting Archetype and Lv 6 in 1 skills in the magic or crafting Archetype. Each meditation Skill is a separate skill and costs 10 AP.",
+    "sheetNames": {
+      "main": "<Archetype> Meditation Skill Refresh"
+    },
+    "source": "Rulebook p.98"
+  },
+  {
+    "id": "meditation-surge-of-energy",
+    "name": "Surge of Energy",
+    "category": "multi",
+    "archetypeOptions": ["warrior", "defender", "rogue", "utility", "magic", "crafting"],
+    "archetypeRule": {
+      "kind": "one-of-prereq-archetypes"
+    },
+    "type": "mastery",
+    "marks": [],
+    "skillGroup": "meditation",
+    "cognitivePower": true,
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "per-repop",
+        "prereqs": [
+          {
+            "allOf": [
+              {
+                "count": 2,
+                "from": {
+                  "archetypes": ["warrior", "defender", "rogue", "utility"],
+                  "sameArchetype": true
+                },
+                "part": "basic",
+                "minLevel": 6
+              },
+              {
+                "count": 1,
+                "from": {
+                  "archetypes": ["magic", "crafting"]
+                },
+                "part": "basic",
+                "minLevel": 6
+              }
+            ]
+          }
+        ],
+        "usesPerRepop": 1,
+        "text": "Spend 10 minutes meditating on your techniques for a specific Archetype to grant yourself the Surge of Energy buff in a buff slot. You may expend the Surge of Energy Buff to restore all used per/encounter skills in that Archetype you meditated on.",
+        "notAtCreation": true
+      }
+    },
+    "text": "Prereqs for all Meditation skills: Requires Lv 6 in two skills in a single non-magic/non-crafting Archetype and Lv 6 in 1 skills in the magic or crafting Archetype. Each meditation Skill is a separate skill and costs 10 AP.",
+    "sheetNames": {
+      "main": "<Archetype> Meditation Surge of Energy"
+    },
+    "source": "Rulebook p.98"
+  },
+  {
+    "id": "meditation-mental-strength",
+    "name": "Mental Strength",
+    "category": "multi",
+    "archetypeOptions": ["warrior", "defender", "rogue", "utility", "magic", "crafting"],
+    "archetypeRule": {
+      "kind": "one-of-prereq-archetypes"
+    },
+    "type": "mastery",
+    "marks": [],
+    "skillGroup": "meditation",
+    "cognitivePower": true,
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "per-repop",
+        "prereqs": [
+          {
+            "allOf": [
+              {
+                "count": 2,
+                "from": {
+                  "archetypes": ["warrior", "defender", "rogue", "utility"],
+                  "sameArchetype": true
+                },
+                "part": "basic",
+                "minLevel": 6
+              },
+              {
+                "count": 1,
+                "from": {
+                  "archetypes": ["magic", "crafting"]
+                },
+                "part": "basic",
+                "minLevel": 6
+              }
+            ]
+          }
+        ],
+        "usesPerRepop": 1,
+        "text": "Spend 10 minutes meditation to grant yourself the Mental Strength buff in a buff slot. When reduced to your bleedout or affected by a Death effect you may expend this ability to return to Full health.",
+        "notAtCreation": true
+      }
+    },
+    "text": "Prereqs for all Meditation skills: Requires Lv 6 in two skills in a single non-magic/non-crafting Archetype and Lv 6 in 1 skills in the magic or crafting Archetype. Each meditation Skill is a separate skill and costs 10 AP.",
+    "sheetNames": {
+      "main": "<Archetype> Meditation Mental Strength"
+    },
+    "source": "Rulebook p.98"
+  },
+  {
+    "id": "alchemy",
+    "name": "Alchemy",
+    "category": "multi",
+    "archetypeOptions": ["crafting", "magic"],
+    "archetypeRule": {
+      "kind": "one-of-prereq-archetypes"
+    },
+    "type": "mastery",
+    "marks": [],
+    "cognitivePower": true,
+    "canBeUnstable": false,
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "frequencyText": "each use spends one use of the matching level of a magic school and of a listed craft",
+        "prereqs": [
+          {
+            "allOf": [
+              {
+                "count": 1,
+                "from": {
+                  "skills": ["elemental-magic", "life-magic", "death-magic", "tech-magic"]
+                },
+                "part": "basic",
+                "minLevel": 6
+              },
+              {
+                "count": 1,
+                "from": {
+                  "skills": ["chemistry", "medicine"]
+                },
+                "part": "basic",
+                "minLevel": 6
+              }
+            ]
+          }
+        ],
+        "assumed": true,
+        "assumptionNote": "Cost assumed from the Skill Cost Chart (10 AP); the rulebook states none for this part.",
+        "text": "Requires Lv 6 in both a single school of magic and Lv 6 in either chemistry or medicine. Can be purchased as either a crafting or a magic skill. Alchemy cannot be made unstable. Using Alchemy requires using a single use of the correct level of both a type of magic and either medicine or chemistry. Any adept or advanced uses of magic skills used with alchemy do not return until the repop.",
+        "notAtCreation": true
+      }
+    },
+    "tiers": [
+      {
+        "tier": "basic",
+        "materials": {
+          "count": 4,
+          "rarity": "common",
+          "kinds": ["organic", "chemical"]
+        },
+        "text": "Create a basic skill restore potion. Drinking this potion will allow the character to restore a single basic skill used in the current or last encounter. A character cannot benefit from more than one skill restore potion per encounter."
+      },
+      {
+        "tier": "adept",
+        "materials": {
+          "count": 4,
+          "rarity": "uncommon",
+          "kinds": ["organic", "chemical"]
+        },
+        "text": "Create an adept skill upgrade potion. When creating this potion choose a specific non-crafting archetype. Drinking this potion will grant a \"Adept <Archetype> Upgrade\" buff into one of their buff slots. The buff may be expended to upgrade a basic skill use of that archetype to adept."
+      },
+      {
+        "tier": "advanced",
+        "materials": {
+          "count": 4,
+          "rarity": "rare",
+          "kinds": ["organic", "chemical"]
+        },
+        "text": "Create an advanced skill upgrade potion. When creating this potion choose a specific non-crafting archetype. Drinking this potion will grant a \"Advanced <Archetype> Upgrade\" buff into one of their buff slots. The buff may be expended to upgrade a basic skill use of that archetype to adept."
+      }
+    ],
+    "sheetNames": {
+      "main": "Alchemy"
+    },
+    "source": "Rulebook p.98"
+  },
+  {
+    "id": "enchanting",
+    "name": "Enchanting",
+    "category": "multi",
+    "archetypeOptions": ["crafting", "magic"],
+    "archetypeRule": {
+      "kind": "one-of-prereq-archetypes"
+    },
+    "type": "mastery",
+    "marks": [],
+    "cognitivePower": true,
+    "canBeUnstable": false,
+    "parts": {
+      "main": {
+        "costKind": "mastery",
+        "frequency": "other",
+        "frequencyText": "each use spends one use of the matching level of a magic school and of a listed craft",
+        "prereqs": [
+          {
+            "allOf": [
+              {
+                "count": 1,
+                "from": {
+                  "skills": ["elemental-magic", "life-magic", "death-magic", "tech-magic"]
+                },
+                "part": "basic",
+                "minLevel": 6
+              },
+              {
+                "count": 1,
+                "from": {
+                  "skills": ["gearcraft", "engineering"]
+                },
+                "part": "basic",
+                "minLevel": 6
+              }
+            ]
+          }
+        ],
+        "assumed": true,
+        "assumptionNote": "Cost assumed from the Skill Cost Chart (10 AP); the rulebook states none for this part.",
+        "text": "Requires Lv 6 in both a single school of magic and Lv 6 in either Gearcraft or Engineering. Can be purchased as either a crafting or a magic skill. Enchanting cannot be made unstable. Using Enchanting requires using a single use of the correct level of both a type of magic and either Gearcraft or Engineering as well as 5 minutes. Any adept or advanced uses of magic skills used with Enchanting do not return until the repop.",
+        "notAtCreation": true
+      }
+    },
+    "tiers": [
+      {
+        "tier": "basic",
+        "materials": {
+          "count": 4,
+          "rarity": "common",
+          "kinds": ["scrap", "junk"]
+        },
+        "text": "Create a basic skill store enhancement in an item. While the item is being crafted any character may expend a basic use of a skill they know into the enhancement. Any character can later expend the enhancement to use the skill as if it was one of their skills."
+      },
+      {
+        "tier": "adept",
+        "materials": {
+          "count": 4,
+          "rarity": "uncommon",
+          "kinds": ["scrap", "junk"]
+        },
+        "text": "Create an adept skill store enhancement in an item. While the item is being crafted any character may expend an adept use of a skill they know into the enhancement. Any character can later expend the enhancement to use the skill as if it was one of their skills."
+      },
+      {
+        "tier": "advanced",
+        "materials": {
+          "count": 4,
+          "rarity": "rare",
+          "kinds": ["scrap", "junk"]
+        },
+        "text": "Create an advanced skill store enhancement in an item. While the item is being crafted any character may expend an advanced use of a skill they know into the enhancement. Any character can later expend the enhancement to use the skill as if it was one of their skills."
+      }
+    ],
+    "sheetNames": {
+      "main": "Enchanting"
+    },
+    "source": "Rulebook p.99"
+  }
+]

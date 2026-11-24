@@ -1,0 +1,35 @@
+.iconButton {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: inherit;
+  transition: background-color 120ms ease;
+}
+
+.ghost {
+  border-color: var(--color-border-strong);
+}
+
+.iconButton:not(:disabled, [aria-disabled='true']):hover {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.iconButton:disabled,
+.iconButton[aria-disabled='true'] {
+  opacity: 0.45;
+}
+
+.icon {
+  display: inline-flex;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}

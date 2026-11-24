@@ -1,0 +1,1247 @@
+{
+  "rules": {
+    "currency": "pxp",
+    "maxProfessionsPerCharacter": 1,
+    "costPerLevel": 10,
+    "costScaling": "escalating",
+    "maxLevel": 5,
+    "maxLevelsPerSkillPerEvent": 1,
+    "start": {
+      "eventsPlayedBefore": 3,
+      "countsPurchasedMissedEvents": false,
+      "firstPurchaseMinLevel": 1,
+      "passiveGrantedOnStart": true,
+      "recordOnTeachingSheet": true,
+      "assumed": true,
+      "assumptionNote": "Q-PRO-2: counts events attended before the event of the first purchase."
+    },
+    "slots": [
+      {
+        "id": "passive",
+        "frequency": "passive",
+        "leveled": false,
+        "tiered": false
+      },
+      {
+        "id": "skill-1",
+        "frequency": "per-encounter",
+        "leveled": true,
+        "tiered": false
+      },
+      {
+        "id": "skill-2",
+        "frequency": "per-repop",
+        "leveled": true,
+        "tiered": true
+      }
+    ],
+    "usesByLevel": [
+      {
+        "level": 1,
+        "basic": 1,
+        "adeptUpgrades": 0,
+        "advancedUpgrades": 0
+      },
+      {
+        "level": 2,
+        "basic": 2,
+        "adeptUpgrades": 0,
+        "advancedUpgrades": 0
+      },
+      {
+        "level": 3,
+        "basic": 3,
+        "adeptUpgrades": 1,
+        "advancedUpgrades": 0
+      },
+      {
+        "level": 4,
+        "basic": 4,
+        "adeptUpgrades": 2,
+        "advancedUpgrades": 0
+      },
+      {
+        "level": 5,
+        "basic": 5,
+        "adeptUpgrades": 2,
+        "advancedUpgrades": 1
+      }
+    ],
+    "upgradeConsumesBasicUse": true,
+    "abilitiesAreNonCore": true,
+    "restore": {
+      "byRulebookSkills": false,
+      "byGmOrAbility": true,
+      "text": "As a general rule unless specifically stated profession skills cannot be restored by any standard rulebook skills or abilities."
+    },
+    "exclusiveText": "Profession skills can only be used by a character in that profession and cannot be used or modified by other skills unless the modifying skill says so.",
+    "notes": "usesByLevel.basic is the use count of both leveled skills; upgrades apply to the tiered skill only. Basics!X18:Z19 gives adept 1 at levels 3-5 and applies tiers to skill 1 too",
+    "source": "Professions Document p.1-2; Rulebook p.33, p.47"
+  },
+  "professions": [
+    {
+      "id": "sniper",
+      "name": "Sniper",
+      "heading": "Sniper",
+      "kind": "standard",
+      "sheetName": "Sniper",
+      "passive": {
+        "id": "sniper-line-up-the-shot",
+        "name": "Line up the shot",
+        "sheetName": "Line Up The Shot",
+        "frequency": "passive",
+        "text": "May aim to increase damage. For every second aiming you increase your passive damage for the next ranged weapon attack by +1 up to a maximum of +5. You must plant your feet and cannot use any other skills while aiming. Aiming counts towards any required counts for attack skills (example it will count towards the studying target requirement of Aimed strike)",
+        "source": "Professions Document p.2"
+      },
+      "skills": [
+        {
+          "id": "sniper-open-spots",
+          "name": "Open Spots",
+          "sheetName": "Open Spots",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "Your next Ranged weapon attack becomes piercing and the passive damage gets x2. (This stacks additively with any other damage multipliers)",
+          "source": "Professions Document p.2"
+        },
+        {
+          "id": "sniper-critical-hit",
+          "name": "Critical Hit",
+          "sheetName": "Critical Hit",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "After studying your target for 3 seconds, your next attack deals +5 damage and you may add slay to the call."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "After studying your target for 3 seconds your next attack becomes Bleed"
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "For the rest of the encounter if a packet thrown weapon attack misses all possible targets you may call \"Accuracy\" and rethrow the attack at the same target without spending any additional skills. You may only rethrow the packet for each target once."
+            }
+          },
+          "source": "Professions Document p.2"
+        }
+      ],
+      "source": "Professions Document p.2"
+    },
+    {
+      "id": "medic",
+      "name": "Medic",
+      "heading": "Medic",
+      "kind": "standard",
+      "sheetName": "Medic",
+      "passive": {
+        "id": "medic-skilled-healer",
+        "name": "Skilled Healer",
+        "sheetName": "Skilled Healer",
+        "frequency": "passive",
+        "text": "You may touch a target (or rp performing some task that requires touching them) and perform a 30 count. After the count you will heal the target 5 hp or remove a single ailment. While performing this task your target's bleedout count is stopped.",
+        "source": "Professions Document p.2"
+      },
+      "skills": [
+        {
+          "id": "medic-get-back-in-there",
+          "name": "Get back in there!",
+          "sheetName": "Get Back In There!",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "Your next use of Skilled Healer becomes a 3 count and is increased to 20 hp and will remove a single ailment.",
+          "source": "Professions Document p.2"
+        },
+        {
+          "id": "medic-stitch-em-up",
+          "name": "Stitch em up",
+          "sheetName": "Stitch Em Up",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "Perform a 3 count and remove all Ailments from the target."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "Perform a 3 count and the target takes a Regenerate effect."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "Your next use of the Skilled Healer passive used on a dead target becomes \"Raise Dead Full Heal\" and pauses their Infection or Connection damage count."
+            }
+          },
+          "source": "Professions Document p.2"
+        }
+      ],
+      "source": "Professions Document p.2"
+    },
+    {
+      "id": "chemist",
+      "name": "Chemist",
+      "heading": "Chemist",
+      "kind": "standard",
+      "sheetName": "Chemist",
+      "passive": {
+        "id": "chemist-scientist",
+        "name": "Scientist",
+        "sheetName": "Scientist",
+        "frequency": "passive",
+        "craftedItems": [
+          {
+            "id": "fragile-vial",
+            "name": "Fragile Vial",
+            "rating": 2,
+            "effect": "1 packet of 10 Acid",
+            "source": "Professions Document p.3"
+          },
+          {
+            "id": "thats-acid",
+            "name": "That's Acid",
+            "rating": 3,
+            "effect": "1 packet of Fear 5 seconds",
+            "source": "Professions Document p.3"
+          },
+          {
+            "id": "glue-bottle",
+            "name": "Glue Bottle",
+            "rating": 4,
+            "effect": "1 packet of pin 10 seconds",
+            "source": "Professions Document p.3"
+          },
+          {
+            "id": "science-is-cool",
+            "name": "Science is Cool",
+            "rating": 5,
+            "effect": "1 packet of Pacify 3 seconds",
+            "source": "Professions Document p.3"
+          }
+        ],
+        "ratingCap": {
+          "base": 8,
+          "skill": "chemist-experiments",
+          "byLevel": [
+            {
+              "level": 1,
+              "value": 8
+            },
+            {
+              "level": 2,
+              "value": 8
+            },
+            {
+              "level": 3,
+              "value": 10
+            },
+            {
+              "level": 4,
+              "value": 10
+            },
+            {
+              "level": 5,
+              "value": 12
+            }
+          ]
+        },
+        "craftTimeMinutes": 5,
+        "requiresSafeArea": true,
+        "text": "While in a safe area you may spend 5 minutes tinkering with crafting materials you have to create small devices. Each device has a rating and you can only ever have 8 points worth of chemist-items on you. Only the Chemist can use their own gadgets. Fragile Vial (R2): 1 packet of 10 Acid. That's Acid (R3): 1 packet of Fear 5 seconds. Glue Bottle (R4): 1 packet of pin 10 seconds. Science is Cool (R5): 1 packet of Pacify 3 seconds.",
+        "source": "Professions Document p.3"
+      },
+      "skills": [
+        {
+          "id": "chemist-eureka",
+          "name": "Eureka!",
+          "sheetName": "Eureka!",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "You may create a basic item from the chemistry or medicine recipes you know and immediately use it. The effects of the item end at the end of the encounter even if they would normally last longer.",
+          "source": "Professions Document p.3"
+        },
+        {
+          "id": "chemist-experiments",
+          "name": "Experiments",
+          "sheetName": "Experiments",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may throw a second packet of one of your created scientist items."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may throw a copy of one of your currently created scientist items into a frontal cone. Passive: Your total scientist item rating increases to 10. You may raise the gadget rating of the object by 3 when you create it and give it the frontal cone keyword."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "You throw a copy of one of your currently created scientist items as a Lash effect. Passive: Your total scientist rating increases to 12. You may raise the scientist rating of an object by 5 when you create it and give it the Lash keyword."
+            }
+          },
+          "tierPassives": {
+            "adept": {
+              "ratingCap": 10,
+              "ratingRaiseForFrontalCone": 3
+            },
+            "advanced": {
+              "ratingCap": 12,
+              "ratingRaiseForLash": 5
+            }
+          },
+          "designNote": "Trying to think of something potentially like tinkerer for this profession",
+          "source": "Professions Document p.3"
+        }
+      ],
+      "source": "Professions Document p.3"
+    },
+    {
+      "id": "tinkerer",
+      "name": "Tinkerer",
+      "heading": "Tinkerer",
+      "kind": "standard",
+      "sheetName": "Tinkerer",
+      "passive": {
+        "id": "tinkerer-gadgeteer",
+        "name": "Gadgeteer",
+        "sheetName": "Gadgeteer",
+        "frequency": "passive",
+        "craftedItems": [
+          {
+            "id": "crackler",
+            "name": "Crackler",
+            "rating": 2,
+            "effect": "1 packet of 10 Fire",
+            "source": "Professions Document p.3-4"
+          },
+          {
+            "id": "sweeper",
+            "name": "Sweeper",
+            "rating": 3,
+            "effect": "1 Packet of Knockback 5",
+            "source": "Professions Document p.3-4"
+          },
+          {
+            "id": "flypaper",
+            "name": "Flypaper",
+            "rating": 4,
+            "effect": "1 packet of Slow 10",
+            "source": "Professions Document p.3-4"
+          },
+          {
+            "id": "dome-cracker",
+            "name": "Dome-cracker",
+            "rating": 5,
+            "effect": "1 Packet of Stun 3",
+            "source": "Professions Document p.3-4"
+          }
+        ],
+        "ratingCap": {
+          "base": 8,
+          "skill": "tinkerer-efficient-supplies",
+          "byLevel": [
+            {
+              "level": 1,
+              "value": 8
+            },
+            {
+              "level": 2,
+              "value": 8
+            },
+            {
+              "level": 3,
+              "value": 10
+            },
+            {
+              "level": 4,
+              "value": 10
+            },
+            {
+              "level": 5,
+              "value": 12
+            }
+          ]
+        },
+        "craftTimeMinutes": 5,
+        "requiresSafeArea": true,
+        "text": "While in a safe area you may spend 5 minutes tinkering with crafting materials you have to create small devices. Each device has a rating and you can only ever have 8 points worth of gadgets on you. Only the Tinkerer can use their own gadgets. Crackler (R2): 1 packet of 10 Fire. Sweeper (R3): 1 Packet of Knockback 5. Flypaper (R4): 1 packet of Slow 10. Dome-cracker (R5): 1 Packet of Stun 3.",
+        "source": "Professions Document p.3-4"
+      },
+      "skills": [
+        {
+          "id": "tinkerer-cobble-together",
+          "name": "Cobble Together",
+          "sheetName": "Cobble Together",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "You may create a basic item from the engineering or gearcraft recipes you know and immediately use it. The effects of the item end at the end of the encounter even if they would normally last longer.",
+          "source": "Professions Document p.3-4"
+        },
+        {
+          "id": "tinkerer-efficient-supplies",
+          "name": "Efficient Supplies",
+          "sheetName": "Efficient Supplies",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may throw a second packet of one of your created Gadgets."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may throw a copy of one of your currently created Gadgets into a frontal cone. Passive: Your total gadget rating increases to 10. You may raise the gadget rating of the object by 3 when you create it and give it the frontal cone keyword."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "You throw a copy of one of your currently created Gadgets as a Lash effect. Passive: Your total gadget rating increases to 12. You may raise the gadget rating of an object by 5 when you create it and give it the Lash keyword."
+            }
+          },
+          "tierPassives": {
+            "adept": {
+              "ratingCap": 10,
+              "ratingRaiseForFrontalCone": 3
+            },
+            "advanced": {
+              "ratingCap": 12,
+              "ratingRaiseForLash": 5
+            }
+          },
+          "source": "Professions Document p.3-4"
+        }
+      ],
+      "source": "Professions Document p.3-4"
+    },
+    {
+      "id": "scout",
+      "name": "Scout",
+      "heading": "Scout",
+      "kind": "standard",
+      "sheetName": "Scout",
+      "passive": {
+        "id": "scout-outdoor-camouflage",
+        "name": "Outdoor Camouflage",
+        "sheetName": "Outdoor Camouflage",
+        "frequency": "passive",
+        "text": "While in an outdoor location you may spend a 30 count to hide without expending a skill. You may use a Hide or Stealth to instant hide in an outdoor location. (someone who directly watches you hide may still reveal you.)",
+        "source": "Professions Document p.4"
+      },
+      "skills": [
+        {
+          "id": "scout-quick-feet",
+          "name": "Quick Feet",
+          "sheetName": "Quick Feet",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "May be used as a Dash or Evasion. If used while hidden, the dash will not break the hide. This also may be used as a Resist Reveal - Hidden Dash.",
+          "source": "Professions Document p.4"
+        },
+        {
+          "id": "scout-scouting",
+          "name": "Scouting",
+          "sheetName": "Scouting",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may perform an instant search action over a distance. You may search a 20x20 visible area instantly from up to 30 feet away. If a hidden object or character is located in this search you may reveal one of them as part of the use of this skill. Additional items will require further uses of scouting or the search skill. You will be aware that there are other hidden characters or objects in the area but be unable to reveal them. You may also ask the narrator one specific yes/no question that could be answered from where you are searching."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "Your search area increases to 40x40. When locating hidden objects or characters in the area with Adept Scouting you may reveal up to two of these objects or characters instead of one. You may ask 3 questions that will each receive a one-word answer."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "Your search area increases to 60x60. When locating hidden objects or characters in the area with Advanced Scouting you may reveal up to 5 of these objects or characters instead of one. You may ask a short answer question. At level 5 you can ask 2 short answer questions."
+            }
+          },
+          "designNote": "still on the fence on how to determine area",
+          "source": "Professions Document p.4"
+        }
+      ],
+      "source": "Professions Document p.4"
+    },
+    {
+      "id": "protector",
+      "name": "Protector",
+      "heading": "Protector",
+      "kind": "standard",
+      "sheetName": "Protector",
+      "passive": {
+        "id": "protector-stand-behind-me",
+        "name": "Stand Behind me",
+        "sheetName": "Protector",
+        "frequency": "passive",
+        "text": "You gain a basic use of Intercept that refits every 10 seconds. This use of intercept cannot be upgraded too adept or advanced",
+        "source": "Professions Document p.4-5"
+      },
+      "skills": [
+        {
+          "id": "protector-get-back",
+          "name": "Get Back",
+          "sheetName": "Get Back!",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "After you use an intercept, or Deflection skill on a melee attack you may Reflect Stun 3 seconds",
+          "source": "Professions Document p.4-5"
+        },
+        {
+          "id": "protector-i-can-do-this-all-day",
+          "name": "I can do this all day",
+          "sheetName": "I Can Do This All Day",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may 3 count refit half your total armor. Gain +10 temp armor."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may 3 count refit your total armor. Gain +20 Temp armor."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "For the encounter pierce damage will damage your armor before your health."
+            }
+          },
+          "source": "Professions Document p.4-5"
+        }
+      ],
+      "source": "Professions Document p.4-5"
+    },
+    {
+      "id": "arcanist",
+      "name": "Arcanist",
+      "heading": "Arcanist",
+      "kind": "standard",
+      "sheetName": "Arcanist",
+      "passive": {
+        "id": "arcanist-raw-power",
+        "name": "Raw Power",
+        "sheetName": "Raw Power",
+        "frequency": "passive",
+        "text": "You may spend up to 10 seconds charging your raw magic packets. For each second charged the packet will do +1 damage. If you are hit while charging you lose the charge. While charging you have to hold your hand with the packet up to show you are charging it.",
+        "source": "Professions Document p.5"
+      },
+      "skills": [
+        {
+          "id": "arcanist-explosive",
+          "name": "Explosive",
+          "sheetName": "Explosive",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "Your next raw magic packet deals x2 damage and is a Lash.",
+          "source": "Professions Document p.5"
+        },
+        {
+          "id": "arcanist-master-of-the-art",
+          "name": "Master of the art",
+          "sheetName": "Master of the Art",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "Your next raw magic packet gains +10 and Spell"
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "Your next raw magic attack gains +10 and frontal cone."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "For the next encounter after you charge up your Raw Power passive to full as long as you keep your feet planted all your passive damage packets gain the spell keyword and keep the damage bonus."
+            }
+          },
+          "source": "Professions Document p.5"
+        }
+      ],
+      "source": "Professions Document p.5"
+    },
+    {
+      "id": "soldier",
+      "name": "Soldier",
+      "heading": "Soldier",
+      "kind": "standard",
+      "sheetName": "Soldier",
+      "passive": {
+        "id": "soldier-well-trained",
+        "name": "Well Trained",
+        "sheetName": "Well Trained",
+        "frequency": "passive",
+        "effects": [
+          {
+            "stat": "weaponDamage",
+            "add": 1
+          }
+        ],
+        "text": "+1 Passive damage with all weapons.",
+        "source": "Professions Document p.5"
+      },
+      "skills": [
+        {
+          "id": "soldier-muscle-memory",
+          "name": "Muscle Memory",
+          "sheetName": "Muscle Memory",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "Can be used as a basic use of any skill you know that includes a weapon attack. This basic use cannot be upgraded too adept or advanced",
+          "source": "Professions Document p.5"
+        },
+        {
+          "id": "soldier-combat-expertise",
+          "name": "Combat Expertise",
+          "sheetName": "Combat Expertise",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "Upgrade a use of a basic weapon attack skill to adept."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "Upgrade a use of a basic weapon attack skill to advanced."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "For the next encounter all basic weapon attack skills you use can be upgraded to adept."
+            }
+          },
+          "source": "Professions Document p.5"
+        }
+      ],
+      "source": "Professions Document p.5"
+    },
+    {
+      "id": "infiltrator",
+      "name": "Infiltrator",
+      "heading": "Infiltrator",
+      "kind": "standard",
+      "sheetName": "Infiltrator",
+      "passive": {
+        "id": "infiltrator-enter-the-shadows",
+        "name": "Enter the shadows",
+        "sheetName": "Enter the shadows",
+        "frequency": "passive",
+        "text": "When you hide or passwall you can take up to 4 additional people with you. If passwalling the players must be in contact with you when you move through the wall. If hiding they must stay close to you or will be revealed, they will be able to follow along with any of your hidden dashes. If you are revealed all of the people you are hiding will also be revealed.",
+        "source": "Professions Document p.6"
+      },
+      "skills": [
+        {
+          "id": "infiltrator-shadow",
+          "name": "Shadow",
+          "sheetName": "Shadow",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "You may use this skill to make your next skill use while hiding gain \"Hidden\" and will not break your hide. You may also use this skill to instant hide or resist reveal.",
+          "source": "Professions Document p.6"
+        },
+        {
+          "id": "infiltrator-always-a-way-in",
+          "name": "Always a way in",
+          "sheetName": "Always a way in",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may use this skill to passwall on a 3 count through a wall."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "Instant Invisibility for up to 10 seconds. If you attack or speak louder than a whisper, you will lose the effect."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "This may be performed as a Phase - Invisibility. For the rest of the encounter whenever you hide you and anyone you are hiding becomes invisible for 10 seconds."
+            }
+          },
+          "source": "Professions Document p.6"
+        }
+      ],
+      "source": "Professions Document p.6"
+    },
+    {
+      "id": "assassin",
+      "name": "Assassin",
+      "heading": "Assassin",
+      "kind": "standard",
+      "sheetName": "Assassin",
+      "passive": {
+        "id": "assassin-aim-for-the-vitals",
+        "name": "Aim for the vitals",
+        "sheetName": "Aim for the Vitals",
+        "frequency": "passive",
+        "rechargeCountSeconds": 10,
+        "text": "You may expend this to Feint or Press an attack, this passive may be restored on a 10 count. You may expend a use of Feint may also be used to remove the study/aim at your target requirement of your next attack.",
+        "source": "Professions Document p.6"
+      },
+      "skills": [
+        {
+          "id": "assassin-take-down",
+          "name": "Take Down",
+          "sheetName": "Take Down",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "You may study your target for 3 seconds and your next attack gains +20 damage and the Slay keyword.",
+          "source": "Professions Document p.6"
+        },
+        {
+          "id": "assassin-assassinate",
+          "name": "Assassinate",
+          "sheetName": "Assassinate",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may attack a target from behind or hiding and perform a Wound attack."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may attack a target from behind or hiding and perform a Bleed attack."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "You may attack a target from behind or hiding and perform a death attack."
+            }
+          },
+          "source": "Professions Document p.6"
+        }
+      ],
+      "source": "Professions Document p.6"
+    },
+    {
+      "id": "sorcerer",
+      "name": "Sorcerer",
+      "heading": "Sorcerer",
+      "kind": "standard",
+      "sheetName": "Sorcerer",
+      "passive": {
+        "id": "sorcerer-natural-caster",
+        "name": "Natural Caster",
+        "sheetName": "Natural Caster",
+        "frequency": "passive",
+        "rechargeCountSeconds": 100,
+        "perEventChoice": {
+          "field": "naturalCasterSpell",
+          "kind": "memorized-spell",
+          "rank": "basic",
+          "excludeSpells": ["screen-visions"]
+        },
+        "onStartGrant": {
+          "kind": "memorized-spell",
+          "rank": "basic",
+          "condition": "no-memorized-spells",
+          "free": true,
+          "assumed": true,
+          "assumptionNote": "Q-PRO-7: the granted spell is free (no AP, no slot)."
+        },
+        "text": "Choose a single basic spell you have memorized that is not screen visions at the beginning of the event. You may cast the spell without a use. You may recharge this with a 100 count. If the spell goes in the buff slot it lasts 10 minutes or until the end of the current encounter. If you do not have any memorized spells you may memorize a single basic spell when starting this profession.",
+        "source": "Professions Document p.6-7"
+      },
+      "skills": [
+        {
+          "id": "sorcerer-gifted",
+          "name": "Gifted",
+          "sheetName": "Gifted",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "perEventChoice": {
+            "field": "giftedMagicType",
+            "kind": "magic-school"
+          },
+          "text": "Choose a type of magic at the beginning of the event. You may cast a basic spell of that type of magic. If the spell goes in the buff slot it lasts 10 minutes or until the end of the encounter.",
+          "source": "Professions Document p.6-7"
+        },
+        {
+          "id": "sorcerer-restore-magic",
+          "name": "Restore Magic",
+          "sheetName": "Restore Magic",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "perEventChoice": {
+            "field": "restoreMagicType",
+            "kind": "magic-school",
+            "tier": "advanced"
+          },
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may instantly restore a basic use of magic to yourself or a willing target."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may expend this to cast an adept or advanced spell that you know."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "Choose a type of magic at the beginning of the event. You may expend a use of this skill to upgrade all your basic uses of this magic to adept for the next encounter."
+            }
+          },
+          "source": "Professions Document p.6-7"
+        }
+      ],
+      "source": "Professions Document p.6-7"
+    },
+    {
+      "id": "researcher",
+      "name": "Researcher",
+      "heading": "Researcher",
+      "kind": "standard",
+      "sheetName": "Researcher",
+      "passive": {
+        "id": "researcher-i-think-i-read-about-that",
+        "name": "I think I read about that",
+        "sheetName": "I think I read about that",
+        "frequency": "passive",
+        "text": "After you or another person nearby asks a research question using a research you know you are able to ask a follow-up basic research question regarding the same subject.",
+        "source": "Professions Document p.7"
+      },
+      "skills": [
+        {
+          "id": "researcher-crossreferenced-information",
+          "name": "Crossreferenced Information",
+          "sheetName": "Crossreferenced",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "Upgrade a use of research during an event one level. Basic to Adept, or Adept to advanced.",
+          "source": "Professions Document p.7"
+        },
+        {
+          "id": "researcher-taking-notes",
+          "name": "Taking Notes",
+          "sheetName": "Taking Notes",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "altFrequency": "per-event",
+          "frequencyText": "(Per Repop)/(Per Event)",
+          "betweenEvents": true,
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may expend a use of this skill between events to create Skill notes for basic or adept skills, recipes, or spells. These skill notes can be read by a character to learn the skill as if they were taught by someone. You do not need to know the skill/recipe/spell to create the notes. This may also be used as an Adept use of any research skill you have during an event."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may expend a use of this skill between events to create Skill notes for Advanced skills, recipes, or spells. This may also be used as an advanced use of any research skill you have during an event."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "You may expend a use of this skill between events to create skill notes for Mastery skills, recipes, or magic. This may be used to get a one sentence or longer research answer during an event for a research skill question you have."
+            }
+          },
+          "source": "Professions Document p.7"
+        }
+      ],
+      "source": "Professions Document p.7"
+    },
+    {
+      "id": "dream",
+      "name": "Dream",
+      "heading": "Dream - Sandy",
+      "kind": "patron",
+      "domain": "Dream",
+      "patron": "Sandy",
+      "sheetName": "Dream",
+      "passive": {
+        "id": "dream-dream-touched",
+        "name": "Dream Touched",
+        "sheetName": "Dream Touched",
+        "frequency": "passive",
+        "text": "You may convert your damage to Dream and you may throw packets for 1 dream. On a 100 count you may view the dreams of a sleeping person you are touching. Dream Viewing level of detail is up to narrator or GM discretion.",
+        "source": "Professions Document p.7-8"
+      },
+      "skills": [
+        {
+          "id": "dream-clear-your-head",
+          "name": "Clear Your Head",
+          "sheetName": "Clear Your Head",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "Remove Corruption, Fear, Sleep, Frenzy, Charm, Pacify.",
+          "source": "Professions Document p.7-8"
+        },
+        {
+          "id": "dream-dream-sand",
+          "name": "Dream Sand",
+          "sheetName": "Dream Sand",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "Throw a packet of \"Spell Charm Pacify\""
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "Throw a packet of \"Spell Banish Nightmare\" or \"Spell Sleep\""
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "On a 100 count you and anyone willingly touching you may enter the cognitive realm for 1 hour. ((GM warning this ability can be dangerous as cognitive realm is not stable))"
+            }
+          },
+          "source": "Professions Document p.7-8"
+        }
+      ],
+      "source": "Professions Document p.7-8"
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "heading": "Earth - Rootmother",
+      "kind": "patron",
+      "domain": "Earth",
+      "patron": "Rootmother",
+      "sheetName": "Nature",
+      "passive": {
+        "id": "earth-rootspeak",
+        "name": "Rootspeak",
+        "sheetName": "Rootspeak",
+        "frequency": "passive",
+        "text": "You gain +1 tracking when tracking anything on the ground and +2 when tracking underground. You may speak with plants and stones. (note Stone/Plant intelligence is up to GM/Narrator discretion and usually have impressions and not good on detail).",
+        "source": "Professions Document p.8"
+      },
+      "skills": [
+        {
+          "id": "earth-commune-with-earth",
+          "name": "Commune With Earth",
+          "sheetName": "Commune With Earth",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "On a 10 count you may commune with the earth and regain a single spent skill. You must use the skill in this encounter. You may expend this skill while rootwalking to grant anyone one additional use of a basic skill they possess that must be used this encounter.",
+          "source": "Professions Document p.8"
+        },
+        {
+          "id": "earth-roots-embrace",
+          "name": "Root's Embrace",
+          "sheetName": "Root's Embrace",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "On 100 count you may Rootwalk yourself and 5 additional people to another tree you are familiar with."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may target 12 additional people with treewalking instead of 5."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "On a 100 count while in contact with the ground you may lash \"Restore 2 skills\""
+            }
+          },
+          "source": "Professions Document p.8"
+        }
+      ],
+      "source": "Professions Document p.8"
+    },
+    {
+      "id": "time",
+      "name": "Time",
+      "heading": "Time - Syn",
+      "kind": "patron",
+      "domain": "Time",
+      "patron": "Syn",
+      "sheetName": "Time",
+      "passive": {
+        "id": "time-borrowed-time",
+        "name": "Borrowed Time",
+        "sheetName": "Borrowed Time",
+        "frequency": "passive",
+        "text": "You may perform any counted action hasted. Followed by an unresistable slow 5.",
+        "source": "Professions Document p.8-9"
+      },
+      "skills": [
+        {
+          "id": "time-lets-try-that-again",
+          "name": "Let's try that again",
+          "sheetName": "Let's Try That Again",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "After a skill is missed/resisted/or no effect you may regain a use of that skill.",
+          "source": "Professions Document p.8-9"
+        },
+        {
+          "id": "time-temporal-manipulation",
+          "name": "Temporal Manipulation",
+          "sheetName": "Temporal Manipulation",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "Packet or melee delivered Spell Grant \"haste your next counted action\" in a buff slot or \"Spell Slow 10\""
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "Plant your feet and you can cast \"Spell Lash Grant Haste\" or \"Spell Lash Slow 5\" as long as your feet are planted you may call \"Echo\" and then cast either of the effects again. This effect ends once you move your feet or use any other skill."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "\"Lash Spell Rewind 5 seconds\" Rewind a single non-combat detrimental action (setting off a trap, saying the wrong thing in conversation) ((GM Note some things might not be affected by this))"
+            }
+          },
+          "source": "Professions Document p.8-9"
+        }
+      ],
+      "source": "Professions Document p.8-9"
+    },
+    {
+      "id": "home",
+      "name": "Home",
+      "heading": "Home - Haighan",
+      "kind": "patron",
+      "domain": "Home",
+      "patron": "Haighan",
+      "sheetName": "Home",
+      "passive": {
+        "id": "home-at-peace",
+        "name": "At Peace",
+        "sheetName": "At Peace",
+        "frequency": "passive",
+        "text": "All healing effects on you are doubled and gain the ability to temporarily suppress any charm, Trauma, or mind altering effect on someone while you are actively having a conversation with them.",
+        "source": "Professions Document p.9"
+      },
+      "skills": [
+        {
+          "id": "home-remember-home",
+          "name": "Remember Home",
+          "sheetName": "Remember Home",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "You may swing for Spell Charm Pacify 1 min OR when hit you may Reflect Spell Charm Pacify 1 min",
+          "source": "Professions Document p.9"
+        },
+        {
+          "id": "home-calm-the-mind",
+          "name": "Calm The Mind",
+          "sheetName": "Calm The Mind",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may spend a 10 count to suppress the effects of a target's Trauma effects for an encounter, -OR- you may instant remove a fear or charm effect."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may spend 10 minutes talking to your target about their Trauma effect. After the conversation if the target feels like the Trauma could be resolved you may expend a use of this skill and the Trauma effect will be removed. (report this on the teaching log)"
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "Create a circle where as long as you are in it you may call 'Spell Charm Pacify', 'Spell Remove Charm', or 'Spell Remove Fear' on anyone who enters the circle. -OR- You may expend this to plant your feet and gain the ability to cast 'Spell Charm Pacify 1 min', 'Spell Remove Charm', or 'Spell Remove Fear' on a 5-count."
+            }
+          },
+          "sheetEffects": {
+            "adept": "removes a trauma entry on the target's sheet; staff record it from the teaching log"
+          },
+          "source": "Professions Document p.9"
+        }
+      ],
+      "source": "Professions Document p.9"
+    },
+    {
+      "id": "dealer",
+      "name": "Dealer",
+      "heading": "Dealer - Deals",
+      "kind": "patron",
+      "domain": "Deals",
+      "patron": "Deals",
+      "sheetName": "Deals",
+      "passive": {
+        "id": "dealer-ledger-book",
+        "name": "Ledger Book",
+        "sheetName": "Ledger Book",
+        "frequency": "passive",
+        "ledgerSlots": {
+          "base": 4,
+          "skill": "dealer-lets-make-a-deal",
+          "byLevel": [
+            {
+              "level": 1,
+              "value": 4
+            },
+            {
+              "level": 2,
+              "value": 4
+            },
+            {
+              "level": 3,
+              "value": 6
+            },
+            {
+              "level": 4,
+              "value": 6
+            },
+            {
+              "level": 5,
+              "value": 10
+            }
+          ],
+          "alternativeAtLevel5": 8,
+          "assumed": true,
+          "assumptionNote": "Q-PRO-4: tier bonuses read as cumulative (10 slots at level 5, not 8)."
+        },
+        "resetsAt": "event-end",
+        "text": "You gain a ledger book with 4 slots, each slot can hold one skill use. On a 10 count you can place one of your skill uses into your ledger book. You may expend skills from your ledger book like it is your character sheet. (Storing a use of a skill will count as it being expended from your character sheet. Adept or Advanced skills stored will not refresh until the next repop). Your Ledger book fully empties at the end of an event. You may spend a 60 count to remove one of your ledger book slots for the event and Lash grant a basic use of the skill in a buff slot.",
+        "source": "Professions Document p.9-10"
+      },
+      "skills": [
+        {
+          "id": "dealer-gamble-with-fate",
+          "name": "Gamble with Fate",
+          "sheetName": "Gamble with Fate",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "When you plan to expend a skill from your ledger book you may flip a coin. If you flip heads you may use the skill without expending it from the book. If you flip tails you can either lose the skill with no effect or still gain the use of the skill but after used the slot will be locked for the rest of the event. You may use this skill before an encounter starts to \"bank\" the extra use during the encounter.",
+          "source": "Professions Document p.9-10"
+        },
+        {
+          "id": "dealer-lets-make-a-deal",
+          "name": "Lets Make a Deal",
+          "sheetName": "Lets Make a Deal",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may exchange a skill use in your ledger with another person's skill of equal or lesser ranks with 60 seconds of RP. The skills you exchange to a player will be stored in a Buff slot. The player's stored skill will count as expended on their character sheet. You may only make a Deal with another character once per Re-Pop. Adept and Advanced skills stored in the book will not refresh until the next repop"
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "When you perform a deal instead of granting a single person the skill you may grant 3 additional people in lash range a use of the skill in a buff slot as well (you may not be a target). Passive: Gain 2 more Ledger slots"
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "When you perform a deal instead of granting a single person the skill you may \"Lash grant\" a basic use of the skill instead (you are not affected by the lash). Passive: Gain 4 more Ledger slots"
+            }
+          },
+          "tierPassives": {
+            "adept": {
+              "ledgerSlotsAdd": 2
+            },
+            "advanced": {
+              "ledgerSlotsAdd": 4
+            }
+          },
+          "source": "Professions Document p.9-10"
+        }
+      ],
+      "source": "Professions Document p.9-10"
+    },
+    {
+      "id": "death",
+      "name": "Death",
+      "heading": "Death",
+      "kind": "patron",
+      "domain": "Death",
+      "sheetName": "Death",
+      "passive": {
+        "id": "death-death-is-not-the-end",
+        "name": "Death Is Not The End",
+        "sheetName": "Death Is Not The End",
+        "frequency": "passive",
+        "text": "You take reduced damage from Harm and Essence damage AND While Dead or bleeding out you may stand, walk, and speak (you may not attack or activate items). While moving you are under the effect of a permanent slow. Any attack that hits you in this state will knock you down for 5 seconds. While Dead and speaking your speech should be slow and broken. This passive does not stop your bleed out or death timers.",
+        "source": "Professions Document p.10"
+      },
+      "skills": [
+        {
+          "id": "death-embrace-death",
+          "name": "Embrace Death",
+          "sheetName": "Embrace Death",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "You may expend this skill to convert a numerical damaging attack or spell to \"Death\" Damage.",
+          "source": "Professions Document p.10"
+        },
+        {
+          "id": "death-lay-to-rest",
+          "name": "Lay to Rest",
+          "sheetName": "Lay to Rest",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may expend this skill to swing a single \"Risen Death\" or \"Spirit Death.\" This may also be used to allow a willing aware or spirit to pass on to death's realm without becoming a restless."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "You may instead perform a single \"Frontal Cone Risen Death\" or \"Frontal Cone Spirit Death\""
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "For the Encounter you gain the ability to spend a 5 count to convert your next numerical attack to a death attack."
+            }
+          },
+          "source": "Professions Document p.10"
+        }
+      ],
+      "source": "Professions Document p.10"
+    },
+    {
+      "id": "tenacity",
+      "name": "Tenacity",
+      "heading": "Tenacity - John Vigil",
+      "kind": "patron",
+      "domain": "Tenacity",
+      "patron": "John Vigil",
+      "sheetName": "Tenacity",
+      "passive": {
+        "id": "tenacity-hold-on-a-little-longer",
+        "name": "Hold on a Little Longer",
+        "sheetName": "Hold on a Little Longer",
+        "frequency": "passive",
+        "effects": [
+          {
+            "stat": "bleedOutSeconds",
+            "multiply": 2
+          }
+        ],
+        "text": "Your Bleed Out Count is Doubled, and you may resist killing blow once while you are bleeding out. Whenever you are affected by Endurance Heal 10 life.",
+        "source": "Professions Document p.11"
+      },
+      "skills": [
+        {
+          "id": "tenacity-hold-fast-to-your-resolve",
+          "name": "Hold Fast to your Resolve",
+          "sheetName": "Hold Fast to your Resolve",
+          "slot": "skill-1",
+          "frequency": "per-encounter",
+          "text": "You may use Endurance per the basic endurance skill and restore one skill you used in this encounter. The skill restored must be used this encounter or it will automatically be expended.",
+          "source": "Professions Document p.11"
+        },
+        {
+          "id": "tenacity-never-give-up",
+          "name": "Never Give up",
+          "sheetName": "Never Give up",
+          "slot": "skill-2",
+          "frequency": "per-repop",
+          "tiers": {
+            "basic": {
+              "minLevel": 1,
+              "text": "You may resist or remove any movement impairing or detrimental ailment from yourself."
+            },
+            "adept": {
+              "minLevel": 3,
+              "text": "If you have died within 10 seconds you may cast Restore life on yourself per the spell and immediately heal to full health."
+            },
+            "advanced": {
+              "minLevel": 5,
+              "text": "Gain the ability to call minimal to all movement impairing effects (1 second duration) and remove any detrimental ailment on yourself with a 10 count for an encounter."
+            }
+          },
+          "designNote": "Adept tier: still on the fence on this one",
+          "source": "Professions Document p.11"
+        }
+      ],
+      "source": "Professions Document p.11"
+    }
+  ]
+}

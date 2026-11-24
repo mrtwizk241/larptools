@@ -1,0 +1,135 @@
+/* Hub page of larptools (index.html). Colors follow the Rustwater app's tokens. */
+:root {
+  --bg: #fff8f1;
+  --surface: #ffffff;
+  --text: #1a140d;
+  --muted: #5c4f40;
+  --border: #e3d5c4;
+  --accent: #c2410c;
+  --accent-text: #ffffff;
+  --band: #16120b;
+  --band-text: #fff8f1;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16120b;
+    --surface: #221b12;
+    --text: #fff8f1;
+    --muted: #d6c7b4;
+    --border: #3d3224;
+    --accent: #fb923c;
+    --accent-text: #16120b;
+    --band: #0d0a06;
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+.band {
+  background: var(--band);
+  color: var(--band-text);
+  padding: 1rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+.band p {
+  margin: 0;
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.site {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.sub {
+  font-size: 0.875rem;
+  opacity: 0.85;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.75rem;
+}
+
+h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.card p {
+  margin: 0 0 0.75rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.button {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  filter: brightness(1.08);
+}
+
+footer {
+  padding: 1.5rem 1rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}

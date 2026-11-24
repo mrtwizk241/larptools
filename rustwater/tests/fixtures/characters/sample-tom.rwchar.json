@@ -1,0 +1,29 @@
+{
+  "format": "rustwater-character",
+  "formatVersion": 1,
+  "exportedAt": "2026-10-04T12:30:00.000Z",
+  "appVersion": "0.1.0",
+  "character": {
+    "id": "3a9d7c5e-2f1b-4e8d-b6a4-c0e9f8d7a6b5",
+    "schemaVersion": 1,
+    "rulesetId": "2026-2.0",
+    "createdAt": "2026-10-04T12:15:00.000Z",
+    "updatedAt": "2026-10-04T12:15:00.000Z",
+    "actions": [
+      {
+        "id": "7c1e5a9b-3d2f-4b6c-a8e0-1f2d3c4b5a69",
+        "seq": 1,
+        "at": "2026-10-04T12:15:00.000Z",
+        "actor": { "role": "staff", "name": "Check-in desk" },
+        "type": "character.created",
+        "payload": {
+          "characterName": "Old Tom",
+          "playerName": "Priya Nair",
+          "ancestryId": "human",
+          "subtypeId": "human-wastelander",
+          "extraInfection": 0
+        }
+      }
+    ]
+  }
+}

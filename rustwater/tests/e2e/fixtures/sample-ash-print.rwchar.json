@@ -1,0 +1,786 @@
+{
+  "format": "rustwater-character",
+  "formatVersion": 1,
+  "exportedAt": "2026-09-19T21:30:00.000Z",
+  "appVersion": "0.1.0",
+  "character": {
+    "id": "7d1e9a40-5b7d-4c9a-9e21-3d4f6a7b8c91",
+    "schemaVersion": 1,
+    "rulesetId": "2026-2.0",
+    "createdAt": "2026-03-14T18:00:00.000Z",
+    "updatedAt": "2026-09-19T19:06:00.000Z",
+    "actions": [
+      {
+        "id": "7d1e9a40-0001-4c2b-9a11-000000000001",
+        "seq": 1,
+        "at": "2026-03-14T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "character.created",
+        "payload": {
+          "characterName": "Ash Merrow",
+          "playerName": "Robin Vale",
+          "ancestryId": "human",
+          "subtypeId": "human-wastelander",
+          "extraInfection": 0,
+          "startingCxp": 250,
+          "infectionBonusCxp": 0
+        }
+      },
+      {
+        "id": "7d1e9a40-0001-4c2b-9a11-000000000002",
+        "seq": 2,
+        "at": "2026-03-14T19:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-03-14-thaw-market",
+            "name": "Thaw Market",
+            "date": "2026-03-14"
+          },
+          "attendance": "npc-paid",
+          "npcHours": 0,
+          "preSignedShift": false,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "cxp",
+              "amount": 75,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "npc"
+            },
+            {
+              "currency": "pxp",
+              "amount": 5,
+              "kind": "npc"
+            },
+            {
+              "currency": "shinies",
+              "amount": 500,
+              "kind": "npc"
+            },
+            {
+              "currency": "fp",
+              "amount": 1,
+              "kind": "attendance"
+            }
+          ],
+          "owed": [
+            "3 Common resources, 2 Uncommon resources, 1 Rare resource (Full Event NPC (Paid))",
+            "1 Rare resource (Full Event NPC (Paid), no crafting skills)"
+          ]
+        },
+        "eventKey": "2026-03-14-thaw-market"
+      },
+      {
+        "id": "7d1e9a40-0001-4c2b-9a11-000000000003",
+        "seq": 3,
+        "at": "2026-05-16T19:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-05-16-spring-flood",
+            "name": "Spring Flood",
+            "date": "2026-05-16"
+          },
+          "attendance": "npc-paid",
+          "npcHours": 0,
+          "preSignedShift": false,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "cxp",
+              "amount": 75,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "npc"
+            },
+            {
+              "currency": "pxp",
+              "amount": 5,
+              "kind": "npc"
+            },
+            {
+              "currency": "shinies",
+              "amount": 500,
+              "kind": "npc"
+            },
+            {
+              "currency": "fp",
+              "amount": 1,
+              "kind": "attendance"
+            }
+          ],
+          "owed": [
+            "3 Common resources, 2 Uncommon resources, 1 Rare resource (Full Event NPC (Paid))",
+            "1 Rare resource (Full Event NPC (Paid), no crafting skills)"
+          ]
+        },
+        "eventKey": "2026-05-16-spring-flood"
+      },
+      {
+        "id": "7d1e9a40-0001-4c2b-9a11-000000000004",
+        "seq": 4,
+        "at": "2026-07-18T19:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-07-18-long-summer",
+            "name": "Long Summer",
+            "date": "2026-07-18"
+          },
+          "attendance": "npc-paid",
+          "npcHours": 0,
+          "preSignedShift": false,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "cxp",
+              "amount": 75,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "npc"
+            },
+            {
+              "currency": "pxp",
+              "amount": 5,
+              "kind": "npc"
+            },
+            {
+              "currency": "shinies",
+              "amount": 500,
+              "kind": "npc"
+            },
+            {
+              "currency": "fp",
+              "amount": 1,
+              "kind": "attendance"
+            }
+          ],
+          "owed": [
+            "3 Common resources, 2 Uncommon resources, 1 Rare resource (Full Event NPC (Paid))",
+            "1 Rare resource (Full Event NPC (Paid), no crafting skills)"
+          ]
+        },
+        "eventKey": "2026-07-18-long-summer"
+      },
+      {
+        "id": "7d1e9a40-0001-4c2b-9a11-000000000005",
+        "seq": 5,
+        "at": "2026-09-19T19:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-09-19-harvest-moon",
+            "name": "Harvest Moon",
+            "date": "2026-09-19"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "preSignedShift": false,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "cxp",
+              "amount": 75,
+              "kind": "event"
+            },
+            {
+              "currency": "fp",
+              "amount": 1,
+              "kind": "attendance"
+            }
+          ],
+          "owed": []
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "7d1e9a40-0001-4c2b-9a11-000000000006",
+        "seq": 6,
+        "at": "2026-09-19T19:05:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "points.awarded",
+        "payload": {
+          "currency": "fp",
+          "amount": 20,
+          "kind": "other-award",
+          "requested": 20,
+          "credited": 20
+        },
+        "note": "Familiar quest reward."
+      },
+      {
+        "id": "7d1e9a40-0001-4c2b-9a11-000000000007",
+        "seq": 7,
+        "at": "2026-09-19T19:06:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "points.awarded",
+        "payload": {
+          "currency": "pxp",
+          "amount": 40,
+          "kind": "staff",
+          "requested": 40,
+          "credited": 40
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "ash-extra-1",
+        "seq": 8,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "assault",
+          "part": "basic",
+          "toLevel": 1,
+          "cost": {
+            "currency": "cxp",
+            "amount": 10
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-2",
+        "seq": 9,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "assault",
+          "part": "basic",
+          "toLevel": 2,
+          "cost": {
+            "currency": "cxp",
+            "amount": 20
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-3",
+        "seq": 10,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "assault",
+          "part": "basic",
+          "toLevel": 3,
+          "cost": {
+            "currency": "cxp",
+            "amount": 30
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-4",
+        "seq": 11,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "assault",
+          "part": "adept",
+          "toLevel": 1,
+          "cost": {
+            "currency": "ap",
+            "amount": 3
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-5",
+        "seq": 12,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness-warrior",
+          "part": "main",
+          "toLevel": 1,
+          "cost": {
+            "currency": "ap",
+            "amount": 3
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-6",
+        "seq": 13,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "deflection",
+          "part": "basic",
+          "toLevel": 1,
+          "cost": {
+            "currency": "cxp",
+            "amount": 10
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-7",
+        "seq": 14,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "deflection",
+          "part": "basic",
+          "toLevel": 2,
+          "cost": {
+            "currency": "cxp",
+            "amount": 20
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-8",
+        "seq": 15,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "armor",
+          "part": "main",
+          "toLevel": 1,
+          "cost": {
+            "currency": "ap",
+            "amount": 3
+          },
+          "teacher": "Jory",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-9",
+        "seq": 16,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "dash",
+          "part": "basic",
+          "toLevel": 1,
+          "cost": {
+            "currency": "cxp",
+            "amount": 10
+          },
+          "teacher": "Moss",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-10",
+        "seq": 17,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "search",
+          "part": "basic",
+          "toLevel": 1,
+          "cost": {
+            "currency": "cxp",
+            "amount": 10
+          },
+          "teacher": "Moss",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-11",
+        "seq": 18,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "search",
+          "part": "basic",
+          "toLevel": 2,
+          "cost": {
+            "currency": "cxp",
+            "amount": 20
+          },
+          "teacher": "Moss",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-12",
+        "seq": 19,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "life-magic",
+          "part": "basic",
+          "toLevel": 1,
+          "cost": {
+            "currency": "cxp",
+            "amount": 10
+          },
+          "teacher": "Wren",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-13",
+        "seq": 20,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "life-magic",
+          "part": "basic",
+          "toLevel": 2,
+          "cost": {
+            "currency": "cxp",
+            "amount": 20
+          },
+          "teacher": "Wren",
+          "atCreation": false
+        }
+      },
+      {
+        "id": "ash-extra-14",
+        "seq": 21,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "memorized.added",
+        "payload": {
+          "kind": "spell",
+          "refId": "life-bolt",
+          "slot": "life"
+        }
+      },
+      {
+        "id": "ash-extra-15",
+        "seq": 22,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "memorized.added",
+        "payload": {
+          "kind": "spell",
+          "refId": "health-spring",
+          "slot": "life"
+        }
+      },
+      {
+        "id": "ash-extra-16",
+        "seq": 23,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "memorized.added",
+        "payload": {
+          "kind": "knowledge",
+          "text": "Old river trade routes",
+          "slot": "none"
+        }
+      },
+      {
+        "id": "ash-extra-17",
+        "seq": 24,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "ancestry.leveled",
+        "payload": {
+          "abilityId": "make-it-work",
+          "toLevel": 2
+        }
+      },
+      {
+        "id": "ash-extra-18",
+        "seq": 25,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "items.startingSet",
+        "payload": {
+          "picks": [
+            {
+              "optionId": "basic-melee-weapon",
+              "detail": "long"
+            },
+            {
+              "optionId": "basic-armor"
+            },
+            {
+              "optionId": "basic-shield"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ash-extra-19",
+        "seq": 26,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "profession.started",
+        "payload": {
+          "professionId": "medic",
+          "eventsPlayedBefore": 3
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "ash-extra-20",
+        "seq": 27,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "profession.leveled",
+        "payload": {
+          "abilityId": "medic-get-back-in-there",
+          "toLevel": 1,
+          "cost": {
+            "currency": "pxp",
+            "amount": 10
+          }
+        },
+        "eventKey": "2026-09-19-harvest-moon",
+        "causedBy": "ash-extra-19"
+      },
+      {
+        "id": "ash-extra-21",
+        "seq": 28,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "profession.leveled",
+        "payload": {
+          "abilityId": "medic-stitch-em-up",
+          "toLevel": 1,
+          "cost": {
+            "currency": "pxp",
+            "amount": 10
+          }
+        },
+        "eventKey": "2026-09-19-harvest-moon",
+        "causedBy": "ash-extra-19"
+      },
+      {
+        "id": "ash-extra-22",
+        "seq": 29,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "familiar.bonded",
+        "payload": {
+          "name": "Pip",
+          "creature": "raven"
+        }
+      },
+      {
+        "id": "ash-extra-23",
+        "seq": 30,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "familiar.awakened",
+        "payload": {
+          "awakenedSkillId": "push",
+          "fpCost": 5
+        }
+      },
+      {
+        "id": "ash-extra-24",
+        "seq": 31,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "familiar.leveled",
+        "payload": {
+          "toLevel": 3,
+          "fpCost": 3
+        }
+      },
+      {
+        "id": "ash-extra-25",
+        "seq": 32,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "familiar.skillLearned",
+        "payload": {
+          "skillId": "fam-feint",
+          "essenceCost": 5
+        }
+      },
+      {
+        "id": "ash-extra-26",
+        "seq": 33,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "boon.added",
+        "payload": {
+          "boonId": "slap-in-the-face",
+          "name": "Slap in the Face",
+          "expires": "Lasts until the end of the Event if never used, or until the end of the Encounter once used or activated."
+        }
+      },
+      {
+        "id": "ash-extra-27",
+        "seq": 34,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "owed.added",
+        "payload": {
+          "text": "1 Spell Blueprint (Life Bolt)",
+          "eventKey": "2026-09-19-harvest-moon"
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "ash-extra-28",
+        "seq": 35,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "shinies.spent",
+        "payload": {
+          "purchaseId": "buy-cxp",
+          "qty": 2,
+          "shiniesCost": 100,
+          "grants": [
+            {
+              "currency": "cxp",
+              "amount": 2,
+              "kind": "shiny-purchase"
+            }
+          ],
+          "items": []
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "ash-extra-29",
+        "seq": 36,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "shinies.spent",
+        "payload": {
+          "purchaseId": "buy-basic-resource",
+          "qty": 2,
+          "shiniesCost": 40,
+          "grants": [],
+          "items": ["2 Common resources"]
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "ash-extra-30",
+        "seq": 37,
+        "at": "2026-09-19T21:00:00.000Z",
+        "actor": {
+          "role": "staff"
+        },
+        "type": "profile.updated",
+        "payload": {
+          "notes": "Owes the ferryman a favor."
+        }
+      }
+    ]
+  }
+}

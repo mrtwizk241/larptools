@@ -1,0 +1,84 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding: 0 20px;
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  text-align: center;
+  text-decoration: none;
+  transition:
+    filter 120ms ease,
+    background-color 120ms ease;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.primary {
+  min-height: var(--tap-lg);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* Border so it reads as a button in sunlight (a11y A-11). */
+.secondary {
+  background: var(--color-secondary);
+  color: var(--color-on-secondary);
+  border-color: var(--color-border-strong);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+.danger {
+  background: var(--color-danger);
+  color: var(--color-on-danger);
+}
+
+.button:not(:disabled):hover {
+  filter: brightness(1.08);
+}
+
+.ghost:not(:disabled):hover {
+  filter: none;
+  background: var(--color-surface-2);
+}
+
+.button:not(:disabled):active {
+  filter: brightness(0.94);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  opacity: 0.45;
+}
+
+.withReason {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.reason {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}

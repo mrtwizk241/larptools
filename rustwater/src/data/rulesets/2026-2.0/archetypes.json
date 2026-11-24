@@ -1,0 +1,38 @@
+[
+  {
+    "id": "warrior",
+    "name": "Warrior",
+    "description": "Your character's offensive skills in battle.",
+    "source": "Rulebook p.48"
+  },
+  {
+    "id": "defender",
+    "name": "Defender",
+    "description": "Your character's defensive abilities.",
+    "source": "Rulebook p.51"
+  },
+  {
+    "id": "rogue",
+    "name": "Rogue",
+    "description": "Moving quickly and silently, and taking down targets efficiently.",
+    "source": "Rulebook p.54"
+  },
+  {
+    "id": "utility",
+    "name": "Utility",
+    "description": "Utility and research skills.",
+    "source": "Rulebook p.57"
+  },
+  {
+    "id": "magic",
+    "name": "Magic",
+    "description": "Spellcasting in the Elemental, Life, Death, and Tech schools, and mastery magic.",
+    "source": "Rulebook p.82-84"
+  },
+  {
+    "id": "crafting",
+    "name": "Crafting",
+    "description": "Your character's skill and known recipes for the various crafts.",
+    "source": "Rulebook p.67"
+  }
+]

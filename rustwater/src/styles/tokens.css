@@ -1,0 +1,133 @@
+/*
+ * Design tokens. Source of truth: docs/design/style-guide.md.
+ * Light "Parchment" theme is the default (readable in sunlight).
+ * Dark "Swamp" theme follows the system setting unless the user picks one
+ * (html[data-theme="light" | "dark"]).
+ * Every text pair here is at least 6:1 contrast; borders at least 3:1.
+ */
+:root {
+  color-scheme: light;
+
+  /* Color: light "Parchment" */
+  --color-bg: #fff8f1;
+  --color-surface: #fbf1e4;
+  --color-surface-2: #f1e2ce;
+  --color-text: #1a140d;
+  --color-text-muted: #5b4d43;
+  --color-border: #8a735e;
+  --color-border-strong: #5b4d43;
+  --color-primary: #8a3f12;
+  --color-on-primary: #fff8f1;
+  --color-secondary: #dbbc9a;
+  --color-on-secondary: #1a140d;
+  --color-link: #8a3f12;
+  --color-danger: #9b1c1c;
+  --color-on-danger: #fff8f1;
+  --color-success: #2f5d1e;
+  --color-warning-bg: #f6d9a8;
+  --color-warning-text: #1a140d;
+  --color-focus: #c2410c;
+  --color-header-bg: #16120b;
+  --color-header-text: #fff8f1;
+  --color-header-muted: #dbbc9a;
+  --color-overlay: rgb(22 18 11 / 60%);
+
+  /* Type */
+  --font-body: 'Source Sans 3 Variable', 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Azeret Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --font-display: 'Permanent Marker', 'Azeret Mono', cursive;
+
+  --text-xs: 0.875rem; /* 14px: captions only, never body */
+  --text-sm: 1rem; /* 16px */
+  --text-md: 1.0625rem; /* 17px: body */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.5rem; /* 24px */
+  --text-2xl: 2rem; /* 32px */
+  --leading: 1.5;
+  --leading-tight: 1.2;
+  --weight-normal: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Space (4px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Shape and size */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-pill: 999px;
+  --border-width: 1px;
+  --tap: 44px; /* minimum tap target */
+  --tap-lg: 48px; /* primary actions */
+  --content-max: 960px;
+  /* Phone bottom nav: grows with the text size (a11y A-05). */
+  --nav-height: max(56px, 3.5rem);
+  --focus-ring: 3px solid var(--color-focus);
+  --focus-offset: 2px;
+  --shadow: 0 1px 3px rgb(22 18 11 / 25%);
+
+  /* Layers */
+  --z-header: 10;
+  --z-nav: 20;
+  --z-dialog: 100;
+  --z-toast: 200;
+}
+
+/* Dark "Swamp" */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #16120b;
+  --color-surface: #231c12;
+  --color-surface-2: #2f2518;
+  --color-text: #fff8f1;
+  --color-text-muted: #dbbc9a;
+  --color-border: #8c7660;
+  --color-border-strong: #dbbc9a;
+  --color-primary: #dbbc9a;
+  --color-on-primary: #16120b;
+  --color-secondary: #4a3c2c;
+  --color-on-secondary: #fff8f1;
+  --color-link: #f0a868;
+  --color-danger: #ff8a80;
+  --color-on-danger: #16120b;
+  --color-success: #9bd17b;
+  --color-warning-bg: #5a4210;
+  --color-warning-text: #fff8f1;
+  --color-focus: #ffb86b;
+  --color-header-bg: #0d0a06;
+  --color-overlay: rgb(0 0 0 / 70%);
+  --shadow: 0 1px 3px rgb(0 0 0 / 60%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --color-bg: #16120b;
+    --color-surface: #231c12;
+    --color-surface-2: #2f2518;
+    --color-text: #fff8f1;
+    --color-text-muted: #dbbc9a;
+    --color-border: #8c7660;
+    --color-border-strong: #dbbc9a;
+    --color-primary: #dbbc9a;
+    --color-on-primary: #16120b;
+    --color-secondary: #4a3c2c;
+    --color-on-secondary: #fff8f1;
+    --color-link: #f0a868;
+    --color-danger: #ff8a80;
+    --color-on-danger: #16120b;
+    --color-success: #9bd17b;
+    --color-warning-bg: #5a4210;
+    --color-warning-text: #fff8f1;
+    --color-focus: #ffb86b;
+    --color-header-bg: #0d0a06;
+    --color-overlay: rgb(0 0 0 / 70%);
+    --shadow: 0 1px 3px rgb(0 0 0 / 60%);
+  }
+}

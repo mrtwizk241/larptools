@@ -1,0 +1,336 @@
+{
+  "id": "2026-2.0",
+  "name": "Rustwater Rulebook 2.0 (2026 season)",
+  "season": 2026,
+  "rulebookVersion": "2.0",
+  "sources": [
+    {
+      "id": "rulebook",
+      "name": "Rustwater Rulebook 2.0"
+    },
+    {
+      "id": "professions",
+      "name": "Rustwater Professions Document"
+    }
+  ],
+  "currencies": [
+    {
+      "id": "cxp",
+      "name": "Character Experience",
+      "abbr": "CXP",
+      "scope": "character",
+      "derived": false,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "ap",
+      "name": "Archetype Points",
+      "abbr": "AP",
+      "scope": "character-per-archetype",
+      "derived": true,
+      "source": "Rulebook p.12, p.17"
+    },
+    {
+      "id": "lxp",
+      "name": "Ancestry Experience",
+      "abbr": "LXP",
+      "scope": "character",
+      "derived": true,
+      "source": "Rulebook p.17"
+    },
+    {
+      "id": "pxp",
+      "name": "Profession Experience Points",
+      "abbr": "PXP",
+      "scope": "character",
+      "derived": false,
+      "source": "Rulebook p.12; Professions Document p.1"
+    },
+    {
+      "id": "shinies",
+      "name": "Shinies",
+      "abbr": "Shinies",
+      "aliases": ["Brownie points"],
+      "scope": "character",
+      "derived": false,
+      "source": "Rulebook p.12-14"
+    },
+    {
+      "id": "fp",
+      "name": "Familiar Points",
+      "abbr": "FP",
+      "scope": "character",
+      "derived": false,
+      "source": "Rulebook p.12-13, p.98"
+    }
+  ],
+  "ledgerKinds": [
+    {
+      "id": "start",
+      "name": "Starting points"
+    },
+    {
+      "id": "infection-bonus",
+      "name": "Extra infection at creation"
+    },
+    {
+      "id": "retirement-carry",
+      "name": "Retirement carry-over"
+    },
+    {
+      "id": "event",
+      "name": "Event CXP"
+    },
+    {
+      "id": "attendance",
+      "name": "Event attendance"
+    },
+    {
+      "id": "npc",
+      "name": "NPC time"
+    },
+    {
+      "id": "staff",
+      "name": "Staff work"
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer help"
+    },
+    {
+      "id": "donation",
+      "name": "Donation"
+    },
+    {
+      "id": "grades",
+      "name": "Good grades"
+    },
+    {
+      "id": "shiny-purchase",
+      "name": "Bought with Shinies"
+    },
+    {
+      "id": "shiny-spend",
+      "name": "Spent Shinies"
+    },
+    {
+      "id": "other-award",
+      "name": "Other award"
+    },
+    {
+      "id": "penalty",
+      "name": "Penalty"
+    },
+    {
+      "id": "adjustment",
+      "name": "Staff correction"
+    },
+    {
+      "id": "transfer",
+      "name": "Shiny transfer"
+    }
+  ],
+  "startingCxp": 250,
+  "eventCxp": 75,
+  "earnedCxpCap": {
+    "amount": 2000,
+    "excludedKinds": ["start", "infection-bonus", "retirement-carry"],
+    "onExceed": "clamp-and-warn",
+    "assumed": true,
+    "assumptionNote": "Q-PTS-1: read as lifetime CXP earned after creation, from every source except the excluded kinds.",
+    "source": "Rulebook p.12"
+  },
+  "apPerBasicLevel": 1,
+  "basicSkill": {
+    "currency": "cxp",
+    "costPerLevel": 10,
+    "maxLevel": 10,
+    "source": "Rulebook p.16-17, p.48"
+  },
+  "archetypeSkill": {
+    "currency": "ap",
+    "maxLevel": 5,
+    "costs": {
+      "adept": {
+        "costPerLevel": 3,
+        "scaling": "escalating",
+        "maxLevel": 5
+      },
+      "advanced": {
+        "costPerLevel": 5,
+        "scaling": "escalating",
+        "maxLevel": 5
+      },
+      "encounter": {
+        "costPerLevel": 2,
+        "scaling": "escalating",
+        "maxLevel": 5
+      },
+      "passive": {
+        "costPerLevel": 3,
+        "scaling": "escalating",
+        "maxLevel": 5
+      },
+      "memorization": {
+        "costPerLevel": 1,
+        "scaling": "flat",
+        "maxLevel": null
+      },
+      "mastery": {
+        "costPerLevel": 10,
+        "scaling": "flat",
+        "maxLevel": 1
+      }
+    },
+    "source": "Rulebook p.17, p.48"
+  },
+  "lxp": {
+    "atCreation": 1,
+    "perCxp": 500,
+    "countsStartingCxp": true,
+    "costPerLevel": 1,
+    "abilityStartLevel": 1,
+    "maxAbilityLevel": null,
+    "sheetMaxAbilityLevel": 6,
+    "assumed": true,
+    "assumptionNote": "Q-PTS-4: LXP counts all CXP the character has, including the starting 250.",
+    "source": "Rulebook p.17-18"
+  },
+  "pxp": {
+    "atCreation": 0,
+    "earnedByAttendance": false,
+    "source": "Rulebook p.12; Professions Document p.1-2"
+  },
+  "baseStats": {
+    "maxHealth": 10,
+    "armor": 0,
+    "assumed": true,
+    "assumptionNote": "Q-HP-1: the rulebook states no base Health; the sheet starts Max Health at 10 and Armor at 0.",
+    "source": "sheet Basics!D6, Q-HP-1"
+  },
+  "extraInfection": {
+    "maxLevels": 2,
+    "cxpPerLevel": 10,
+    "ledgerKind": "infection-bonus",
+    "source": "Rulebook p.19"
+  },
+  "retirement": {
+    "subtractCxp": 250,
+    "subtractFp": 0,
+    "divisor": 3,
+    "rounding": "floor",
+    "carries": ["cxp", "fp", "shinies"],
+    "kinds": ["planned", "unplanned"],
+    "assumed": true,
+    "assumptionNote": "Q-PTS-10: \"total spent XP\" read as CXP spent on basic skills; rounding down; PXP does not carry.",
+    "source": "Rulebook p.17-18"
+  },
+  "upkeep": {
+    "options": [
+      {
+        "kind": "resource",
+        "rarity": "common",
+        "qty": 2
+      },
+      {
+        "kind": "bits",
+        "qty": 10
+      }
+    ],
+    "firstEventFree": true,
+    "zeroForAncestries": ["aware"],
+    "coveredByPurchase": "buy-upkeep",
+    "gmModifiable": true,
+    "source": "Rulebook p.8, p.13, p.30"
+  },
+  "penalties": {
+    "cxpLossAllowed": true,
+    "banBlocksPurchases": true,
+    "infectionLevelPenalty": true,
+    "source": "Rulebook p.10-11"
+  },
+  "magicSchools": [
+    {
+      "id": "elemental",
+      "name": "Elemental",
+      "skill": "elemental-magic"
+    },
+    {
+      "id": "life",
+      "name": "Life",
+      "skill": "life-magic"
+    },
+    {
+      "id": "death",
+      "name": "Death",
+      "skill": "death-magic"
+    },
+    {
+      "id": "tech",
+      "name": "Tech",
+      "skill": "tech-magic"
+    }
+  ],
+  "craftingDisciplines": [
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "skill": "engineering",
+      "resourceType": "junk"
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "skill": "chemistry",
+      "resourceType": "chemical"
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "skill": "medicine",
+      "resourceType": "organic"
+    },
+    {
+      "id": "gearcraft",
+      "name": "Gearcraft",
+      "skill": "gearcraft",
+      "resourceType": "scrap"
+    }
+  ],
+  "resourceTypes": [
+    {
+      "id": "chemical",
+      "name": "Chemical"
+    },
+    {
+      "id": "organic",
+      "name": "Organic"
+    },
+    {
+      "id": "scrap",
+      "name": "Scrap"
+    },
+    {
+      "id": "junk",
+      "name": "Junk"
+    }
+  ],
+  "rarities": [
+    {
+      "id": "common",
+      "name": "Common",
+      "rank": "basic"
+    },
+    {
+      "id": "uncommon",
+      "name": "Uncommon",
+      "rank": "adept"
+    },
+    {
+      "id": "rare",
+      "name": "Rare",
+      "rank": "advanced"
+    }
+  ],
+  "source": "Rulebook p.8-19"
+}

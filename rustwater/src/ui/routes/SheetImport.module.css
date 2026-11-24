@@ -1,0 +1,49 @@
+/* Preview of a Google Sheet import. Label and value pairs as on the profile card
+   (character.module.css .facts). */
+.facts {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.facts > div {
+  display: grid;
+  gap: 2px;
+}
+
+.facts dt {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.wrap {
+  overflow-wrap: anywhere;
+}
+
+.warnings {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.warningsTitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.warningList {
+  display: grid;
+  gap: var(--space-1);
+  padding-left: var(--space-5);
+  overflow-wrap: anywhere;
+}

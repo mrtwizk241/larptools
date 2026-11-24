@@ -1,0 +1,266 @@
+/* Memory screen: slot pools, memorized entries, the Memorize picker. */
+.tab {
+  display: grid;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.tab > * {
+  min-width: 0;
+}
+
+.unlock {
+  color: var(--color-text-muted);
+}
+
+/* Slot pools: one compact line each, expandable to where the slots come from. */
+.pools {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.expander {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface-2);
+}
+
+.expander > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  list-style: none;
+}
+
+.expander > summary::-webkit-details-marker {
+  display: none;
+}
+
+.expander > summary::before {
+  content: '';
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin: 0 var(--space-1);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+}
+
+.expander[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.expander > summary:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--radius);
+}
+
+.expanderBody {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0 var(--space-3) var(--space-3) calc(var(--space-3) + 20px);
+}
+
+.poolLine {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+.over {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-danger);
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+}
+
+.overIcon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.breakdown {
+  padding-left: var(--space-5);
+}
+
+/* Memorized entries. */
+.entries {
+  display: grid;
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.entry {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.entries > li:first-child .entry {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.entryHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+}
+
+.entryName {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  text-transform: none;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+
+.entryMeta {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.ruleText {
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+}
+
+/* Memorize picker: a radio list laid out as cards; the whole card selects. */
+.pickerFieldset {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.pickerLegend {
+  margin-bottom: var(--space-1);
+  padding: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.options {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  padding: var(--space-3);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.option:hover {
+  background: var(--color-surface-2);
+}
+
+/* Selected: thicker primary border plus the checked radio, not color alone. */
+.option:has(.radio:checked) {
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+}
+
+.option:has(.radio:focus-visible) {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.radio {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.optionText {
+  display: grid;
+  flex: 1;
+  gap: 2px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.optionLabel {
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+}
+
+.optionLabel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+
+.optionDetail {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  padding: var(--space-2) 0;
+}
+
+.check input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.checkText {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.checkLabel {
+  cursor: pointer;
+  font-weight: var(--weight-semibold);
+}
+
+.count {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}

@@ -1,0 +1,79 @@
+{
+  "tracks": [
+    {
+      "id": "infection",
+      "name": "Infection Level",
+      "min": 0,
+      "max": 10,
+      "atMax": {
+        "outcome": "risen",
+        "triggers": "unplanned-retirement",
+        "text": "Once the infection level reaches 10 your character completely succumbs to the virus and becomes a Risen."
+      },
+      "source": "Rulebook p.40-41"
+    },
+    {
+      "id": "connection",
+      "name": "Connection Damage",
+      "aliases": ["Connection Loss"],
+      "min": 0,
+      "max": 10,
+      "atMax": {
+        "outcome": "restless",
+        "triggers": "unplanned-retirement",
+        "text": "Awares will rise as a Restless."
+      },
+      "source": "Rulebook p.30, p.40-41"
+    }
+  ],
+  "gain": [
+    {
+      "id": "death-rise",
+      "amount": 1,
+      "triggersTrauma": true,
+      "when": "character dies and rises by the Risen Virus after the 5 minute count",
+      "preventedBy": "a Raise Dead effect before the 5 minute count ends",
+      "source": "Rulebook p.41"
+    },
+    {
+      "id": "gm-penalty",
+      "amount": 1,
+      "when": "GM repercussion for a serious mistake",
+      "source": "Rulebook p.10"
+    },
+    {
+      "id": "staff-adjustment",
+      "staffSetsAmount": true,
+      "when": "in-game effects recorded by staff",
+      "source": "Rulebook p.40"
+    }
+  ],
+  "clampToTrack": true,
+  "death": {
+    "downedAtHealth": 0,
+    "downedRecoverMinutes": 5,
+    "downedRecoverToHealth": 1,
+    "bleedOutAtHealth": -1,
+    "minimumHealth": -1,
+    "bleedOutSeconds": 60,
+    "riseCountMinutes": 5,
+    "riseAtFullHealth": true,
+    "skillUsesRestoredOnDeath": false,
+    "clearedOnDeath": [
+      "all buff slots",
+      "all re-pop duration effects",
+      "all encounter duration effects",
+      "all unslotted buffs",
+      "all status effects except delimb and aging"
+    ],
+    "awareText": "Body dissipates after the bleed-out count and leaves the Beacon; gains Connection Damage instead of infection.",
+    "source": "Rulebook p.38, p.41"
+  },
+  "trauma": {
+    "createdOn": "death-rise",
+    "createdBy": "GM with the player",
+    "removable": true,
+    "fields": ["text", "createdAtEvent", "status", "removedBy"],
+    "source": "Rulebook p.41"
+  }
+}

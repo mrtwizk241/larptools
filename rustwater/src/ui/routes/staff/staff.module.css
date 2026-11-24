@@ -1,0 +1,167 @@
+.page {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.page > :global(*) {
+  min-width: 0;
+}
+
+.tabBody {
+  display: grid;
+  gap: var(--space-6);
+  padding-top: var(--space-4);
+}
+
+.section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.section > :global(*) {
+  min-width: 0;
+}
+
+.quick,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.cards {
+  display: grid;
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.form {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.facts > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-2);
+}
+
+.facts dt {
+  font-weight: var(--weight-semibold);
+}
+
+.facts dt::after {
+  content: ':';
+}
+
+.inline {
+  display: grid;
+  gap: var(--space-1);
+  padding-left: var(--space-5);
+}
+
+.muted,
+.note {
+  color: var(--color-text-muted);
+}
+
+.note {
+  font-size: var(--text-sm);
+}
+
+.wrap {
+  overflow-wrap: anywhere;
+}
+
+/* One-time codes are read aloud: big, monospaced, easy to copy. */
+.code {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  user-select: all;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: var(--space-2);
+  border-bottom: var(--border-width) solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+/* Radio lists in staff dialogs. */
+.radios {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.radios legend {
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-semibold);
+}
+
+.radio {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  padding: var(--space-2) 0;
+  cursor: pointer;
+}
+
+.radio input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.error {
+  color: var(--color-danger);
+  font-weight: var(--weight-semibold);
+}
+
+/* Shiny manager rows: name, balance, then the two actions. */
+.shinyTotal {
+  flex: none;
+  font-weight: var(--weight-semibold);
+}
+
+.shinyRow {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-left: 3px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.shinyName {
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+.shinyBalance {
+  color: var(--color-text-muted);
+}

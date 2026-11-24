@@ -1,0 +1,19 @@
+.page {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+}
+
+.page > :global(*) {
+  max-width: 100%;
+}
+
+.page > :global(div) {
+  width: 100%;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+}

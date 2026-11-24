@@ -2,13 +2,14 @@ import { Link, useParams, useSearchParams } from 'react-router';
 import { ArrowLeft } from 'lucide-react';
 import { Card } from '../../../components/index.ts';
 import type { CharacterView } from '../view.ts';
+import { SkillControls } from './SkillControls.tsx';
 import { SkillPanel } from './SkillPanel.tsx';
 import { skillTitle } from './skillInfo.ts';
 import styles from './skills.module.css';
 
 /**
  * `#/c/:id/skills/:skillId`: one skill on its own page (older links and the wiki). The same panel
- * the Skills list opens in place: rule text per part, + per level for players, steppers for staff.
+ * the Skills list opens in place, under the same level controls as the list row.
  * With `?owned=1`, a player sees only the parts they have, with a button for the rest.
  */
 export function SkillDetailPage({ view }: { view: CharacterView }) {
@@ -35,6 +36,7 @@ export function SkillDetailPage({ view }: { view: CharacterView }) {
       <h2 id="skill-heading" className={styles.title}>
         {skillTitle(view.ruleset, skill)}
       </h2>
+      <SkillControls view={view} skill={skill} />
       <SkillPanel view={view} skill={skill} ownedView={ownedView} headingLevel={3} />
     </section>
   );

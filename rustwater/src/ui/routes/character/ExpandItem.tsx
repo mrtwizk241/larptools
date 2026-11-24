@@ -9,6 +9,7 @@ export function ExpandItem({
   title,
   meta,
   action,
+  controls,
   defaultOpen = false,
   headingLevel = 3,
   children,
@@ -18,6 +19,8 @@ export function ExpandItem({
   meta?: ReactNode;
   /** A button beside the toggle, for example "I learned this spell". */
   action?: ReactNode;
+  /** Controls under the heading that stay visible while closed, for example level steppers. */
+  controls?: ReactNode;
   defaultOpen?: boolean;
   headingLevel?: 3 | 4;
   /** The details; rendered only while open. */
@@ -49,6 +52,7 @@ export function ExpandItem({
         </Heading>
         {action}
       </div>
+      {controls ? <div className={styles.controls}>{controls}</div> : null}
       {open ? (
         <div id={panelId} className={styles.panel}>
           {children()}

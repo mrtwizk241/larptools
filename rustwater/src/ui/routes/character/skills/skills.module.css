@@ -340,3 +340,42 @@
   color: var(--color-text-muted);
   font-size: var(--text-sm);
 }
+
+/* Level controls on a skill row: one "Adept (-) 2 (+)" group per part. */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* One width for every part name, so the circles line up when the parts stack on a phone. */
+.controlLabel {
+  min-width: 5.5em;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.controlValue {
+  min-width: 3ch;
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+}
+
+.circle svg {
+  width: 20px;
+  height: 20px;
+}

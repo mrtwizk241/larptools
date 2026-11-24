@@ -6,6 +6,7 @@ import { Field, ScrollRow, Tabs } from '../../../components/index.ts';
 import { ExpandItem } from '../ExpandItem.tsx';
 import type { CharacterView } from '../view.ts';
 import { canRequest } from './requestParts.ts';
+import { SkillControls } from './SkillControls.tsx';
 import { SkillPanel } from './SkillPanel.tsx';
 import {
   CATEGORIES,
@@ -13,7 +14,6 @@ import {
   filterChips,
   filterSkills,
   isCategory,
-  ownedSummary,
   poolsForCategory,
   skillTitle,
   typeLabel,
@@ -239,25 +239,20 @@ function SkillTab({
       </p>
       {canRequest(view) ? (
         <p className={styles.hint}>
-          Learned a skill in game? Open it, tap + next to the level you learned, and say who taught
-          you. To find a skill you do not have yet, turn off Owned only.
+          Learned a skill in game? Tap + next to the level you learned and say who taught you. To
+          find a skill you do not have yet, turn off Owned only.
         </p>
       ) : null}
       {skills.length > 0 ? (
         <ul className={expand.list}>
           {skills.map((skill) => {
-            const owned = sheet.skills.find((s) => s.skillId === skill.id);
             return (
               <li key={skill.id}>
                 <ExpandItem
                   title={skillTitle(ruleset, skill)}
                   defaultOpen={skill.id === openId}
-                  meta={
-                    <>
-                      <span className={styles.typeBadge}>{typeLabel(skill)}</span>
-                      <span>{ownedSummary(skill, owned)}</span>
-                    </>
-                  }
+                  controls={<SkillControls view={view} skill={skill} />}
+                  meta={<span className={styles.typeBadge}>{typeLabel(skill)}</span>}
                 >
                   {() => (
                     <SkillPanel view={view} skill={skill} ownedView={!view.isStaff && ownedOnly} />

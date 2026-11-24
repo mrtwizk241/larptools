@@ -142,7 +142,7 @@ describe('I learned this skill (player)', () => {
   it('offers a + next to each level on the skills list, including skills not owned yet', async () => {
     const user = userEvent.setup();
     renderApp(`/c/${MIRA_ID}/skills`, { characters: [mira()] });
-    await screen.findByText(/tap \+ next to the level you learned/);
+    await screen.findByText(/Tap \+ next to the level you learned/);
     await user.click(screen.getByRole('checkbox', { name: 'Owned only' }));
     await user.click(await screen.findByRole('button', { name: /^Assault/ }));
     expect(screen.getByRole('button', { name: 'I learned Assault Adept' })).toBeInTheDocument();

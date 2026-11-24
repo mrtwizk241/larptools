@@ -1,7 +1,6 @@
 // Staff dialogs on the skill detail page: learn the next level (teacher, archetype) and refund
 // a level (reason). Both plan through the engine; errors show inline, notices as toasts.
 import { useId, useState, type FormEvent } from 'react';
-import { TEST_BUILD_TEACHER } from '../../../../engine/commands/plan.ts';
 import { maxLevelOf, preview } from '../../../../engine/index.ts';
 import type { SkillPart } from '../../../../engine/model.ts';
 import { Button, Dialog, Field } from '../../../components/index.ts';
@@ -31,15 +30,18 @@ function currentLevel(view: CharacterView, skill: Skill, part: SkillPart): numbe
   return ownedPart(owned, part)?.level ?? 0;
 }
 
-/** "Learn Assault level 4 for 40 CXP?" with a Teacher field and, when open, an archetype choice. */
+/**
+ * "Learn Assault level 4 for 40 CXP?" with a Teacher field (not in test builds) and, when open,
+ * an archetype choice.
+ */
 export function LearnDialog({ view, skill, part, onClose }: DialogProps) {
   const formId = useId();
   const command = useCommand(view.id);
   const { ruleset, sheet } = view;
   const chooseArchetype = needsArchetypeChoice(sheet, skill);
-  // A test build (ADR 0007) records "Test build" as the teacher; prefill it so staff-style
-  // learning there needs no typing.
-  const [teacher, setTeacher] = useState(view.meta?.kind === 'test' ? TEST_BUILD_TEACHER : '');
+  // A test build (ADR 0007) asks for no teacher: the engine records "Test build".
+  const testBuild = view.meta?.kind === 'test';
+  const [teacher, setTeacher] = useState('');
   const [archetype, setArchetype] = useState('');
   const [errors, setErrors] = useState<{ teacher?: string; archetype?: string }>({});
 
@@ -53,7 +55,7 @@ export function LearnDialog({ view, skill, part, onClose }: DialogProps) {
   const title = result.cost
     ? `Learn ${what} for ${costText(ruleset, result.cost)}?`
     : `Learn ${what}?`;
-  const teacherRequired = result.teacherRequired === true;
+  const teacherRequired = !testBuild && result.teacherRequired === true;
 
   async function submit(event: FormEvent) {
     event.preventDefault();
@@ -122,25 +124,27 @@ export function LearnDialog({ view, skill, part, onClose }: DialogProps) {
             )}
           </Field>
         ) : null}
-        <Field
-          label="Teacher"
-          hint={
-            teacherRequired
-              ? 'Required: who taught this skill.'
-              : 'Optional: leave blank when self-taught.'
-          }
-          required={teacherRequired}
-          error={errors.teacher}
-        >
-          {(control) => (
-            <input
-              {...control}
-              autoComplete="off"
-              value={teacher}
-              onChange={(e) => setTeacher(e.target.value)}
-            />
-          )}
-        </Field>
+        {testBuild ? null : (
+          <Field
+            label="Teacher"
+            hint={
+              teacherRequired
+                ? 'Required: who taught this skill.'
+                : 'Optional: leave blank when self-taught.'
+            }
+            required={teacherRequired}
+            error={errors.teacher}
+          >
+            {(control) => (
+              <input
+                {...control}
+                autoComplete="off"
+                value={teacher}
+                onChange={(e) => setTeacher(e.target.value)}
+              />
+            )}
+          </Field>
+        )}
         <ErrorList
           messages={[...blocked, ...command.errors.map((e) => e.message)].filter(unique)}
         />

@@ -177,3 +177,8 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
+/* Controls under a row's heading, visible while the row is closed (skill level steppers). */
+.controls {
+  padding: 0 var(--space-3) var(--space-3) var(--space-4);
+}

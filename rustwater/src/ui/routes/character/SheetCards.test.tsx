@@ -32,7 +32,13 @@ vi.mock('../../../api/client.ts', async (importOriginal) => {
 
 vi.mock('../../../storage/remote.ts', async (importOriginal) => {
   const actual = await importOriginal<typeof import('../../../storage/remote.ts')>();
-  return { ...actual, characterMetaFor: vi.fn(actual.characterMetaFor) };
+  const characterMetaFor = vi.fn(actual.characterMetaFor);
+  // isTestBuild calls characterMetaFor inside the module, so it reads the mock through here.
+  return {
+    ...actual,
+    characterMetaFor,
+    isTestBuild: (id: string) => characterMetaFor(id)?.kind === 'test',
+  };
 });
 
 const rs = loadRuleset();
@@ -351,13 +357,13 @@ describe('test builds', () => {
     };
   }
 
-  it('has no hidden notes option, and Learn prefills the teacher with "Test build"', async () => {
+  it('has no hidden notes option; + and - work at once, with no teacher or reason', async () => {
     const user = userEvent.setup();
     const ash = printAsh();
     vi.mocked(characterMetaFor).mockImplementation((id) =>
       id === ash.id ? testBuildMeta(id) : undefined,
     );
-    renderWithServer(`/c/${ash.id}`, ash, TEST_PLAYER);
+    const repository = renderWithServer(`/c/${ash.id}`, ash, TEST_PLAYER);
     await screen.findByRole('heading', { level: 1, name: 'Ash Merrow' });
     await user.click(screen.getByRole('button', { name: 'Add a story note' }));
     const add = screen.getByRole('dialog', { name: 'Add a Story Note' });
@@ -366,8 +372,18 @@ describe('test builds', () => {
     await user.click(within(add).getByRole('button', { name: 'Cancel' }));
 
     window.location.hash = `#/c/${ash.id}/skills/bash`;
-    await user.click(await screen.findByRole('button', { name: 'Raise Bash' }));
-    const learn = screen.getByRole('dialog', { name: /^Learn Bash level 1/ });
-    expect(within(learn).getByLabelText(/Teacher/)).toHaveValue('Test build');
+    await user.click(await screen.findByRole('button', { name: 'Raise Bash (10 CXP)' }));
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    await waitFor(() => expect(screen.getByRole('group', { name: 'Bash' })).toHaveTextContent('1'));
+    const actions = () => repository.data.characters.get(ash.id)?.actions ?? [];
+    expect(actions().at(-1)?.payload).toMatchObject({ skillId: 'bash', teacher: 'Test build' });
+
+    await user.click(screen.getByRole('button', { name: 'Lower Bash' }));
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    await waitFor(() => expect(screen.getByRole('group', { name: 'Bash' })).toHaveTextContent('0'));
+    expect(actions().at(-1)).toMatchObject({
+      type: 'skill.refunded',
+      payload: { reason: 'Test build' },
+    });
   });
 });

@@ -169,8 +169,11 @@ describe('skills list', () => {
 
     const assault = screen.getByRole('button', { name: /^Assault/ });
     expect(assault).toHaveAttribute('aria-expanded', 'false');
-    expect(assault).toHaveTextContent('Basic 2 · Adept 1');
-    expect(screen.getByRole('button', { name: /^Bash/ })).toHaveTextContent('Not learned');
+    // Levels sit between the round - and + on the row, not in the row's title.
+    expect(assault).not.toHaveTextContent('Basic 2');
+    expect(screen.getByRole('group', { name: 'Assault' })).toHaveTextContent('2');
+    expect(screen.getByRole('group', { name: 'Assault Adept' })).toHaveTextContent('1');
+    expect(screen.getByRole('group', { name: 'Bash' })).toHaveTextContent('0');
     expect(screen.getByRole('button', { name: /^Delay Effect \(R\)/ })).toBeInTheDocument();
     // Opens in place with every part.
     await user.click(assault);
@@ -214,20 +217,22 @@ describe('skills list', () => {
     expect(screen.getByRole('button', { name: 'Warrior' })).toHaveAttribute('aria-pressed', 'true');
   });
 
-  it('player: owned only is on by default and shows only learned levels, each with a +', async () => {
+  it('player: owned only is on by default; each row shows its levels with a +', async () => {
     const user = userEvent.setup();
     renderApp(`/c/${ID}/skills`, { characters: [wren()] });
     const owned = await screen.findByRole('checkbox', { name: 'Owned only' });
     expect(owned).toBeChecked();
     expect(screen.getByText('2 skills')).toBeInTheDocument();
-    await user.click(screen.getByRole('button', { name: /^Assault/ }));
-    expect(screen.getByRole('region', { name: 'Assault Basic' })).toHaveTextContent('Level 2');
-    expect(screen.getByRole('region', { name: 'Assault Adept' })).toHaveTextContent('Level 1');
-    expect(screen.queryByRole('region', { name: 'Assault Mastery' })).not.toBeInTheDocument();
+    // The levels and the + sit on the row, closed.
+    expect(screen.getByRole('group', { name: 'Assault' })).toHaveTextContent('2');
+    expect(screen.getByRole('group', { name: 'Assault Adept' })).toHaveTextContent('1');
+    expect(screen.queryByRole('group', { name: 'Assault Mastery' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /^(Raise|Lower) / })).not.toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'I learned Assault Adept' })).toBeInTheDocument();
-    await user.click(
-      screen.getByRole('button', { name: 'Show Advanced and Mastery (not learned yet)' }),
-    );
+    // Opened: only the learned parts' rule text.
+    await user.click(screen.getByRole('button', { name: /^Assault/ }));
+    expect(screen.getByRole('region', { name: 'Assault Basic' })).toBeInTheDocument();
+    expect(screen.queryByRole('region', { name: 'Assault Mastery' })).not.toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'I learned Assault Advanced' }));
     const dialog = screen.getByRole('dialog', { name: 'I learned Assault Advanced' });
     expect(within(dialog).queryByLabelText('Part')).not.toBeInTheDocument();
@@ -255,30 +260,31 @@ describe('skills list', () => {
 });
 
 describe('skill detail', () => {
-  it('shows marks and parts in words; a mastery without its prerequisite says why', async () => {
+  it('opened, shows each part: frequency, uses, and description only', async () => {
     renderApp(`/c/${ID}/skills/assault`, { characters: [wren()], settings: STAFF });
     expect(await screen.findByRole('heading', { level: 2, name: 'Assault' })).toBeVisible();
-    expect(screen.getByText('Warrior archetype')).toBeInTheDocument();
     const basic = screen.getByRole('region', { name: 'Assault Basic' });
-    expect(basic).toHaveTextContent('per repop');
+    expect(basic).toHaveTextContent('Frequency');
     expect(basic).toHaveTextContent('2 uses per repop');
-    expect(within(basic).getByText('Next level: 30 CXP')).toBeInTheDocument();
-    expect(
-      within(screen.getByRole('region', { name: 'Assault Adept' })).getByText(
-        'Not enough Warrior AP: needs 6, 0 left.',
-      ),
-    ).toBeInTheDocument();
-    expect(
-      within(screen.getByRole('region', { name: 'Assault Mastery' })).getByText(
-        /^Needs Assault level 9./,
-      ),
-    ).toBeInTheDocument();
+    expect(screen.queryByText('Warrior archetype')).not.toBeInTheDocument();
+    expect(screen.queryByRole('list', { name: 'Marks' })).not.toBeInTheDocument();
+    expect(within(basic).queryByRole('button')).not.toBeInTheDocument();
   });
 
-  it('explains resistance and avoidance marks', async () => {
-    renderApp(`/c/${ID}/skills/delay-effect`, { characters: [wren()], settings: STAFF });
-    const marks = await screen.findByRole('list', { name: 'Marks' });
-    expect(marks).toHaveTextContent(/^Resistance \(R\)/);
+  it('staff: a round - and + per part; Mastery only once the skill reaches level 9', async () => {
+    const user = userEvent.setup();
+    renderApp(`/c/${ID}/skills/assault`, { characters: [wren()], settings: STAFF });
+    expect(await screen.findByRole('button', { name: 'Raise Assault (30 CXP)' })).toBeVisible();
+    expect(screen.getByRole('button', { name: 'Lower Assault' })).toBeVisible();
+    expect(screen.getByRole('button', { name: /^Raise Assault Adept/ })).toHaveAttribute(
+      'aria-disabled',
+      'true',
+    );
+    expect(screen.getByRole('button', { name: /^Raise Assault Advanced/ })).toBeVisible();
+    expect(screen.queryByRole('group', { name: 'Assault Mastery' })).not.toBeInTheDocument();
+    // A blocked + says why.
+    await user.click(screen.getByRole('button', { name: /^Raise Assault Adept/ }));
+    expect(await screen.findByText('Not enough Warrior AP: needs 6, 0 left.')).toBeInTheDocument();
   });
 
   it('buys a level of a known skill: teacher optional', async () => {
@@ -287,7 +293,7 @@ describe('skill detail', () => {
       characters: [wren()],
       settings: STAFF,
     });
-    await user.click(await screen.findByRole('button', { name: 'Raise Assault' }));
+    await user.click(await screen.findByRole('button', { name: 'Raise Assault (30 CXP)' }));
     const dialog = screen.getByRole('dialog', { name: 'Learn Assault level 3 for 30 CXP?' });
     expect(within(dialog).getByText('Optional: leave blank when self-taught.')).toBeVisible();
     expect(within(dialog).getByLabelText(/Teacher/)).not.toBeRequired();
@@ -297,7 +303,7 @@ describe('skill detail', () => {
       const stored = repository.data.characters.get(ID);
       expect(stored && skillLevel(deriveSheet(rs, stored.actions), 'assault', 'basic')).toBe(3);
     });
-    expect(screen.getByText('Next level: 40 CXP')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Raise Assault (40 CXP)' })).toBeVisible();
   });
 
   it('buys a new skill: teacher required, and recorded', async () => {
@@ -306,7 +312,7 @@ describe('skill detail', () => {
       characters: [wren()],
       settings: STAFF,
     });
-    await user.click(await screen.findByRole('button', { name: 'Raise Bash' }));
+    await user.click(await screen.findByRole('button', { name: 'Raise Bash (10 CXP)' }));
     const dialog = screen.getByRole('dialog', { name: 'Learn Bash level 1 for 10 CXP?' });
     expect(within(dialog).getByLabelText(/Teacher/)).toBeRequired();
     await user.click(within(dialog).getByRole('button', { name: 'Learn' }));
@@ -316,7 +322,6 @@ describe('skill detail', () => {
     expect(await screen.findByText('Learned Bash level 1.')).toBeInTheDocument();
     const last = repository.data.characters.get(ID)?.actions.at(-1);
     expect(last?.payload).toMatchObject({ skillId: 'bash', toLevel: 1, teacher: 'Old Tom' });
-    expect(screen.getByRole('region', { name: 'Bash Basic' })).toHaveTextContent('Old Tom');
   });
 
   it('refunds a level only with a reason; blocked refunds say why', async () => {
@@ -326,14 +331,13 @@ describe('skill detail', () => {
       settings: STAFF,
     });
     // Assault level 2 earned Warrior AP that Assault Adept spent: blocked, with the reason.
-    await user.click(await screen.findByRole('button', { name: 'Lower Assault' }));
-    let dialog = screen.getByRole('dialog', { name: 'Refund Assault level 2?' });
-    expect(within(dialog).getByText('Returns 20 CXP.')).toBeInTheDocument();
-    expect(within(dialog).getByRole('alert')).toHaveTextContent(/Refunding would leave Warrior AP/);
-    await user.click(within(dialog).getByRole('button', { name: 'Cancel' }));
+    const lowerAssault = await screen.findByRole('button', { name: 'Lower Assault' });
+    expect(lowerAssault).toHaveAttribute('aria-disabled', 'true');
+    await user.click(lowerAssault);
+    expect(await screen.findByText(/Refunding would leave Warrior AP/)).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'Lower Assault Adept' }));
-    dialog = screen.getByRole('dialog', { name: 'Refund Assault Adept level 1?' });
+    const dialog = screen.getByRole('dialog', { name: 'Refund Assault Adept level 1?' });
     expect(within(dialog).getByText('Returns 3 Warrior AP.')).toBeInTheDocument();
     await user.click(within(dialog).getByRole('button', { name: 'Refund' }));
     expect(within(dialog).getByText('Enter a reason for the refund.')).toBeInTheDocument();
@@ -349,9 +353,9 @@ describe('skill detail', () => {
     renderApp(`/c/${ID}/skills/assault`, { characters: [wren()] });
     expect(await screen.findByRole('heading', { level: 2, name: 'Assault' })).toBeVisible();
     expect(screen.queryByRole('button', { name: /^(Raise|Lower) / })).not.toBeInTheDocument();
-    expect(screen.getByRole('region', { name: 'Assault Basic' })).toHaveTextContent('Level 2');
+    expect(screen.getByRole('group', { name: 'Assault' })).toHaveTextContent('2');
     expect(screen.getByRole('region', { name: 'Assault Mastery' })).toHaveTextContent(
-      'Not learned',
+      'None until learned',
     );
   });
 
@@ -359,8 +363,8 @@ describe('skill detail', () => {
     const user = userEvent.setup();
     renderApp(`/c/${ID}/skills/assault?owned=1`, { characters: [wren()] });
     expect(await screen.findByRole('heading', { level: 2, name: 'Assault' })).toBeVisible();
-    expect(screen.getByRole('region', { name: 'Assault Basic' })).toHaveTextContent('Level 2');
-    expect(screen.getByRole('region', { name: 'Assault Adept' })).toHaveTextContent('Level 1');
+    expect(screen.getByRole('region', { name: 'Assault Basic' })).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: 'Assault Adept' })).toBeInTheDocument();
     expect(screen.queryByRole('region', { name: 'Assault Advanced' })).not.toBeInTheDocument();
     expect(screen.queryByRole('region', { name: 'Assault Mastery' })).not.toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'All skills' })).toHaveAttribute(
@@ -371,7 +375,7 @@ describe('skill detail', () => {
       screen.getByRole('button', { name: 'Show Advanced and Mastery (not learned yet)' }),
     );
     expect(screen.getByRole('region', { name: 'Assault Mastery' })).toHaveTextContent(
-      'Not learned',
+      'None until learned',
     );
     expect(screen.queryByRole('button', { name: /^Show / })).not.toBeInTheDocument();
   });

@@ -58,7 +58,9 @@ export function MemorizeDialog({ view, kind, initialRefId, onClose }: MemorizeDi
   const costPreview = base && needsSlot ? preview(ruleset, sheet, base) : null;
   const buyPreview =
     base && needsSlot && buySlot ? preview(ruleset, sheet, { ...base, buySlot: true }) : null;
-  const teacherRequired = buyPreview?.teacherRequired === true;
+  // A test build (ADR 0007) asks for no teacher: the engine records "Test build".
+  const testBuild = view.meta?.kind === 'test';
+  const teacherRequired = !testBuild && buyPreview?.teacherRequired === true;
   const cost = costPreview?.cost;
   const archetypeName = cost?.archetype
     ? (ruleset.archetypesById[cost.archetype]?.name ?? cost.archetype)
@@ -183,7 +185,7 @@ export function MemorizeDialog({ view, kind, initialRefId, onClose }: MemorizeDi
             </span>
           </div>
         ) : null}
-        {needsSlot && buySlot && (teacherRequired || teacherError) ? (
+        {needsSlot && buySlot && !testBuild && (teacherRequired || teacherError) ? (
           <Field
             label="Teacher"
             required

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { CircleAlert, X } from 'lucide-react';
 import { AppShell, Badge, IconButton, type HeaderLink } from './components/index.ts';
-import { PUBLIC_MODE } from '../publicMode.ts';
+import { CHARACTERS_PATH, PUBLIC_MODE } from '../publicMode.ts';
 import { isStaffRole, ROLE_LABEL, useOptionalAuth } from './auth/authContext.ts';
 import { useSettings, useStartup } from './data/hooks.ts';
 import { pageTitle, useDocumentTitle } from './lib/routeFocus.ts';
@@ -29,8 +29,8 @@ export function Screen({ children, nav, title }: ScreenProps) {
   const user = auth?.user ?? null;
   const links: HeaderLink[] = [];
   if (PUBLIC_MODE) {
-    links.push({ to: '/', label: 'Test Builds', end: true });
-    links.push({ to: '/calculator', label: 'Soak and Damage Calculator' });
+    links.push({ to: '/', label: 'Soak and Damage Calculator', end: true });
+    links.push({ to: CHARACTERS_PATH, label: 'Test Builds' });
   } else if (auth) {
     if (user)
       links.push({

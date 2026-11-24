@@ -17,7 +17,7 @@ import {
   type TestBuildCurrency,
 } from './testBuilds.ts';
 import styles from './testBuilds.module.css';
-import { PUBLIC_MODE } from '../../../publicMode.ts';
+import { CHARACTERS_PATH, PUBLIC_MODE } from '../../../publicMode.ts';
 
 function message(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
@@ -58,7 +58,7 @@ export function TestBuildBanner({ view }: { view: CharacterView }) {
     try {
       await repository.deleteCharacter(view.id);
       toast.show(`Deleted ${name}.`);
-      void navigate('/');
+      void navigate(CHARACTERS_PATH);
     } catch (error) {
       setProblem(`The test build could not be deleted: ${message(error)}`);
     }

@@ -32,7 +32,7 @@ async function watch(page: Page): Promise<string[]> {
 
 /** Runs the new test build wizard with the first choice of every question. */
 async function makeTestBuild(page: Page, name: string): Promise<void> {
-  await page.goto('./#/');
+  await page.goto('./#/test-builds');
   await main(page).getByRole('link', { name: 'New test build' }).click();
   await expect(main(page).getByRole('heading', { level: 1, name: 'New test build' })).toBeVisible();
   await main(page).getByLabel('Character name').fill(name);
@@ -58,28 +58,45 @@ async function makeTestBuild(page: Page, name: string): Promise<void> {
   await expect(main(page).getByText(name).first()).toBeVisible();
 }
 
-test('the start page has the tools and no sign-in, with no accessibility problems', async ({
+test('the site opens on the calculator, with no sign-in and no accessibility problems', async ({
   page,
 }) => {
   const problems = await watch(page);
-  await page.goto('./#/');
+  await page.goto('./');
   await expect(
-    main(page).getByRole('heading', { level: 1, name: 'Rustwater Player Tools' }),
+    main(page).getByRole('heading', { level: 1, name: 'Soak and Damage Calculator' }),
   ).toBeVisible();
-  await expect(main(page).getByText('saved only in this browser')).toBeVisible();
   await expect(main(page).getByText('Unofficial, player-made tool')).toBeVisible();
+  // The calculator is the first header link, Test Builds the second.
+  await expect(page.getByRole('banner').getByRole('link')).toContainText([
+    'Soak and Damage Calculator',
+    'Test Builds',
+  ]);
   await expect(page.getByText('Unofficial Player Tools')).toBeVisible();
   await expect(page.getByRole('link', { name: 'Sign In' })).toHaveCount(0);
   await expect(page.getByRole('link', { name: 'Rules Wiki' })).toHaveCount(0);
   await expect(
     page.getByText('Unofficial fan tool, not affiliated with Rustwater LARP.'),
   ).toBeVisible();
-  await expect(main(page).getByText('no tracking')).toBeVisible();
   await expect(page.getByRole('link', { name: 'Source code on GitHub' })).toHaveAttribute(
     'href',
     'https://github.com/mrtwizk241/larptools',
   );
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+
+  // Test Builds has its own page, with the storage and privacy notes.
+  await page.getByRole('banner').getByRole('link', { name: 'Test Builds' }).click();
+  await expect(main(page).getByRole('heading', { level: 1, name: 'Test Builds' })).toBeVisible();
+  await expect(page).toHaveURL(/#\/test-builds$/);
+  await expect(main(page).getByText('saved only in this browser')).toBeVisible();
+  await expect(main(page).getByText('Unofficial, player-made tool')).toBeVisible();
+  await expect(main(page).getByText('no tracking')).toBeVisible();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  // Old calculator links still work.
+  await page.goto('./#/calculator');
+  await expect(
+    main(page).getByRole('heading', { level: 1, name: 'Soak and Damage Calculator' }),
+  ).toBeVisible();
   // The build ships the security headers file and no brand images.
   expect((await page.request.get('./_headers')).ok()).toBe(true);
   const logo = await page.request.get('./brand/logo-96.webp');
@@ -100,7 +117,7 @@ test('a test build is made, changed, and kept in this browser', async ({ page })
 
   await page.reload();
   await expect(main(page).getByText('Public Test Build').first()).toBeVisible();
-  await page.goto('./#/');
+  await page.goto('./#/test-builds');
   await expect(main(page).getByRole('link', { name: /Public Test Build/ })).toBeVisible();
   expect(problems).toEqual([]);
 });
@@ -114,13 +131,13 @@ test('server-only screens are not on the public site', async ({ page }) => {
   }
 });
 
-test('after one online visit the start page, a test build, and the calculator work offline', async ({
+test('after one online visit the calculator, test builds, and a build work offline', async ({
   page,
   context,
 }) => {
   const problems = await watch(page);
   await makeTestBuild(page, 'Offline Build');
-  await page.goto('./#/');
+  await page.goto('./#/test-builds');
   await expect
     .poll(
       () =>
@@ -169,7 +186,7 @@ test('test builds are backed up to a file and restored from it', async ({ page }
           request.onsuccess = request.onerror = request.onblocked = done;
         });
   });
-  await page.goto('./#/');
+  await page.goto('./#/test-builds');
   await page.reload();
   await expect(main(page).getByText('No test builds yet.')).toBeVisible();
   await page.goto('./#/settings');
@@ -180,14 +197,14 @@ test('test builds are backed up to a file and restored from it', async ({ page }
   await expect(dialog).toContainText('New: 1');
   await dialog.getByRole('button', { name: 'Restore', exact: true }).click();
   await expect(page.getByText('Restored 1 character.')).toBeVisible();
-  await page.goto('./#/');
+  await page.goto('./#/test-builds');
   await expect(main(page).getByRole('link', { name: /Backed Up Build/ })).toBeVisible();
   expect(problems).toEqual([]);
 });
 
 test('the calculator opens from the header, with Totals and Character tabs', async ({ page }) => {
   const problems = await watch(page);
-  await page.goto('./#/');
+  await page.goto('./#/test-builds');
   await page.getByRole('banner').getByRole('link', { name: 'Soak and Damage Calculator' }).click();
   await expect(
     main(page).getByRole('heading', { level: 1, name: 'Soak and Damage Calculator' }),

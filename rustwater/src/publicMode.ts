@@ -8,6 +8,12 @@ declare const __RW_PUBLIC__: boolean;
 
 export const PUBLIC_MODE: boolean = typeof __RW_PUBLIC__ === 'boolean' ? __RW_PUBLIC__ : false;
 
+/**
+ * Where the list of characters lives. On the public site the calculator is the start page, so
+ * the visitor's test builds have their own address.
+ */
+export const CHARACTERS_PATH = PUBLIC_MODE ? '/test-builds' : '/';
+
 /** The open source repo of the public site, linked from the footer. */
 export const PUBLIC_REPO_URL = 'https://github.com/mrtwizk241/larptools';
 

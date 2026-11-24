@@ -1,8 +1,8 @@
-// `#/` on the public site (docs/PUBLIC-SITE-PLAN.md): what the site is, the visitor's test builds
-// saved in this browser, and the Soak and Damage Calculator. No sign-in, nothing sent anywhere.
+// `#/test-builds` on the public site (docs/PUBLIC-SITE-PLAN.md): the visitor's test builds saved in
+// this browser. The calculator is the start page (`#/`). No sign-in, nothing sent anywhere.
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import { Calculator, ChevronRight, Plus } from 'lucide-react';
+import { ChevronRight, Plus } from 'lucide-react';
 import { TEST_BUILD_LIMIT } from '../../../api/contract.ts';
 import { Alert, ButtonLink, Card } from '../../components/index.ts';
 import { useRepository } from '../../data/hooks.ts';
@@ -64,9 +64,9 @@ export function PublicHomePage() {
   const full = count >= TEST_BUILD_LIMIT;
 
   return (
-    <Screen title="Player Tools">
+    <Screen title="Test Builds">
       <div className={styles.page}>
-        <h1>Rustwater Player Tools</h1>
+        <h1>Test Builds</h1>
         <Alert kind="info" title="Unofficial, player-made tool">
           <p>
             Made by a player, not by Rustwater LARP. Staff have not checked or approved it, so if
@@ -74,8 +74,8 @@ export function PublicHomePage() {
           </p>
         </Alert>
         <p>
-          Plan a character with a test build, or work out soak and damage. No sign-in, no tracking,
-          and no analytics: nothing you enter leaves this browser.
+          Plan a character with a test build: try out skills, points, and ancestries. No sign-in, no
+          tracking, and no analytics: nothing you enter leaves this browser.
         </p>
 
         <Alert kind="info" title="Your test builds are saved only in this browser">
@@ -138,15 +138,6 @@ export function PublicHomePage() {
               )}
             </div>
           ) : null}
-        </Card>
-
-        <Card title="Soak and Damage Calculator">
-          <p>Add up your Health, Armor, and damage calls without a character sheet.</p>
-          <div className={styles.actions}>
-            <ButtonLink to="/calculator" icon={<Calculator />}>
-              Open the calculator
-            </ButtonLink>
-          </div>
         </Card>
       </div>
     </Screen>

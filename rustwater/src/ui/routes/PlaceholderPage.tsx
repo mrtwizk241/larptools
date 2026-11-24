@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { Card } from '../components/index.ts';
+import { CHARACTERS_PATH } from '../../publicMode.ts';
 import { Screen } from '../Screen.tsx';
 import styles from './PlaceholderPage.module.css';
 
@@ -39,7 +40,7 @@ export function NotFoundPage() {
 
 export function BackLink() {
   return (
-    <Link to="/" className={styles.back}>
+    <Link to={CHARACTERS_PATH} className={styles.back}>
       Back to characters
     </Link>
   );

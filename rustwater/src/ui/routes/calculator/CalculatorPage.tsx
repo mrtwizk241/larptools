@@ -6,6 +6,7 @@ import { Button, Card, ConfirmDialog, Field, LevelStepper, Tabs } from '../../co
 import type { Ruleset } from '../../../engine/index.ts';
 import { useRuleset } from '../../data/rulesetContext.ts';
 import { Screen } from '../../Screen.tsx';
+import { PUBLIC_MODE } from '../../../publicMode.ts';
 import { CombatCards } from '../character/play/CombatPanel.tsx';
 import { attacks, withDefaultNames, type CombatState } from '../character/play/combat.ts';
 import play from '../character/play/play.module.css';
@@ -58,6 +59,14 @@ export function CalculatorPage() {
     <Screen title={TITLE}>
       <div className={styles.page}>
         <h1>{TITLE}</h1>
+        {PUBLIC_MODE ? (
+          // The public site opens here, so the unofficial note sits under the title (short, so the
+          // tabs stay near the top).
+          <p className={styles.unofficial}>
+            Unofficial, player-made tool, not checked by Rustwater LARP staff. If anything here
+            disagrees with the rulebook or staff, the rulebook and staff win.
+          </p>
+        ) : null}
         <p>
           Add up your Health, Armor, and damage calls without a character sheet. Set your skills in
           Character, then pick buffs and weapons in Totals. Your choices stay on this device.

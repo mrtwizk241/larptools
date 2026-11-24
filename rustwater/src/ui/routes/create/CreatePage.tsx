@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Check, Send } from 'lucide-react';
 import { ApiError, api } from '../../../api/client.ts';
 import { createTestBuild } from '../../../storage/remote.ts';
 import { TEST_BUILD_LIMIT, type UserInfo } from '../../../api/contract.ts';
-import { PUBLIC_MODE } from '../../../publicMode.ts';
+import { CHARACTERS_PATH, PUBLIC_MODE } from '../../../publicMode.ts';
 import { useOptionalAuth } from '../../auth/authContext.ts';
 import { Button, ButtonLink, useToast } from '../../components/index.ts';
 import { useCommand } from '../../data/engineHooks.ts';
@@ -353,7 +353,7 @@ function Wizard({ submit }: { submit?: SubmitMode }) {
               Back
             </Button>
           ) : (
-            <ButtonLink to="/" variant="ghost">
+            <ButtonLink to={CHARACTERS_PATH} variant="ghost">
               Cancel
             </ButtonLink>
           )}

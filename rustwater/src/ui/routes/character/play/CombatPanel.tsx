@@ -448,11 +448,14 @@ function DamageCard({
     (s) => s.skillId === 'stun' && s.parts.some((p) => p.part === 'mastery' && p.level > 0),
   );
   const rawMagic = hasRawMagicEnhancement(sheet);
+  // The main call never counts From behind. With the box ticked, a second "From behind" call
+  // shows under it on the lines where Precision adds (fist or short weapons).
   const options = {
-    fromBehind: precision && state.fromBehind,
+    fromBehind: false,
     targetStunned: stunMastery && state.stunned,
     rawMagic: rawMagic ? state.rawMagic : 0,
   };
+  const showBehind = precision && state.fromBehind;
   const full = state.lines.length >= MAX_DAMAGE_LINES;
   const setLine = (id: string, change: (l: DamageLineState) => DamageLineState) =>
     setState((s) => ({ ...s, lines: s.lines.map((l) => (l.id === id ? change(l) : l)) }));
@@ -460,16 +463,25 @@ function DamageCard({
   const rows = state.lines.flatMap((line) => {
     const attack = lineAttack(line, list);
     if (!attack) return [];
-    const result = damageFor(
-      ruleset,
-      sheet,
-      attack,
-      buffs,
-      chosen,
-      options,
-      lineGear(line, attack),
-    );
-    return [{ line, attack, result, call: `${result.total} ${lineType(line, attack)}` }];
+    const gear = lineGear(line, attack);
+    const result = damageFor(ruleset, sheet, attack, buffs, chosen, options, gear);
+    const behind = showBehind
+      ? damageFor(ruleset, sheet, attack, buffs, chosen, { ...options, fromBehind: true }, gear)
+      : null;
+    const type = lineType(line, attack);
+    const behindExtra = behind ? behind.total - result.total : 0;
+    return [
+      {
+        line,
+        attack,
+        result,
+        call: `${result.total} ${type}`,
+        behind:
+          behind && behindExtra > 0
+            ? { call: `${behind.total} ${type}`, extra: behindExtra }
+            : null,
+      },
+    ];
   });
 
   return (
@@ -479,10 +491,17 @@ function DamageCard({
       className={`${styles.statCard} ${styles.damageCard}`}
     >
       <ul className={styles.calls} aria-label="Damage calls">
-        {rows.map(({ line, attack, call }) => (
+        {rows.map(({ line, attack, call, behind }) => (
           <li key={line.id} className={styles.callRow}>
             <span className={styles.lineName}>{lineName(line, attack)}</span>
-            <strong className={styles.call}>{call}</strong>
+            <span className={styles.callStack}>
+              <strong className={styles.call}>{call}</strong>
+              {behind ? (
+                <span className={styles.behindCall}>
+                  From behind: <strong>{behind.call}</strong>
+                </span>
+              ) : null}
+            </span>
           </li>
         ))}
       </ul>
@@ -492,7 +511,7 @@ function DamageCard({
         onToggle={() => update({ open: toggleOpen(state.open, 'damage') })}
       >
         <ol className={styles.damageLines} aria-label="Damage lines">
-          {rows.map(({ line, attack, result }, index) => (
+          {rows.map(({ line, attack, result, behind }, index) => (
             <DamageLineRow
               key={line.id}
               index={index}
@@ -500,6 +519,7 @@ function DamageCard({
               attack={attack}
               list={list}
               result={result}
+              behind={behind}
               removable={state.lines.length > 1}
               onChange={(change) => setLine(line.id, change)}
               onRemove={() =>
@@ -540,7 +560,7 @@ function DamageCard({
                 checked={state.fromBehind}
                 onChange={(e) => update({ fromBehind: e.target.checked })}
               />
-              <span>From behind (Precision, fist or short weapon)</span>
+              <span>Show the From behind call (Precision, fist or short weapon)</span>
             </label>
           ) : null}
         </TimingGroup>
@@ -586,6 +606,7 @@ function DamageLineRow({
   attack,
   list,
   result,
+  behind,
   removable,
   onChange,
   onRemove,
@@ -595,6 +616,8 @@ function DamageLineRow({
   attack: Attack;
   list: readonly Attack[];
   result: ReturnType<typeof damageFor>;
+  /** The extra "From behind" call, when it applies to this line. */
+  behind: { call: string; extra: number } | null;
   removable: boolean;
   onChange: (change: (l: DamageLineState) => DamageLineState) => void;
   onRemove: () => void;
@@ -609,9 +632,16 @@ function DamageLineRow({
     <li className={styles.damageLine} aria-label={`Damage line ${index + 1}`}>
       <div className={styles.lineHead}>
         <span className={styles.lineName}>{name}</span>
-        <p aria-live="polite">
-          Call: <strong className={styles.call}>{`"${call}"`}</strong>
-        </p>
+        <div aria-live="polite" className={styles.callStack}>
+          <p>
+            Call: <strong className={styles.call}>{`"${call}"`}</strong>
+          </p>
+          {behind ? (
+            <p className={styles.behindCall}>
+              From behind: <strong>{`"${behind.call}"`}</strong>
+            </p>
+          ) : null}
+        </div>
       </div>
       <div className={styles.selects}>
         <div className={styles.selectField}>
@@ -695,6 +725,11 @@ function DamageLineRow({
         ) : null}
       </div>
       <ReadOnlyLines lines={result.lines} label={`${name} damage`} />
+      {behind ? (
+        <p className={expand.muted}>
+          From behind adds Precision <span className="num">+{behind.extra}</span>.
+        </p>
+      ) : null}
       {result.notes.map((n) => (
         <p key={n} className={expand.muted}>
           {n}

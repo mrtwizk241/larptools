@@ -222,6 +222,23 @@
   font-size: var(--text-lg);
 }
 
+/* The call, with the From behind call under it when it applies. */
+.callStack {
+  display: grid;
+  justify-items: end;
+  margin: 0;
+  text-align: right;
+}
+
+.callStack p {
+  margin: 0;
+}
+
+.behindCall {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
 .selects {
   display: flex;
   flex-wrap: wrap;

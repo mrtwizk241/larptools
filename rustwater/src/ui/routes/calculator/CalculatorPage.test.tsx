@@ -70,4 +70,32 @@ describe('Soak and Damage Calculator', () => {
       }),
     ).toBeInTheDocument();
   });
+  it('shows the From behind call under the normal call, only where Precision adds', async () => {
+    const user = userEvent.setup();
+    renderApp('/calculator', { user: null });
+    await screen.findByRole('heading', { level: 1, name: 'Soak and Damage Calculator' });
+    await user.click(screen.getByRole('tab', { name: 'Character' }));
+    await user.click(screen.getByRole('button', { name: 'Raise Precision' }));
+    await user.click(screen.getByRole('tab', { name: 'Totals' }));
+    await user.click(screen.getByRole('button', { name: 'Edit lines and buffs' }));
+    await user.click(
+      screen.getByRole('checkbox', {
+        name: 'Show the From behind call (Precision, fist or short weapon)',
+      }),
+    );
+    // The short weapon keeps its call, and the From behind call sits under it.
+    const calls = screen.getByRole('list', { name: 'Damage calls' });
+    expect(within(calls).getByRole('listitem')).toHaveTextContent(
+      /Short weapon\s*1 Steel\s*From behind: 3 Steel/,
+    );
+    const line = screen.getByRole('listitem', { name: 'Damage line 1' });
+    expect(line).toHaveTextContent('Call: "1 Steel"');
+    expect(line).toHaveTextContent('From behind: "3 Steel"');
+    // Precision does not add from behind with a great weapon, so there is no second call.
+    await user.selectOptions(
+      within(line).getByRole('combobox', { name: 'Weapon or packet' }),
+      'great',
+    );
+    expect(within(calls).getByRole('listitem')).not.toHaveTextContent('From behind');
+  });
 });

@@ -2,7 +2,7 @@
 // "Your Character" card holds what normally comes from the sheet; the Health, Armor, and Damage
 // cards are the Play Tracker's own (`CombatCards`), fed a sheet built from the form.
 import { useEffect, useId, useMemo, useState, type ReactNode } from 'react';
-import { Button, Card, ConfirmDialog, Field, LevelStepper } from '../../components/index.ts';
+import { Button, Card, ConfirmDialog, Field, LevelStepper, Tabs } from '../../components/index.ts';
 import type { Ruleset } from '../../../engine/index.ts';
 import { useRuleset } from '../../data/rulesetContext.ts';
 import { Screen } from '../../Screen.tsx';
@@ -26,6 +26,9 @@ import styles from './calculator.module.css';
 
 const TITLE = 'Soak and Damage Calculator';
 
+/** The page always opens on Totals: reading the numbers is why people come here. */
+type CalculatorTab = 'totals' | 'character';
+
 /** Keeps the default damage line names in step with the attacks the form allows. */
 function withNames(rs: Ruleset, state: CalculatorState): CalculatorState {
   const list = attacks(rs, calculatorSheet(rs, state.inputs));
@@ -41,6 +44,7 @@ export function CalculatorPage() {
     const stored = readCalculatorState(rs);
     return withNames(rs, stored);
   });
+  const [tab, setTab] = useState<CalculatorTab>('totals');
   const [confirming, setConfirming] = useState(false);
   useEffect(() => saveCalculatorState(state), [state]);
 
@@ -55,17 +59,35 @@ export function CalculatorPage() {
       <div className={styles.page}>
         <h1>{TITLE}</h1>
         <p>
-          Add up your Health, Armor, and damage calls without a character sheet. Set your character
-          below, then pick buffs and weapons in the cards. Your choices stay on this device.
+          Add up your Health, Armor, and damage calls without a character sheet. Set your skills in
+          Character, then pick buffs and weapons in Totals. Your choices stay on this device.
         </p>
-        <CharacterCard inputs={state.inputs} setInputs={setInputs} />
-        <CombatCards
-          ruleset={rs}
-          sheet={sheet}
-          state={state.combat}
-          setState={setCombat}
-          title="Health, Armor, and Damage"
-          level={2}
+        <Tabs
+          label="Calculator"
+          className={styles.tabs ?? ''}
+          selectedId={tab}
+          onSelect={(id) => setTab(id as CalculatorTab)}
+          tabs={[
+            {
+              id: 'totals',
+              label: 'Totals',
+              content: (
+                <CombatCards
+                  ruleset={rs}
+                  sheet={sheet}
+                  state={state.combat}
+                  setState={setCombat}
+                  title="Health, Armor, and Damage"
+                  level={2}
+                />
+              ),
+            },
+            {
+              id: 'character',
+              label: 'Character',
+              content: <CharacterCard inputs={state.inputs} setInputs={setInputs} />,
+            },
+          ]}
         />
         <div>
           <Button onClick={() => setConfirming(true)}>Reset calculator</Button>

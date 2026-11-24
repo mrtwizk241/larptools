@@ -185,7 +185,7 @@ test('test builds are backed up to a file and restored from it', async ({ page }
   expect(problems).toEqual([]);
 });
 
-test('the calculator opens from the header and adds up Health', async ({ page }) => {
+test('the calculator opens from the header, with Totals and Character tabs', async ({ page }) => {
   const problems = await watch(page);
   await page.goto('./#/');
   await page.getByRole('banner').getByRole('link', { name: 'Soak and Damage Calculator' }).click();
@@ -196,10 +196,20 @@ test('the calculator opens from the header and adds up Health', async ({ page })
     .getByRole('region', { name: 'Health', exact: true })
     .locator('[aria-live="polite"]')
     .first();
+  // The page always opens on Totals; skills are on the Character tab.
+  await expect(page.getByRole('tab', { name: 'Totals' })).toHaveAttribute('aria-selected', 'true');
   await expect(health).toHaveText('Health 10');
+  await page.getByRole('tab', { name: 'Character' }).click();
   await page.getByRole('button', { name: 'Raise Toughness (Warrior)', exact: true }).click();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.getByRole('tab', { name: 'Totals' }).click();
   await expect(health).toHaveText('Health 20');
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  // Back on Totals after a reload, even when left on Character.
+  await page.getByRole('tab', { name: 'Character' }).click();
+  await page.reload();
+  await expect(page.getByRole('tab', { name: 'Totals' })).toHaveAttribute('aria-selected', 'true');
+  await expect(health).toHaveText('Health 20');
   expect(problems).toEqual([]);
 });
 

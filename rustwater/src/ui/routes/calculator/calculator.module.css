@@ -8,6 +8,11 @@
   min-width: 0;
 }
 
+/* Totals and Character: two equal halves, so each is an easy thumb target on a phone. */
+.tabs :global([role='tab']) {
+  flex: 1 1 0;
+}
+
 /* Ancestry, Weapon Skills, Defense Skills, Magic, Boons and Familiar: stacked on phones, two
    columns from 768px, like the Health and Armor cards. */
 .sections {

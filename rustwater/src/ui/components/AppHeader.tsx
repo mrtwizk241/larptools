@@ -12,6 +12,11 @@ export interface HeaderLink {
   label: string;
   /** Match the route exactly (for `/`). */
   end?: boolean;
+  /**
+   * Shown instead of `label` on narrow phones so every link fits. Screen readers still get the
+   * full label, which contains this text.
+   */
+  shortLabel?: string;
 }
 
 export interface AppHeaderProps {
@@ -82,8 +87,16 @@ export function AppHeader({
                 to={link.to}
                 end={link.end ?? false}
                 className={({ isActive }) => cx(styles.navLink, isActive ? styles.navActive : null)}
+                {...(link.shortLabel ? { 'aria-label': link.label } : {})}
               >
-                {link.label}
+                {link.shortLabel ? (
+                  <>
+                    <span className={styles.longLabel}>{link.label}</span>
+                    <span className={styles.shortLabel}>{link.shortLabel}</span>
+                  </>
+                ) : (
+                  link.label
+                )}
               </NavLink>
             ))}
           </nav>

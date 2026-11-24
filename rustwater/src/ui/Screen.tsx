@@ -5,6 +5,7 @@ import { CHARACTERS_PATH, PUBLIC_MODE } from '../publicMode.ts';
 import { isStaffRole, ROLE_LABEL, useOptionalAuth } from './auth/authContext.ts';
 import { useSettings, useStartup } from './data/hooks.ts';
 import { pageTitle, useDocumentTitle } from './lib/routeFocus.ts';
+import { OfflineBar } from './pwa/OfflineBar.tsx';
 import { UpdateBanner } from './pwa/UpdateBanner.tsx';
 import styles from './Screen.module.css';
 
@@ -29,8 +30,14 @@ export function Screen({ children, nav, title }: ScreenProps) {
   const user = auth?.user ?? null;
   const links: HeaderLink[] = [];
   if (PUBLIC_MODE) {
-    links.push({ to: '/', label: 'Soak and Damage Calculator', end: true });
+    links.push({
+      to: '/',
+      label: 'Soak and Damage Calculator',
+      shortLabel: 'Calculator',
+      end: true,
+    });
     links.push({ to: CHARACTERS_PATH, label: 'Test Builds' });
+    links.push({ to: '/wiki', label: 'Rules Wiki' });
   } else if (auth) {
     if (user)
       links.push({
@@ -54,7 +61,12 @@ export function Screen({ children, nav, title }: ScreenProps) {
     <Badge kind={settings.mode} />
   ) : undefined;
   return (
-    <AppShell modeBadge={badge} nav={nav} links={links}>
+    <AppShell
+      modeBadge={badge}
+      nav={nav}
+      links={links}
+      {...(PUBLIC_MODE ? { topBar: <OfflineBar /> } : {})}
+    >
       <UpdateBanner />
       {startup.errors.length > 0 ? (
         <div role="alert" className={styles.banner}>

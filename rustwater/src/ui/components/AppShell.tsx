@@ -13,13 +13,15 @@ export interface AppShellProps {
   nav?: ReactNode;
   /** Main sections in the header. */
   links?: HeaderLink[];
+  /** A bar above the header (the public site's offline option). */
+  topBar?: ReactNode;
 }
 
 /**
  * Skip link, header, main, and footer. With a nav: bottom bar on phones, left rail from 900px.
  * The nav comes after main in the DOM, so Tab reaches the content first (a11y A-08).
  */
-export function AppShell({ children, modeBadge, settingsTo, nav, links }: AppShellProps) {
+export function AppShell({ children, modeBadge, settingsTo, nav, links, topBar }: AppShellProps) {
   return (
     <div className={cx(styles.shell, nav ? styles.withNav : null)}>
       {/* Hash routing: "#main" would be read as a route, so the link moves focus itself. */}
@@ -35,6 +37,7 @@ export function AppShell({ children, modeBadge, settingsTo, nav, links }: AppShe
       >
         Skip to content
       </a>
+      {topBar}
       <AppHeader
         modeBadge={modeBadge}
         {...(settingsTo !== undefined ? { settingsTo } : {})}

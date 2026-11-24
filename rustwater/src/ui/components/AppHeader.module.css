@@ -169,3 +169,18 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
 }
+
+/* Links with a short label: the short one on narrow phones, where the full row would not fit. */
+.shortLabel {
+  display: none;
+}
+
+@media (max-width: 559px) {
+  .longLabel {
+    display: none;
+  }
+
+  .shortLabel {
+    display: inline;
+  }
+}

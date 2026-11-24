@@ -9,6 +9,7 @@ import { DataCard } from './settings/DataCard.tsx';
 import { AccountCard } from './settings/AccountCard.tsx';
 import styles from './settings/settings.module.css';
 import { PUBLIC_MODE } from '../../publicMode.ts';
+import { OfflineControl } from '../pwa/OfflineBar.tsx';
 
 /** `#/settings`: account, theme, backup and restore, about. */
 export function SettingsPage() {
@@ -18,6 +19,11 @@ export function SettingsPage() {
         <h1>Settings</h1>
         {PUBLIC_MODE ? null : <AccountCard />}
         <ThemeCard />
+        {PUBLIC_MODE ? (
+          <Card title="Offline use">
+            <OfflineControl />
+          </Card>
+        ) : null}
         <SignedIn>
           <DataCard />
         </SignedIn>

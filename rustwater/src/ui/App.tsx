@@ -131,8 +131,8 @@ export function App({ repository, user }: AppProps) {
 }
 
 /**
- * The public site (docs/PUBLIC-SITE-PLAN.md): the calculator (the start page) and test builds. No
- * sign-in, staff, events, requests, or Rules Wiki. `#/calculator` still works for old links.
+ * The public site (docs/PUBLIC-SITE-PLAN.md): the calculator (the start page), test builds, and the
+ * Rules Wiki. No sign-in, staff, events, or requests. `#/calculator` still works for old links.
  */
 function PublicRoutes() {
   return (
@@ -140,6 +140,8 @@ function PublicRoutes() {
       <Route path="/" element={<CalculatorPage />} />
       <Route path="/calculator" element={<Navigate to="/" replace />} />
       <Route path="/test-builds" element={<PublicHomePage />} />
+      <Route path="/wiki" element={<WikiPage />} />
+      <Route path="/wiki/:slug" element={<WikiPage />} />
       <Route path="/settings" element={<SettingsPage />} />
       <Route path="/new" element={<CreatePage />} />
       <Route path="/test-builds/new" element={<Navigate to="/new?test=1" replace />} />

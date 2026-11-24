@@ -67,14 +67,16 @@ test('the site opens on the calculator, with no sign-in and no accessibility pro
     main(page).getByRole('heading', { level: 1, name: 'Soak and Damage Calculator' }),
   ).toBeVisible();
   await expect(main(page).getByText('Unofficial, player-made tool')).toBeVisible();
-  // The calculator is the first header link, Test Builds the second.
+  // Header links, left to right: the calculator, Test Builds, the Rules Wiki.
   await expect(page.getByRole('banner').getByRole('link')).toContainText([
     'Soak and Damage Calculator',
     'Test Builds',
+    'Rules Wiki',
   ]);
+  // The offline option sits above the header.
+  await expect(page.getByRole('region', { name: 'Offline use' })).toBeVisible();
   await expect(page.getByText('Unofficial Player Tools')).toBeVisible();
   await expect(page.getByRole('link', { name: 'Sign In' })).toHaveCount(0);
-  await expect(page.getByRole('link', { name: 'Rules Wiki' })).toHaveCount(0);
   await expect(
     page.getByText('Unofficial fan tool, not affiliated with Rustwater LARP.'),
   ).toBeVisible();
@@ -123,7 +125,7 @@ test('a test build is made, changed, and kept in this browser', async ({ page })
 });
 
 test('server-only screens are not on the public site', async ({ page }) => {
-  for (const path of ['login', 'staff', 'admin', 'events', 'requests', 'wiki']) {
+  for (const path of ['login', 'staff', 'admin', 'events', 'requests']) {
     await page.goto(`./#/${path}`);
     await expect(
       main(page).getByRole('heading', { level: 1, name: 'Page not found' }),
@@ -131,22 +133,19 @@ test('server-only screens are not on the public site', async ({ page }) => {
   }
 });
 
-test('after one online visit the calculator, test builds, and a build work offline', async ({
+test('after Make available offline, the calculator, test builds, and the wiki work offline', async ({
   page,
   context,
 }) => {
   const problems = await watch(page);
   await makeTestBuild(page, 'Offline Build');
   await page.goto('./#/test-builds');
-  await expect
-    .poll(
-      () =>
-        page.evaluate(
-          async () => (await navigator.serviceWorker.getRegistration())?.active?.state ?? 'none',
-        ),
-      { timeout: 30_000 },
-    )
-    .toBe('activated');
+  // Make available offline: the bar says when the site is saved, then stays away.
+  const bar = page.getByRole('region', { name: 'Offline use' });
+  await bar.getByRole('button', { name: 'Make available offline' }).click();
+  await expect(bar.getByRole('status')).toContainText('Ready to use offline', { timeout: 30_000 });
+  await bar.getByRole('button', { name: 'Close the offline bar' }).click();
+  await expect(bar).toHaveCount(0);
 
   await context.setOffline(true);
   await page.reload();
@@ -155,10 +154,38 @@ test('after one online visit the calculator, test builds, and a build work offli
     .getByRole('link', { name: /Offline Build/ })
     .click();
   await expect(main(page).getByText('Offline Build').first()).toBeVisible();
+  await expect(bar).toHaveCount(0);
   await page.goto('./#/calculator');
   await expect(
     main(page).getByRole('heading', { level: 1, name: 'Soak and Damage Calculator' }),
   ).toBeVisible();
+  // The wiki and its articles work offline too.
+  await page.goto('./#/wiki');
+  await expect(main(page).getByRole('heading', { level: 1, name: 'Rules Wiki' })).toBeVisible();
+  await main(page).getByRole('link', { name: 'Making a Character' }).click();
+  await expect(
+    main(page).getByRole('heading', { level: 1, name: 'Making a Character' }),
+  ).toBeVisible();
+  // Settings still offers it, already done.
+  await page.goto('./#/settings');
+  await expect(main(page).getByText('Ready to use offline')).toBeVisible();
+  expect(problems).toEqual([]);
+});
+
+test('the Rules Wiki is the third header link, with no accessibility problems', async ({
+  page,
+}) => {
+  const problems = await watch(page);
+  await page.goto('./');
+  await page.getByRole('banner').getByRole('link', { name: 'Rules Wiki' }).click();
+  await expect(page).toHaveURL(/#\/wiki$/);
+  await expect(main(page).getByRole('heading', { level: 1 })).toBeVisible();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  // An article opens from the list.
+  await main(page).getByRole('link').first().click();
+  await expect(page).toHaveURL(/#\/wiki\/./);
+  await expect(main(page).getByRole('heading', { level: 1 })).toBeVisible();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   expect(problems).toEqual([]);
 });
 

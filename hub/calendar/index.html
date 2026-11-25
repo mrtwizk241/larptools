@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      name="description"
+      content="Event dates for Michigan and Indiana LARPs, plus gaming, anime, comic, and pop-culture conventions in Michigan, Ohio, and Indiana."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Event Calendar | LARP Tools (Unofficial)</title>
+    <link rel="stylesheet" href="../hub.css" />
+    <link rel="stylesheet" href="calendar.css" />
+    <script type="module" src="calendar.js"></script>
+  </head>
+  <body>
+    <header class="band">
+      <p class="site"><a class="home" href="../">LARP Tools</a></p>
+      <p class="sub">Unofficial Player Tools</p>
+    </header>
+    <main class="wide">
+      <h1>Event Calendar</h1>
+      <p class="lede">
+        LARP events and nearby conventions in Michigan, Ohio, and Indiana. Pick what you want to
+        see, then open an event for its dates, place, and website.
+      </p>
+      <p class="warn" id="updated">
+        Dates are copied by hand from each game&rsquo;s and convention&rsquo;s own website. Always
+        check their site before you make plans.
+      </p>
+
+      <noscript>
+        <p class="card">This calendar needs JavaScript to show events.</p>
+      </noscript>
+
+      <section class="filters card" aria-label="Filters">
+        <fieldset class="kind">
+          <legend>Show</legend>
+          <div class="segmented" id="kind"></div>
+        </fieldset>
+
+        <fieldset id="larp-group">
+          <legend>LARPs</legend>
+          <div class="chips" id="larp-chips"></div>
+        </fieldset>
+
+        <fieldset id="style-group">
+          <legend>Convention type</legend>
+          <div class="chips" id="style-chips"></div>
+        </fieldset>
+
+        <fieldset id="state-group">
+          <legend>Convention state</legend>
+          <div class="chips" id="state-chips"></div>
+        </fieldset>
+
+        <div class="filter-foot">
+          <button type="button" class="link-button" id="reset">Show everything</button>
+          <span id="count" role="status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <div class="segmented" id="view" role="group" aria-label="View"></div>
+        <div class="month-nav" id="month-nav">
+          <button type="button" id="prev" aria-label="Previous month">&lsaquo;</button>
+          <h2 id="month-title" aria-live="polite"></h2>
+          <button type="button" id="next" aria-label="Next month">&rsaquo;</button>
+          <button type="button" class="link-button" id="today">Today</button>
+        </div>
+        <label class="past" id="past-label"
+          ><input type="checkbox" id="past" /> Show past events</label
+        >
+      </div>
+
+      <div id="calendar"></div>
+
+      <section class="card" id="tbd" aria-labelledby="tbd-title" hidden>
+        <h2 id="tbd-title">Dates not announced yet</h2>
+        <p class="muted">These usually run around the month shown. Check their site for news.</p>
+        <ul class="tbd-list" id="tbd-list"></ul>
+      </section>
+
+      <section class="card" aria-labelledby="sources">
+        <h2 id="sources">Websites</h2>
+        <div class="sources" id="source-list"></div>
+      </section>
+    </main>
+
+    <dialog id="details" aria-labelledby="d-name">
+      <button type="button" class="dialog-close" id="d-close" aria-label="Close">&times;</button>
+      <p class="tag" id="d-tag"></p>
+      <h2 id="d-name"></h2>
+      <p id="d-when"></p>
+      <p id="d-where"></p>
+      <p id="d-note" class="muted"></p>
+      <p>
+        <a class="button" id="d-link" href="#" rel="noreferrer" target="_blank">Event website</a>
+      </p>
+    </dialog>
+
+    <footer>
+      <p>
+        Unofficial and not affiliated with any game or convention listed. Spot a wrong date? Tell us
+        on
+        <a href="https://github.com/mrtwizk241/larptools/issues" rel="noreferrer">GitHub</a>.
+      </p>
+      <p><a href="../">Back to LARP Tools</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,539 @@
+/* Event calendar (calendar/index.html). Builds on ../hub.css tokens. */
+
+/* One color per LARP and per convention type, used as a stripe and a light tint. */
+.c-rustwater {
+  --c: #c2410c;
+}
+.c-sylvaris {
+  --c: #15803d;
+}
+.c-carps {
+  --c: #1d4ed8;
+}
+.c-archon {
+  --c: #7e22ce;
+}
+.c-shifted {
+  --c: #0e7490;
+}
+.c-drmi {
+  --c: #b91c1c;
+}
+.c-ttrpg {
+  --c: #a16207;
+}
+.c-boardgame {
+  --c: #4d7c0f;
+}
+.c-anime {
+  --c: #db2777;
+}
+.c-videogame {
+  --c: #4338ca;
+}
+.c-comic {
+  --c: #0369a1;
+}
+.c-popculture {
+  --c: #57534e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .c-rustwater {
+    --c: #fb923c;
+  }
+  .c-sylvaris {
+    --c: #4ade80;
+  }
+  .c-carps {
+    --c: #60a5fa;
+  }
+  .c-archon {
+    --c: #c084fc;
+  }
+  .c-shifted {
+    --c: #22d3ee;
+  }
+  .c-drmi {
+    --c: #f87171;
+  }
+  .c-ttrpg {
+    --c: #facc15;
+  }
+  .c-boardgame {
+    --c: #a3e635;
+  }
+  .c-anime {
+    --c: #f472b6;
+  }
+  .c-videogame {
+    --c: #a5b4fc;
+  }
+  .c-comic {
+    --c: #38bdf8;
+  }
+  .c-popculture {
+    --c: #d6d3d1;
+  }
+}
+
+[hidden] {
+  display: none !important;
+}
+
+main.wide {
+  max-width: 72rem;
+}
+
+.home {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lede {
+  margin: 0 0 0.5rem;
+}
+
+.warn,
+.muted {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.warn {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Filters */
+.filters {
+  display: grid;
+  gap: 0.75rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+  padding: 0;
+}
+
+.segmented {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.segmented button {
+  border: 0;
+  background: none;
+  padding: 0.45rem 1rem;
+  min-height: 40px;
+}
+
+.segmented button[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 700;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 36px;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  font-size: 0.9375rem;
+}
+
+.chip::before {
+  content: '';
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: 2px solid var(--c, var(--muted));
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--c, var(--accent));
+  background: color-mix(in srgb, var(--c, var(--accent)) 14%, var(--surface));
+  font-weight: 600;
+}
+
+.chip[aria-pressed='true']::before {
+  background: var(--c, var(--accent));
+}
+
+.filter-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.link-button {
+  border: 0;
+  background: none;
+  padding: 0.25rem 0;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.month-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.month-nav h2 {
+  margin: 0;
+  min-width: 10.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.month-nav > button:not(.link-button) {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.past {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9375rem;
+}
+
+.past input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+}
+
+/* Month grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--border);
+  gap: 1px;
+}
+
+.dow {
+  background: var(--surface);
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 0.35rem 0;
+}
+
+.day {
+  background: var(--surface);
+  min-height: 6.5rem;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.day.other {
+  background: var(--bg);
+}
+
+.day.other .num {
+  opacity: 0.55;
+}
+
+.num {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  align-self: flex-start;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.day.today .num {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.pill {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-left: 3px solid var(--c);
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, var(--c) 16%, var(--surface));
+  padding: 0.15rem 0.35rem;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pill.cont {
+  border-left-style: dotted;
+}
+
+.pill.past,
+.row.past {
+  opacity: 0.6;
+}
+
+.pill:hover {
+  background: color-mix(in srgb, var(--c) 28%, var(--surface));
+}
+
+/* List */
+.list h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.list h3:first-child {
+  margin-top: 0;
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--c);
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.when {
+  text-align: center;
+  line-height: 1.15;
+}
+
+.when .d {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.when .m {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.row h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.row h4 button {
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+.row h4 button:hover {
+  text-decoration: underline;
+}
+
+.meta {
+  margin: 0.1rem 0 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--c, var(--accent)) 18%, var(--surface));
+  border: 1px solid var(--c, var(--accent));
+  margin: 0 0.35rem 0 0;
+}
+
+.row .button {
+  min-height: 40px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9375rem;
+  white-space: nowrap;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 1rem;
+}
+
+/* Not-yet-dated and sources */
+.tbd-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.tbd-list li {
+  margin: 0.25rem 0;
+}
+
+.sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.25rem 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.sources h3 {
+  grid-column: 1 / -1;
+  font-size: 1rem;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.sources h3:first-child {
+  margin-top: 0;
+}
+
+/* Details dialog */
+dialog {
+  border: 1px solid var(--border);
+  border-top: 6px solid var(--c, var(--accent));
+  border-radius: 0.75rem;
+  background: var(--surface);
+  color: var(--text);
+  width: min(28rem, calc(100vw - 2rem));
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+
+dialog h2 {
+  margin: 0.4rem 0 0.5rem;
+  padding-right: 2rem;
+}
+
+dialog p {
+  margin: 0 0 0.6rem;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: none;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+dialog {
+  position: fixed;
+}
+
+/* Phones: the month grid turns into dots, so the list view is the default there. */
+@media (max-width: 40rem) {
+  .day {
+    min-height: 3.25rem;
+  }
+
+  .pill {
+    font-size: 0;
+    height: 0.45rem;
+    padding: 0;
+    border-left-width: 0;
+    background: var(--c);
+  }
+
+  .row {
+    grid-template-columns: 3.5rem 1fr;
+  }
+
+  .row .button {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .month-nav h2 {
+    min-width: 8.5rem;
+    font-size: 1.0625rem;
+  }
+}
+
+@media print {
+  .filters,
+  .toolbar .segmented,
+  .month-nav button {
+    display: none;
+  }
+}

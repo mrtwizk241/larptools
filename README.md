@@ -7,6 +7,7 @@ Unofficial, player-made tools for LARP players, at
 | ------------- | --------------------------------------------------------------------------- |
 | `/`           | The hub page (`hub/`)                                                       |
 | `/rustwater/` | Rustwater: a test builder and the Soak and Damage Calculator (`rustwater/`) |
+| `/calendar/`  | LARP and convention event calendar (`hub/calendar/`; dates in `events.js`)  |
 
 No accounts, no tracking, no analytics. Everything a visitor enters stays in their own browser.
 These are fan projects, not made or endorsed by the games they are for (see NOTICE).

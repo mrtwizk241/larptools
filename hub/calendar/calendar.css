@@ -421,11 +421,58 @@ legend {
   margin: 0 0.35rem 0 0;
 }
 
-.row .button {
+.row .button,
+.add-options .button {
   min-height: 40px;
   padding: 0.5rem 0.9rem;
   font-size: 0.9375rem;
   white-space: nowrap;
+}
+
+/* Website and Add to calendar buttons */
+.actions,
+.add-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button.button {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.button.secondary:hover {
+  filter: none;
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+}
+
+.add-options {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.add-options .button {
+  text-align: center;
+}
+
+#d-add {
+  border-top: 1px solid var(--border);
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+#d-add h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
 }
 
 .empty {
@@ -519,7 +566,7 @@ dialog {
     grid-template-columns: 3.5rem 1fr;
   }
 
-  .row .button {
+  .row .actions {
     grid-column: 2;
     justify-self: start;
   }

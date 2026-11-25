@@ -145,6 +145,139 @@ function where(e) {
   return [e.venue, `${e.city}, ${e.state}`].filter(Boolean).join(', ');
 }
 
+// ---------- add to calendar ----------
+// All events are added as all-day events (start day through end day): the sites rarely give
+// times. Google and Outlook.com open their own "new event" page; the .ics file works with Apple
+// Calendar, Outlook on a computer, and most other calendar apps.
+
+/** YYYYMMDD for a local date, plus `add` days. */
+function compact(date, add = 0) {
+  const d = new Date(date.getFullYear(), date.getMonth(), date.getDate() + add);
+  return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function iso(date, add = 0) {
+  const c = compact(date, add);
+  return `${c.slice(0, 4)}-${c.slice(4, 6)}-${c.slice(6)}`;
+}
+
+function aboutText(e) {
+  const lines = [tagText(e)];
+  if (e.note) lines.push(e.note);
+  if (e.unconfirmed) lines.push('Dates are from a listing site, not the event’s own site yet.');
+  lines.push(`Website: ${e.url}`);
+  lines.push(
+    'Check the website for times and tickets. Added from larptools.scrollplaygames.com/calendar/.',
+  );
+  return lines.join('\n');
+}
+
+function googleUrl(e) {
+  const q = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: e.name,
+    dates: `${compact(e.s)}/${compact(e.e, 1)}`,
+    location: where(e),
+    details: aboutText(e),
+  });
+  return `https://calendar.google.com/calendar/render?${q}`;
+}
+
+function outlookUrl(e) {
+  const q = new URLSearchParams({
+    path: '/calendar/action/compose',
+    rru: 'addevent',
+    subject: e.name,
+    startdt: iso(e.s),
+    enddt: iso(e.e, 1),
+    allday: 'true',
+    location: where(e),
+    body: aboutText(e),
+  });
+  return `https://outlook.live.com/calendar/0/action/compose?${q}`;
+}
+
+function icsText(e) {
+  const esc = (text) =>
+    text.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+  // Lines over 75 octets are folded (RFC 5545); counting characters is close enough here.
+  const fold = (line) => (line.match(/.{1,73}/gu) ?? ['']).join('\r\n ');
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
+  const slug = e.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  return [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//larptools//Event Calendar//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    `UID:${compact(e.s)}-${slug}@larptools.scrollplaygames.com`,
+    `DTSTAMP:${stamp}`,
+    `DTSTART;VALUE=DATE:${compact(e.s)}`,
+    `DTEND;VALUE=DATE:${compact(e.e, 1)}`,
+    `SUMMARY:${esc(e.name)}`,
+    `LOCATION:${esc(where(e))}`,
+    `DESCRIPTION:${esc(aboutText(e))}`,
+    `URL:${e.url}`,
+    'TRANSP:TRANSPARENT',
+    'END:VEVENT',
+    'END:VCALENDAR',
+    '',
+  ]
+    .map(fold)
+    .join('\r\n');
+}
+
+function downloadIcs(e) {
+  const blob = new Blob([icsText(e)], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const slug = e.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  const a = el('a', { href: url, download: `${slug}-${iso(e.s)}.ics` });
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+
+/** The three ways to add an event, as a row of buttons. */
+function addOptions(e) {
+  const out = (text, href) =>
+    el('a', { class: 'button secondary', href, rel: 'noreferrer', target: '_blank', text });
+  return el(
+    'div',
+    { class: 'add-options' },
+    out('Google Calendar', googleUrl(e)),
+    out('Outlook.com', outlookUrl(e)),
+    el('button', {
+      type: 'button',
+      class: 'button secondary',
+      text: 'Apple, Outlook, other (.ics)',
+      onclick: () => downloadIcs(e),
+    }),
+  );
+}
+
+const addDialog = $('add');
+
+function openAdd(e) {
+  addDialog.className = `c-${e.color}`;
+  $('a-name').textContent = e.name;
+  $('a-when').textContent = range(e);
+  $('a-options').replaceChildren(addOptions(e));
+  addDialog.showModal();
+}
+
+$('a-close').addEventListener('click', () => addDialog.close());
+addDialog.addEventListener('click', (ev) => {
+  if (ev.target === addDialog) addDialog.close();
+});
+
 // ---------- details dialog ----------
 
 const dialog = $('details');
@@ -164,6 +297,8 @@ function openDetails(e) {
   link.href = e.url;
   link.textContent =
     e.kind === 'larp' ? `Open the ${larpById.get(e.larp).name} site` : 'Open the convention site';
+  $('d-add').replaceChildren(el('h3', { text: 'Add to calendar' }), addOptions(e));
+  $('d-add').hidden = false;
   if (!dialog.open) dialog.showModal();
 }
 
@@ -197,6 +332,7 @@ function openDay(date, list) {
   $('d-where').textContent = '';
   $('d-note').hidden = true;
   $('d-link').parentElement.hidden = true;
+  $('d-add').hidden = true;
   if (!dialog.open) dialog.showModal();
 }
 
@@ -385,14 +521,25 @@ function renderList(shown) {
             e.unconfirmed ? ' · dates not yet on their site' : '',
           ),
         ),
-        el('a', {
-          class: 'button',
-          href: e.url,
-          rel: 'noreferrer',
-          target: '_blank',
-          text: 'Website',
-          'aria-label': `${e.name} website`,
-        }),
+        el(
+          'div',
+          { class: 'actions' },
+          el('button', {
+            type: 'button',
+            class: 'button secondary',
+            text: 'Add to calendar',
+            'aria-label': `Add ${e.name} to your calendar`,
+            onclick: () => openAdd(e),
+          }),
+          el('a', {
+            class: 'button',
+            href: e.url,
+            rel: 'noreferrer',
+            target: '_blank',
+            text: 'Website',
+            'aria-label': `${e.name} website`,
+          }),
+        ),
       ),
     );
   }

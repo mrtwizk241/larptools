@@ -21,6 +21,40 @@ const PREVIEW_IGNORED: ReadonlySet<string> = new Set([
   'CHOICE_REQUIRED',
 ]);
 
+/** Errors a test build may ignore: it can spend more CXP or PXP than it has (ADR 0007). */
+const OVERSPEND_CODES: ReadonlySet<string> = new Set(['NOT_ENOUGH_CXP', 'NOT_ENOUGH_PXP']);
+
+/**
+ * The sheet with room for any CXP or PXP cost, for re-checking a test build's command after a
+ * NOT_ENOUGH_CXP or NOT_ENOUGH_PXP error. Only those two checks read these balances when buying;
+ * the real balance then goes negative on the test build's sheet.
+ */
+function withRoomToOverspend(sheet: Sheet): Sheet {
+  const room = Number.MAX_SAFE_INTEGER;
+  return {
+    ...sheet,
+    points: {
+      ...sheet.points,
+      cxp: { ...sheet.points.cxp, available: room },
+      pxp: { ...sheet.points.pxp, available: room },
+    },
+  };
+}
+
+/** run(), and for a test build a second run with room to overspend when CXP or PXP is short. */
+function runFor(
+  ruleset: Ruleset,
+  sheet: Sheet,
+  command: Command,
+  ctx: PlanContext,
+  testBuild: boolean,
+): Evaluation & { actions: Action[] } {
+  const r = run(ruleset, sheet, command, ctx);
+  if (testBuild && r.errors.some((e) => OVERSPEND_CODES.has(e.code)))
+    return run(ruleset, withRoomToOverspend(sheet), command, ctx);
+  return r;
+}
+
 function run(
   ruleset: Ruleset,
   sheet: Sheet,
@@ -78,8 +112,9 @@ export const TEST_BUILD_TEACHER = 'Test build';
 export interface PlanOptions {
   /**
    * The character is its owner's private test build (ADR 0007): the player may run every
-   * command, as staff can, and a missing teacher is recorded as TEST_BUILD_TEACHER. The server
-   * sets this only for the owner's own test builds.
+   * command, as staff can, a missing teacher is recorded as TEST_BUILD_TEACHER, and CXP and PXP
+   * may be overspent (the balance goes negative). The server sets this only for the owner's own
+   * test builds.
    */
   readonly testBuild?: boolean;
 }
@@ -109,9 +144,9 @@ export function plan(
         ),
       ],
     };
-  let r = run(ruleset, sheet, command, ctx);
+  let r = runFor(ruleset, sheet, command, ctx, testBuild);
   if (testBuild && r.errors.some((e) => e.code === 'TEACHER_REQUIRED'))
-    r = run(ruleset, sheet, { ...command, teacher: TEST_BUILD_TEACHER } as Command, ctx);
+    r = runFor(ruleset, sheet, { ...command, teacher: TEST_BUILD_TEACHER } as Command, ctx, true);
   if (r.errors.length > 0) return { ok: false, errors: r.errors };
   return { ok: true, actions: r.actions, notices: r.notices };
 }
@@ -119,9 +154,15 @@ export function plan(
 /**
  * What a command would cost and whether it is allowed, for labels such as "Next level: 40 CXP"
  * or "Needs Assault level 9". Ignores the actor, and ignores a missing teacher or reason (see
- * `teacherRequired`), so a button can be labelled before those are typed.
+ * `teacherRequired`), so a button can be labelled before those are typed. With
+ * `options.testBuild`, too little CXP or PXP does not block, as in plan().
  */
-export function preview(ruleset: Ruleset, sheet: Sheet, command: Command): PreviewResult {
+export function preview(
+  ruleset: Ruleset,
+  sheet: Sheet,
+  command: Command,
+  options: PlanOptions = {},
+): PreviewResult {
   let n = 0;
   const ctx: PlanContext = {
     actor: { role: 'staff' },
@@ -129,7 +170,7 @@ export function preview(ruleset: Ruleset, sheet: Sheet, command: Command): Previ
     newId: () => `preview-${++n}`,
     nextSeq: sheet.lastSeq + 1,
   };
-  const r = run(ruleset, sheet, command, ctx);
+  const r = runFor(ruleset, sheet, command, ctx, options.testBuild === true);
   const errors = r.errors.filter((e) => !PREVIEW_IGNORED.has(e.code));
   return {
     allowed: errors.length === 0,

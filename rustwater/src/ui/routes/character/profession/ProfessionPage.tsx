@@ -346,11 +346,13 @@ function ProfessionStepper({
   onLevel: (next: number) => void;
 }) {
   if (!eventKey) return <p className={shared.muted}>Check in to an event to level this skill.</p>;
-  const result = preview(view.ruleset, view.sheet, {
-    type: 'levelProfession',
-    skillId: skill.id,
-    eventKey,
-  });
+  // A test build (ADR 0007) may overspend PXP.
+  const result = preview(
+    view.ruleset,
+    view.sheet,
+    { type: 'levelProfession', skillId: skill.id, eventKey },
+    { testBuild: view.meta?.kind === 'test' },
+  );
   const cost = result.cost?.amount ?? skill.nextCost ?? 0;
   return (
     <LevelStepper

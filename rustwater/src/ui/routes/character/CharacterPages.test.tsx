@@ -12,7 +12,7 @@ import { WIZARD_STEPS } from '../create/steps.ts';
 const STAFF: Settings = { mode: 'staff', theme: 'system' };
 
 describe('character overview', () => {
-  it('marks a negative points value with the word "over", not color alone', async () => {
+  it('marks a negative points value with a warning icon and hidden text, not color alone', async () => {
     const base = mira();
     const character = {
       ...base,
@@ -33,7 +33,8 @@ describe('character overview', () => {
     const shinies = within(chips)
       .getAllByRole('listitem')
       .find((li) => li.textContent?.startsWith('Shinies'));
-    expect(shinies).toHaveTextContent('Shinies -20 over');
+    expect(shinies).toHaveTextContent('Shinies (overspent) -20');
+    expect(shinies?.querySelector('svg')).not.toBeNull();
   });
 
   it('adds an AP chip per archetype with AP earned, after the other points', async () => {

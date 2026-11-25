@@ -179,7 +179,8 @@ export function needsArchetypeChoice(sheet: Sheet, skill: Skill): boolean {
 /**
  * preview() of learning the next level of a part. For a multi-archetype skill whose archetype
  * is still open, `archetype` is the one chosen in a form; without one, each option is tried and
- * the first allowed one is reported (the label then names no archetype).
+ * the first allowed one is reported (the label then names no archetype). A test build may
+ * overspend CXP (`testBuild`).
  */
 export function previewLearn(
   ruleset: Ruleset,
@@ -187,14 +188,20 @@ export function previewLearn(
   skill: Skill,
   part: SkillPart,
   archetype?: string,
+  testBuild = false,
 ): PreviewResult {
   const run = (a: string | undefined) =>
-    preview(ruleset, sheet, {
-      type: 'learnSkill',
-      skillId: skill.id,
-      part,
-      ...(a ? { archetype: a } : {}),
-    });
+    preview(
+      ruleset,
+      sheet,
+      {
+        type: 'learnSkill',
+        skillId: skill.id,
+        part,
+        ...(a ? { archetype: a } : {}),
+      },
+      { testBuild },
+    );
   if (archetype || !needsArchetypeChoice(sheet, skill)) return run(archetype);
   const options = skill.archetypeOptions ?? [];
   const results = options.map((a) => run(a));

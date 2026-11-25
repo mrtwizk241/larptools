@@ -4,6 +4,7 @@ import { deriveSheet, loadRuleset, plan, type Ruleset } from '../../../engine/in
 import { BASE_CHARACTER, harness } from '../../../engine/testkit.ts';
 import {
   copyableEntries,
+  overspendText,
   parsePointsChange,
   pointsChangeCommand,
   pointsChangeText,
@@ -144,5 +145,25 @@ describe('Add or remove points', () => {
     expect(pointsChangeText('cxp', -20)).toBe('Removed 20 CXP.');
     expect(pointsChangeText('pxp', 50)).toBe('Added 50 PXP.');
     expect(pointsChangeText('pxp', -20)).toBe('Removed 20 PXP.');
+  });
+});
+
+describe('overspendText', () => {
+  const ruleset = loadRuleset();
+
+  it('CXP: the events it takes, at the event CXP each', () => {
+    expect(overspendText(ruleset, 'cxp', 25)).toBe(
+      'You have spent 25 more CXP than you have. Earning it takes 1 event (75 CXP an event).',
+    );
+    expect(overspendText(ruleset, 'cxp', 160)).toContain('takes 3 events');
+  });
+
+  it('PXP: the hours of NPC time, or the Shinies spent on PXP', () => {
+    expect(overspendText(ruleset, 'pxp', 12)).toBe(
+      'You have spent 12 more PXP than you have. Earning it takes 12 hours of NPCing ' +
+        '(1 PXP an hour, up to 5 hours an event) or 1,200 Shinies spent on PXP ' +
+        '(100 Shinies for 1 PXP, 1 purchase an event).',
+    );
+    expect(overspendText(ruleset, 'pxp', 1)).toContain('1 hour of NPCing');
   });
 });

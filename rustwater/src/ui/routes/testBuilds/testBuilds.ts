@@ -72,3 +72,43 @@ export function pointsChangeText(currency: TestBuildCurrency, amount: number): s
   const name = currency.toUpperCase();
   return amount > 0 ? `Added ${amount} ${name}.` : `Removed ${-amount} ${name}.`;
 }
+
+function plural(n: number, one: string, many: string): string {
+  return `${n.toLocaleString('en-US')} ${n === 1 ? one : many}`;
+}
+
+/**
+ * The pop-up after a test build spends more CXP or PXP than it has: how far over it is, and
+ * what it would take to earn the rest. `short` is how far below zero the balance is.
+ * CXP: events, at the event CXP each. PXP: hours of NPC time, or Shinies spent on PXP.
+ */
+export function overspendText(
+  ruleset: Ruleset,
+  currency: TestBuildCurrency,
+  short: number,
+): string {
+  if (currency === 'cxp') {
+    const perEvent = ruleset.ruleset.eventCxp;
+    const events = Math.ceil(short / perEvent);
+    return (
+      `You have spent ${short.toLocaleString('en-US')} more CXP than you have. ` +
+      `Earning it takes ${plural(events, 'event', 'events')} (${perEvent} CXP an event).`
+    );
+  }
+  const npc = ruleset.awards.npcTime;
+  const hours = Math.ceil(short / npc.pxpPerHour);
+  const buy = ruleset.awards.shinyPurchases.find((p) =>
+    p.grants?.some((g) => g.currency === 'pxp'),
+  );
+  const perBuy = buy?.grants?.find((g) => g.currency === 'pxp')?.amount ?? 0;
+  const shinies = buy && perBuy > 0 ? Math.ceil(short / perBuy) * buy.price : null;
+  return (
+    `You have spent ${short.toLocaleString('en-US')} more PXP than you have. ` +
+    `Earning it takes ${plural(hours, 'hour', 'hours')} of NPCing (${npc.pxpPerHour} PXP an hour, ` +
+    `up to ${npc.maxHours} hours an event)` +
+    (shinies !== null && buy
+      ? ` or ${plural(shinies, 'Shiny', 'Shinies')} spent on PXP (${buy.price} Shinies for ${perBuy} PXP, ` +
+        `${plural(buy.capPerEvent ?? 1, 'purchase', 'purchases')} an event).`
+      : '.')
+  );
+}

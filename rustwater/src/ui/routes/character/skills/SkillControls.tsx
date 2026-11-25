@@ -99,7 +99,7 @@ export function SkillControls({ view, skill }: { view: CharacterView; skill: Ski
             );
           }
 
-          const learn = previewLearn(ruleset, sheet, skill, part);
+          const learn = previewLearn(ruleset, sheet, skill, part, undefined, testBuild);
           const refund =
             level > 0
               ? preview(ruleset, sheet, { type: 'refundSkill', skillId: skill.id, part })

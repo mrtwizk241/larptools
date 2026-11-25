@@ -28,6 +28,7 @@ import { UNNAMED_CHARACTER } from '../../data/summary.ts';
 import { Screen } from '../../Screen.tsx';
 import { BackLink } from '../PlaceholderPage.tsx';
 import { RouteFallback } from '../RouteFallback.tsx';
+import { OverspendNotice } from '../testBuilds/OverspendNotice.tsx';
 import { TestBuildBanner } from '../testBuilds/TestBuildBanner.tsx';
 import { ancestryLine } from './format.ts';
 import { CharacterNotFound } from './CharacterNotFound.tsx';
@@ -160,6 +161,7 @@ export function CharacterLayout() {
         <CharacterHeader sheet={state.sheet} ruleset={state.ruleset} />
         {meta ? <ReviewBanner meta={meta} isStaff={view.isStaff} /> : null}
         {testBuild ? <TestBuildBanner view={view} /> : null}
+        {testBuild ? <OverspendNotice key={id} view={view} /> : null}
         <Suspense fallback={<RouteFallback />}>
           <Routes>
             <Route index element={<OverviewPage view={view} />} />
@@ -212,16 +214,25 @@ function ReviewBanner({ meta, isStaff }: { meta: CharacterMeta; isStaff: boolean
 }
 
 /**
- * One header points entry. Under 900px it is a stat tile in a 3 column grid (label on top, value
- * below); from 900px it is a chip in a wrapped row. A negative value adds a warning icon and the
- * word "over" (never color alone). Spaces between the parts keep the read-out "CXP 45 left".
+ * One header points tile: the name on top, then "99 / 250 left" (left, then the total
+ * received). Below zero (a test build can overspend) the tile turns red with a warning icon,
+ * never color alone: "-25 / 998 left". Spaces between the parts keep the read-out
+ * "CXP 99 / 250 left".
  */
-/** One header tile: the name on top, then "99 / 250 left" (left, then the total received). */
 function PointsStat({ label, value, total }: { label: string; value: number; total?: number }) {
   const over = value < 0;
   return (
     <li className={over ? `${styles.point} ${styles.pointOver}` : styles.point}>
-      <span className={styles.pointLabel}>{label}</span>{' '}
+      <span className={styles.pointLabel}>
+        {label}
+        {over ? (
+          <>
+            {' '}
+            <TriangleAlert aria-hidden="true" className={styles.pointIcon} />
+            <span className="visually-hidden">(overspent)</span>
+          </>
+        ) : null}
+      </span>{' '}
       <span className={styles.pointAmount}>
         <span className={styles.pointValue}>{value}</span>
         {total !== undefined ? (
@@ -231,15 +242,6 @@ function PointsStat({ label, value, total }: { label: string; value: number; tot
           </>
         ) : null}
       </span>
-      {over ? (
-        <>
-          {' '}
-          <span className={styles.pointWarn}>
-            <TriangleAlert aria-hidden="true" className={styles.pointIcon} />
-            over
-          </span>
-        </>
-      ) : null}
     </li>
   );
 }

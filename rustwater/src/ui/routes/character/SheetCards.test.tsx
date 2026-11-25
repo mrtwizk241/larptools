@@ -386,4 +386,26 @@ describe('test builds', () => {
       payload: { reason: 'Test build' },
     });
   });
+
+  it('can spend more CXP than it has: the tile turns red and a pop-up says what it takes', async () => {
+    const user = userEvent.setup();
+    const ruleset = loadRuleset();
+    const left = deriveSheet(ruleset, ashAfter([]).actions).points.cxp.available;
+    // 5 CXP left, then Bash level 1 (10 CXP) leaves -5.
+    const poor = ashAfter([
+      { type: 'adjustPoints', currency: 'cxp', amount: 5 - left, reason: 'Test setup' },
+    ]);
+    vi.mocked(characterMetaFor).mockImplementation((id) =>
+      id === poor.id ? testBuildMeta(id) : undefined,
+    );
+    renderWithServer(`/c/${poor.id}/skills/bash`, poor, TEST_PLAYER);
+    await user.click(await screen.findByRole('button', { name: 'Raise Bash (10 CXP)' }));
+    expect(
+      await screen.findByText(
+        'You have spent 5 more CXP than you have. Earning it takes 1 event (75 CXP an event).',
+      ),
+    ).toBeInTheDocument();
+    const cxp = within(screen.getByRole('list', { name: 'Points' })).getAllByRole('listitem')[0];
+    expect(cxp).toHaveTextContent(/^CXP \(overspent\) -5 \/ \d+ left$/);
+  });
 });

@@ -48,7 +48,7 @@ export function LearnDialog({ view, skill, part, onClose }: DialogProps) {
   const def = skill.parts[part];
   const level = currentLevel(view, skill, part);
   const next = level + 1;
-  const result = previewLearn(ruleset, sheet, skill, part, archetype || undefined);
+  const result = previewLearn(ruleset, sheet, skill, part, archetype || undefined, testBuild);
   const name = partLabel(ruleset, skill, part);
   const single = def !== undefined && maxLevelOf(ruleset, def.costKind) === 1;
   const what = single ? name : `${name} level ${next}`;

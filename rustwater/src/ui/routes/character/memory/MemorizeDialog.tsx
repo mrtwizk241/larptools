@@ -55,11 +55,14 @@ export function MemorizeDialog({ view, kind, initialRefId, onClose }: MemorizeDi
   const base: MemorizeCommand | null = selected
     ? { type: 'memorize', kind, refId: selected.refId }
     : null;
-  const costPreview = base && needsSlot ? preview(ruleset, sheet, base) : null;
-  const buyPreview =
-    base && needsSlot && buySlot ? preview(ruleset, sheet, { ...base, buySlot: true }) : null;
-  // A test build (ADR 0007) asks for no teacher: the engine records "Test build".
+  // A test build (ADR 0007) asks for no teacher (the engine records "Test build") and may
+  // overspend CXP.
   const testBuild = view.meta?.kind === 'test';
+  const costPreview = base && needsSlot ? preview(ruleset, sheet, base, { testBuild }) : null;
+  const buyPreview =
+    base && needsSlot && buySlot
+      ? preview(ruleset, sheet, { ...base, buySlot: true }, { testBuild })
+      : null;
   const teacherRequired = !testBuild && buyPreview?.teacherRequired === true;
   const cost = costPreview?.cost;
   const archetypeName = cost?.archetype

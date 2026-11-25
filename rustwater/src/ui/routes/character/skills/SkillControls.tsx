@@ -1,4 +1,5 @@
-// The level controls on a skill row: a round - and + around the level of each part (the skill,
+// The level controls on a skill row: each part's name, with a round - and + around its level
+// under it. One group per part (the skill,
 // Adept, Advanced, and Mastery once the skill reaches the level it needs).
 // - Test builds: + and - change the level at once, with no teacher or reason to type. Only a
 //   multi-archetype skill bought for the first time asks which archetype.
@@ -79,19 +80,21 @@ export function SkillControls({ view, skill }: { view: CharacterView; skill: Ski
             return (
               <div key={part} className={styles.control} role="group" aria-label={label}>
                 {title ? <span className={styles.controlLabel}>{title}</span> : null}
-                <span className={styles.controlValue}>
-                  <span className="visually-hidden">Level </span>
-                  {shown}
+                <span className={styles.stepper}>
+                  <span className={styles.controlValue}>
+                    <span className="visually-hidden">Level </span>
+                    {shown}
+                  </span>
+                  {canAsk ? (
+                    <IconButton
+                      variant="ghost"
+                      className={styles.circle}
+                      aria-label={`I learned ${label}`}
+                      icon={<Plus />}
+                      onClick={() => setDialog({ kind: 'request', part })}
+                    />
+                  ) : null}
                 </span>
-                {canAsk ? (
-                  <IconButton
-                    variant="ghost"
-                    className={styles.circle}
-                    aria-label={`I learned ${label}`}
-                    icon={<Plus />}
-                    onClick={() => setDialog({ kind: 'request', part })}
-                  />
-                ) : null}
               </div>
             );
           }
@@ -117,45 +120,47 @@ export function SkillControls({ view, skill }: { view: CharacterView; skill: Ski
           return (
             <div key={part} className={styles.control} role="group" aria-label={label}>
               {title ? <span className={styles.controlLabel}>{title}</span> : null}
-              <IconButton
-                variant="ghost"
-                className={styles.circle}
-                aria-label={`Lower ${label}`}
-                aria-disabled={lowerBlock || busy ? true : undefined}
-                {...(lowerBlock ? { title: lowerBlock } : {})}
-                icon={<Minus />}
-                onClick={() => {
-                  if (busy) return;
-                  if (lowerBlock) {
-                    if (level > 0) toast.show(lowerBlock);
-                    return;
+              <span className={styles.stepper}>
+                <IconButton
+                  variant="ghost"
+                  className={styles.circle}
+                  aria-label={`Lower ${label}`}
+                  aria-disabled={lowerBlock || busy ? true : undefined}
+                  {...(lowerBlock ? { title: lowerBlock } : {})}
+                  icon={<Minus />}
+                  onClick={() => {
+                    if (busy) return;
+                    if (lowerBlock) {
+                      if (level > 0) toast.show(lowerBlock);
+                      return;
+                    }
+                    void lower(part);
+                  }}
+                />
+                <output className={styles.controlValue} aria-live="polite">
+                  {shown}
+                </output>
+                <IconButton
+                  variant="ghost"
+                  className={styles.circle}
+                  aria-label={
+                    learn.cost && !atMax
+                      ? `Raise ${label} (${costText(ruleset, learn.cost)})`
+                      : `Raise ${label}`
                   }
-                  void lower(part);
-                }}
-              />
-              <output className={styles.controlValue} aria-live="polite">
-                {shown}
-              </output>
-              <IconButton
-                variant="ghost"
-                className={styles.circle}
-                aria-label={
-                  learn.cost && !atMax
-                    ? `Raise ${label} (${costText(ruleset, learn.cost)})`
-                    : `Raise ${label}`
-                }
-                aria-disabled={raiseBlock || busy ? true : undefined}
-                {...(raiseBlock ? { title: raiseBlock } : {})}
-                icon={<Plus />}
-                onClick={() => {
-                  if (busy) return;
-                  if (raiseBlock) {
-                    toast.show(raiseBlock);
-                    return;
-                  }
-                  void raise(part);
-                }}
-              />
+                  aria-disabled={raiseBlock || busy ? true : undefined}
+                  {...(raiseBlock ? { title: raiseBlock } : {})}
+                  icon={<Plus />}
+                  onClick={() => {
+                    if (busy) return;
+                    if (raiseBlock) {
+                      toast.show(raiseBlock);
+                      return;
+                    }
+                    void raise(part);
+                  }}
+                />
+              </span>
             </div>
           );
         })}

@@ -178,7 +178,48 @@
   letter-spacing: 0.04em;
 }
 
-/* Controls under a row's heading, visible while the row is closed (skill level steppers). */
+/* A row with level controls (Skills): name, controls, and the arrow on one line when there is
+   room; on a phone the controls drop under the name. The arrow outside the button toggles too. */
+.withControls {
+  container-type: inline-size;
+}
+
+.withControls .head {
+  display: grid;
+  grid-template-areas:
+    'heading chevron'
+    'controls controls';
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0;
+}
+
+.withControls .heading {
+  grid-area: heading;
+}
+
 .controls {
+  grid-area: controls;
   padding: 0 var(--space-3) var(--space-3) var(--space-4);
+}
+
+.chevronHit {
+  display: flex;
+  grid-area: chevron;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@container (min-width: 40rem) {
+  .withControls .head {
+    grid-template-areas: 'heading controls chevron';
+    grid-template-columns: minmax(8rem, 1fr) auto auto;
+  }
+
+  .controls {
+    padding: var(--space-2) var(--space-3);
+  }
 }

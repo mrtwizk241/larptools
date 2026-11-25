@@ -19,6 +19,9 @@
 .c-drmi {
   --c: #b91c1c;
 }
+.c-altered {
+  --c: #a21caf;
+}
 .c-ttrpg {
   --c: #a16207;
 }
@@ -56,6 +59,9 @@
   }
   .c-drmi {
     --c: #f87171;
+  }
+  .c-altered {
+    --c: #e879f9;
   }
   .c-ttrpg {
     --c: #facc15;

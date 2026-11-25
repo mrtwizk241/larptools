@@ -70,6 +70,16 @@ export const LARPS = [
     venue: 'Outdoor Education Center',
     city: 'Dowling, MI',
   },
+  {
+    id: 'altered',
+    name: 'Altered',
+    where: 'Markdale, ON (near Owen Sound)',
+    blurb: 'Survival horror: people from Earth trapped in a world of magic and monsters.',
+    site: 'https://www.alteredlarp.com/',
+    events: 'https://www.alteredlarp.com/event-schedule/',
+    venue: '',
+    city: 'Markdale, ON',
+  },
 ];
 
 const larpInfo = Object.fromEntries(LARPS.map((l) => [l.id, l]));
@@ -232,6 +242,20 @@ const LARP_EVENTS = [
   larp('drmi', '2026-10-23', '2026-10-25', 'October event'),
   larp('drmi', '2026-11-20', '2026-11-22', 'November event', {
     url: 'https://www.dystopiarisingmichigan.com/events/drmi-november-2026-event',
+  }),
+
+  // Altered (2027 event schedule). Site opens Friday 5 pm; game starts Friday 11 pm.
+  larp('altered', '2027-05-07', '2027-05-09', 'Build weekend', {
+    note: 'A build weekend at the site, not a game.',
+  }),
+  larp('altered', '2027-05-14', '2027-05-16', 'May game'),
+  larp('altered', '2027-06-11', '2027-06-13', 'June game'),
+  larp('altered', '2027-07-09', '2027-07-11', 'July game'),
+  larp('altered', '2027-08-06', '2027-08-08', 'August game'),
+  larp('altered', '2027-09-03', '2027-09-05', 'September game'),
+  larp('altered', '2027-10-01', '2027-10-03', 'October game'),
+  larp('altered', '2027-10-15', '2027-10-17', 'Build weekend', {
+    note: 'A build weekend at the site, not a game.',
   }),
 ];
 

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link, NavLink } from 'react-router';
-import { Settings } from 'lucide-react';
+import { House, Settings } from 'lucide-react';
 import { cx } from './cx.ts';
 import styles from './AppHeader.module.css';
 import { PUBLIC_MODE } from '../../publicMode.ts';
@@ -51,6 +51,15 @@ export function AppHeader({
           decoding="async"
         />
       )}
+      {/* Public site only: back to the LARP Tools hub at the site root, outside the hash routes. */}
+      {PUBLIC_MODE ? (
+        <div className={styles.hubRow}>
+          <a href="/" className={styles.hubLink}>
+            <House aria-hidden="true" />
+            LARP Tools
+          </a>
+        </div>
+      ) : null}
       <div className={styles.inner}>
         <Link to="/" className={cx(styles.brand, styles.homeLink)}>
           {PUBLIC_MODE ? null : (

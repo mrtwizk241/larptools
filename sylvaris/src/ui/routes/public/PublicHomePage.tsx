@@ -1,0 +1,148 @@
+// `#/test-builds` on the public site (docs/PUBLIC-SITE-PLAN.md): the visitor's test builds saved in
+// this browser. The calculator is the start page (`#/`). No sign-in, nothing sent anywhere.
+// Ported from the Rustwater public site.
+import { useCallback, useEffect, useState } from 'react';
+import { Link } from 'react-router';
+import { ChevronRight, Plus } from 'lucide-react';
+import { TEST_BUILD_LIMIT } from '../../../publicMode.ts';
+import { Alert, ButtonLink, Card } from '../../components/index.ts';
+import { useRepository } from '../../data/hooks.ts';
+import { Screen } from '../../Screen.tsx';
+import styles from '../RosterPage.module.css';
+import { TestBuildMenu } from './TestBuildMenu.tsx';
+import { testBuildRow, type TestBuildRow } from './testBuildCopy.ts';
+
+type Builds =
+  | { status: 'loading' }
+  | { status: 'ready'; rows: TestBuildRow[]; unreadable: number }
+  | { status: 'error'; message: string };
+
+/**
+ * Asks the browser to keep this site's storage when space runs low, so test builds are not
+ * cleared on their own. Browsers may say no; the backup in Settings still covers that.
+ */
+async function askToKeepStorage(): Promise<void> {
+  try {
+    if ((await navigator.storage?.persisted?.()) === false) await navigator.storage.persist();
+  } catch {
+    // Not supported, or blocked: nothing to do.
+  }
+}
+
+export function PublicHomePage() {
+  const repository = useRepository();
+  const [builds, setBuilds] = useState<Builds>({ status: 'loading' });
+  // Bumped after a copy or a delete from a row's menu, to read the list again.
+  const [version, setVersion] = useState(0);
+  const reload = useCallback(() => setVersion((v) => v + 1), []);
+
+  useEffect(() => {
+    void askToKeepStorage();
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    repository
+      .listCharacters()
+      .then((result) => {
+        if (cancelled) return;
+        setBuilds({
+          status: 'ready',
+          rows: result.items.map((character) => testBuildRow(character)),
+          unreadable: result.invalid.length,
+        });
+      })
+      .catch((error: unknown) => {
+        if (cancelled) return;
+        setBuilds({
+          status: 'error',
+          message: error instanceof Error ? error.message : String(error),
+        });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [repository, version]);
+
+  const count = builds.status === 'ready' ? builds.rows.length : 0;
+  const full = count >= TEST_BUILD_LIMIT;
+
+  return (
+    <Screen title="Test Builds">
+      <div className={styles.page}>
+        <h1>Test Builds</h1>
+        <Alert kind="info" title="Unofficial, player-made tool">
+          <p>
+            Made by a player, not by Sylvaris LARP. Staff have not checked or approved it, so if
+            anything here disagrees with the rulebook or staff, the rulebook and staff win.
+          </p>
+        </Alert>
+        <p>
+          Plan a character with a test build: try out races, skills, and points. No sign-in, no
+          tracking, and no analytics: nothing you enter leaves this browser.
+        </p>
+
+        <Alert kind="info" title="Your test builds are saved only in this browser">
+          <p>
+            Clearing this site&apos;s data, or using a private window, deletes them. To keep a copy
+            or move builds to another device, use Back up in <Link to="/settings">Settings</Link>.
+          </p>
+        </Alert>
+
+        <Card title="Test builds">
+          {builds.status === 'loading' ? <p>Loading test builds…</p> : null}
+          {builds.status === 'error' ? (
+            <p role="alert">Your test builds could not be read: {builds.message}</p>
+          ) : null}
+          {builds.status === 'ready' && builds.unreadable > 0 ? (
+            <p role="alert">
+              {builds.unreadable === 1
+                ? '1 saved test build could not be read.'
+                : `${builds.unreadable} saved test builds could not be read.`}
+            </p>
+          ) : null}
+          {builds.status === 'ready' && count === 0 ? (
+            <p>No test builds yet. Make one to try out races, skills, and points.</p>
+          ) : null}
+          {builds.status === 'ready' && count > 0 ? (
+            <ul className={styles.list}>
+              {builds.rows.map((row) => (
+                <li key={row.id} className={styles.row}>
+                  <Link to={`/c/${row.id}`} className={styles.rowLink}>
+                    <span className={styles.rowMain}>
+                      <span className={styles.name}>{row.name}</span>
+                      <span className={styles.meta}>
+                        XP <span className="num">{row.xpTotal}</span> total
+                      </span>
+                    </span>
+                    {row.raceName ? (
+                      <span className={styles.side}>
+                        <span className={styles.race}>{row.raceName}</span>
+                      </span>
+                    ) : null}
+                    <ChevronRight aria-hidden="true" className={styles.chevron} />
+                  </Link>
+                  <TestBuildMenu id={row.id} name={row.name} count={count} onChanged={reload} />
+                </li>
+              ))}
+            </ul>
+          ) : null}
+          {builds.status === 'ready' ? (
+            <div className={styles.actions}>
+              {full ? (
+                <p className={styles.note}>
+                  You have {TEST_BUILD_LIMIT} test builds, the most this site keeps. Delete one to
+                  make another.
+                </p>
+              ) : (
+                <ButtonLink to="/new" variant="primary" icon={<Plus />}>
+                  New test build
+                </ButtonLink>
+              )}
+            </div>
+          ) : null}
+        </Card>
+      </div>
+    </Screen>
+  );
+}

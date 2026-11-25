@@ -1,0 +1,48 @@
+/* "Use with no signal" card on the wiki home and in Settings. */
+.card {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.body {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.body p {
+  margin: 0;
+}
+
+.title {
+  font-weight: var(--weight-semibold);
+}
+
+.ready {
+  font-weight: var(--weight-semibold);
+  color: var(--color-success);
+}
+
+.line,
+.lineReady {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin: 0;
+  font-weight: var(--weight-semibold);
+}
+
+.lineReady {
+  color: var(--color-success);
+}
+
+.icon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 0.15em;
+}
+
+.tip {
+  margin: 0;
+  color: var(--color-text-muted);
+}

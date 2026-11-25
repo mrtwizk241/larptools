@@ -1,0 +1,799 @@
+{
+  "format": "sylvaris-character",
+  "formatVersion": 1,
+  "exportedAt": "2026-09-19T18:45:00.000Z",
+  "appVersion": "0.1.0",
+  "character": {
+    "id": "7d1e9a40-5b7d-4c9a-9e21-3d4f6a7b8c91",
+    "schemaVersion": 1,
+    "rulesetId": "sylvaris-1.3.1",
+    "createdAt": "2026-04-18T17:00:00.000Z",
+    "updatedAt": "2026-09-19T18:45:00.000Z",
+    "actions": [
+      {
+        "id": "ash-0001",
+        "seq": 1,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "character.created",
+        "payload": {
+          "characterName": "Ash Merrow",
+          "playerName": "Robin Vale",
+          "playerEmail": "robin.vale@example.test",
+          "raceId": "human",
+          "choices": {},
+          "literacy": "race-language",
+          "ageCategory": 3,
+          "concept": "A caravan guard who stayed.",
+          "startingXp": 150
+        }
+      },
+      {
+        "id": "ash-0002",
+        "seq": 2,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "level": 1
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0003",
+        "seq": 3,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "level": 2
+          },
+          "currency": "xp",
+          "cost": 10,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0004",
+        "seq": 4,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "level": 3
+          },
+          "currency": "xp",
+          "cost": 15,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0005",
+        "seq": 5,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "technique": "expert"
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0006",
+        "seq": 6,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "level": 1
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0007",
+        "seq": 7,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "level": 2
+          },
+          "currency": "xp",
+          "cost": 10,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0008",
+        "seq": 8,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "level": 3
+          },
+          "currency": "xp",
+          "cost": 15,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0009",
+        "seq": 9,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "technique": "expert"
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0010",
+        "seq": 10,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "deflection",
+          "step": {
+            "level": 1
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0011",
+        "seq": 11,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "deflection",
+          "step": {
+            "level": 2
+          },
+          "currency": "xp",
+          "cost": 10,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0012",
+        "seq": 12,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "life-magic",
+          "step": {
+            "level": 1
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "ash-0001"
+      },
+      {
+        "id": "ash-0013",
+        "seq": 13,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "items.startingSet",
+        "payload": {
+          "picks": [
+            {
+              "optionId": "basic-armor"
+            },
+            {
+              "optionId": "basic-shield"
+            },
+            {
+              "optionId": "basic-weapon",
+              "detail": "Longsword"
+            },
+            {
+              "optionId": "basic-spell",
+              "detail": "grant-life"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ash-0014",
+        "seq": 14,
+        "at": "2026-04-18T17:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "journal.added",
+        "payload": {
+          "kind": "spell",
+          "refId": "grant-life",
+          "source": "starting",
+          "status": "pending"
+        }
+      },
+      {
+        "id": "ash-0015",
+        "seq": 15,
+        "at": "2026-04-18T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-04-18-spring-thaw",
+            "name": "Spring Thaw",
+            "date": "2026-04-18"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "xp",
+              "amount": 60,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "event"
+            },
+            {
+              "currency": "axp",
+              "amount": 1,
+              "kind": "event"
+            }
+          ],
+          "notCredited": [],
+          "upkeep": {
+            "dueSilver": 0,
+            "coveredBy": null
+          },
+          "handedOut": ["1 Silver (Human innate)"]
+        },
+        "eventKey": "2026-04-18-spring-thaw"
+      },
+      {
+        "id": "ash-0016",
+        "seq": 16,
+        "at": "2026-05-16T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-05-16-blossom-court",
+            "name": "Blossom Court",
+            "date": "2026-05-16"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "extras": ["sunday-cleanup"],
+          "awards": [
+            {
+              "currency": "xp",
+              "amount": 60,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "event"
+            },
+            {
+              "currency": "axp",
+              "amount": 1,
+              "kind": "event"
+            },
+            {
+              "currency": "mt",
+              "amount": 100,
+              "kind": "extra"
+            }
+          ],
+          "notCredited": [],
+          "upkeep": {
+            "dueSilver": 1,
+            "coveredBy": "paid"
+          },
+          "handedOut": ["1 Silver (Human innate)"]
+        },
+        "eventKey": "2026-05-16-blossom-court"
+      },
+      {
+        "id": "ash-0017",
+        "seq": 17,
+        "at": "2026-05-16T20:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "life-magic",
+          "step": {
+            "level": 2
+          },
+          "currency": "xp",
+          "cost": 10,
+          "atCreation": false
+        },
+        "eventKey": "2026-05-16-blossom-court"
+      },
+      {
+        "id": "ash-0018",
+        "seq": 18,
+        "at": "2026-05-16T20:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "life-magic",
+          "step": {
+            "level": 3
+          },
+          "currency": "xp",
+          "cost": 15,
+          "atCreation": false
+        },
+        "eventKey": "2026-05-16-blossom-court"
+      },
+      {
+        "id": "ash-0019",
+        "seq": 19,
+        "at": "2026-06-20T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-06-20-midsummer-fair",
+            "name": "Midsummer Fair",
+            "date": "2026-06-20"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "extras": ["friday-setup"],
+          "awards": [
+            {
+              "currency": "xp",
+              "amount": 60,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "event"
+            },
+            {
+              "currency": "axp",
+              "amount": 1,
+              "kind": "event"
+            },
+            {
+              "currency": "mt",
+              "amount": 50,
+              "kind": "extra"
+            }
+          ],
+          "notCredited": [],
+          "upkeep": {
+            "dueSilver": 1,
+            "coveredBy": "paid"
+          },
+          "handedOut": ["1 Silver (Human innate)"]
+        },
+        "eventKey": "2026-06-20-midsummer-fair"
+      },
+      {
+        "id": "ash-0020",
+        "seq": 20,
+        "at": "2026-06-20T21:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "journal.added",
+        "payload": {
+          "kind": "spell",
+          "refId": "life-dart",
+          "source": "teacher",
+          "teacher": "Sister Wren",
+          "status": "pending"
+        },
+        "eventKey": "2026-06-20-midsummer-fair"
+      },
+      {
+        "id": "ash-0021",
+        "seq": 21,
+        "at": "2026-07-18T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-07-18-river-games",
+            "name": "River Games",
+            "date": "2026-07-18"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "xp",
+              "amount": 60,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "event"
+            },
+            {
+              "currency": "axp",
+              "amount": 1,
+              "kind": "event"
+            }
+          ],
+          "notCredited": [],
+          "upkeep": {
+            "dueSilver": 1,
+            "coveredBy": "paid"
+          },
+          "handedOut": ["1 Silver (Human innate)"]
+        },
+        "eventKey": "2026-07-18-river-games"
+      },
+      {
+        "id": "ash-0022",
+        "seq": 22,
+        "at": "2026-07-18T22:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "spirit.changed",
+        "payload": {
+          "delta": -1,
+          "reason": "Died in the river fight."
+        }
+      },
+      {
+        "id": "ash-0023",
+        "seq": 23,
+        "at": "2026-08-15T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-08-15-ember-night",
+            "name": "Ember Night",
+            "date": "2026-08-15"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "extras": ["marshal-medic"],
+          "awards": [
+            {
+              "currency": "xp",
+              "amount": 60,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "event"
+            },
+            {
+              "currency": "axp",
+              "amount": 1,
+              "kind": "event"
+            },
+            {
+              "currency": "mt",
+              "amount": 50,
+              "kind": "extra"
+            }
+          ],
+          "notCredited": [],
+          "upkeep": {
+            "dueSilver": 1,
+            "coveredBy": "paid"
+          },
+          "handedOut": ["1 Silver (Human innate)"]
+        },
+        "eventKey": "2026-08-15-ember-night"
+      },
+      {
+        "id": "ash-0024",
+        "seq": 24,
+        "at": "2026-08-15T19:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "mt.spent",
+        "payload": {
+          "purchaseId": "basic-component",
+          "qty": 2,
+          "mtCost": 50,
+          "grants": [],
+          "items": ["2 Basic Components"]
+        },
+        "eventKey": "2026-08-15-ember-night"
+      },
+      {
+        "id": "ash-0025",
+        "seq": 25,
+        "at": "2026-08-15T19:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "deflection",
+          "step": {
+            "level": 3
+          },
+          "currency": "xp",
+          "cost": 15,
+          "atCreation": false
+        },
+        "eventKey": "2026-08-15-ember-night",
+        "causedBy": "ash-request-1"
+      },
+      {
+        "id": "ash-0026",
+        "seq": 26,
+        "at": "2026-08-15T19:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "request.approved",
+        "payload": {
+          "requestId": "ash-request-1",
+          "submittedAt": "2026-08-15T19:10:00.000Z",
+          "skillId": "deflection",
+          "step": {
+            "level": 3
+          },
+          "teacher": "Captain Dorn",
+          "playerNote": "Drilled with the guard all weekend."
+        },
+        "eventKey": "2026-08-15-ember-night",
+        "causedBy": "ash-request-1"
+      },
+      {
+        "id": "ash-0027",
+        "seq": 27,
+        "at": "2026-08-15T23:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "owed.added",
+        "payload": {
+          "text": "Basic Shield repair kit",
+          "eventKey": "2026-08-15-ember-night"
+        },
+        "eventKey": "2026-08-15-ember-night"
+      },
+      {
+        "id": "ash-0028",
+        "seq": 28,
+        "at": "2026-09-19T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-09-19-harvest-moon",
+            "name": "Harvest Moon",
+            "date": "2026-09-19"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "xp",
+              "amount": 60,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "event"
+            },
+            {
+              "currency": "axp",
+              "amount": 1,
+              "kind": "event"
+            }
+          ],
+          "notCredited": [],
+          "upkeep": {
+            "dueSilver": 1,
+            "coveredBy": "paid"
+          },
+          "handedOut": ["1 Silver (Human innate)"]
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "ash-0029",
+        "seq": 29,
+        "at": "2026-09-19T18:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "calling.started",
+        "payload": {
+          "callingId": "protector",
+          "choices": {}
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      },
+      {
+        "id": "ash-0030",
+        "seq": 30,
+        "at": "2026-09-19T18:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "guardianship",
+          "step": {
+            "level": 1
+          },
+          "currency": "cxp",
+          "cost": 5,
+          "teacher": "Calling book",
+          "atCreation": false
+        },
+        "eventKey": "2026-09-19-harvest-moon",
+        "causedBy": "ash-0029"
+      },
+      {
+        "id": "ash-0031",
+        "seq": 31,
+        "at": "2026-09-19T18:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "protector-protection",
+          "step": {
+            "level": 1
+          },
+          "currency": "cxp",
+          "cost": 5,
+          "teacher": "Calling book",
+          "atCreation": false
+        },
+        "eventKey": "2026-09-19-harvest-moon",
+        "causedBy": "ash-0029"
+      },
+      {
+        "id": "ash-0032",
+        "seq": 32,
+        "at": "2026-09-19T18:45:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "journal.tagged",
+        "payload": {
+          "entryId": "ash-0014"
+        }
+      }
+    ]
+  }
+}

@@ -107,6 +107,17 @@
   }
 }
 
+/* Under the points of an overspent test build: about how many events would earn the rest. */
+.estimate {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
 .chips {
   display: flex;
   flex-wrap: wrap;

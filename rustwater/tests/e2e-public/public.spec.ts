@@ -76,6 +76,11 @@ test('the site opens on the calculator, with no sign-in and no accessibility pro
   // The offline option sits above the header.
   await expect(page.getByRole('region', { name: 'Offline use' })).toBeVisible();
   await expect(page.getByText('Unofficial Player Tools')).toBeVisible();
+  // A button back to the LARP Tools hub at the site root.
+  const hub = page.getByRole('banner').getByRole('link', { name: 'LARP Tools', exact: true });
+  await expect(hub).toBeVisible();
+  await expect(hub).toHaveAttribute('href', '/');
+  expect((await hub.boundingBox())?.height ?? 0).toBeGreaterThanOrEqual(44);
   await expect(page.getByRole('link', { name: 'Sign In' })).toHaveCount(0);
   await expect(
     page.getByText('Unofficial fan tool, not affiliated with Rustwater LARP.'),
@@ -104,6 +109,20 @@ test('the site opens on the calculator, with no sign-in and no accessibility pro
   const logo = await page.request.get('./brand/logo-96.webp');
   expect(logo.headers()['content-type'] ?? '').not.toMatch(/^image\//);
   expect(problems).toEqual([]);
+});
+
+test('the LARP Tools button fits 375px and passes axe in dark mode', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('./');
+  const hub = page.getByRole('banner').getByRole('link', { name: 'LARP Tools', exact: true });
+  await expect(hub).toBeVisible();
+  await expect(hub).toHaveAttribute('href', '/');
+  const overflow = await page.evaluate(
+    () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+  );
+  expect(overflow).toBeLessThanOrEqual(0);
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
 });
 
 test('a test build is made, changed, and kept in this browser', async ({ page }) => {

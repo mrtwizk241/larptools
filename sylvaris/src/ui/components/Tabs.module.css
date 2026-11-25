@@ -1,0 +1,72 @@
+.tabs {
+  min-width: 0;
+}
+
+/* Scrolls sideways on phones instead of wrapping or widening the page. */
+.list {
+  display: flex;
+  gap: var(--space-1);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.tab {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: var(--tap);
+  height: var(--tap);
+  padding: 0 var(--space-4);
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: var(--text-md);
+  font-weight: var(--weight-normal);
+  white-space: nowrap;
+}
+
+/* Reserve the bold width so tabs do not shift when selected. */
+.tab::before {
+  content: attr(data-label);
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-weight: var(--weight-bold);
+}
+
+.tab:hover {
+  color: var(--color-text);
+}
+
+.tab[aria-selected='true'] {
+  color: var(--color-text);
+  font-weight: var(--weight-bold);
+}
+
+.tab[aria-selected='true']::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+/* Inset so the ring is not clipped by the scrolling list. */
+.tab:focus-visible {
+  outline-offset: calc(-1 * var(--focus-offset) - 3px);
+}
+
+.panel {
+  padding-top: var(--space-4);
+}
+
+.panel:focus-visible {
+  outline-offset: var(--focus-offset);
+}

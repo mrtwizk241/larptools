@@ -1,0 +1,157 @@
+{
+  "cuts": [
+    {
+      "id": "uncut",
+      "valueKnown": false
+    },
+    {
+      "id": "square",
+      "cutRecipe": "terra-artis-cut-square-gem",
+      "craftLevel": "expert"
+    },
+    {
+      "id": "circle",
+      "cutRecipe": "terra-artis-cut-circle-gem",
+      "craftLevel": "master"
+    },
+    {
+      "id": "triangle",
+      "cutRecipe": "terra-artis-cut-triangle-gem",
+      "craftLevel": "grandmaster"
+    }
+  ],
+  "gems": [
+    {
+      "id": "amber",
+      "name": "Amber",
+      "color": "Orange",
+      "valueCopper": {
+        "square": 2,
+        "circle": 5,
+        "triangle": 10
+      },
+      "magicAffinity": "fire",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "sunstone",
+      "name": "Sunstone",
+      "color": "Yellow",
+      "valueCopper": {
+        "square": 2,
+        "circle": 5,
+        "triangle": 10
+      },
+      "magicAffinity": "air",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "onyx",
+      "name": "Onyx",
+      "color": "Black/Grey",
+      "valueCopper": {
+        "square": 2,
+        "circle": 5,
+        "triangle": 10
+      },
+      "magicAffinity": "death",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "agate",
+      "name": "Agate",
+      "color": "Brown",
+      "valueCopper": {
+        "square": 5,
+        "circle": 10,
+        "triangle": 20
+      },
+      "magicAffinity": "earth",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "opal",
+      "name": "Opal",
+      "color": "White",
+      "valueCopper": {
+        "square": 5,
+        "circle": 10,
+        "triangle": 20
+      },
+      "magicAffinity": "water",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "amethyst",
+      "name": "Amethyst",
+      "color": "Purple",
+      "valueCopper": {
+        "square": 5,
+        "circle": 10,
+        "triangle": 20
+      },
+      "magicAffinity": "air",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "color": "Red",
+      "valueCopper": {
+        "square": 10,
+        "circle": 20,
+        "triangle": 30
+      },
+      "magicAffinity": "fire",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "sapphire",
+      "name": "Sapphire",
+      "color": "Blue",
+      "valueCopper": {
+        "square": 10,
+        "circle": 20,
+        "triangle": 30
+      },
+      "magicAffinity": "water",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "color": "Green",
+      "valueCopper": {
+        "square": 10,
+        "circle": 20,
+        "triangle": 30
+      },
+      "magicAffinity": "earth",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "color": "Clear",
+      "valueCopper": {
+        "square": 20,
+        "circle": 30,
+        "triangle": 50
+      },
+      "magicAffinity": "life",
+      "affinityIsFlavorOnly": true,
+      "source": "Rulebook p.144"
+    }
+  ],
+  "notes": "Values in copper by colour and cut. Uncut value is not listed. Affinity has no game effect. Uncut Gems can be bought for 25 MT each (max 2 per event, Rulebook p.12).",
+  "source": "Rulebook p.143, p.144"
+}

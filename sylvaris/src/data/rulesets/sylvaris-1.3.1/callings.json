@@ -1,0 +1,1224 @@
+[
+  {
+    "id": "distinctive",
+    "name": "The Distinctive",
+    "summary": "Build-your-own Calling that borrows a racial passive and two racial skills from other races.",
+    "innate": {
+      "name": "I Can Do That, Too",
+      "summary": "Gain one passive racial ability from the rulebook that the character does not already have."
+    },
+    "choices": [
+      {
+        "id": "racial-passive",
+        "label": "Borrowed racial passive",
+        "kind": "racial-passive",
+        "excludeOwned": true
+      },
+      {
+        "id": "racial-skill-a",
+        "label": "First Distinctive racial skill",
+        "kind": "racial-skill",
+        "excludeOwned": true,
+        "appliesToSkill": "distinctive-racial-skill-a"
+      },
+      {
+        "id": "racial-skill-b",
+        "label": "Second Distinctive racial skill",
+        "kind": "racial-skill",
+        "excludeOwned": true,
+        "appliesToSkill": "distinctive-racial-skill-b"
+      }
+    ],
+    "skills": [
+      {
+        "id": "distinctive-racial-skill-a",
+        "name": "Distinctive <Skill Name> (first)",
+        "category": "calling",
+        "callingId": "distinctive",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Mirrors the racial skill chosen in choice racial-skill-a; still a Calling skill for advancing, techniques, granting, and restoring.",
+        "mirrorsChoice": "racial-skill-a",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Basic level, with any flavor."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Expert level."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Master level."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Grandmaster level."
+          }
+        },
+        "source": "Callings p.4"
+      },
+      {
+        "id": "distinctive-racial-skill-b",
+        "name": "Distinctive <Skill Name> (second)",
+        "category": "calling",
+        "callingId": "distinctive",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Mirrors the racial skill chosen in choice racial-skill-b; still a Calling skill for advancing, techniques, granting, and restoring.",
+        "mirrorsChoice": "racial-skill-b",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Basic level, with any flavor."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Expert level."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Master level."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "As the chosen racial skill's Grandmaster level."
+          }
+        },
+        "source": "Callings p.4"
+      }
+    ],
+    "source": "Callings p.4"
+  },
+  {
+    "id": "dream-warden",
+    "name": "The Dream Warden",
+    "summary": "Defender of the Plane of Dream who fights the Nightmare and inspires allies.",
+    "innate": {
+      "name": "Champion Of Dreams",
+      "summary": "Living relic of Dream: throw Dream damage packets without a phys rep and deal Dream with any wielded weapon. Always has Planar Asylum: Dream. Grant self a resist fear on a 100 count, max 1 held."
+    },
+    "effects": [
+      {
+        "stat": "selfResistFearMax",
+        "amount": 1
+      },
+      {
+        "stat": "planarAsylum",
+        "value": "Dream"
+      }
+    ],
+    "skills": [
+      {
+        "id": "empowerment-of-dreams",
+        "name": "Empowerment of Dreams",
+        "category": "calling",
+        "callingId": "dream-warden",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Packet or weapon \"awaken\" (Slay against nightmare creatures), or place a Dream Rune (E): deal Dream with any weapon or relic, spend it to resist a call containing Fear or Nightmare."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Group Dream Rune, or Group Dream Empowerment: 5 relic, weapon, or claw attacks at +10 Dream."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Packet Magic Sleep or packet Banish Nightmare."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Dream Storm: feet planted, repeated \"storm\" packets for 25 Dream until you move, take any effect, or use another skill. Or Dance of Dreams: swing 25 Dream with no other offensive skills, until ended or end of encounter."
+          }
+        },
+        "source": "Callings p.5"
+      },
+      {
+        "id": "inspiration-of-dreams",
+        "name": "Inspiration of Dreams",
+        "category": "calling",
+        "callingId": "dream-warden",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "both",
+            "summary": "100 count: restore 1 basic skill use to someone else (once per encounter per person, once per repop per skill). Passive: 100 count \"Lash grant planar asylum - dream\"."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Dream Ward on self (E), reduced effect from Nightmare damage; or a phys-repped Dream Circle up to 10' across blocking nightmare creatures and their melee, fear immunity and reduced thrown nightmare damage inside, until you act offensively, leave, or the encounter ends."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "For the encounter, Intercept any effect with Fear or Nightmare in the call. Passive: hold a 2nd self-granted resist fear."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "After a 30 count, \"Voice Radius - Refit Armor\", once per encounter. Passive: hold a 3rd self-granted resist fear."
+          }
+        },
+        "passives": [
+          {
+            "at": "master",
+            "stat": "selfResistFearMax",
+            "amount": 1
+          },
+          {
+            "at": "grandmaster",
+            "stat": "selfResistFearMax",
+            "amount": 1
+          }
+        ],
+        "source": "Callings p.5-6"
+      }
+    ],
+    "source": "Callings p.5-6"
+  },
+  {
+    "id": "elemental-mage",
+    "name": "The Elemental Mage",
+    "summary": "Mage devoted to one element who gives up its opposing element.",
+    "innate": {
+      "name": "Elemental Alignment",
+      "summary": "Pick one of the six base elements. Living relic of it (packets for its damage, no phys rep) and planar asylum to its realm."
+    },
+    "detriment": {
+      "summary": "Cannot learn the opposing element's magic, cast or use items that use or create its effects, and its beneficial or enhancement spells have no effect on you."
+    },
+    "choices": [
+      {
+        "id": "element",
+        "label": "Aligned element",
+        "kind": "pick",
+        "options": ["air", "death", "earth", "fire", "life", "water"],
+        "opposites": {
+          "air": "earth",
+          "earth": "air",
+          "fire": "water",
+          "water": "fire",
+          "life": "death",
+          "death": "life"
+        },
+        "relicDamage": {
+          "air": "Lightning",
+          "death": "Harm",
+          "earth": "Earth",
+          "fire": "Fire",
+          "life": "Essence",
+          "water": "Ice"
+        },
+        "source": "Callings p.7; Rulebook p.66, p.110"
+      }
+    ],
+    "effects": [
+      {
+        "stat": "blockedMagicSchool",
+        "fromChoice": "element",
+        "via": "opposites"
+      }
+    ],
+    "skills": [
+      {
+        "id": "elemental-mage-elemental-magic",
+        "name": "Elemental Magic",
+        "category": "calling",
+        "callingId": "elemental-mage",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Element of focus (assumed same as the aligned element).",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Cast a basic spell of the chosen element."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Cast an expert spell of the chosen element."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Cast a master spell of the chosen element."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Cast a grandmaster spell of the chosen element."
+          }
+        },
+        "source": "Callings p.7"
+      },
+      {
+        "id": "elemental-manipulation",
+        "name": "Elemental Manipulation",
+        "category": "calling",
+        "callingId": "elemental-mage",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Spell Cleave one packet spell of your element: 2 packets on different targets."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Next offensive or healing spell of your element becomes a Frontal Cone, or every spell you cast this encounter becomes your element."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "Next offensive or healing spell of your element becomes a Lash, or next enhancement-occupying spell of it becomes a Group Cast (4 targets). Passive: immune to your own spells of your element."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Next offensive or healing spell of your element becomes a Voice Radius, or next enhancement-occupying spell of it becomes a Lash."
+          }
+        },
+        "source": "Callings p.7"
+      }
+    ],
+    "source": "Callings p.7"
+  },
+  {
+    "id": "fortune-favored",
+    "name": "The Fortune Favored",
+    "summary": "Charmed risk-taker whose luck is tied to a lucky coin.",
+    "innate": {
+      "name": "Under Lucky Stars",
+      "summary": "No upkeep. 100 count in a Safe Space: gain Fortune's Favor (max 1, no enhancement slot), call \"Lucky Evade\" against the next 3 detrimental non-AoE effects with a number in the call. Must always carry Lucky Items: a non-kingdom coin first, plus 1 more item per technique learned in this Calling."
+    },
+    "detriment": {
+      "summary": "Without the Lucky Coin, this Calling's abilities are unavailable until it is recovered or a new coin is imbued over 1 month."
+    },
+    "effects": [
+      {
+        "stat": "upkeepSilver",
+        "amount": 0,
+        "op": "set"
+      },
+      {
+        "stat": "luckyItemsRequired",
+        "amount": 1,
+        "perCallingTechnique": 1
+      }
+    ],
+    "skills": [
+      {
+        "id": "heads-i-win",
+        "name": "Heads I Win",
+        "category": "calling",
+        "callingId": "fortune-favored",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Lucky Coin",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Ask a Basic Augury and flip the coin. Tails: normal yes/no. Heads: answered as an Expert Augury."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "\"Resist Charm\" or \"Resist Trap\" when hit by a charm or trap."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "\"Fortunate One - Cure Ailments\": purge all standard rulebook negative effects on self; if any were removed, also gain a new Fortune's Favor."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "10 count: give a target a Lucky Dodge (as Master Evasion Dodge, called \"Lucky Dodge\"), occupies an enhancement slot until used, 1 per person. Passive: the innate may give self a Lucky Dodge instead of Fortune's Favor, one or the other at a time."
+          }
+        },
+        "source": "Callings p.8"
+      },
+      {
+        "id": "tails-you-lose",
+        "name": "Tails You Lose",
+        "category": "calling",
+        "callingId": "fortune-favored",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Lucky Coin",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Flip the coin. Tails: gain 1 use of Evasion. Heads: gain 1 use of Finesse."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "One packet or Weapon Strike Destruction."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "When hit by a non-AoE effect, redirect it to another target (not the source): ranged by packet, melee by \"Point - <Effect>\" within weapon reach."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "When affected by an enemy, \"Reflect - Stun X\" at them; X is the effect's number, or 100 if none."
+          }
+        },
+        "source": "Callings p.9"
+      }
+    ],
+    "source": "Callings p.8-9"
+  },
+  {
+    "id": "librarian",
+    "name": "The Librarian",
+    "summary": "Library scholar unmatched at research and at sharing knowledge.",
+    "innate": {
+      "name": "Research Specialization",
+      "summary": "One GM-approved narrow research specialization; research on it costs 1 fewer Research use (minimum 1). Broad topics are not allowed."
+    },
+    "choices": [
+      {
+        "id": "research-specialization",
+        "label": "Research specialization (GM approved)",
+        "kind": "text"
+      }
+    ],
+    "effects": [
+      {
+        "stat": "researchCostReductionSpecialization",
+        "amount": 1
+      }
+    ],
+    "skills": [
+      {
+        "id": "amplify-knowledge",
+        "name": "Amplify Knowledge",
+        "category": "calling",
+        "callingId": "librarian",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "100 count, touch: \"Spark of Insight - Disenchant Knowledge, restore one skill use\". Removes a knowledge enhancement and restores 1 skill use."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "100 count: Amplify Knowledge buff in a regular enhancement slot. Knowledge skill hits 1 extra target, and each target may pick a different skill when choosing one already known."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "100 count: \"Restore Knowledge\" on one target, refilling uses from its knowledge buffs (each buff counts as a separate renewal)."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Next Knowledge use may target Calling skills the target already has (never Librarian skills to non-Librarians); that buff counts as a Calling skill for restores. Max 1 per person."
+          }
+        },
+        "source": "Callings p.10"
+      },
+      {
+        "id": "amplify-research",
+        "name": "Amplify Research",
+        "category": "calling",
+        "callingId": "librarian",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Spend uses equal to your highest named level in this skill to make a teaching paper; someone spends a skill's uses to teach it to the paper, a later reader learns it and the paper crumbles. Tiers: Basic/Expert non-advanced Basic/Expert; Master non-advanced Master or advanced Basic; Grandmaster non-advanced Grandmaster or advanced Expert."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Spend 2 uses with Research (notes) or Amplify Research (papers) for results 1 step higher. Not for Ritual Scripts."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Esoteric reasoning on a research question: get answers not written directly anywhere."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Consult a library colleague with a chosen specialization on one question, for extra information or to break research blocks."
+          }
+        },
+        "source": "Callings p.10-11"
+      }
+    ],
+    "source": "Callings p.10-11"
+  },
+  {
+    "id": "protector",
+    "name": "The Protector",
+    "summary": "Bodyguard who shields a chosen Ward.",
+    "innate": {
+      "name": "Wardship",
+      "summary": "100 count: make a willing target in sight your Ward. Max 1. Ends if the Ward is more than 10 feet away or the encounter ends. Cannot name a Ward while being a Ward."
+    },
+    "effects": [
+      {
+        "stat": "wardsMax",
+        "amount": 1
+      },
+      {
+        "stat": "armorRefitCount",
+        "amount": 100,
+        "op": "base"
+      },
+      {
+        "stat": "protectionStackMax",
+        "amount": 1,
+        "perTechniqueInSkill": "protector-protection"
+      }
+    ],
+    "skills": [
+      {
+        "id": "guardianship",
+        "name": "Guardianship",
+        "category": "calling",
+        "callingId": "protector",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "both",
+            "summary": "Self and Ward gain +25 Temporary Armor Points or +25 life points. Passive: 100 count to grant self an intercept usable only for the Ward, 1 held."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "both",
+            "summary": "Parry a physical effect harming the Ward. Passive: the 100 count intercept is hastened."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "Parry any effect targeting the Ward (spell, gas, voice, lash, cone, etc.); for AoE only the Ward is spared. Passive: 2nd intercept slot, and these intercepts work for anyone."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "Move all negative effects and damage, death included, from the Ward to yourself; cannot be mitigated. Passive: a 2nd Ward, or with 1 Ward all damage it takes is reduced."
+          }
+        },
+        "passives": [
+          {
+            "at": "basic",
+            "stat": "wardInterceptSlots",
+            "amount": 1
+          },
+          {
+            "at": "master",
+            "stat": "wardInterceptSlots",
+            "amount": 1
+          }
+        ],
+        "source": "Callings p.12"
+      },
+      {
+        "id": "protector-protection",
+        "name": "Protection",
+        "category": "calling",
+        "callingId": "protector",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "both",
+            "summary": "10 count: self AND Ward gain +10 Life Points and +10 Armor Points (healable, refittable, no enhancement slot, ignore Disenchant) for the encounter or until no Ward; stacks up to 1 + techniques in Protection. Passive: your armor refits are hastened."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "both",
+            "summary": "Resist one status or damaging effect. Passive: ignore any Charm that would make you harm, abandon, or neglect your Ward."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "Instantly refit your and your Ward's armor. Passive: base refit for you or your Ward drops from 100 to 80."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "For the encounter or until no Ward, defensive skills for you or your Ward cost 1 use less. Passive: base refit drops from 100 to 60."
+          }
+        },
+        "passives": [
+          {
+            "at": "master",
+            "stat": "armorRefitCount",
+            "amount": -20
+          },
+          {
+            "at": "grandmaster",
+            "stat": "armorRefitCount",
+            "amount": -20
+          }
+        ],
+        "source": "Callings p.12-13"
+      }
+    ],
+    "source": "Callings p.12-13"
+  },
+  {
+    "id": "quartermaster",
+    "name": "The Quartermaster",
+    "summary": "Resourceful item user who sets augments freely and stretches consumables.",
+    "innate": {
+      "name": "Set Augment",
+      "summary": "Set any consumable augment for free (no skill uses) on a 100 count; item type limits still apply."
+    },
+    "skills": [
+      {
+        "id": "quartermaster-supplies",
+        "name": "Supplies",
+        "category": "calling",
+        "callingId": "quartermaster",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "With Set Augment, create an unstable augment slot for it; once per item per technique known in Supplies."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Get a second use from a consumable, used in the same encounter."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Pull any basic or expert crafted consumable from your pouches; always unstable."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Pull any master crafted consumable from your pouches; always unstable."
+          }
+        },
+        "source": "Callings p.14"
+      },
+      {
+        "id": "quartermaster-craft-consumable",
+        "name": "Craft Consumable",
+        "category": "calling",
+        "callingId": "quartermaster",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Must be able to craft the item through another skill.",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Craft any basic unstable consumable you can craft through another skill."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Craft any expert unstable consumable you can craft through another skill."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Craft any master unstable consumable you can craft through another skill."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Craft any grandmaster unstable consumable you can craft through another skill."
+          }
+        },
+        "source": "Callings p.14"
+      }
+    ],
+    "source": "Callings p.14"
+  },
+  {
+    "id": "reliquist",
+    "name": "The Reliquist",
+    "summary": "Relic specialist bonded to an unshatterable Spirit-Forged Relic.",
+    "innate": {
+      "name": "Focused Charge",
+      "summary": "Each 1 count adds +1 damage to the next relic attack, up to the 20 cap. May imbue one relic with a spirit fragment to make a Spirit-Forged Relic, unshatterable while held; the fragment is lost only if the relic is destroyed."
+    },
+    "choices": [
+      {
+        "id": "spirit-forged-relic",
+        "label": "Spirit-Forged Relic",
+        "kind": "text"
+      },
+      {
+        "id": "permanent-damage-types",
+        "label": "Permanent extra damage types on the Spirit-Forged Relic",
+        "kind": "pick",
+        "options": [
+          "air",
+          "death",
+          "earth",
+          "fire",
+          "life",
+          "water",
+          "radiance",
+          "nature",
+          "dream",
+          "spirit",
+          "magic"
+        ],
+        "multi": true,
+        "maxFromPassives": "relicPermanentDamageTypes"
+      }
+    ],
+    "effects": [
+      {
+        "stat": "focusedChargeCap",
+        "amount": 20,
+        "op": "base"
+      }
+    ],
+    "skills": [
+      {
+        "id": "relic-mastery",
+        "name": "Relic Mastery",
+        "category": "calling",
+        "callingId": "reliquist",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Spirit-Forged Relic",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Add one extra elemental damage type to the Spirit-Forged Relic for 1 encounter."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "both",
+            "summary": "Deliver relic damage with the call \"Frontal Cone - 100 <Relic Type>\". Passive: the relic permanently gains a 2nd elemental damage type."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "Twice per encounter, \"Lash - 100 <Relic Type>\". Passive: permanently add 2 more elemental types (+3 total). Passive: Basic use may instead make one attack x2 Vorpal (20 Physical Fire becomes 40 Vorpal Fire)."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "Three times per encounter, \"Point - 100 <Relic Type>\". Passive: permanently add 2 more elemental types, or one of Radiance, Nature, Dream, Spirit, Magic. Passive: Focused Charge caps at 30 instead of 20 (passive damage still caps at 20)."
+          }
+        },
+        "passives": [
+          {
+            "at": "expert",
+            "stat": "relicPermanentDamageTypes",
+            "amount": 1
+          },
+          {
+            "at": "master",
+            "stat": "relicPermanentDamageTypes",
+            "amount": 2
+          },
+          {
+            "at": "grandmaster",
+            "stat": "relicPermanentDamageTypes",
+            "amount": 2
+          },
+          {
+            "at": "grandmaster",
+            "stat": "focusedChargeCap",
+            "amount": 10
+          }
+        ],
+        "source": "Callings p.15"
+      },
+      {
+        "id": "relic-affinity",
+        "name": "Relic Affinity",
+        "category": "calling",
+        "callingId": "reliquist",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "10 count: give another relic +1 passive relic damage or Focused Charge; occupies an augmentation slot in it, lasts 1 encounter once activated."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Add an Augmentation Slot to the Spirit-Forged Relic until repop, up to 1 extra per technique in Relic Affinity; or power an augment in it without expending it."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Spirit-Forged Relic deals Radiance, Nature, Dream, Spirit, or Magic for 1 encounter."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "Until next repop, each Basic use may also add a damage type (base 6 or the Master list) to that relic. Passive: the Spirit-Forged Relic drops \"Physical\" from its damage call."
+          }
+        },
+        "source": "Callings p.15-16"
+      }
+    ],
+    "source": "Callings p.15-16"
+  },
+  {
+    "id": "songweaver",
+    "name": "The Songweaver",
+    "summary": "Performer whose magical weaves add slots and protection to items.",
+    "innate": {
+      "name": "Weave of Bonding",
+      "summary": "30 count with an item: it gains 1 Resist Shatter until used or the event ends."
+    },
+    "skills": [
+      {
+        "id": "weave-of-augmentation",
+        "name": "Weave of Augmentation",
+        "category": "calling",
+        "callingId": "songweaver",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Bardic performance. Call: \"<Performance> By my (song/voice/dance), I improve this weave - Magic Charm, Grant Augmentation Slot.\"",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Weave on the target's clothing gives one worn item an extra Augmentation Slot. 1 target per use; 1 woven item per person."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "both",
+            "summary": "New slot also gets an unstable Basic Mystic Weaving Augment. Passive: Basic use may be a group effect. Passive: 1 use and a 10 count restores that unstable augment."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "New slot gets an unstable Mystic Weaving Augment of Expert or lower. Passive: Basic use is Voice Radius. Passive: Expert use is a group effect."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "New slot gets an unstable Mystic Weaving Augment of Master or lower. Passive: Expert use is Voice Radius. Passive: Master use is a group effect."
+          }
+        },
+        "source": "Callings p.17"
+      },
+      {
+        "id": "weave-of-enchantment",
+        "name": "Weave of Enchantment",
+        "category": "calling",
+        "callingId": "songweaver",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "A person may carry only 1 Weave of Enchantment, Elements, Strengthening, or Inspiration.",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "10 count, weave into a worn item's augmentation slot: 1 Resist Disenchant, counts as an Unstable Augment; if the wearer dies, they keep enhancements normally lost on death."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "10 count: Weave of Elements in a weapon's augmentation slot; on activation the wielder picks a base element and swings it for the encounter or until disenchanted."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "10 count: Weave of Strengthening in an item's augmentation slot; unshatterable (call \"No effect\") until disenchanted or next repop."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "10 count: Weave of Inspiration in an item's augmentation slot, costs 1 use less for an encounter: weapon offensive, shield or armor defensive, jewelry utility, clothing in a base magic's color that magic."
+          }
+        },
+        "source": "Callings p.17-18"
+      }
+    ],
+    "source": "Callings p.17-18"
+  },
+  {
+    "id": "sorcerer",
+    "name": "The Sorcerer",
+    "summary": "Caster who keeps a fixed list of known spells in the body instead of a spellbook.",
+    "innate": {
+      "name": "Always Prepared",
+      "summary": "Per magic type known, pick 2 known spells per spell level; only known spells can be cast. Swap one by absorbing a spell copy of the new spell on a 100 count (copy destroyed), dropping one of the same element and level. Each new basic magic technique or new basic magic type adds 2 rulebook spells. Keep the list on the sheet."
+    },
+    "detriment": {
+      "summary": "Cannot cast spells from a spellbook."
+    },
+    "choices": [
+      {
+        "id": "known-spells",
+        "label": "Known spells",
+        "kind": "spell-list",
+        "perMagicTypePerLevel": 2
+      }
+    ],
+    "effects": [
+      {
+        "stat": "canCastFromSpellbook",
+        "value": false
+      }
+    ],
+    "skills": [
+      {
+        "id": "spell-preparation",
+        "name": "Spell Preparation",
+        "category": "calling",
+        "callingId": "sorcerer",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Known spell list. Prepared spells in an (E) slot end at the end of the encounter they were cast in.",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Prepare a basic known spell for the repop; cast it unmodified once per encounter with no skill uses."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Same for an expert known spell."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "Same for a master known spell. Passive: prepared spells may be modified with other known magic skills, paying those uses."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Same for a grandmaster known spell (text omits \"unmodified\")."
+          }
+        },
+        "source": "Callings p.19"
+      },
+      {
+        "id": "sorcerous-magic",
+        "name": "Sorcerous Magic",
+        "category": "calling",
+        "callingId": "sorcerer",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Known spell list",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Cast a Basic spell from your known list."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Cast an Expert spell from your known list."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Cast a Master spell from your known list."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Cast a Grandmaster spell from your known list."
+          }
+        },
+        "source": "Callings p.19-20"
+      }
+    ],
+    "source": "Callings p.19-20"
+  },
+  {
+    "id": "spirit-speaker",
+    "name": "The Spirit Speaker",
+    "summary": "Specialist in living and dead spirits who crafts spirit tokens.",
+    "innate": {
+      "name": "Spirit Sight",
+      "summary": "Has spirit sight; grant it to someone for an encounter on a 100 count. Counts as a set of Spirit token crafting tools."
+    },
+    "skills": [
+      {
+        "id": "spirits-of-the-living",
+        "name": "Spirits of the Living",
+        "category": "calling",
+        "callingId": "spirit-speaker",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "5 count, then for the encounter talk with any creature with a living spirit: \"Spirit of Communication.\" (E)"
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "\"Spirit of Protection, <Option>\": give self or another a Resist Pain, Evade, or Boon Element. (E)"
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "100 count with ancestor spirits: they take an enhancement slot and give Expert level plus the Expert technique of any basic rulebook skill; not the same skill twice per repop."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "100 count, \"Spirit of Life\": takes a general enhancement slot, immunity to instant death. On bleed out or death, spend it within 5 minutes for \"Spirit of Rebirth\", a self Raise Dead to full life points. (E)"
+          }
+        },
+        "source": "Callings p.21"
+      },
+      {
+        "id": "spirit-speaker-spirit-token",
+        "name": "Spirit Token",
+        "category": "calling",
+        "callingId": "spirit-speaker",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Crafting: 5 minutes, stable or unstable, not enhanceable by other crafting skills. Each token type: 1 active per person, none of that type again in the same encounter once spent.",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Craft a Status Token (attuned to Corruption, Destruction, Disease, Fear, Poison, Silence, Sleep, Slow, Stun, or Weakness): remove that status on a 30 count, or spend it to resist it. (E)"
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Craft a Damage Token (Fire, Lightning, Ice, Earth, Essence, Harm, Magic, Nature, Dream, or Spirit): weapon, claw, and relic attacks deal that type; spend for one 100 damage effect of it. (E)"
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Craft a Reduction Token (Claw, Edge, Blunt, Fire, Air/Lightning, Water/Ice, Earth/Stone, Essence, Harm, Magic, Nature, Nightmare, Dream, Acid, Chaos, Order, or Spirit): reduce all damage of that type; spend for one resist damage of it. (E)"
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Craft an Absorption Token: one Resist Effect that also restores 1 basic skill use of the holder's choice. (E)"
+          }
+        },
+        "source": "Callings p.21-22"
+      }
+    ],
+    "source": "Callings p.21-22"
+  },
+  {
+    "id": "umbral-guide",
+    "name": "The Umbral Guide",
+    "summary": "Infiltrator and poisoner who leads small groups through the shadows.",
+    "innate": {
+      "name": "Adept Poisoner",
+      "summary": "Packet-delivered damaging acid attacks from a valid hiding spot during an active Hide are doubled."
+    },
+    "effects": [
+      {
+        "stat": "infiltrationGroupSize",
+        "amount": 1,
+        "perTechniqueInSkill": "umbral-guide-infiltration",
+        "max": 4
+      }
+    ],
+    "skills": [
+      {
+        "id": "umbral-guide-infiltration",
+        "name": "Infiltration",
+        "category": "calling",
+        "callingId": "umbral-guide",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Bring 1 + techniques known people (max 4 plus self) into a Hide; they can follow a Hop and must stay within arm's reach or are revealed."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Distract an NPC not in combat: \"Lash Ignore - 60 seconds\"; ends early for all if any affected target is attacked; Hide continues."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "\"Fade\": up to 10 seconds or 10 steps to reach a valid Hide spot. Reach it and effects taken during the Fade are negated and you are hidden even if watched; fail and all effects land and you are revealed. Passive: group Hop lasts 15 seconds/steps."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "\"Umbral Shift\" between valid hiding spots in line of sight at least at a fast walk, with up to 4 others; hands or weapons crossed over the head."
+          }
+        },
+        "source": "Callings p.23"
+      },
+      {
+        "id": "venom-master",
+        "name": "Venom Master",
+        "category": "calling",
+        "callingId": "umbral-guide",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Press one non-damaging packet venom (once per venom, one target), or resist any call containing Venom or Poison."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "both",
+            "summary": "Fork a non-damaging packet venom: 1 extra packet within 5 seconds at a different target; forked venom cannot be pressed. Passive: immune to your own Poison, Venom, or Acid."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Reclaim a thrown venom whose packet missed every target out of game (keep the tag), or Press any venom (damaging or not, packet or weapon)."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Fork damaging packet venoms too (other Expert conditions apply), or deliver a damaging venom or acid as a Lash."
+          }
+        },
+        "source": "Callings p.24"
+      }
+    ],
+    "source": "Callings p.23-24"
+  },
+  {
+    "id": "warblade",
+    "name": "The Warblade",
+    "summary": "Warrior with a supernatural bond to a single weapon.",
+    "innate": {
+      "name": "Bond Weapon",
+      "summary": "Bonding takes one full event using only that weapon; it then holds one of your spirit fragments, lost only if forsaken or destroyed. +1 passive damage while wielding it. Only 1 bonded weapon. Immune to effects from your bonded weapon (such as Riposte)."
+    },
+    "detriment": {
+      "summary": "From the Calling description (no labeled detriment): Warblade powers do not work with any other weapon, and the bonded weapon can be used against you."
+    },
+    "choices": [
+      {
+        "id": "bonded-weapon",
+        "label": "Bonded weapon",
+        "kind": "text"
+      }
+    ],
+    "effects": [
+      {
+        "stat": "passiveDamageBondedWeapon",
+        "amount": 1
+      }
+    ],
+    "skills": [
+      {
+        "id": "skill-bond",
+        "name": "Skill Bond",
+        "category": "calling",
+        "callingId": "warblade",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Bonded weapon",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Spend uses of this skill in place of uses of offensive weapon skills you know (for example Aggression, Backstrike, Speed of Blade)."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "When attacking with the bonded weapon through an ability, use that ability 1 extra time; once per attack."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "\"Flurry, 100 X, 100 X, 100 X\" with the bonded weapon, X being your damage type."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Three consecutive \"Crush Slay\" attacks with the bonded weapon."
+          }
+        },
+        "source": "Callings p.25"
+      },
+      {
+        "id": "weapon-bond",
+        "name": "Weapon Bond",
+        "category": "calling",
+        "callingId": "warblade",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Bonded weapon",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Bonded weapon deals Magic damage for an encounter."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Weapon Strike or Spell Strike with the bonded weapon."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "One frontal cone weapon attack with the bonded weapon."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "One lash weapon attack with the bonded weapon."
+          }
+        },
+        "source": "Callings p.25"
+      }
+    ],
+    "source": "Callings p.25"
+  }
+]

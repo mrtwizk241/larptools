@@ -1,0 +1,504 @@
+.page {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.page > :global(*) {
+  min-width: 0;
+}
+
+/* Header block: name, race and player line, points chips. */
+.header {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.nameRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.name {
+  overflow-wrap: anywhere;
+}
+
+.line {
+  overflow-wrap: anywhere;
+}
+
+/* Header points. Phones and tablets: XP, CXP, AXP, and MT as stat tiles, as many per row as
+   fit (four at 375px with default text, fewer with large text). From 900px: chips in a wrapped
+   row, as PointsChip draws them. */
+.points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4.75rem, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.point {
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.pointLabel {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pointAmount {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--space-1);
+  min-width: 0;
+}
+
+.pointValue {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.pointSuffix {
+  font-size: var(--text-sm);
+}
+
+.pointWarn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.pointIcon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+}
+
+.pointOver,
+.pointOver .pointLabel {
+  color: var(--color-danger);
+}
+
+@media (min-width: 900px) {
+  .points {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .point {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 var(--space-2);
+    min-height: 36px;
+    padding: var(--space-1) var(--space-4);
+    border-radius: var(--radius-pill);
+    font-size: var(--text-sm);
+  }
+
+  .pointLabel {
+    font-size: inherit;
+  }
+
+  .pointAmount {
+    display: inline-flex;
+    gap: 0 var(--space-2);
+  }
+
+  .pointValue {
+    font-size: inherit;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.section {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* More: rows at least 56px, the whole row is a link, chevron for navigation. */
+.list {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 56px;
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.row:hover {
+  background: var(--color-surface-2);
+}
+
+.rowIcon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+}
+
+.rowLabel {
+  flex: 1;
+  min-width: 0;
+  font-weight: var(--weight-semibold);
+}
+
+.chevron {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-muted);
+}
+
+/* Overview: one column on phones, two from 900px. */
+.overview {
+  display: grid;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .warningCard {
+    grid-column: 1 / -1;
+  }
+}
+
+.card {
+  display: grid;
+  align-content: start;
+}
+
+.stack {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.lead {
+  font-weight: var(--weight-semibold);
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.rule {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.ruleName {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.text {
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
+
+.wrap {
+  overflow-wrap: anywhere;
+}
+
+/* Label and value pairs. */
+.facts {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.facts > div {
+  display: grid;
+  gap: 2px;
+}
+
+.facts dt {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.statValue {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.from {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+/* Inline errors from a command or form. */
+.errors {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--color-danger);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.errorsIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  color: var(--color-danger);
+}
+
+.errorsText {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.errorsText ul {
+  padding-left: var(--space-5);
+}
+
+.errorsTitle {
+  font-weight: var(--weight-semibold);
+}
+
+/* Warnings: warning colors plus an icon and text, not color alone. */
+.warningCard {
+  border-color: var(--color-border-strong);
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+.warningCard .muted {
+  color: var(--color-warning-text);
+}
+
+.warnTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.warnIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.warningList {
+  display: grid;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  padding-left: var(--space-5);
+}
+
+.warnLine {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  color: var(--color-danger);
+  font-weight: var(--weight-semibold);
+}
+
+/* Points tables: mono numbers, right aligned. */
+/* Overview tables scroll on their own when the text is large (a11y A-10). */
+.tableScroll {
+  /* width 0 plus min-width 100%: fills the card without widening it to the table's size. */
+  width: 0;
+  min-width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.table th,
+.table td {
+  padding: var(--space-2) var(--space-1);
+  border-bottom: var(--border-width) solid var(--color-border);
+  text-align: right;
+}
+
+.table th:first-child {
+  text-align: left;
+}
+
+.table thead th {
+  color: var(--color-text-muted);
+  font-weight: var(--weight-semibold);
+}
+
+.table tbody th {
+  font-weight: var(--weight-semibold);
+}
+
+.negative {
+  color: var(--color-danger);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-bold);
+}
+
+.flag {
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+}
+
+/* The no-login builds' header points (as on Rustwater): each tile has the name on top and
+   "99 / 150 left" under it. Phones: two columns, four from 30rem; from 900px tiles sized to fit,
+   in a wrapped row. */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 30rem) {
+  .tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .tiles {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.tile {
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+@media (min-width: 900px) {
+  .tile {
+    padding: var(--space-1) var(--space-4);
+  }
+}
+
+.tileAmount {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--space-1);
+  min-width: 0;
+}
+
+.tileValue {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+
+.tileSuffix {
+  font-size: var(--text-xs);
+}
+
+@media (min-width: 900px) {
+  .tileSuffix {
+    font-size: var(--text-sm);
+  }
+}
+
+.tileIcon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.25em;
+}
+
+/* Under the points while any is overspent: about how many events would earn the rest. */
+.estimate {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}

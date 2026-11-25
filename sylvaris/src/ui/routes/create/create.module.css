@@ -1,0 +1,501 @@
+.page {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.page > :global(*) {
+  min-width: 0;
+}
+
+.wizard {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.wizard > :global(*) {
+  min-width: 0;
+}
+
+.progress {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.stepTitle {
+  margin-top: calc(-1 * var(--space-3));
+}
+
+.fields {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.fields > :global(*) {
+  min-width: 0;
+}
+
+.account {
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  overflow-wrap: anywhere;
+}
+
+/* Choice groups: a fieldset of cards or radios. */
+.group {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  padding: 0;
+  margin-bottom: var(--space-1);
+  font-weight: var(--weight-semibold);
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.choices {
+  display: grid;
+  gap: var(--space-2);
+}
+
+@media (min-width: 900px) {
+  .choices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.choice {
+  position: relative;
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+/* Selected: thicker primary border plus the checked radio, not color alone. */
+.choice:has(.radio:checked) {
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+}
+
+.choice:has(.radio:focus-visible) {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.choice:hover {
+  background: var(--color-surface-2);
+}
+
+.choiceHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+}
+
+.radio {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.radio:focus-visible {
+  outline: none;
+}
+
+.choiceLabel {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+}
+
+/* The whole card selects the radio. */
+.choiceLabel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+
+.choiceDetails {
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.rule {
+  overflow-wrap: break-word;
+}
+
+.ruleName {
+  font-weight: var(--weight-semibold);
+}
+
+.meta {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* Plain radio rows (literacy). */
+.radioRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+}
+
+.radioRow input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.fieldError {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-1);
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.fieldErrorIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+
+/* Skills */
+.sticky {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  margin: 0 calc(-1 * var(--space-4));
+  padding: var(--space-2) var(--space-4);
+  border-bottom: var(--border-width) solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabBody {
+  display: grid;
+  gap: var(--space-4);
+  padding-top: var(--space-3);
+}
+
+.skillList {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.skillPicked {
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0 1px var(--color-primary);
+}
+
+.skillName {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.skillSummary {
+  font-size: var(--text-sm);
+  overflow-wrap: break-word;
+}
+
+.skillControls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+}
+
+.check input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.unavailable {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.advanced {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.advanced summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+}
+
+/* Starting items */
+.itemList {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.itemHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+}
+
+.itemName {
+  min-width: 0;
+  font-weight: var(--weight-semibold);
+  overflow-wrap: break-word;
+}
+
+.details {
+  display: grid;
+  gap: var(--space-3);
+}
+
+textarea.backstory {
+  min-height: 16rem;
+}
+
+/* Review */
+.summary {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.summary > div {
+  display: grid;
+  gap: 2px;
+}
+
+.summary dt {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.summary dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.notes ul {
+  padding-left: var(--space-5);
+}
+
+.notesTitle {
+  font-weight: var(--weight-semibold);
+}
+
+.summaryAnchor:empty {
+  display: none;
+}
+
+.summaryAnchor:focus-visible {
+  outline-offset: var(--focus-offset);
+}
+
+/* Back and Next stick to the bottom of the screen. */
+.bar {
+  position: sticky;
+  z-index: var(--z-nav);
+  bottom: 0;
+  margin: 0 calc(-1 * var(--space-4));
+  padding: var(--space-3) var(--space-4) calc(var(--space-3) + env(safe-area-inset-bottom));
+  border-top: var(--border-width) solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.barButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+}
+
+/*
+ * Keyboard focus never hides under the sticky Starting XP row or the Back and Next bar (a11y
+ * A-1). Rem based, so the room grows with the text size; the toasts can need more.
+ */
+:global(html):has(.bar) {
+  scroll-padding-bottom: max(6rem, var(--toast-stack, 0px));
+}
+
+:global(html):has(.sticky) {
+  scroll-padding-top: 5rem;
+}
+
+/* The chosen race's choices, right under its card (acceptance AC-3). */
+.raceChoices {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: var(--space-5);
+  min-width: 0;
+  padding: var(--space-2) 0 var(--space-4);
+}
+
+.raceChoices > :global(*) {
+  min-width: 0;
+}
+
+/* The chosen race's abilities, each opening with an arrow to its full text. */
+.raceAbilities {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.abilityList {
+  display: grid;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expandToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-text);
+  font: inherit;
+  font-weight: var(--weight-semibold);
+  text-align: left;
+  cursor: pointer;
+}
+
+.expandIcon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+}
+
+.expandToggle[aria-expanded='true'] .expandIcon {
+  transform: rotate(180deg);
+}
+
+.expandBody {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0 0 var(--space-3) calc(24px + var(--space-2));
+  overflow-wrap: anywhere;
+}
+
+.expandBody[hidden] {
+  display: none;
+}
+
+.abilityLevels {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.abilityLevels dt {
+  font-weight: var(--weight-semibold);
+}
+
+.abilityLevels dd {
+  margin: 0;
+}

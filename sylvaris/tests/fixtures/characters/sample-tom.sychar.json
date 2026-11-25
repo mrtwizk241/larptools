@@ -1,0 +1,258 @@
+{
+  "format": "sylvaris-character",
+  "formatVersion": 1,
+  "exportedAt": "2026-09-19T18:00:00.000Z",
+  "appVersion": "0.1.0",
+  "character": {
+    "id": "3a9d7c5e-2f1b-4e8d-b6a4-c0e9f8d7a6b5",
+    "schemaVersion": 1,
+    "rulesetId": "sylvaris-1.3.1",
+    "createdAt": "2026-09-19T17:30:00.000Z",
+    "updatedAt": "2026-09-19T18:00:00.000Z",
+    "actions": [
+      {
+        "id": "tom-0001",
+        "seq": 1,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "character.created",
+        "payload": {
+          "characterName": "Old Tom",
+          "playerName": "Priya Nair",
+          "raceId": "dwarf",
+          "choices": {},
+          "literacy": "race-language",
+          "ageCategory": 6,
+          "startingXp": 150
+        }
+      },
+      {
+        "id": "tom-0002",
+        "seq": 2,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "level": 1
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0003",
+        "seq": 3,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "level": 2
+          },
+          "currency": "xp",
+          "cost": 10,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0004",
+        "seq": 4,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "level": 3
+          },
+          "currency": "xp",
+          "cost": 15,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0005",
+        "seq": 5,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "toughness",
+          "step": {
+            "technique": "expert"
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0006",
+        "seq": 6,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "level": 1
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0007",
+        "seq": 7,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "level": 2
+          },
+          "currency": "xp",
+          "cost": 10,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0008",
+        "seq": 8,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "level": 3
+          },
+          "currency": "xp",
+          "cost": 15,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0009",
+        "seq": 9,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "wear-armor",
+          "step": {
+            "technique": "expert"
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0010",
+        "seq": 10,
+        "at": "2026-09-19T17:30:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "skill.learned",
+        "payload": {
+          "skillId": "bash",
+          "step": {
+            "level": 1
+          },
+          "currency": "xp",
+          "cost": 5,
+          "atCreation": true
+        },
+        "causedBy": "tom-0001"
+      },
+      {
+        "id": "tom-0011",
+        "seq": 11,
+        "at": "2026-09-19T18:00:00.000Z",
+        "actor": {
+          "role": "staff",
+          "name": "Check-in desk"
+        },
+        "type": "event.checkedIn",
+        "payload": {
+          "event": {
+            "key": "2026-09-19-harvest-moon",
+            "name": "Harvest Moon",
+            "date": "2026-09-19"
+          },
+          "attendance": "player",
+          "npcHours": 0,
+          "extras": [],
+          "awards": [
+            {
+              "currency": "xp",
+              "amount": 60,
+              "kind": "event"
+            },
+            {
+              "currency": "cxp",
+              "amount": 5,
+              "kind": "event"
+            },
+            {
+              "currency": "axp",
+              "amount": 1,
+              "kind": "event"
+            }
+          ],
+          "notCredited": [],
+          "upkeep": {
+            "dueSilver": 0,
+            "coveredBy": null
+          },
+          "handedOut": []
+        },
+        "eventKey": "2026-09-19-harvest-moon"
+      }
+    ]
+  }
+}

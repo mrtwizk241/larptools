@@ -1,0 +1,123 @@
+/* Requests: player list with Send to staff, staff inbox with Approve and Reject. */
+.page {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.page > :global(*) {
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+}
+
+.group {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.groupName {
+  overflow-wrap: anywhere;
+}
+
+.send {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.list > li {
+  min-width: 0;
+}
+
+.item {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.muted {
+  color: var(--color-text-muted);
+}
+
+/* Inbox check: icon plus text, never color alone. */
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.checkIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+
+.ok .checkIcon {
+  color: var(--color-success);
+}
+
+.blocked .checkIcon {
+  color: var(--color-danger);
+}
+
+.checkText {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.checkText ul {
+  padding-left: var(--space-5);
+}
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+  border: 2px solid var(--color-danger);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.alertText {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-2) 0;
+  overflow-wrap: anywhere;
+}
+
+.alertText ul {
+  padding-left: var(--space-5);
+}
+
+.alertTitle {
+  font-weight: var(--weight-semibold);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  min-height: var(--tap);
+}

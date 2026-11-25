@@ -1,0 +1,1180 @@
+{
+  "id": "sylvaris-1.3.1",
+  "name": "Sylvaris Rulebook V1.3.1",
+  "rulebookVersion": "1.3.1",
+  "callingsVersion": "1.3.1",
+  "currencies": [
+    {
+      "id": "xp",
+      "name": "Experience Points",
+      "abbr": "XP"
+    },
+    {
+      "id": "cxp",
+      "name": "Calling Experience Points",
+      "abbr": "CXP"
+    },
+    {
+      "id": "axp",
+      "name": "Artifact Experience Points",
+      "abbr": "AXP"
+    },
+    {
+      "id": "mt",
+      "name": "Mist Tokens",
+      "abbr": "MT"
+    }
+  ],
+  "ledgerKinds": [
+    {
+      "id": "starting",
+      "name": "Starting points"
+    },
+    {
+      "id": "retirement",
+      "name": "Retirement transfer"
+    },
+    {
+      "id": "event",
+      "name": "Event attendance"
+    },
+    {
+      "id": "npc-time",
+      "name": "NPC time"
+    },
+    {
+      "id": "staff",
+      "name": "GM-level staff"
+    },
+    {
+      "id": "extra",
+      "name": "Event extra (check-in help, marshal, setup, clean up)"
+    },
+    {
+      "id": "away-role",
+      "name": "Staff role between events"
+    },
+    {
+      "id": "plot-writing",
+      "name": "Plot writing"
+    },
+    {
+      "id": "donation",
+      "name": "Donation"
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer help"
+    },
+    {
+      "id": "grades",
+      "name": "Good grades"
+    },
+    {
+      "id": "mt-purchase",
+      "name": "Bought with Mist Tokens"
+    },
+    {
+      "id": "missed-event",
+      "name": "Missed event XP"
+    },
+    {
+      "id": "alt-character",
+      "name": "Alternate character event XP"
+    },
+    {
+      "id": "gm-award",
+      "name": "GM award"
+    }
+  ],
+  "xp": {
+    "start": 150,
+    "perEvent": 60,
+    "earnedCap": 2000,
+    "earnedCapIncludesStart": true
+  },
+  "cxp": {
+    "start": 0,
+    "perEvent": 5,
+    "earnedCap": 610
+  },
+  "axp": {
+    "start": 0,
+    "perEvent": 1
+  },
+  "skills": {
+    "maxLevel": 10,
+    "costPerLevel": 5,
+    "namedLevels": {
+      "basic": 1,
+      "expert": 3,
+      "master": 6,
+      "grandmaster": 10
+    },
+    "usesPerAbility": {
+      "basic": 1,
+      "expert": 2,
+      "master": 3,
+      "grandmaster": 4
+    },
+    "techniques": [
+      {
+        "id": "expert",
+        "level": 3,
+        "cost": 5
+      },
+      {
+        "id": "master",
+        "level": 6,
+        "cost": 10,
+        "requires": "expert"
+      },
+      {
+        "id": "grandmaster",
+        "level": 10,
+        "cost": 15,
+        "requires": "master"
+      }
+    ],
+    "advancedPrereqTechnique": "master",
+    "racialSkillsSameCost": true
+  },
+  "creation": {
+    "startingXp": 150,
+    "maxSkillLevel": 5,
+    "maxTechnique": "expert",
+    "startingEquipmentPicks": 10,
+    "minAgeCategory": 2,
+    "maxAgeCategory": 10,
+    "defaultAgeCategory": 2,
+    "literacyChoice": ["race-language", "common"],
+    "garbEnforcedByEvent": 3
+  },
+  "languages": [
+    {
+      "id": "aeshu",
+      "name": "Aeshu"
+    },
+    {
+      "id": "common",
+      "name": "Common"
+    },
+    {
+      "id": "draconic",
+      "name": "Draconic"
+    },
+    {
+      "id": "dwarven",
+      "name": "Dwarven"
+    },
+    {
+      "id": "elven",
+      "name": "Elven"
+    },
+    {
+      "id": "erid",
+      "name": "Erid"
+    },
+    {
+      "id": "gargoyle",
+      "name": "Gargoyle"
+    },
+    {
+      "id": "gnomish",
+      "name": "Gnomish"
+    },
+    {
+      "id": "orcish",
+      "name": "Orcish"
+    }
+  ],
+  "magicSchools": [
+    {
+      "id": "air",
+      "name": "Air",
+      "skill": "air-magic"
+    },
+    {
+      "id": "death",
+      "name": "Death",
+      "skill": "death-magic"
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "skill": "earth-magic"
+    },
+    {
+      "id": "fire",
+      "name": "Fire",
+      "skill": "fire-magic"
+    },
+    {
+      "id": "life",
+      "name": "Life",
+      "skill": "life-magic"
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "skill": "water-magic"
+    }
+  ],
+  "events": {
+    "repopsPerEvent": 3,
+    "sessions": [
+      {
+        "session": 1,
+        "begins": "Friday Game-On",
+        "ends": "Saturday 06:00"
+      },
+      {
+        "session": 2,
+        "begins": "Saturday 06:00",
+        "ends": "Saturday 18:00"
+      },
+      {
+        "session": 3,
+        "begins": "Saturday 18:00",
+        "ends": "Sunday 02:00"
+      }
+    ],
+    "ibgaPerGap": 1,
+    "ibgaDeadlineDaysBefore": 7,
+    "checkoutFormDue": "the Sunday after the event",
+    "checkInSteps": [
+      "pay event fee if not prepaid",
+      "sign waivers",
+      "collect character sheet, production items, MT market items, Merchanting coins or items",
+      "pay upkeep",
+      "turn in components used for production and anything spent in an IBGA"
+    ]
+  },
+  "upkeep": {
+    "silverPerEvent": 1,
+    "firstEventFree": true,
+    "modifiers": [
+      {
+        "id": "merchanting",
+        "summary": "Merchanting can cover 2 Silver of upkeep",
+        "coversSilver": 2,
+        "source": "Rulebook p.101"
+      },
+      {
+        "id": "urban-knowledge",
+        "summary": "Urban Knowledge can cover one PC's upkeep up to 2 Silver",
+        "coversSilver": 2,
+        "source": "Rulebook p.103"
+      },
+      {
+        "id": "live-off-the-land",
+        "summary": "Totemic Live off the Land Expert covers basic upkeep",
+        "coversAll": true,
+        "source": "Rulebook p.61"
+      },
+      {
+        "id": "town-hall",
+        "summary": "Town Hall Basic: upkeep 1 Silver per PC; Grandmaster: standard upkeep covered",
+        "source": "Rulebook p.167"
+      }
+    ]
+  },
+  "coins": {
+    "copperPerSilver": 10,
+    "silverPerGold": 10
+  },
+  "body": {
+    "baseLifePoints": 10,
+    "baseArmorPoints": 0,
+    "spiritFragmentsStart": 10,
+    "spiritFragmentsMax": 10,
+    "unconsciousMinutes": 5,
+    "bleedOutSeconds": 60,
+    "deathCountMinutes": 5,
+    "raiseLifeFraction": 0.5,
+    "spiritFragmentLossAfterDeathCount": 1,
+    "refitCount": 100,
+    "killingBlowCount": 3,
+    "hastenMinCount": 10
+  },
+  "caps": {
+    "passiveDamage": 20,
+    "passiveDamageFromBehind": 30,
+    "passiveDamageWeakened": 10,
+    "healableLifePoints": 100,
+    "temporaryLifePoints": 50,
+    "refittableArmorPoints": 100,
+    "temporaryArmorPoints": 50,
+    "skillRenewalsPerEncounter": 5
+  },
+  "slots": {
+    "enhancement": 4,
+    "attunement": 6,
+    "greaterBoon": 4,
+    "lesserBoon": 4,
+    "attunementMinutes": 10,
+    "augmentSlotsByQuality": {
+      "mundane": 0,
+      "basic": 1,
+      "expert": 2,
+      "master": 3,
+      "grandmaster": 4
+    }
+  },
+  "familiarization": {
+    "maxLocations": 20,
+    "fixedLocation": "Raven's Rest (local tavern)",
+    "fixedLocationCountsTowardMax": true,
+    "minutesToFamiliarize": 10
+  },
+  "relic": {
+    "baseDamage": 2,
+    "damageByElement": {
+      "air": "Physical Lightning",
+      "death": "Physical Harm",
+      "earth": "Physical Earth",
+      "fire": "Physical Fire",
+      "life": "Physical Essence",
+      "water": "Physical Ice"
+    }
+  },
+  "racialInnateMinMinutesBetweenUses": 60,
+  "calling": {
+    "minFullEvents": 5,
+    "startLevelInBothSkills": 1,
+    "startCostCxp": 10,
+    "currency": "cxp",
+    "maxActive": 1,
+    "techniquesPerEvent": 1,
+    "noTechniqueAtStartEvent": true,
+    "maxTechniqueGap": 1
+  },
+  "artifact": {
+    "maxPerPc": 1,
+    "minXpEarned": 500,
+    "awakenCostAxp": 5,
+    "slotCostAxp": 5,
+    "maxSlots": 10
+  },
+  "retirement": {
+    "xp": {
+      "fraction": 0.25,
+      "deduct": 150,
+      "base": "earned"
+    },
+    "cxp": {
+      "fraction": 0.5,
+      "base": "earned"
+    },
+    "axp": {
+      "fraction": 0.25,
+      "base": "earned"
+    },
+    "goods": {
+      "fraction": 0.25,
+      "deductCopper": 50,
+      "min": 0
+    },
+    "rounding": "down",
+    "startingXpIsTransferOnly": true,
+    "warnBelowXp": 150,
+    "creationLimitsWaived": true,
+    "coinPaidTechniques": ["master", "grandmaster"],
+    "targets": ["new-character", "existing-character-same-player"],
+    "lockedOnceAssigned": true,
+    "summary": "Retiring a PC makes it unplayable and passes part of its progress to one PC of the same player (new or existing); once assigned the points are locked to that PC."
+  },
+  "combat": {
+    "weapons": [
+      {
+        "id": "wand",
+        "name": "Wand",
+        "attack": "one-handed",
+        "baseDamage": 2,
+        "types": ["Edge", "Blunt"]
+      },
+      {
+        "id": "short",
+        "name": "Short weapon",
+        "attack": "one-handed",
+        "baseDamage": 2,
+        "types": ["Edge", "Blunt"]
+      },
+      {
+        "id": "long",
+        "name": "Long weapon",
+        "attack": "one-handed",
+        "baseDamage": 2,
+        "types": ["Edge", "Blunt"]
+      },
+      {
+        "id": "two-handed",
+        "name": "2-Handed weapon",
+        "attack": "two-handed",
+        "baseDamage": 3,
+        "types": ["Edge", "Blunt"]
+      },
+      {
+        "id": "staff",
+        "name": "Staff",
+        "attack": "two-handed",
+        "baseDamage": 3,
+        "types": ["Blunt"]
+      },
+      {
+        "id": "bow",
+        "name": "Bow",
+        "attack": "ranged",
+        "baseDamage": 3,
+        "types": ["Edge"]
+      },
+      {
+        "id": "crossbow",
+        "name": "Crossbow",
+        "attack": "ranged",
+        "baseDamage": 3,
+        "types": ["Edge"]
+      },
+      {
+        "id": "thrown",
+        "name": "Thrown weapon",
+        "attack": "ranged",
+        "baseDamage": 2,
+        "types": ["Edge", "Blunt"]
+      }
+    ],
+    "armorPhysRep": {
+      "locations": ["Head", "Shoulders", "Arms", "Chest front", "Chest back", "Legs", "Feet"],
+      "pointsPerLocation": 5,
+      "shellRaces": ["clockwork"]
+    },
+    "buffs": [
+      {
+        "id": "toughness",
+        "name": "Toughness",
+        "from": {
+          "kind": "skill",
+          "id": "toughness",
+          "at": "basic"
+        },
+        "who": "self",
+        "life": 10,
+        "enhancement": false,
+        "stacks": "uses",
+        "lasts": "Encounter",
+        "source": "Rulebook p.96"
+      },
+      {
+        "id": "grant-life",
+        "name": "Grant Life",
+        "from": {
+          "kind": "spell",
+          "id": "grant-life"
+        },
+        "who": "given",
+        "life": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.124"
+      },
+      {
+        "id": "mass-grant-life",
+        "name": "Mass Grant Life",
+        "from": {
+          "kind": "spell",
+          "id": "mass-grant-life"
+        },
+        "who": "given",
+        "life": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.124"
+      },
+      {
+        "id": "toughness-potion",
+        "name": "Toughness Potion",
+        "from": {
+          "kind": "recipe",
+          "id": "alchemy-toughness-potion"
+        },
+        "who": "given",
+        "life": 20,
+        "enhancement": true,
+        "lasts": "Until the re-pop ends",
+        "source": "Rulebook p.133"
+      },
+      {
+        "id": "artifact-life",
+        "name": "Artifact: 20 Life Points",
+        "from": {
+          "kind": "artifact",
+          "id": "art-life-20"
+        },
+        "who": "self",
+        "life": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "note": "Once per re-pop.",
+        "source": "Rulebook p.81"
+      },
+      {
+        "id": "monster-ken-life",
+        "name": "Monster Ken trait: Life",
+        "from": {
+          "kind": "skill",
+          "id": "monster-ken",
+          "at": "expert"
+        },
+        "who": "self",
+        "life": 20,
+        "enhancement": true,
+        "group": "monster-ken",
+        "lasts": "Until re-pop",
+        "source": "Rulebook p.105-106"
+      },
+      {
+        "id": "fortitude-mutagen-life",
+        "name": "Fortitude Mutagen (Life)",
+        "from": {
+          "kind": "recipe",
+          "id": "flesh-crafting-fortitude-mutagen"
+        },
+        "who": "given",
+        "life": 10,
+        "enhancement": false,
+        "lasts": "Ongoing",
+        "note": "Counted as a lasting bonus (Q-CRF-6 default).",
+        "source": "Rulebook p.153-154"
+      },
+      {
+        "id": "protector-protection",
+        "name": "Protection",
+        "from": {
+          "kind": "skill",
+          "id": "protector-protection",
+          "at": "basic"
+        },
+        "who": "self",
+        "life": 10,
+        "armor": 10,
+        "enhancement": false,
+        "stacks": "techniques-plus-one",
+        "lasts": "Encounter, while you have a Ward",
+        "note": "Your Ward gets the same.",
+        "source": "Callings p.12-13"
+      },
+      {
+        "id": "wear-armor",
+        "name": "Wear Armor",
+        "from": {
+          "kind": "skill",
+          "id": "wear-armor",
+          "at": "basic"
+        },
+        "who": "self",
+        "armor": 10,
+        "enhancement": false,
+        "stacks": "uses",
+        "lasts": "Encounter",
+        "source": "Rulebook p.96"
+      },
+      {
+        "id": "armor-plating",
+        "name": "Armor Plating",
+        "from": {
+          "kind": "skill",
+          "id": "armor-plating",
+          "at": "basic"
+        },
+        "who": "self",
+        "armor": 10,
+        "enhancement": false,
+        "stacks": "uses",
+        "lasts": "Encounter",
+        "source": "Rulebook p.27"
+      },
+      {
+        "id": "ice-armor",
+        "name": "Ice Armor",
+        "from": {
+          "kind": "spell",
+          "id": "ice-armor"
+        },
+        "who": "given",
+        "armor": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.125"
+      },
+      {
+        "id": "group-ice-armor",
+        "name": "Group Ice Armor",
+        "from": {
+          "kind": "spell",
+          "id": "group-ice-armor"
+        },
+        "who": "given",
+        "armor": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.125"
+      },
+      {
+        "id": "bandage-of-barkskin",
+        "name": "Bandage of Barkskin",
+        "from": {
+          "kind": "recipe",
+          "id": "herbalism-bandage-of-barkskin"
+        },
+        "who": "given",
+        "armor": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.137-138"
+      },
+      {
+        "id": "candle-of-barkskin",
+        "name": "Candle of Barkskin",
+        "from": {
+          "kind": "recipe",
+          "id": "herbalism-candle-of-barkskin"
+        },
+        "who": "given",
+        "armor": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.137-138"
+      },
+      {
+        "id": "artifact-armor",
+        "name": "Artifact: 20 Armor Points",
+        "from": {
+          "kind": "artifact",
+          "id": "art-armor-20"
+        },
+        "who": "self",
+        "armor": 20,
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "note": "Once per re-pop.",
+        "source": "Rulebook p.81"
+      },
+      {
+        "id": "monster-ken-armor",
+        "name": "Monster Ken trait: Armor",
+        "from": {
+          "kind": "skill",
+          "id": "monster-ken",
+          "at": "expert"
+        },
+        "who": "self",
+        "armor": 20,
+        "enhancement": true,
+        "group": "monster-ken",
+        "lasts": "Until re-pop",
+        "source": "Rulebook p.105-106"
+      },
+      {
+        "id": "fortitude-mutagen-armor",
+        "name": "Fortitude Mutagen (Armor)",
+        "from": {
+          "kind": "recipe",
+          "id": "flesh-crafting-fortitude-mutagen"
+        },
+        "who": "given",
+        "armor": 10,
+        "enhancement": false,
+        "lasts": "Ongoing",
+        "note": "Counted as a lasting bonus (Q-CRF-6 default).",
+        "source": "Rulebook p.153-154"
+      },
+      {
+        "id": "weapon-proficiency",
+        "name": "Weapon Proficiency",
+        "from": {
+          "kind": "skill",
+          "id": "weapon-proficiency",
+          "at": "basic"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["one-handed", "two-handed", "ranged"]
+          }
+        ],
+        "enhancement": false,
+        "stacks": "uses",
+        "lasts": "Encounter",
+        "source": "Rulebook p.93"
+      },
+      {
+        "id": "relic-proficiency",
+        "name": "Relic Proficiency",
+        "from": {
+          "kind": "skill",
+          "id": "relic-proficiency",
+          "at": "basic"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["relic"]
+          }
+        ],
+        "enhancement": false,
+        "stacks": "uses",
+        "lasts": "Encounter",
+        "source": "Rulebook p.93"
+      },
+      {
+        "id": "precision",
+        "name": "Precision",
+        "from": {
+          "kind": "skill",
+          "id": "precision",
+          "at": "basic"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["one-handed", "two-handed"],
+            "fromBehind": true
+          },
+          {
+            "amount": 1,
+            "attacks": ["ranged", "relic"]
+          }
+        ],
+        "enhancement": false,
+        "stacks": "uses",
+        "lasts": "Encounter",
+        "source": "Rulebook p.92"
+      },
+      {
+        "id": "orcish-anger",
+        "name": "Orcish Anger (Expert)",
+        "from": {
+          "kind": "skill",
+          "id": "orcish-anger",
+          "at": "expert"
+        },
+        "who": "self",
+        "life": 10,
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["one-handed", "two-handed", "ranged", "relic"]
+          }
+        ],
+        "enhancement": false,
+        "lasts": "Encounter",
+        "source": "Rulebook p.58"
+      },
+      {
+        "id": "weapon-flourish",
+        "name": "Dance of the Desert",
+        "from": {
+          "kind": "skill",
+          "id": "weapon-flourish",
+          "at": "grandmaster"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 5,
+            "attacks": ["one-handed", "two-handed", "ranged", "relic"]
+          }
+        ],
+        "enhancement": false,
+        "lasts": "Until 20 seconds without attacking",
+        "source": "Rulebook p.21"
+      },
+      {
+        "id": "monster-ken-damage",
+        "name": "Monster Ken trait: Damage",
+        "from": {
+          "kind": "skill",
+          "id": "monster-ken",
+          "at": "expert"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["one-handed", "two-handed", "ranged", "relic"]
+          }
+        ],
+        "enhancement": true,
+        "group": "monster-ken",
+        "lasts": "Until re-pop",
+        "source": "Rulebook p.105-106"
+      },
+      {
+        "id": "chain-lightning",
+        "name": "Chain Lightning",
+        "from": {
+          "kind": "spell",
+          "id": "chain-lightning"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["ranged", "relic"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.118-119"
+      },
+      {
+        "id": "static-charge",
+        "name": "Static Charge",
+        "from": {
+          "kind": "spell",
+          "id": "static-charge"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["ranged", "relic"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.118-119"
+      },
+      {
+        "id": "raging-winds",
+        "name": "Raging Winds",
+        "from": {
+          "kind": "spell",
+          "id": "raging-winds"
+        },
+        "who": "self",
+        "damage": [
+          {
+            "amount": 5,
+            "attacks": ["ranged", "relic"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.118-119"
+      },
+      {
+        "id": "battle-unit",
+        "name": "Battle Unit",
+        "from": {
+          "kind": "skill",
+          "id": "battle-tactics",
+          "at": "basic"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["one-handed", "two-handed", "ranged", "relic"]
+          }
+        ],
+        "enhancement": false,
+        "group": "battle-unit",
+        "lasts": "Encounter, within 15 feet of the founder",
+        "source": "Rulebook p.91"
+      },
+      {
+        "id": "battle-unit-master",
+        "name": "Battle Unit (Master founder)",
+        "from": {
+          "kind": "skill",
+          "id": "battle-tactics",
+          "at": "master"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["one-handed", "two-handed", "ranged", "relic"]
+          }
+        ],
+        "enhancement": false,
+        "group": "battle-unit",
+        "lasts": "Encounter, within 15 feet of the founder",
+        "source": "Rulebook p.91"
+      },
+      {
+        "id": "grant-orc-strength",
+        "name": "Grant Orc Strength",
+        "from": {
+          "kind": "spell",
+          "id": "grant-orc-strength"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["one-handed", "two-handed"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.122"
+      },
+      {
+        "id": "grant-ogre-strength",
+        "name": "Grant Ogre Strength",
+        "from": {
+          "kind": "spell",
+          "id": "grant-ogre-strength"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["one-handed", "two-handed"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.122"
+      },
+      {
+        "id": "group-grant-ogre-strength",
+        "name": "Group Grant Ogre Strength",
+        "from": {
+          "kind": "spell",
+          "id": "group-grant-ogre-strength"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["one-handed", "two-handed", "ranged"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.122"
+      },
+      {
+        "id": "grant-titan-strength",
+        "name": "Grant Titan Strength",
+        "from": {
+          "kind": "spell",
+          "id": "grant-titan-strength"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 5,
+            "attacks": ["one-handed", "two-handed"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Until re-pop or death",
+        "source": "Rulebook p.122"
+      },
+      {
+        "id": "performance-of-battle",
+        "name": "Performance of Battle",
+        "from": {
+          "kind": "performance",
+          "id": "performance-of-battle"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["one-handed", "two-handed", "ranged", "relic"]
+          }
+        ],
+        "enhancement": true,
+        "lasts": "Next encounter",
+        "source": "Rulebook p.109"
+      },
+      {
+        "id": "siphon-strength",
+        "name": "Siphon Strength",
+        "from": {
+          "kind": "spell",
+          "id": "siphon-strength"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 1,
+            "attacks": ["one-handed", "two-handed", "ranged", "relic"]
+          }
+        ],
+        "enhancement": false,
+        "lasts": "Encounter",
+        "note": "One such bonus per person.",
+        "source": "Rulebook p.120-121"
+      },
+      {
+        "id": "pain-venom",
+        "name": "Pain Venom",
+        "from": {
+          "kind": "recipe",
+          "id": "aqua-mortis-pain-venom"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["one-handed", "two-handed"],
+            "fromBehind": true
+          }
+        ],
+        "enhancement": false,
+        "group": "venom",
+        "lasts": "Next encounter",
+        "source": "Rulebook p.134"
+      },
+      {
+        "id": "agony-venom",
+        "name": "Agony Venom",
+        "from": {
+          "kind": "recipe",
+          "id": "aqua-mortis-agony-venom"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 6,
+            "attacks": ["one-handed", "two-handed"],
+            "fromBehind": true
+          }
+        ],
+        "enhancement": false,
+        "group": "venom",
+        "lasts": "Next encounter",
+        "source": "Rulebook p.134"
+      },
+      {
+        "id": "radiance-strengthening-augment",
+        "name": "Radiance Strengthening Augment",
+        "from": {
+          "kind": "recipe",
+          "id": "enchanting-radiance-strengthening-augment"
+        },
+        "who": "given",
+        "damage": [
+          {
+            "amount": 2,
+            "attacks": ["one-handed"]
+          },
+          {
+            "amount": 3,
+            "attacks": ["two-handed"]
+          }
+        ],
+        "enhancement": false,
+        "lasts": "Encounter",
+        "note": "With the Radiance Magic passive; one at a time.",
+        "source": "Rulebook p.151-152"
+      }
+    ]
+  },
+  "sources": {
+    "xp.start": "Rulebook p.10, p.16",
+    "xp.perEvent": "Rulebook p.10",
+    "xp.earnedCap": "Rulebook p.10",
+    "cxp.start": "Rulebook p.11",
+    "cxp.perEvent": "Rulebook p.11",
+    "axp.start": "Rulebook p.11",
+    "axp.perEvent": "Rulebook p.11, p.80",
+    "skills.costPerLevel": "Rulebook p.16, p.86",
+    "skills.namedLevels": "Rulebook p.16, p.86",
+    "skills.usesPerAbility": "Rulebook p.86",
+    "skills.racialSkillsSameCost": "Rulebook p.17",
+    "creation.startingXp": "Rulebook p.16",
+    "creation.maxSkillLevel": "Rulebook p.16",
+    "creation.maxTechnique": "Rulebook p.16",
+    "creation.startingEquipmentPicks": "Rulebook p.18",
+    "creation.minAgeCategory": "Rulebook p.64",
+    "creation.maxAgeCategory": "Rulebook p.64",
+    "creation.garbEnforcedByEvent": "Rulebook p.9, p.15",
+    "events.repopsPerEvent": "Rulebook p.13",
+    "events.sessions": "Rulebook p.13",
+    "events.ibgaPerGap": "Rulebook p.13",
+    "events.ibgaDeadlineDaysBefore": "Rulebook p.13",
+    "events.checkoutFormDue": "Rulebook p.8",
+    "events.checkInSteps": "Rulebook p.7",
+    "upkeep.silverPerEvent": "Rulebook p.7",
+    "upkeep.firstEventFree": "Rulebook p.7",
+    "upkeep.modifiers": "Rulebook p.7",
+    "coins.copperPerSilver": "Rulebook p.71",
+    "coins.silverPerGold": "Rulebook p.71",
+    "body.baseLifePoints": "Rulebook p.68, p.76",
+    "body.baseArmorPoints": "Rulebook p.70, p.76",
+    "body.spiritFragmentsStart": "Rulebook p.68, p.77",
+    "body.spiritFragmentsMax": "Rulebook p.78",
+    "body.unconsciousMinutes": "Rulebook p.76",
+    "body.bleedOutSeconds": "Rulebook p.77",
+    "body.deathCountMinutes": "Rulebook p.77",
+    "body.raiseLifeFraction": "Rulebook p.77",
+    "body.spiritFragmentLossAfterDeathCount": "Rulebook p.77",
+    "body.refitCount": "Rulebook p.69, p.70",
+    "body.killingBlowCount": "Rulebook p.69",
+    "body.hastenMinCount": "Rulebook p.70",
+    "caps.passiveDamage": "Rulebook p.76, p.86",
+    "caps.healableLifePoints": "Rulebook p.86, p.87",
+    "caps.temporaryLifePoints": "Rulebook p.87",
+    "caps.refittableArmorPoints": "Rulebook p.87",
+    "caps.temporaryArmorPoints": "Rulebook p.87",
+    "caps.skillRenewalsPerEncounter": "Rulebook p.71, p.72",
+    "slots.enhancement": "Rulebook p.78",
+    "slots.attunement": "Rulebook p.79",
+    "slots.greaterBoon": "Rulebook p.79",
+    "slots.lesserBoon": "Rulebook p.79",
+    "slots.attunementMinutes": "Rulebook p.79",
+    "slots.augmentSlotsByQuality": "Rulebook p.71",
+    "familiarization.maxLocations": "Rulebook p.85",
+    "familiarization.fixedLocation": "Rulebook p.85",
+    "familiarization.minutesToFamiliarize": "Rulebook p.85",
+    "relic.baseDamage": "Rulebook p.65",
+    "relic.damageByElement": "Rulebook p.66",
+    "racialInnateMinMinutesBetweenUses": "Rulebook p.65",
+    "artifact.minXpEarned": "Rulebook p.80",
+    "artifact.awakenCostAxp": "Rulebook p.80",
+    "artifact.slotCostAxp": "Rulebook p.80",
+    "artifact.maxSlots": "Rulebook p.80",
+    "xp.earnedCapIncludesStart": "Rulebook p.10 (Q-PTS-7 default)",
+    "cxp.earnedCap": "Rulebook p.10; Callings p.2 (Q-CALL-1 default: 2 x (275 + 30))",
+    "skills.maxLevel": "Rulebook p.86",
+    "skills.techniques": "Rulebook p.17, p.86",
+    "skills.advancedPrereqTechnique": "Rulebook p.115, p.132 (Q-MAG-1, Q-CRF-1 default)",
+    "caps.passiveDamageFromBehind": "Rulebook p.76, p.86",
+    "caps.passiveDamageWeakened": "Rulebook p.76",
+    "creation.defaultAgeCategory": "Rulebook p.64 (Q-RACE-AGE-1 default)",
+    "creation.literacyChoice": "Rulebook p.64",
+    "languages": "Rulebook p.64",
+    "magicSchools": "Rulebook p.110",
+    "familiarization.fixedLocationCountsTowardMax": "Rulebook p.85 (Q-PLAY-8 default)",
+    "calling": "Callings p.2, p.3; Rulebook p.87",
+    "artifact.maxPerPc": "Rulebook p.79",
+    "retirement": "Rulebook p.63 (Q-RET-1, Q-RET-2, Q-RET-5 defaults)",
+    "townBuildings": "Rulebook p.162 to 167",
+    "combat.weapons": "Rulebook p.155 (damage types p.66)",
+    "combat.armorPhysRep": "Rulebook p.157 (Q-RACE-3 default for Clockwork)",
+    "combat.buffs": "Each buff gives its own page; Enhancement Slots p.78 (only the largest numeric enhancement counts)"
+  },
+  "notes": {
+    "xp.perEvent": "per full event, credited at check-in, shown after the event",
+    "skills.costPerLevel": "level n costs 5n XP; levels 1 to 10 bought in order",
+    "skills.racialSkillsSameCost": "p.17 example: Dwarf racial skill to Expert plus Expert Technique = 35 XP",
+    "creation.maxSkillLevel": "advice: not above 3; includes racial skills",
+    "body.unconsciousMinutes": "wake with 1 Life Point",
+    "caps.skillRenewalsPerEncounter": "or 5 per hour outside encounters",
+    "familiarization.maxLocations": "includes the locked tavern (assumed, Q-PLAY-8)",
+    "cxp.earnedCap": "One full Calling: two skills at level 10 (275 CXP each) plus three Techniques (30 CXP each).",
+    "townBuildings": "Game-wide, not per character. Housing caps re-pop recovery (3/6/10 uses), Hunters' Lodge raises MT spend cap, Town Hall changes upkeep, Tavern Grandmaster frees a familiarization spot. Store as optional ruleset settings, not on the sheet. (Q-PLAY-11 default: off.)",
+    "retirement": "XP: (earned XP - 150) x 0.25. CXP: 50%. AXP: 25%. Goods: 25% of market value, then minus 50 Copper (minimum 0). All rounded down."
+  },
+  "source": "Rulebook V1.3.1"
+}

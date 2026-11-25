@@ -4,6 +4,7 @@ import { deriveSheet, loadRuleset, plan, type Ruleset } from '../../../engine/in
 import { BASE_CHARACTER, harness } from '../../../engine/testkit.ts';
 import {
   copyableEntries,
+  eventsEstimateText,
   overspendText,
   parsePointsChange,
   pointsChangeCommand,
@@ -165,5 +166,40 @@ describe('overspendText', () => {
         '(100 Shinies for 1 PXP, 1 purchase an event).',
     );
     expect(overspendText(ruleset, 'pxp', 1)).toContain('1 hour of NPCing');
+  });
+});
+
+describe('eventsEstimateText', () => {
+  const ruleset = loadRuleset();
+  function over(cxp: number, pxp: number) {
+    const h = harness();
+    h.run({ ...BASE_CHARACTER });
+    const p = h.sheet().points;
+    h.run({ type: 'adjustPoints', currency: 'cxp', amount: -(p.cxp.available + cxp), reason: 'x' });
+    if (pxp > 0)
+      h.run({
+        type: 'adjustPoints',
+        currency: 'pxp',
+        amount: -(p.pxp.available + pxp),
+        reason: 'x',
+      });
+    return h.sheet();
+  }
+
+  it('is null when nothing is overspent', () => {
+    expect(eventsEstimateText(ruleset, over(0, 0))).toBeNull();
+  });
+
+  it('CXP: events at the event CXP', () => {
+    expect(eventsEstimateText(ruleset, over(5, 0))).toBe(
+      'Over: about 1 more event would earn this build (75 CXP an event).',
+    );
+  });
+
+  it('both: the currency that needs the most events, with both rates', () => {
+    expect(eventsEstimateText(ruleset, over(5, 7))).toBe(
+      'Over: about 2 more events would earn this build (75 CXP an event; up to 6 PXP an event ' +
+        'from NPCing and Shinies).',
+    );
   });
 });

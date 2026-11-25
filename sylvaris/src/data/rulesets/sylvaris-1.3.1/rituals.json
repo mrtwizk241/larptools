@@ -1,0 +1,246 @@
+{
+  "rules": {
+    "usesByLevel": {
+      "basic": 1,
+      "expert": 2,
+      "master": 3,
+      "grandmaster": 4
+    },
+    "castMinutesPerNamedLevel": 10,
+    "requiredTechniqueInEachMagic": "expert",
+    "consumesRitualScript": true,
+    "enhancementNote": "Rituals that grant abilities take one of the target's Enhancement Slots.",
+    "source": "Rulebook p.126"
+  },
+  "rituals": [
+    {
+      "id": "planar-commune",
+      "name": "Planar Commune",
+      "level": "basic",
+      "uses": 1,
+      "castMinutes": 10,
+      "requiredMagicRule": "planar-chart",
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "Ask one of the six Primary Planes or a Planar Realm for insight on a planned action.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "planar-asylum",
+      "name": "Planar Asylum",
+      "level": "basic",
+      "uses": 1,
+      "castMinutes": 10,
+      "requiredMagicRule": "planar-chart",
+      "requiredTechnique": "expert",
+      "enhancement": true,
+      "summary": "Gives the target Planar Asylum for one Plane.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "unlearn",
+      "name": "Unlearn",
+      "level": "basic",
+      "uses": 1,
+      "castMinutes": 10,
+      "requiredMagic": ["death-magic", "fire-magic"],
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "Target removes the top level of one chosen skill and gets back the XP spent on it.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "planar-gate",
+      "name": "Planar Gate",
+      "level": "expert",
+      "uses": 2,
+      "castMinutes": 20,
+      "requiredMagicRule": "planar-chart",
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "Open a 10 ft Gate to a Primary Plane or Planar Realm for up to 10 minutes.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "race-change",
+      "name": "Race Change",
+      "level": "expert",
+      "uses": 2,
+      "castMinutes": 20,
+      "requiredMagic": ["air-magic", "fire-magic"],
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "Target becomes another base race from the rulebook; racial skills are unlearned automatically.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "ritual-circle",
+      "name": "Ritual Circle",
+      "level": "expert",
+      "uses": 2,
+      "castMinutes": 20,
+      "requiredMagic": ["air-magic", "earth-magic", "water-magic"],
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "10 ft circle that can be the target of later rituals this re-pop; up to 10 occupants all count as targets. One wall or circle at a time; needs a phys rep.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "healers-grace",
+      "name": "Healer's Grace",
+      "level": "master",
+      "uses": 3,
+      "castMinutes": 30,
+      "requiredMagic": ["earth-magic", "life-magic"],
+      "requiredTechnique": "expert",
+      "enhancement": true,
+      "summary": "Target holds a healing pool up to 10 x their Healing or Life Magic level, starting empty. Charge only in a safe place with numeric healing; release by touch, packet, or weapon in 5 point steps. Lasts to re-pop.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "summon-planar-creature",
+      "name": "Summon Planar Creature",
+      "level": "master",
+      "uses": 3,
+      "castMinutes": 30,
+      "requiredMagicRule": "planar-chart",
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "aliases": ["Summon Elemental"],
+      "summary": "Summon a standard creature of a plane for a task of at most one month that does not endanger it. It may join an adventure if the ritualist supplies a player; rough stats 100 soak, 10 damage, 2 absolute defenses, 3 basic offenses/skills/spells.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "transfer-augment",
+      "name": "Transfer Augment",
+      "level": "master",
+      "uses": 3,
+      "castMinutes": 30,
+      "requiredMagic": ["air-magic", "earth-magic", "water-magic"],
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "Move one Augment between items if the target item has room; some Augments cannot move (ask a GM first).",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "knowledge-of-valtherin",
+      "name": "Knowledge of Val'Therin",
+      "level": "grandmaster",
+      "uses": 4,
+      "castMinutes": 40,
+      "requiredMagic": ["air-magic", "earth-magic", "water-magic"],
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "Target regains two uses of each of their Basic skills.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "spirit-forge",
+      "name": "Spirit Forge",
+      "level": "grandmaster",
+      "uses": 4,
+      "castMinutes": 40,
+      "requiredMagic": ["death-magic", "fire-magic", "life-magic"],
+      "requiredTechnique": "expert",
+      "enhancement": false,
+      "summary": "Target goes back to character creation with all XP unspent.",
+      "source": "Rulebook p.126-128"
+    },
+    {
+      "id": "elemental-imbuement",
+      "name": "Elemental Imbuement",
+      "level": "grandmaster",
+      "uses": 4,
+      "castMinutes": 40,
+      "requiredMagicRule": "imbued-element",
+      "requiredTechnique": "expert",
+      "enhancement": true,
+      "elementBonus": {
+        "air": "Each encounter: Levitate, plus one Evade or Blink use.",
+        "death": "Each encounter starts with Enshroud Life and 25 Temporary Armor Points.",
+        "earth": "Each encounter starts with one Strength use; also +1 passive weapon or claw damage that stacks with other passive damage.",
+        "fire": "Elemental pool is doubled at the start of each encounter.",
+        "life": "Each encounter starts with 25 Temporary Life Points; the Essence pool can become healing at 2:1.",
+        "water": "Water Breathing and +1 passive relic damage (stacks with other passive relic damage)."
+      },
+      "summary": "One imbuement at a time. Target becomes a relic of the element or swings it with any weapon for the re-pop, gets a 100 point elemental pool per encounter (10 point throws or swings), is Reduced against that element, and gains an element bonus (see elementBonus).",
+      "source": "Rulebook p.126-128"
+    }
+  ],
+  "planarChart": [
+    {
+      "id": "elements",
+      "name": "Elements",
+      "requiredMagic": ["air-magic", "earth-magic", "fire-magic", "water-magic"]
+    },
+    {
+      "id": "air",
+      "name": "Air",
+      "parent": "elements",
+      "requiredMagic": ["air-magic"]
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "parent": "elements",
+      "requiredMagic": ["earth-magic"]
+    },
+    {
+      "id": "fire",
+      "name": "Fire",
+      "parent": "elements",
+      "requiredMagic": ["fire-magic"]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "parent": "elements",
+      "requiredMagic": ["water-magic"]
+    },
+    {
+      "id": "ethereal",
+      "name": "Ethereal",
+      "requiredMagic": ["death-magic", "life-magic"]
+    },
+    {
+      "id": "death",
+      "name": "Death",
+      "parent": "ethereal",
+      "requiredMagic": ["death-magic"]
+    },
+    {
+      "id": "life",
+      "name": "Life",
+      "parent": "ethereal",
+      "requiredMagic": ["life-magic"]
+    },
+    {
+      "id": "fortune",
+      "name": "Fortune",
+      "requiredMagic": ["air-magic", "death-magic"]
+    },
+    {
+      "id": "magic",
+      "name": "Magic",
+      "requiredMagic": ["fire-magic", "water-magic"]
+    },
+    {
+      "id": "creation",
+      "name": "Creation",
+      "requiredMagic": ["earth-magic", "life-magic"]
+    },
+    {
+      "id": "nature",
+      "name": "Nature",
+      "requiredMagic": ["air-magic", "earth-magic"]
+    },
+    {
+      "id": "unlisted-realm",
+      "name": "Unlisted Realm",
+      "requiredMagic": [],
+      "requiredMagicVaries": true,
+      "note": "Varies by realm; usually the matching plane's magic plus one more."
+    }
+  ],
+  "planarChartSource": "Rulebook p.128"
+}

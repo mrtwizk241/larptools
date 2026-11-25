@@ -48,6 +48,7 @@ export function TestBuildBanner({ view }: { view: CharacterView }) {
     setAmountError(undefined);
     const result = await command.run(pointsChangeCommand(currency, value), {
       success: pointsChangeText(currency, value),
+      undo: pointsChangeCommand(currency, -value),
     });
     if (result.ok) setAmount('');
   }

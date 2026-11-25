@@ -1,0 +1,76 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.body {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.main {
+  min-width: 0;
+  padding: var(--space-4);
+}
+
+/* Focus target for the skip link and route changes, not a control: no ring around the page. */
+.main:focus {
+  outline: none;
+}
+
+/* Skip link: hidden until it has keyboard focus, then shown over the header's top left. */
+.skip {
+  position: absolute;
+  z-index: var(--z-toast);
+  top: var(--space-2);
+  left: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0 var(--space-4);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-weight: var(--weight-semibold);
+  transform: translateY(calc(-100% - var(--space-4)));
+}
+
+.skip:focus {
+  transform: none;
+}
+
+/* Room for the fixed bottom bar on phones. */
+@media (max-width: 899.98px) {
+  .withNav {
+    padding-bottom: calc(var(--nav-height) + env(safe-area-inset-bottom));
+  }
+}
+
+/* Desktop: rail beside the content. */
+@media (min-width: 900px) {
+  .withNav .body {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-4);
+    max-width: calc(var(--content-max) + 96px + var(--space-4));
+    padding-left: var(--space-4);
+  }
+
+  /* The nav follows main in the DOM; draw the rail on the left. */
+  .withNav .body > [data-bottom-nav] {
+    order: -1;
+  }
+
+  .main {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .withNav .main {
+    padding-left: 0;
+  }
+}

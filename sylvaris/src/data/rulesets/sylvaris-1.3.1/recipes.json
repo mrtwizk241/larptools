@@ -1,0 +1,4556 @@
+[
+  {
+    "id": "alchemy-cure-wounds-potion",
+    "name": "Cure Wounds Potion",
+    "craft": "alchemy",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Drinker heals 10 Life Points.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-jump-potion",
+    "name": "Jump Potion",
+    "craft": "alchemy",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "One 50 ft horizontal or 20 ft vertical leap; not usable in combat.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-remove-charm-potion",
+    "name": "Remove Charm Potion",
+    "craft": "alchemy",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Removes all rulebook Charm effects from the drinker.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-slow-death-potion",
+    "name": "Slow Death Potion",
+    "craft": "alchemy",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Bleed-out timer becomes 90 seconds for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-toughness-potion",
+    "name": "Toughness Potion",
+    "craft": "alchemy",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Grants 20 more Life Points until the re-pop ends.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-water-breathing-potion",
+    "name": "Water Breathing Potion",
+    "craft": "alchemy",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "The drinker can breathe water until the re-pop ends.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-cloud-walk-potion",
+    "name": "Cloud Walk Potion",
+    "craft": "alchemy",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Levitate spell effect for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-grant-strength-potion",
+    "name": "Grant Strength Potion",
+    "craft": "alchemy",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Rip free from Pin and Web on a 3 count for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-lesser-armor-potion",
+    "name": "Lesser Armor Potion",
+    "craft": "alchemy",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "+25 Temporary Armor Points.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-liquid-courage-potion",
+    "name": "Liquid Courage Potion",
+    "craft": "alchemy",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Remove Fear on yourself with a 3 count for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-potion-of-boon-element",
+    "name": "Potion of Boon Element",
+    "craft": "alchemy",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Choose an element on use: one use of the Resist Elements Expert Technique for it.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-alchemical-amplification-additive",
+    "name": "Alchemical Amplification Additive",
+    "craft": "alchemy",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Added to a potion, Amplifies it for up to 10 minutes: doubles its number, or its uses if it has no number. Not usable on Additives.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-alchemical-diffuser-additive",
+    "name": "Alchemical Diffuser Additive",
+    "craft": "alchemy",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Added to a potion, makes it affect a group. Not usable on Additives.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-potion-of-element-reduction",
+    "name": "Potion of Element Reduction",
+    "craft": "alchemy",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Reduce Effect against all numeric effects of one element (chosen on use) for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-potion-of-uninhibited-movement",
+    "name": "Potion of Uninhibited Movement",
+    "craft": "alchemy",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Until the re-pop ends, a 3 count shakes off any movement-impairing effect.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-potion-of-warding",
+    "name": "Potion of Warding",
+    "craft": "alchemy",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Counted Actions cannot be interrupted except by moving or a Killing Blow, for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-potion-of-invigoration",
+    "name": "Potion of Invigoration",
+    "craft": "alchemy",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Immunity to Drain for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-potion-of-mental-acuity",
+    "name": "Potion of Mental Acuity",
+    "craft": "alchemy",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "+2 levels in a skill you already know (as the Knowledge skill) for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-potion-of-timeless-form",
+    "name": "Potion of Timeless Form",
+    "craft": "alchemy",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Immunity to Aging for the re-pop.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-raise-dead-potion",
+    "name": "Raise Dead Potion",
+    "craft": "alchemy",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Drinker receives a Raise Dead.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "alchemy-steel-skin-potion",
+    "name": "Steel Skin Potion",
+    "craft": "alchemy",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "+50 Temporary Armor Points.",
+    "source": "Rulebook p.133"
+  },
+  {
+    "id": "aqua-mortis-acid-vial",
+    "name": "Acid Vial",
+    "craft": "aqua-mortis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Packet: Lash 25 Acid.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-ignore-venom",
+    "name": "Ignore Venom",
+    "craft": "aqua-mortis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["gas-packet", "paste"],
+    "summary": "Gas packet (Charm Ignore Venom) or weapon paste (X Charm Ignore Venom).",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-minor-venom",
+    "name": "Minor Venom",
+    "craft": "aqua-mortis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Next weapon attack deals +25 Vorpal Venom.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-pain-venom",
+    "name": "Pain Venom",
+    "craft": "aqua-mortis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Paste: +2 passive damage from behind for the next encounter.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-weakness-venom",
+    "name": "Weakness Venom",
+    "craft": "aqua-mortis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["gas-packet", "paste"],
+    "summary": "Gas packet (Weakness Venom) or weapon paste (X Weakness Venom).",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-deadly-venom",
+    "name": "Deadly Venom",
+    "craft": "aqua-mortis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Next weapon attack deals +50 Vorpal Venom.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-elemental-paste",
+    "name": "Elemental Paste",
+    "craft": "aqua-mortis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Weapon deals one element for the encounter: air, earth, essence, fire, harm, or water (chosen when crafted).",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-greater-acid-vial",
+    "name": "Greater Acid Vial",
+    "craft": "aqua-mortis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Packet: Lash 50 Acid.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-sleep-venom",
+    "name": "Sleep Venom",
+    "craft": "aqua-mortis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["gas-packet", "paste"],
+    "summary": "Gas packet (Sleep Venom) or weapon paste (X Sleep Venom).",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-venom-thickener",
+    "name": "Venom Thickener",
+    "craft": "aqua-mortis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Adds +1 attack to a limited-use venom already on a weapon.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-agony-venom",
+    "name": "Agony Venom",
+    "craft": "aqua-mortis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Paste: +6 passive damage from behind for the next encounter.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-anti-lock-acid",
+    "name": "Anti-Lock Acid",
+    "craft": "aqua-mortis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Lowers a lock's level by one.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-magic-paste",
+    "name": "Magic Paste",
+    "craft": "aqua-mortis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Weapon deals Magic damage for an encounter.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-silence-venom",
+    "name": "Silence Venom",
+    "craft": "aqua-mortis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["gas-packet", "paste"],
+    "summary": "Gas packet (Silence Venom) or weapon paste (X Silence Venom).",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-slay-venom",
+    "name": "Slay Venom",
+    "craft": "aqua-mortis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Next weapon attack deals Slay Venom.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-bleed-venom",
+    "name": "Bleed Venom",
+    "craft": "aqua-mortis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Next weapon attack deals Bleed Venom.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-destruction-venom",
+    "name": "Destruction Venom",
+    "craft": "aqua-mortis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["gas-packet", "paste"],
+    "summary": "Gas packet (Destruction Venom) or weapon paste (X Destruction Venom).",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-diffusion-globe",
+    "name": "Diffusion Globe",
+    "craft": "aqua-mortis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Combined with a venom gas, makes it a Lash.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-major-thickener",
+    "name": "Major Thickener",
+    "craft": "aqua-mortis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Adds +2 attacks to a limited-use venom already on a weapon.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "aqua-mortis-race-reaver-venom",
+    "name": "Race Reaver Venom",
+    "craft": "aqua-mortis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["paste"],
+    "summary": "Next weapon attack deals <Race> Death, Death; race set when crafted.",
+    "source": "Rulebook p.134"
+  },
+  {
+    "id": "armorsmithing-create-basic-armor",
+    "name": "Create Basic Armor",
+    "craft": "armorsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 1,
+    "itemType": "armor-or-shield",
+    "summary": "Basic suit of armor or shield with 1 Augment Slot.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-intercept-augment",
+    "name": "Intercept Augment",
+    "craft": "armorsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["intercept"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Intercept.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-rally-augment",
+    "name": "Rally Augment",
+    "craft": "armorsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["rally"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Rally.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-set-armor-augment",
+    "name": "Set Armor Augment",
+    "craft": "armorsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "insert",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Set an existing armor or shield Augment into an open slot of that armor or shield.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-taunt-augment",
+    "name": "Taunt Augment",
+    "craft": "armorsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["taunt"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Taunt.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-concentration-augment",
+    "name": "Concentration Augment",
+    "craft": "armorsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: do one Counted Action on yourself while moving.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-create-expert-armor",
+    "name": "Create Expert Armor",
+    "craft": "armorsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 2,
+    "itemType": "armor-or-shield",
+    "summary": "Makes an Expert armor suit or shield (2 Augment Slots).",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-delay-effect-augment",
+    "name": "Delay Effect Augment",
+    "craft": "armorsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["delay-effect"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Delay Effect.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-toughness-augment",
+    "name": "Toughness Augment",
+    "craft": "armorsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["toughness"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Toughness.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-wear-armor-augment",
+    "name": "Wear Armor Augment",
+    "craft": "armorsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["wear-armor"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Wear Armor.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-create-master-armor",
+    "name": "Create Master Armor",
+    "craft": "armorsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 3,
+    "itemType": "armor-or-shield",
+    "summary": "Makes a Master armor suit or shield (3 Augment Slots).",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-deflection-augment",
+    "name": "Deflection Augment",
+    "craft": "armorsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["deflection"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Deflection.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-evasion-augment",
+    "name": "Evasion Augment",
+    "craft": "armorsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["evasion"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Evasion.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-feign-death-augment",
+    "name": "Feign Death Augment",
+    "craft": "armorsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: appear dead through a 5 minute Death Count without losing Enhancements, immune to all effects; ends early if you move, talk, or choose to.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-resilience-augment",
+    "name": "Resilience Augment",
+    "craft": "armorsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["resilience"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Resilience.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-surge-shield-augment",
+    "name": "Surge Shield Augment",
+    "craft": "armorsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["surge-shield"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Surge Shield.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-battle-tactics-augment",
+    "name": "Battle Tactics Augment",
+    "craft": "armorsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["battle-tactics"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Battle Tactics.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-create-grandmaster-armor",
+    "name": "Create Grandmaster Armor",
+    "craft": "armorsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 4,
+    "itemType": "armor-or-shield",
+    "summary": "Makes a Grandmaster armor suit or shield (4 Augment Slots).",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-defensive-stance-augment",
+    "name": "Defensive Stance Augment",
+    "craft": "armorsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["defensive-stance"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Defensive Stance.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-endurance-augment",
+    "name": "Endurance Augment",
+    "craft": "armorsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["endurance"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Endurance.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-energy-absorption-augment",
+    "name": "Energy Absorption Augment",
+    "craft": "armorsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["energy-absorption"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Energy Absorption.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-rapid-refit-augment",
+    "name": "Rapid Refit Augment",
+    "craft": "armorsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["armor", "shield", "clothing", "jewelry", "tool", "relic"],
+    "summary": "Once-ever Augment: one armor refit on a 3 count. Not for weapons.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "armorsmithing-stalwart-augment",
+    "name": "Stalwart Augment",
+    "craft": "armorsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["shield"],
+    "summary": "Once-ever Augment, shields only: for the encounter, call Reduced when a Crush effect hits the shield.",
+    "source": "Rulebook p.135-136"
+  },
+  {
+    "id": "herbalism-bandage-of-barkskin",
+    "name": "Bandage of Barkskin",
+    "craft": "herbalism",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "Recipient gains 20 Armor Points.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-bandage-of-feral-instinct",
+    "name": "Bandage of Feral Instinct",
+    "craft": "herbalism",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "Recipient gains claws matching their dual wield ability, or a bite (Greatclaw rep); they supply the phys rep.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-bandage-of-scenting",
+    "name": "Bandage of Scenting",
+    "craft": "herbalism",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "Tracking +1 level for the re-pop; only one at a time.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-invigorating-salve",
+    "name": "Invigorating Salve",
+    "craft": "herbalism",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["salve"],
+    "summary": "Removes the Drained condition.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-purifying-salve",
+    "name": "Purifying Salve",
+    "craft": "herbalism",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["salve"],
+    "summary": "Removes all negative rulebook status effects; may cleanse corrupted flora and fauna at GM discretion.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-bandage-of-bolstered-life",
+    "name": "Bandage of Bolstered Life",
+    "craft": "herbalism",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "+50 Temporary Life Points.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-bandage-of-feral-enhancement",
+    "name": "Bandage of Feral Enhancement",
+    "craft": "herbalism",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "Claw and Bite attacks deal Nature for the re-pop.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-bandage-of-feral-resilience",
+    "name": "Bandage of Feral Resilience",
+    "craft": "herbalism",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "For the re-pop, call Reduced against Claw or Bite damage.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-enhancement-ingredient",
+    "name": "Enhancement Ingredient",
+    "craft": "herbalism",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["ingredient"],
+    "summary": "Eater gains a Regular Enhancement Slot.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-ingredient-of-quickened-healing",
+    "name": "Ingredient of Quickened Healing",
+    "craft": "herbalism",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["ingredient"],
+    "summary": "Healing Counted Actions on you are Hastened for the re-pop, or spend it to make one Healing action a 3 count.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-bandage-of-invigoration",
+    "name": "Bandage of Invigoration",
+    "craft": "herbalism",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "Corruption has no effect on the target until the re-pop ends.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-bandage-of-regenerate",
+    "name": "Bandage of Regenerate",
+    "craft": "herbalism",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "Regenerate effect: heal 100 Life Points, restore limbs, remove aging.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-chameleon-skin-bandage",
+    "name": "Chameleon Skin Bandage",
+    "craft": "herbalism",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["bandage"],
+    "summary": "Without Hide: Hide on a 5 count in the wilderness for the re-pop. With Hide: Hide counts Hastened, the Expert Hide passive, and double Hop distance.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-greater-enhancement-ingredient",
+    "name": "Greater Enhancement Ingredient",
+    "craft": "herbalism",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["ingredient"],
+    "summary": "Eater gains an Amplified Life Enhancement Slot.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-ingredient-of-amplify-healing",
+    "name": "Ingredient of Amplify Healing",
+    "craft": "herbalism",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["ingredient"],
+    "summary": "Amplified Healing Enhancement: all healing on you doubled for the re-pop; one at a time.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-candle-of-barkskin",
+    "name": "Candle of Barkskin",
+    "craft": "herbalism",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["candle"],
+    "summary": "Everyone in the room gains +20 Armor Points.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-candle-of-bolstered-life",
+    "name": "Candle of Bolstered Life",
+    "craft": "herbalism",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["candle"],
+    "summary": "Everyone in the room gains +50 Temporary Life Points.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-candle-of-inspiration",
+    "name": "Candle of Inspiration",
+    "craft": "herbalism",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["candle"],
+    "summary": "Everyone in the room renews one use of a skill.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-candle-of-raging-ferocity",
+    "name": "Candle of Raging Ferocity",
+    "craft": "herbalism",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "form": ["candle"],
+    "summary": "Raging Ferocity Enhancement for the re-pop: Aggression and Back Strike uses count one level higher; no spellcasting while it lasts.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "herbalism-candle-of-restoration",
+    "name": "Candle of Restoration",
+    "craft": "herbalism",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "form": ["candle"],
+    "summary": "Removes Drained and Diseased and heals all missing Life Points for everyone in the room.",
+    "source": "Rulebook p.137-138"
+  },
+  {
+    "id": "mystic-weaving-create-basic-clothing",
+    "name": "Create Basic Clothing",
+    "craft": "mystic-weaving",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 1,
+    "itemType": "clothing",
+    "summary": "Clothing item with 1 Augment Slot; type of clothing named when crafted.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-magic-manipulation-augment",
+    "name": "Magic Manipulation Augment",
+    "craft": "mystic-weaving",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["manipulate-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Manipulate Magic.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-research-augment",
+    "name": "Research Augment",
+    "craft": "mystic-weaving",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["research"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Research. Not for weapons or armor.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-set-weaving-augment",
+    "name": "Set Weaving Augment",
+    "craft": "mystic-weaving",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "insert",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Set an existing clothing Augment into an open slot of that clothing.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-spell-storing-augment",
+    "name": "Spell Storing Augment",
+    "craft": "mystic-weaving",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment giving one level of Spell Storing; charge by touch-casting a spell (one storing level per spell level), release as Focus Cast or Spellstrike, which destroys it. Empties at event end. Made reusable via Enchanting it is not destroyed.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-create-expert-clothing",
+    "name": "Create Expert Clothing",
+    "craft": "mystic-weaving",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 2,
+    "itemType": "clothing",
+    "summary": "Clothing item with 2 Augment Slots; type named when crafted.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-air-magic-augment",
+    "name": "Air Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["air-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Air Magic.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-earth-magic-augment",
+    "name": "Earth Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["earth-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Earth Magic.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-fire-magic-augment",
+    "name": "Fire Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["fire-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Fire Magic.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-water-magic-augment",
+    "name": "Water Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["water-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Water Magic.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-create-master-clothing",
+    "name": "Create Master Clothing",
+    "craft": "mystic-weaving",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 3,
+    "itemType": "clothing",
+    "summary": "Clothing item with 3 Augment Slots; type named when crafted.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-destruction-magic-augment",
+    "name": "Destruction Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["destruction-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Destruction Magic. Advanced skill: owner must know it.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-time-magic-augment",
+    "name": "Time Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["time-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Time Magic. Advanced skill: owner must know it.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-nature-magic-augment",
+    "name": "Nature Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["nature-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Nature Magic. Advanced skill: owner must know it.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-protection-magic-augment",
+    "name": "Protection Magic Augment",
+    "craft": "mystic-weaving",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["protection-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Protection Magic. Advanced skill: owner must know it.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-create-grandmaster-clothing",
+    "name": "Create Grandmaster Clothing",
+    "craft": "mystic-weaving",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 4,
+    "itemType": "clothing",
+    "summary": "Clothing item with 4 Augment Slots; type named when crafted.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-element-changing-augment",
+    "name": "Element Changing Augment",
+    "craft": "mystic-weaving",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: change one spell's base element to another base element.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-mana-augment",
+    "name": "Mana Augment",
+    "craft": "mystic-weaving",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": [
+      "air-magic",
+      "death-magic",
+      "earth-magic",
+      "fire-magic",
+      "life-magic",
+      "water-magic"
+    ],
+    "summary": "Once-ever Augment: one use of any one of the six base magics.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-planar-asylum-augment",
+    "name": "Planar Asylum Augment",
+    "craft": "mystic-weaving",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: Planar Asylum to one Plane (set when crafted) for the re-pop.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "mystic-weaving-planar-portal-augment",
+    "name": "Planar Portal Augment",
+    "craft": "mystic-weaving",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: let a Portal or rift cross planar boundaries as it opens.",
+    "source": "Rulebook p.139-140"
+  },
+  {
+    "id": "relic-crafting-create-basic-relic",
+    "name": "Create Basic Relic",
+    "craft": "relic-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 1,
+    "itemType": "relic",
+    "summary": "Relic of a chosen element (Air, Death, Earth, Fire, Life, Water) with 1 Augment Slot; base damage 2 Physical <element> (Death is Harm, Life is Essence).",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-create-basic-spell-copy-or-scroll-paper",
+    "name": "Create Basic Spell Copy or Scroll Paper",
+    "craft": "relic-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "spellLevelMax": "basic",
+    "summary": "A Basic Spell Copy for a Spellbook (needs a copy or Research Notes to work from), or Basic Scroll Paper that absorbs the next unmodified Basic spell touch-cast into it.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-healing-augment",
+    "name": "Healing Augment",
+    "craft": "relic-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["healing"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Healing.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-insert-relic-augment",
+    "name": "Insert Relic Augment",
+    "craft": "relic-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "insert",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Set an existing Relic Augment into an open Relic slot, or place a Spell Copy into a Spellbook.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-knowledge-augment",
+    "name": "Knowledge Augment",
+    "craft": "relic-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["knowledge"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Knowledge.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-create-expert-spell-copy-or-scroll-paper",
+    "name": "Create Expert Spell Copy or Scroll Paper",
+    "craft": "relic-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "spellLevelMax": "expert",
+    "summary": "An Expert Spell Copy, or Expert Scroll Paper that absorbs the next unmodified spell of Expert level or lower.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-death-magic-augment",
+    "name": "Death Magic Augment",
+    "craft": "relic-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["death-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Death Magic.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-create-expert-relic",
+    "name": "Create Expert Relic",
+    "craft": "relic-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 2,
+    "itemType": "relic",
+    "summary": "Relic of a chosen element with 2 Augment Slots.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-life-magic-augment",
+    "name": "Life Magic Augment",
+    "craft": "relic-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["life-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Life Magic.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-relic-proficiency-augment",
+    "name": "Relic Proficiency Augment",
+    "craft": "relic-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["relic-proficiency"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Relic Proficiency.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-create-master-spell-copy-or-scroll-paper",
+    "name": "Create Master Spell Copy or Scroll Paper",
+    "craft": "relic-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "spellLevelMax": "master",
+    "summary": "A Master Spell Copy, or Master Scroll Paper that absorbs the next unmodified spell of Master level or lower.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-create-master-relic",
+    "name": "Create Master Relic",
+    "craft": "relic-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 3,
+    "itemType": "relic",
+    "summary": "Relic of a chosen element with 3 Augment Slots.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-radiance-magic-augment",
+    "name": "Radiance Magic Augment",
+    "craft": "relic-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["radiance-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Radiance Magic. Advanced skill: owner must know it.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-relic-enhancing-augment",
+    "name": "Relic Enhancing Augment",
+    "craft": "relic-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Relic Augment: switch the Relic's element to Magic, Nature, Radiance, or Spirit (set when crafted) for one encounter.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-spirit-magic-augment",
+    "name": "Spirit Magic Augment",
+    "craft": "relic-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["spirit-magic"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Spirit Magic. Advanced skill: owner must know it.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-create-grandmaster-spell-copy-or-scroll-paper",
+    "name": "Create Grandmaster Spell Copy or Scroll Paper",
+    "craft": "relic-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "spellLevelMax": "grandmaster",
+    "summary": "A Grandmaster Spell Copy, or Grandmaster Scroll Paper that absorbs the next unmodified spell of any level.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-create-grandmaster-relic",
+    "name": "Create Grandmaster Relic",
+    "craft": "relic-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 4,
+    "itemType": "relic",
+    "summary": "Relic of a chosen element with 4 Augment Slots.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-ritual-magic-augment",
+    "name": "Ritual Magic Augment",
+    "craft": "relic-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["ritualism"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Ritual Magic (Ritualism). Not for weapons or armor. Advanced skill: owner must know it.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-spell-focusing-augment",
+    "name": "Spell Focusing Augment",
+    "craft": "relic-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: Focus Cast one spell.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "relic-crafting-spell-repulsion-augment",
+    "name": "Spell Repulsion Augment",
+    "craft": "relic-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: add Knockback 10 Steps (away from the caster) to one spell.",
+    "source": "Rulebook p.141-142"
+  },
+  {
+    "id": "terra-artis-craft-basic-jewelry",
+    "name": "Craft Basic Jewelry",
+    "craft": "terra-artis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 1,
+    "itemType": "jewelry",
+    "summary": "Jewelry with 1 Augment Slot.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-evoke-fear-augment",
+    "name": "Evoke Fear Augment",
+    "craft": "terra-artis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["evoke-fear"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Evoke Fear.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-gem-dust",
+    "name": "Gem Dust",
+    "craft": "terra-artis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "byproduct",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "yields": {
+      "basic": 1
+    },
+    "summary": "While cutting a Gem, also collect 1 unit of Gem Dust, worth 1 Basic Component.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-set-jewelry-augment",
+    "name": "Set Jewelry Augment",
+    "craft": "terra-artis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "insert",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Set an existing jewelry (or suitable Trade Item) Augment into an open slot.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-time-dilation-augment",
+    "name": "Time Dilation Augment",
+    "craft": "terra-artis",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: lengthen a Racial or Utility skill count by 5 seconds, or shorten it by 5 seconds (after Haste).",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-animal-ken-augment",
+    "name": "Animal Ken Augment",
+    "craft": "terra-artis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["animal-ken"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Animal Ken.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-augury-augment",
+    "name": "Augury Augment",
+    "craft": "terra-artis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["augury"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Augury. Not for weapons or armor.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-craft-expert-jewelry",
+    "name": "Craft Expert Jewelry",
+    "craft": "terra-artis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 2,
+    "itemType": "jewelry",
+    "summary": "Jewelry with 2 Augment Slots.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-cut-square-gem",
+    "name": "Cut Square Gem",
+    "craft": "terra-artis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "cut-gem",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0,
+      "uncutGem": 1
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "gemCut": "square",
+    "summary": "Cut an uncut Gem into a Square Gem.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-resist-fear-augment",
+    "name": "Resist Fear Augment",
+    "craft": "terra-artis",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["resist-fear"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Resist Fear.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-blink-augment",
+    "name": "Blink Augment",
+    "craft": "terra-artis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["blink"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Blink.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-craft-master-jewelry",
+    "name": "Craft Master Jewelry",
+    "craft": "terra-artis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 3,
+    "itemType": "jewelry",
+    "summary": "Jewelry with 3 Augment Slots.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-cut-circle-gem",
+    "name": "Cut Circle Gem",
+    "craft": "terra-artis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "cut-gem",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0,
+      "uncutGem": 1
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "gemCut": "circle",
+    "summary": "Cut an uncut Gem into a Circle Gem.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-disenchant-augment",
+    "name": "Disenchant Augment",
+    "craft": "terra-artis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["disenchant"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Disenchant.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-flee-augment",
+    "name": "Flee Augment",
+    "craft": "terra-artis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["flee"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Flee. Advanced skill: owner must know it.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-resist-elements-augment",
+    "name": "Resist Elements Augment",
+    "craft": "terra-artis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["resist-elements"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Resist Elements.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-spellstrike-augment",
+    "name": "Spellstrike Augment",
+    "craft": "terra-artis",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["weapon", "jewelry"],
+    "summary": "Once-ever Augment: Spellstrike one single-packet spell. Weapons or jewelry only.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-energy-theft-augment",
+    "name": "Energy Theft Augment",
+    "craft": "terra-artis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["energy-theft"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Energy Theft. Advanced skill: owner must know it.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-performance-augment",
+    "name": "Performance Augment",
+    "craft": "terra-artis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["performance"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Performance. Not for weapons or armor.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-craft-grandmaster-jewelry",
+    "name": "Craft Grandmaster Jewelry",
+    "craft": "terra-artis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 4,
+    "itemType": "jewelry",
+    "summary": "Jewelry with 4 Augment Slots.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-cut-triangle-gem",
+    "name": "Cut Triangle Gem",
+    "craft": "terra-artis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "cut-gem",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0,
+      "uncutGem": 1
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "gemCut": "triangle",
+    "summary": "Cut an uncut Gem into a Triangle Gem.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-monster-ken-augment",
+    "name": "Monster Ken Augment",
+    "craft": "terra-artis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["monster-ken"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Monster Ken. Advanced skill: owner must know it.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-racial-skill-augment",
+    "name": "Racial Skill Augment",
+    "craft": "terra-artis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: one use of a racial skill named when crafted.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "terra-artis-rifting-augment",
+    "name": "Rifting Augment",
+    "craft": "terra-artis",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["rifting"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Rifting. Advanced skill: owner must know it.",
+    "source": "Rulebook p.143-144"
+  },
+  {
+    "id": "tinkering-craft-basic-tool",
+    "name": "Craft Basic Tool",
+    "craft": "tinkering",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 1,
+    "itemType": "tool",
+    "summary": "Tool with 1 Augment Slot; type named when crafted (Lock Picks, Locks, a craft's Crafting Tools, Disarm Trap Tools, Musical Instrument, Harvesting Tools).",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-disarm-trap-augment",
+    "name": "Disarm Trap Augment",
+    "craft": "tinkering",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["disarm-trap"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Disarm Trap. Clothing, jewelry, or Tools only.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-mica",
+    "name": "Miniature Individual Clockwork Assistant (M.I.C.A.)",
+    "craft": "tinkering",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Assists its activator with one task set at creation, once; gives no skill uses.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-set-tool-enchant",
+    "name": "Set Tool Enchant",
+    "craft": "tinkering",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "insert",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Set an existing Tool Augment into an open Tool slot.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-specialized-knowledge-augment",
+    "name": "Specialized Knowledge Augment",
+    "craft": "tinkering",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["wilderness-knowledge", "urban-knowledge"],
+    "summary": "Once-ever Augment: one use of Wilderness Knowledge or Urban Knowledge.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-archery-scope",
+    "name": "Archery Scope",
+    "craft": "tinkering",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["ranged-weapon", "relic"],
+    "summary": "Once-ever Augment: re-throw a missed ranged weapon or Relic attack without spending another use. Ranged weapons or Relics only.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-craft-expert-tool",
+    "name": "Craft Expert Tool",
+    "craft": "tinkering",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 2,
+    "itemType": "tool",
+    "summary": "Tool with 2 Augment Slots; type named when crafted.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-dr-mica",
+    "name": "Dr. MICA (Dedicated Reassembler Miniature Individual Clockwork Assistant)",
+    "craft": "tinkering",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once: Repair 10 (refittable armor, or refittable life for Clockworks) on the owner or a named target on a 3 count.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-magical-crafting-augment",
+    "name": "Magical Crafting Augment",
+    "craft": "tinkering",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["tool"],
+    "grantsSkillUse": ["mystic-weaving", "relic-crafting", "terra-artis"],
+    "summary": "Once-ever Tool Augment: one use of Mystic Weaving, Relic Crafting, or Terra Artis (set when crafted).",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-natural-crafting-augment",
+    "name": "Natural Crafting Augment",
+    "craft": "tinkering",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["tool"],
+    "grantsSkillUse": ["alchemy", "aqua-mortis", "herbalism"],
+    "summary": "Once-ever Tool Augment: one use of Alchemy, Aqua Mortis, or Herbalism (set when crafted).",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-tooled-crafting-augment",
+    "name": "Tooled Crafting Augment",
+    "craft": "tinkering",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["tool"],
+    "grantsSkillUse": ["armorsmithing", "tinkering", "weaponsmithing"],
+    "summary": "Once-ever Tool Augment: one use of Armorsmithing, Tinkering, or Weaponsmithing (set when crafted).",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-potion-injector",
+    "name": "Potion Injector",
+    "craft": "tinkering",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Load with a Healing Potion and inject once for 1 Vorpal, Heal 50.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-awaken-augment",
+    "name": "Awaken Augment",
+    "craft": "tinkering",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["clothing", "tool"],
+    "summary": "Once-ever Augment: touch to remove Sleep. Clothing or Tools only.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-craft-master-tool",
+    "name": "Craft Master Tool",
+    "craft": "tinkering",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 3,
+    "itemType": "tool",
+    "summary": "Tool with 3 Augment Slots; type named when crafted.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-disguise-kit",
+    "name": "Disguise Kit",
+    "craft": "tinkering",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": false,
+    "summary": "Once: disguise as a non-specific other person for the re-pop or until removed; costume and racial reps required.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-flash-augment",
+    "name": "Flash Augment",
+    "craft": "tinkering",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["flash"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Flash. Advanced skill: owner must know it.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-hide-and-go-seek-augment",
+    "name": "Hide-and-Go-Seek Augment",
+    "craft": "tinkering",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["hide", "search"],
+    "summary": "Once-ever Augment: one use of Hide or Search. Not for weapons or Relics.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-song-storing-device",
+    "name": "Song Storing Device (S.S.D.)",
+    "craft": "tinkering",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Records one sound-based Performance up to Master once (no benefit while recording); replay with Music Box <effect>.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-craft-grandmaster-tool",
+    "name": "Craft Grandmaster Tool",
+    "craft": "tinkering",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 4,
+    "itemType": "tool",
+    "summary": "Tool with 4 Augment Slots; type named when crafted.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-frenzy-augment",
+    "name": "Frenzy Augment",
+    "craft": "tinkering",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["frenzy"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Frenzy. Advanced skill: owner must know it.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-golem-remote-control",
+    "name": "Golem Remote Control",
+    "craft": "tinkering",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once: packet Magic Enslave Golem for the encounter or until you or allies attack it.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-kit-augment",
+    "name": "KIT Augment (Keep-It-Together)",
+    "craft": "tinkering",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "allowedIn": ["tool"],
+    "summary": "Once-ever Tool Augment: use the Tool on an adventure without a crafting space for one encounter.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "tinkering-tinkered-portal-device",
+    "name": "Tinkered Portal Device",
+    "craft": "tinkering",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once: open a Portal (as Master Blink) to a set location, or a Dimensional Ward blocking Passwall and Portal in the area for the re-pop. Type and location fixed when crafted.",
+    "source": "Rulebook p.145-146"
+  },
+  {
+    "id": "weaponsmithing-combat-augment",
+    "name": "Combat Augment",
+    "craft": "weaponsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["back-strike", "aggression"],
+    "summary": "Once-ever Augment: one use of Back Strike or Aggression (chosen when crafted).",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-create-basic-weapon",
+    "name": "Create Basic Weapon",
+    "craft": "weaponsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 1,
+    "itemType": "weapon",
+    "summary": "Weapon with 1 Augment Slot.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-nerve-pinch-augment",
+    "name": "Nerve Pinch Augment",
+    "craft": "weaponsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["nerve-pinch"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Nerve Pinch.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-set-weapon-augment",
+    "name": "Set Weapon Augment",
+    "craft": "weaponsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "insert",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Set an existing weapon Augment into an open weapon slot.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-strength-augment",
+    "name": "Strength Augment",
+    "craft": "weaponsmithing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["strength"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Strength.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-accuracy-augment",
+    "name": "Accuracy Augment",
+    "craft": "weaponsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: redo a missed melee weapon attack without spending another use.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-create-expert-weapon",
+    "name": "Create Expert Weapon",
+    "craft": "weaponsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 2,
+    "itemType": "weapon",
+    "summary": "Weapon with 2 Augment Slots.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-disarm-augment",
+    "name": "Disarm Augment",
+    "craft": "weaponsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["disarm"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Disarm.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-precision-augment",
+    "name": "Precision Augment",
+    "craft": "weaponsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["precision"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Precision.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-weapon-proficiency-augment",
+    "name": "Weapon Proficiency Augment",
+    "craft": "weaponsmithing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["weapon-proficiency"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Weapon Proficiency.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-striking-augment",
+    "name": "Striking Augment",
+    "craft": "weaponsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: turn one offensive weapon attack into a weaponstrike.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-create-master-weapon",
+    "name": "Create Master Weapon",
+    "craft": "weaponsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 3,
+    "itemType": "weapon",
+    "summary": "Weapon with 3 Augment Slots.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-knockback-augment",
+    "name": "Knockback Augment",
+    "craft": "weaponsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["knockback"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Knockback.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-pierce-augment",
+    "name": "Pierce Augment",
+    "craft": "weaponsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["pierce"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Pierce. Advanced skill: owner must know it.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-resist-shatter-augment",
+    "name": "Resist Shatter Augment",
+    "craft": "weaponsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: resist one Shatter effect.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-stun-augment",
+    "name": "Stun Augment",
+    "craft": "weaponsmithing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["stun"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Stun.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-advanced-combat-augment",
+    "name": "Advanced Combat Augment",
+    "craft": "weaponsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["assassinate", "slay"],
+    "summary": "Once-ever Augment: one use of Assassinate or Slay (chosen when crafted). Advanced skills: owner must know it.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-bash-augment",
+    "name": "Bash Augment",
+    "craft": "weaponsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["bash"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Bash.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-create-grandmaster-weapon",
+    "name": "Create Grandmaster Weapon",
+    "craft": "weaponsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "augmentSlots": 4,
+    "itemType": "weapon",
+    "summary": "Weapon with 4 Augment Slots.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-finesse-augment",
+    "name": "Finesse Augment",
+    "craft": "weaponsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["finesse"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Finesse.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-speed-of-blade-augment",
+    "name": "Speed of Blade Augment",
+    "craft": "weaponsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "grantsSkillUse": ["speed-of-blade"],
+    "summary": "Once-ever Augment: when activated, the attuned owner gets one use of Speed of Blade.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "weaponsmithing-blur-augment",
+    "name": "Blur Augment",
+    "craft": "weaponsmithing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": false,
+    "summary": "Once-ever Augment: enter a Basic Blink and make one attack from any direction, which ends the Blink.",
+    "source": "Rulebook p.147-148"
+  },
+  {
+    "id": "artificing-artificers-break-down",
+    "name": "Artificer's Break Down",
+    "craft": "artificing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "byproduct",
+    "unstableAllowed": false,
+    "stableCost": {
+      "basic": 0,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "yields": {
+      "basicPerItemLevel": 1
+    },
+    "summary": "Break down a stable weapon, armor, shield, or tool and salvage 1 Basic Component per level of the item.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-create-basic-multi-tool",
+    "name": "Create Basic Multi-Tool",
+    "craft": "artificing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 1,
+    "itemType": "tool",
+    "summary": "Either a Lock Pick plus Disarm Kit tool, or a Tool for an Advanced Craft that works for its three base crafts; 1 Augment Slot. Type chosen when crafted.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-silver-weapon-augment",
+    "name": "Silver Weapon Augment",
+    "craft": "artificing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "continuous-augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 12,
+      "exotic": 6
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "allowedIn": ["weapon"],
+    "summary": "Make a weapon Silver; takes an Augment Slot.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-strengthen-basic-augment",
+    "name": "Strengthen Basic Augment",
+    "craft": "artificing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "basic",
+    "summary": "Upgrade an existing Basic Augment made by Artificing or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-tinkering-battery",
+    "name": "Tinkering Battery",
+    "craft": "artificing",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Powers a consumable tinkered device; the battery is used up instead of the device.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-create-expert-multi-tool",
+    "name": "Create Expert Multi-Tool",
+    "craft": "artificing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 2,
+    "itemType": "tool",
+    "summary": "Either a Lock Pick plus Disarm Kit tool, or a Tool for an Advanced Craft that works for its three base crafts; 2 Augment Slots. Type chosen when crafted.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-mechanical-scout",
+    "name": "Mechanical Scout",
+    "craft": "artificing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Released once into a small area, it scouts while Hidden and reports back with a simple illusion. Counts as a Tinkered Device for Batteries.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-quick-draw-augment",
+    "name": "Quick Draw Augment",
+    "craft": "artificing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "allowedIn": ["clothing", "tool"],
+    "summary": "Use a consumable stored in the item by touching it and calling Quick Draw <effect>. Clothing or Tools only.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-strengthen-expert-augment",
+    "name": "Strengthen Expert Augment",
+    "craft": "artificing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "expert",
+    "summary": "Upgrade an existing Expert Augment made by Artificing or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-weapon-vein-augment",
+    "name": "Weapon Vein Augment",
+    "craft": "artificing",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "allowedIn": ["weapon"],
+    "summary": "Stores an Aqua Mortis paste; apply it by calling Weapon Vein <Venom Name>. Weapons only.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-advanced-crafting-augment",
+    "name": "Advanced Crafting Augment",
+    "craft": "artificing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "allowedIn": ["tool"],
+    "grantsSkillUse": ["artificing", "enchanting", "flesh-crafting"],
+    "summary": "Once-ever Tool Augment: one use of Artificing, Enchanting, or Flesh Crafting (set when crafted). Owner must know the skill.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-bag-of-tricks-augment",
+    "name": "Bag of Tricks Augment",
+    "craft": "artificing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "grantsSkillUse": ["disarm-trap", "hide", "search", "urban-knowledge"],
+    "summary": "Once-ever Augment: restore one use of Disarm Trap, Hide, Search, or Urban Knowledge (chosen on activation).",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-create-master-multi-tool",
+    "name": "Create Master Multi-Tool",
+    "craft": "artificing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 3,
+    "itemType": "tool",
+    "summary": "Either a Lock Pick plus Disarm Kit tool, or a Tool for an Advanced Craft that works for its three base crafts; 3 Augment Slots. Type chosen when crafted.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-elemental-weapon-augment",
+    "name": "Elemental Weapon Augment",
+    "craft": "artificing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "continuous-augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 12,
+      "exotic": 6
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "allowedIn": ["weapon"],
+    "summary": "All attacks with the weapon become one of the four elements; takes 1 Augment Slot. The book's example of a Continuous Augment.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-strengthen-master-augment",
+    "name": "Strengthen Master Augment",
+    "craft": "artificing",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "master",
+    "summary": "Upgrade an existing Master Augment made by Artificing or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-craft-unshatterable-armament",
+    "name": "Craft Unshatterable Armament",
+    "craft": "artificing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "continuous-augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 12,
+      "exotic": 6
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Turn a stable once-per-re-pop Resist Shatter in a weapon, armor, or shield into permanent unshatterability.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-create-grandmaster-multi-tool",
+    "name": "Create Grandmaster Multi-Tool",
+    "craft": "artificing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 4,
+    "itemType": "tool",
+    "summary": "Either a Lock Pick plus Disarm Kit tool, or a Tool for an Advanced Craft that works for its three base crafts; 4 Augment Slots. Type chosen when crafted.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-magic-weapon-augment",
+    "name": "Magic Weapon Augment",
+    "craft": "artificing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "continuous-augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 12,
+      "exotic": 6
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "allowedIn": ["weapon"],
+    "summary": "All attacks with the weapon become Magic; takes 1 Augment Slot.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-second-skin-armor",
+    "name": "Second Skin Armor",
+    "craft": "artificing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "allowedIn": ["armor"],
+    "summary": "Once-ever Augment, suits of armor only: for the encounter, call Reduced against Vorpal effects.",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "artificing-strengthen-grandmaster-augment",
+    "name": "Strengthen Grandmaster Augment",
+    "craft": "artificing",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "grandmaster",
+    "summary": "Upgrade an existing Grandmaster Augment made by Artificing or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.149-150"
+  },
+  {
+    "id": "enchanting-basic-wizard-staff",
+    "name": "Basic Wizard Staff",
+    "craft": "enchanting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 1,
+    "itemType": "wizard-staff",
+    "summary": "Wizard Staff of a chosen element (Air, Death, Earth, Fire, Life, Water): acts as a Relic (2 Physical <element>) and strikes for 3 Blunt per the staff rules; 1 Augment Slot.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-create-basic-ritual-script",
+    "name": "Create Basic Ritual Script",
+    "craft": "enchanting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "ritualLevel": "basic",
+    "summary": "Duplicate an existing Basic Ritual Script.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-ritual-elemental-augment",
+    "name": "Ritual Elemental Augment",
+    "craft": "enchanting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "For one ritual, the owner counts as having Expert in one base magic they lack (chosen on activation).",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-strengthen-basic-augment",
+    "name": "Strengthen Basic Augment",
+    "craft": "enchanting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "basic",
+    "summary": "Upgrade an existing Basic Augment made by Enchanting or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-sunstone-crystal",
+    "name": "Sunstone Crystal",
+    "craft": "enchanting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": true,
+    "advancedCraft": true,
+    "summary": "Destroyed on use: any wielded weapon deals Radiance for the re-pop or until Disenchanted.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-create-expert-ritual-script",
+    "name": "Create Expert Ritual Script",
+    "craft": "enchanting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "ritualLevel": "expert",
+    "summary": "Duplicate an existing Expert Ritual Script.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-expert-wizard-staff",
+    "name": "Expert Wizard Staff",
+    "craft": "enchanting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 2,
+    "itemType": "wizard-staff",
+    "summary": "Wizard Staff of a chosen element (Air, Death, Earth, Fire, Life, Water): acts as a Relic (2 Physical <element>) and strikes for 3 Blunt per the staff rules; 2 Augment Slots.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-explosive-augment",
+    "name": "Explosive Augment",
+    "craft": "enchanting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Once-ever Augment: turn one damage effect into a Frontal Cone.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-radiance-strengthening-augment",
+    "name": "Radiance Strengthening Augment",
+    "craft": "enchanting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Once-ever Augment, used with the Radiance Magic passive: +2 passive damage (1-handed) or +3 (2-handed) for the encounter; one at a time.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-strengthen-expert-augment",
+    "name": "Strengthen Expert Augment",
+    "craft": "enchanting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "expert",
+    "summary": "Upgrade an existing Expert Augment made by Enchanting or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-create-master-ritual-script",
+    "name": "Create Master Ritual Script",
+    "craft": "enchanting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "ritualLevel": "master",
+    "summary": "Duplicate an existing Master Ritual Script.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-master-wizard-staff",
+    "name": "Master Wizard Staff",
+    "craft": "enchanting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 6,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 3,
+    "itemType": "wizard-staff",
+    "summary": "Wizard Staff of a chosen element (Air, Death, Earth, Fire, Life, Water): acts as a Relic (2 Physical <element>) and strikes for 3 Blunt per the staff rules; 3 Augment Slots.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-rapid-healing-augment",
+    "name": "Rapid Healing Augment",
+    "craft": "enchanting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Once-ever Augment: one use of Healing becomes a 3 count.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-storm-shield-augment",
+    "name": "Storm Shield Augment",
+    "craft": "enchanting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Once-ever Augment: use one resistance-based defense during a Storm or Maelstrom without losing it; one per Storm.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-strengthen-master-augment",
+    "name": "Strengthen Master Augment",
+    "craft": "enchanting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "master",
+    "summary": "Upgrade an existing Master Augment made by Enchanting or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-create-grandmaster-ritual-script",
+    "name": "Create Grandmaster Ritual Script",
+    "craft": "enchanting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "ritualLevel": "grandmaster",
+    "summary": "Duplicate an existing Grandmaster Ritual Script.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-grandmaster-wizard-staff",
+    "name": "Grandmaster Wizard Staff",
+    "craft": "enchanting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "permanent",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "augmentSlots": 4,
+    "itemType": "wizard-staff",
+    "summary": "Wizard Staff of a chosen element (Air, Death, Earth, Fire, Life, Water): acts as a Relic (2 Physical <element>) and strikes for 3 Blunt per the staff rules; 4 Augment Slots.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-point-augment",
+    "name": "Point Augment",
+    "craft": "enchanting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Augment: turn one spell packet into Point.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-spell-echoing-augment",
+    "name": "Spell Echoing Augment",
+    "craft": "enchanting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "augment",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Once-ever Augment: double the packets of a fixed-packet spell (not Storms); once per casting; an Echo effect.",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "enchanting-strengthen-grandmaster-augment",
+    "name": "Strengthen Grandmaster Augment",
+    "craft": "enchanting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "renewing-upgrade",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "upgradesAugmentLevel": "grandmaster",
+    "summary": "Upgrade an existing Grandmaster Augment made by Enchanting or one of its base crafts to Renewing (usable once per re-pop).",
+    "source": "Rulebook p.151-152"
+  },
+  {
+    "id": "flesh-crafting-basic-familiar",
+    "name": "Basic Familiar",
+    "craft": "flesh-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "familiarLevel": "basic",
+    "summary": "Elixir that bonds a Basic Familiar with 1 Trick Slot; trainable between games.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-mutagenic-neutralizer",
+    "name": "Mutagenic Neutralizer",
+    "craft": "flesh-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "Removes one Mutagen and its Boon.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-nimble-fingers-mutagen",
+    "name": "Nimble Fingers Mutagen",
+    "craft": "flesh-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "lesser",
+    "summary": "Once per re-pop gain 1 Basic Component when disarming a trap or picking a lock.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-retraining-elixir",
+    "name": "Retraining Elixir",
+    "craft": "flesh-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "summary": "A Familiar forgets one Trick; retrain between games.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-spirit-guardian-mutagen",
+    "name": "Spirit Guardian Mutagen",
+    "craft": "flesh-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 8,
+      "exotic": 4
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "lesser",
+    "summary": "The body can never be raised as undead.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-wing-strengthening-mutagen",
+    "name": "Wing Strengthening Mutagen",
+    "craft": "flesh-crafting",
+    "level": "basic",
+    "uses": 1,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 1,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "lesser",
+    "summary": "A winged PC gets a Jump Potion or Levitate effect once per re-pop and ignores falling damage.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-primordial-mutagen",
+    "name": "Primordial Mutagen",
+    "craft": "flesh-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "lesser",
+    "summary": "Once per re-pop, weapon/claw/bite attacks use one of the six elements (set when crafted) for the encounter; also Planar Asylum to that Elemental Realm.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-enhancement-capacity-mutagen",
+    "name": "Enhancement Capacity Mutagen",
+    "craft": "flesh-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "lesser",
+    "summary": "Start each re-pop with one extra Enhancement Slot; only one at a time.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-expert-familiar",
+    "name": "Expert Familiar",
+    "craft": "flesh-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "familiarLevel": "expert",
+    "summary": "Elixir that upgrades a Basic Familiar to Expert (2 Trick Slots).",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-racial-empowerment-mutagen",
+    "name": "Racial Empowerment Mutagen",
+    "craft": "flesh-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "lesser",
+    "summary": "Racial Innate Passive doubled if numeric, or Hastened if a Counted Action; only one at a time.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-toughness-mutagen",
+    "name": "Toughness Mutagen",
+    "craft": "flesh-crafting",
+    "level": "expert",
+    "uses": 2,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 2,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "lesser",
+    "summary": "+25 Temporary Life Points or +25 Temporary Armor Points (set when crafted) at the start of each re-pop.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-eagle-eye-mutagen",
+    "name": "Eagle Eye Mutagen",
+    "craft": "flesh-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "Gain 1 Basic Component each time you disarm a trap or pick a lock (destroying it).",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-fortitude-mutagen",
+    "name": "Fortitude Mutagen",
+    "craft": "flesh-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "+10 Life Points or +10 Armor Points (set when crafted).",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-greater-primordial-mutagen",
+    "name": "Greater Primordial Mutagen",
+    "craft": "flesh-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "Weapon/claw/bite attacks always use one of the six elements (set when crafted); Planar Asylum to that Elemental Plane.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-master-familiar",
+    "name": "Master Familiar",
+    "craft": "flesh-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "familiarLevel": "master",
+    "summary": "Elixir that upgrades an Expert Familiar to Master (3 Trick Slots).",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-serpents-touch-mutagen",
+    "name": "Serpent's Touch Mutagen",
+    "craft": "flesh-crafting",
+    "level": "master",
+    "uses": 3,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 3,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "Aqua Mortis pastes can be applied to your natural weapons.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-enrichment-mutagen",
+    "name": "Enrichment Mutagen",
+    "craft": "flesh-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "Gain an Amplified Life Enhancement Slot at the start of each re-pop.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-grandmaster-familiar",
+    "name": "Grandmaster Familiar",
+    "craft": "flesh-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "familiarLevel": "grandmaster",
+    "summary": "Elixir that upgrades a Master Familiar to Grandmaster (4 Trick Slots).",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-intensity-mutagen",
+    "name": "Intensity Mutagen",
+    "craft": "flesh-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "Racial Innate Active ability works at its Expert Technique, still once per encounter.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-ley-link-mutagen",
+    "name": "Ley Link Mutagen",
+    "craft": "flesh-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "Once per re-pop, all your attacks become Magic for the encounter.",
+    "source": "Rulebook p.153-154"
+  },
+  {
+    "id": "flesh-crafting-reinforcing-mutagen",
+    "name": "Reinforcing Mutagen",
+    "craft": "flesh-crafting",
+    "level": "grandmaster",
+    "uses": 4,
+    "itemCategory": "consumable",
+    "unstableAllowed": true,
+    "stableCost": {
+      "basic": 4,
+      "exotic": 0
+    },
+    "enhancement": false,
+    "advancedCraft": true,
+    "boonSlot": "greater",
+    "summary": "One use of each of your racial skills once per re-pop.",
+    "source": "Rulebook p.153-154"
+  }
+]

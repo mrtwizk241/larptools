@@ -1,0 +1,153 @@
+/*
+ * Design tokens. Source of truth: docs/design/style-guide.md.
+ * Light "Vellum" theme is the default (readable in sunlight).
+ * Dark "Nightfall" theme (close to sylvarislarp.com) follows the system setting unless the
+ * user picks one (html[data-theme="light" | "dark"]).
+ * Every text pair here is at least 6:1 contrast; borders and the focus ring at least 3:1.
+ * Ratios: docs/design/style-guide.md, "Contrast checks".
+ */
+:root {
+  color-scheme: light;
+
+  /* Color: light "Vellum" */
+  --color-bg: #f7f5ef;
+  --color-surface: #efebe1;
+  --color-surface-2: #e3ddcd;
+  --color-text: #17161a; /* site background, used as ink */
+  --color-text-muted: #4d4a52;
+  --color-border: #857e6e; /* stone ring */
+  --color-border-strong: #4d4a52;
+  --color-primary: #3b5a1f; /* deep green of the logo's S */
+  --color-on-primary: #f7f5ef;
+  --color-secondary: #d6e0c2; /* pale leaf */
+  --color-on-secondary: #17161a;
+  --color-link: #1b5687; /* water ring, deep */
+  --color-danger: #a3121c; /* site red #ff0e1f, darkened */
+  --color-on-danger: #f7f5ef;
+  --color-success: #2e6324;
+  --color-warning-bg: #fbe0b0;
+  --color-warning-text: #17161a;
+  --color-focus: #b35c00; /* fire ring, darkened */
+  --color-header-bg: #17161a; /* site background */
+  --color-header-text: #f5f5f5;
+  --color-header-muted: #c0c0c0; /* site body text */
+  --color-overlay: rgb(23 22 26 / 60%);
+
+  /* Header band (dark in both themes) */
+  --color-header-rule: #8aa44d; /* leaf accent, straight bottom rule */
+  --color-header-logo-ring: rgb(192 192 192 / 35%);
+  --color-header-hover: rgb(245 245 245 / 12%);
+  --color-header-active: rgb(245 245 245 / 16%);
+  --header-gradient: linear-gradient(
+    to bottom,
+    rgb(15 15 17 / 72%) 0%,
+    rgb(23 22 26 / 82%) 70%,
+    rgb(23 22 26 / 90%) 100%
+  );
+
+  /* Element accents: decoration only, never text, always with a label */
+  --color-accent-fire: #f89b1c;
+  --color-accent-leaf: #8aa44d;
+  --color-accent-air: #a8aaad;
+  --color-accent-water: #8acbf1;
+  --color-accent-stone: #716658;
+
+  /* Type */
+  --font-body: 'Rubik Variable', 'Rubik', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Roboto Mono Variable', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --font-display: 'Cinzel Variable', 'Cinzel', Georgia, 'Times New Roman', serif;
+
+  --text-xs: 0.875rem; /* 14px: captions only, never body */
+  --text-sm: 1rem; /* 16px */
+  --text-md: 1.0625rem; /* 17px: body */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.5rem; /* 24px */
+  --text-2xl: 2rem; /* 32px */
+  --leading: 1.5;
+  --leading-tight: 1.2;
+  --weight-normal: 400; /* never 300 like the site: too thin outdoors */
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Space (4px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  /* Shape and size */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-pill: 999px;
+  --border-width: 1px;
+  --tap: 44px; /* minimum tap target */
+  --tap-lg: 48px; /* primary actions */
+  --content-max: 960px;
+  /* Phone bottom nav: grows with the text size (a11y A-05). */
+  --nav-height: max(56px, 3.5rem);
+  --focus-ring: 3px solid var(--color-focus);
+  --focus-offset: 2px;
+  --shadow: 0 1px 3px rgb(23 22 26 / 25%);
+
+  /* Layers */
+  --z-header: 10;
+  --z-nav: 20;
+  --z-dialog: 100;
+  --z-toast: 200;
+}
+
+/* Dark "Nightfall" */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #17161a;
+  --color-surface: #201f24;
+  --color-surface-2: #2b2a31;
+  --color-text: #efefef;
+  --color-text-muted: #c0c0c0;
+  --color-border: #7c7a84;
+  --color-border-strong: #c0c0c0;
+  --color-primary: #a3cc6e;
+  --color-on-primary: #17161a;
+  --color-secondary: #33402a;
+  --color-on-secondary: #efefef;
+  --color-link: #6ec1e4;
+  --color-danger: #ff7a82;
+  --color-on-danger: #17161a;
+  --color-success: #9fd27f;
+  --color-warning-bg: #5a3d0c;
+  --color-warning-text: #efefef;
+  --color-focus: #f89b1c;
+  --color-header-bg: #0f0f11;
+  --color-overlay: rgb(0 0 0 / 70%);
+  --shadow: 0 1px 3px rgb(0 0 0 / 60%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --color-bg: #17161a;
+    --color-surface: #201f24;
+    --color-surface-2: #2b2a31;
+    --color-text: #efefef;
+    --color-text-muted: #c0c0c0;
+    --color-border: #7c7a84;
+    --color-border-strong: #c0c0c0;
+    --color-primary: #a3cc6e;
+    --color-on-primary: #17161a;
+    --color-secondary: #33402a;
+    --color-on-secondary: #efefef;
+    --color-link: #6ec1e4;
+    --color-danger: #ff7a82;
+    --color-on-danger: #17161a;
+    --color-success: #9fd27f;
+    --color-warning-bg: #5a3d0c;
+    --color-warning-text: #efefef;
+    --color-focus: #f89b1c;
+    --color-header-bg: #0f0f11;
+    --color-overlay: rgb(0 0 0 / 70%);
+    --shadow: 0 1px 3px rgb(0 0 0 / 60%);
+  }
+}

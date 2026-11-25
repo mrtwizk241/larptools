@@ -1,0 +1,62 @@
+/* Bottom center, above the bottom nav when one is on the page (phones). */
+.region {
+  position: fixed;
+  z-index: var(--z-toast);
+  right: 0;
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+  left: 0;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-4);
+  pointer-events: none;
+}
+
+@media (max-width: 899.98px) {
+  :global(body:has([data-bottom-nav])) .region {
+    bottom: calc(var(--nav-height) + var(--space-3) + env(safe-area-inset-bottom));
+  }
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: min(100%, 480px);
+  min-height: 56px;
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+  border-radius: var(--radius);
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
+  box-shadow: var(--shadow);
+  pointer-events: auto;
+}
+
+.message {
+  flex: 1;
+  padding: var(--space-2) 0;
+}
+
+/* Ghost button on the dark toast: light text and border. */
+.toast .undo {
+  flex: none;
+  color: var(--color-header-text);
+  border-color: var(--color-header-muted);
+}
+
+.toast .undo:not(:disabled):hover {
+  background: var(--color-header-hover);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .toast {
+    animation: rise 150ms ease-out;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+}

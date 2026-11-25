@@ -19,6 +19,7 @@ import {
 } from '../character/skills/skillInfo.ts';
 import skillStyles from '../character/skills/skills.module.css';
 import type { Article } from './articles.ts';
+import { EFFECT_MARKS, EFFECTS, EFFECTS_INTRO } from './effects.ts';
 import { titleCase } from './wikiText.ts';
 import styles from './wiki.module.css';
 
@@ -591,6 +592,45 @@ function FamiliarList({ ruleset }: { ruleset: Ruleset }) {
   );
 }
 
+function EffectsList() {
+  const [query, setQuery] = useState('');
+  const [pressed, setPressed] = useState<string[]>([]);
+  const sorted = [...EFFECTS].sort((a, b) => a.name.localeCompare(b.name));
+  const shown = sorted.filter(
+    (e) => chipMatch(pressed, ...e.marks) && matches(query, e.name, e.text),
+  );
+  return (
+    <section className={styles.group}>
+      <p>{EFFECTS_INTRO}</p>
+      <Search value={query} onChange={setQuery} label="Search effects" />
+      <ChipRow
+        label="Filter effects by mark"
+        chips={EFFECT_MARKS}
+        pressed={pressed}
+        onChange={setPressed}
+      />
+      <Count count={shown.length} one="effect" many="effects" />
+      <Empty show={shown.length === 0} />
+      {shown.map((e) => (
+        <Entry
+          key={e.id}
+          title={[e.name, ...e.marks.map((m) => `(${m})`)].join(' ')}
+          meta={`Rulebook p.${e.page}`}
+        >
+          {e.marks.length > 0 ? (
+            <p className={styles.partMeta}>
+              {e.marks
+                .map((m) => EFFECT_MARKS.find((x) => x.id === m)?.label.replace(/^\(\w\) /, ''))
+                .join(', ')}
+            </p>
+          ) : null}
+          <p>{e.text}</p>
+        </Entry>
+      ))}
+    </section>
+  );
+}
+
 export function ReferenceList({
   list,
   ruleset,
@@ -613,5 +653,7 @@ export function ReferenceList({
       return <PerformancesList ruleset={ruleset} />;
     case 'familiar':
       return <FamiliarList ruleset={ruleset} />;
+    case 'effects':
+      return <EffectsList />;
   }
 }

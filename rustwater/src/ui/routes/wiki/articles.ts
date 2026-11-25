@@ -21,7 +21,14 @@ export interface Article {
   body?: (ruleset: Ruleset) => string;
   /** Reference pages: which list to show. */
   list?:
-    'skills' | 'ancestries' | 'professions' | 'spells' | 'recipes' | 'performances' | 'familiar';
+    | 'skills'
+    | 'ancestries'
+    | 'professions'
+    | 'spells'
+    | 'recipes'
+    | 'performances'
+    | 'familiar'
+    | 'effects';
 }
 
 const T = (n: number) => (n * (n + 1)) / 2;
@@ -315,6 +322,8 @@ Most effects end with the encounter. These last longer:
 | Wither | Until removed |
 | Delimb | Until a Regenerate effect |
 
+What every effect call does is in [Effects to Know](/wiki/effects).
+
 Non-combat players wear a green sash; GMs may adjust plots for them.
 `,
   },
@@ -568,6 +577,13 @@ Staff check you in, award points, approve new characters and learnings, and fix 
 | Shinies | Reward currency for helping the game. |
 | Upkeep | 2 basic resources or 10 Bits at check-in. |
 `,
+  },
+  {
+    slug: 'effects',
+    title: 'Effects to Know',
+    summary: 'Every effect call, with (A) Detrimental Ailment and (M) Movement Impairing marks.',
+    group: 'reference',
+    list: 'effects',
   },
   {
     slug: 'skills-list',

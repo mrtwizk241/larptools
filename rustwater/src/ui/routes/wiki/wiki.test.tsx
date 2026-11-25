@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { loadRuleset } from '../../../data/index.ts';
 import { renderApp } from '../../test/renderApp.tsx';
 import { ARTICLES, GROUPS } from './articles.ts';
+import { EFFECTS } from './effects.ts';
 import { parseBlocks, titleCase } from './wikiText.ts';
 
 describe('wiki text', () => {
@@ -145,6 +146,25 @@ describe('reference list chips', () => {
       screen.getByText(countText(ruleset.skills.length, 'skill', 'skills')),
     ).toBeInTheDocument();
     expect(screen.queryByRole('group', { name: 'Filter magic skills' })).not.toBeInTheDocument();
+  });
+
+  it('narrows Effects to Know to (A) or (M) effects, and searches them', async () => {
+    const user = userEvent.setup();
+    renderApp('/wiki/effects', { user: null });
+    const row = await screen.findByRole('group', { name: 'Filter effects by mark' });
+    expect(screen.getByText(countText(EFFECTS.length, 'effect', 'effects'))).toBeInTheDocument();
+    const movement = EFFECTS.filter((e) => e.marks.includes('M'));
+    await user.click(within(row).getByRole('button', { name: '(M) Movement Impairing' }));
+    expect(screen.getByText(countText(movement.length, 'effect', 'effects'))).toBeInTheDocument();
+    expect(screen.getByText('Pin (M)')).toBeInTheDocument();
+    expect(screen.queryByText('Stun (A)')).not.toBeInTheDocument();
+    // Both pressed: either mark.
+    await user.click(within(row).getByRole('button', { name: '(A) Detrimental Ailment' }));
+    const either = EFFECTS.filter((e) => e.marks.length > 0);
+    expect(screen.getByText(countText(either.length, 'effect', 'effects'))).toBeInTheDocument();
+    expect(screen.getByText('Stun (A)')).toBeInTheDocument();
+    await user.type(screen.getByLabelText('Search effects'), 'heel-to-toe');
+    expect(screen.getByText(countText(2, 'effect', 'effects'))).toBeInTheDocument();
   });
 
   it('narrows all spells by school and rank', async () => {

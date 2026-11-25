@@ -1,0 +1,95 @@
+/* Life and Damage Calculator: the page, and the "Your Character" form sections. */
+.page {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.page > * {
+  min-width: 0;
+}
+
+.page > h1 {
+  margin-bottom: 0;
+}
+
+/* The unofficial note under the title (short, so the tabs stay near the top). */
+.unofficial {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* Totals and Character: two equal halves, so each is an easy thumb target on a phone. */
+.tabs :global([role='tab']) {
+  flex: 1 1 0;
+  min-height: var(--tap);
+}
+
+.tabs h2 {
+  margin-bottom: 0;
+}
+
+/* Race and Calling, Skills, racial and Calling skills, Spells and Artifact: stacked on phones,
+   two columns from 768px. */
+.sections {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .sections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.group {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding-top: var(--space-2);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.groupTitle {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.skill {
+  display: grid;
+  gap: var(--space-1);
+  padding-bottom: var(--space-2);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.skill:last-child {
+  border-bottom: 0;
+}
+
+/* Skill name on the left, its level stepper on the right; wraps under on narrow screens. */
+.levelRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+
+.levelName {
+  min-width: 0;
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+/* Expert, Master, Grandmaster side by side, wrapping on a phone. */
+.techniques {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+}

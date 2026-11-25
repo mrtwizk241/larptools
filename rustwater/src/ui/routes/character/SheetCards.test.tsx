@@ -407,5 +407,16 @@ describe('test builds', () => {
     ).toBeInTheDocument();
     const cxp = within(screen.getByRole('list', { name: 'Points' })).getAllByRole('listitem')[0];
     expect(cxp).toHaveTextContent(/^CXP \(overspent\) -5 \/ \d+ left$/);
+    expect(
+      screen.getByText('Over: about 1 more event would earn this build (75 CXP an event).'),
+    ).toBeInTheDocument();
+
+    // The change has an Undo on its toast.
+    expect(screen.getByText('Learned Bash level 1.')).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Undo' }));
+    await waitFor(() => expect(screen.getByRole('group', { name: 'Bash' })).toHaveTextContent('0'));
+    expect(
+      within(screen.getByRole('list', { name: 'Points' })).getAllByRole('listitem')[0],
+    ).toHaveTextContent(/^CXP 5 \/ \d+ left$/);
   });
 });

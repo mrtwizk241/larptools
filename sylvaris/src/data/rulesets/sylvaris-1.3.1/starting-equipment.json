@@ -1,0 +1,113 @@
+{
+  "picks": 10,
+  "duplicatesAllowed": true,
+  "totalValueCopper": 50,
+  "note": "Duplicates allowed (Q-ITEM-1 default). Retirement values the starting items at 50 Copper (p.63).",
+  "options": [
+    {
+      "id": "basic-weapon",
+      "name": "Basic Weapon",
+      "quality": "basic",
+      "gmApproval": false,
+      "choice": "weapon-type"
+    },
+    {
+      "id": "basic-shield",
+      "name": "Basic Shield",
+      "quality": "basic",
+      "gmApproval": false
+    },
+    {
+      "id": "basic-armor",
+      "name": "Basic Suit of Armor",
+      "quality": "basic",
+      "gmApproval": false
+    },
+    {
+      "id": "basic-relic",
+      "name": "Basic Relic",
+      "quality": "basic",
+      "gmApproval": false,
+      "choice": "element"
+    },
+    {
+      "id": "basic-spell",
+      "name": "Basic Spell in Spellbook",
+      "quality": "basic",
+      "gmApproval": false,
+      "choice": "spell"
+    },
+    {
+      "id": "simple-pet",
+      "name": "Simple Pet",
+      "gmApproval": true
+    },
+    {
+      "id": "basic-recipe",
+      "name": "Basic Recipe in Crafting Journal",
+      "quality": "basic",
+      "gmApproval": false,
+      "choice": "recipe"
+    },
+    {
+      "id": "basic-jewelry",
+      "name": "Basic Jewelry",
+      "quality": "basic",
+      "gmApproval": false
+    },
+    {
+      "id": "basic-clothing",
+      "name": "Basic Clothing Item",
+      "quality": "basic",
+      "gmApproval": false
+    },
+    {
+      "id": "basic-lockpicks",
+      "name": "Basic Lockpicks",
+      "quality": "basic",
+      "gmApproval": false
+    },
+    {
+      "id": "basic-tools",
+      "name": "Basic Crafting or Harvesting Tools",
+      "quality": "basic",
+      "gmApproval": false,
+      "choice": "craft"
+    },
+    {
+      "id": "basic-performance-note",
+      "name": "Basic Performance Note in Performance Record",
+      "quality": "basic",
+      "gmApproval": false,
+      "choice": "performance"
+    },
+    {
+      "id": "basic-disarm-trap-kit",
+      "name": "Basic Disarm Trap Kit",
+      "quality": "basic",
+      "gmApproval": false
+    },
+    {
+      "id": "cure-wounds-potion",
+      "name": "Cure Wounds Potion",
+      "gmApproval": false
+    },
+    {
+      "id": "minor-poison",
+      "name": "Minor Poison",
+      "gmApproval": false
+    },
+    {
+      "id": "purifying-salve",
+      "name": "Purifying Salve",
+      "gmApproval": false
+    },
+    {
+      "id": "coin-5-copper",
+      "name": "5 Copper in Coin",
+      "gmApproval": false,
+      "copper": 5
+    }
+  ],
+  "source": "Rulebook p.18, p.63"
+}

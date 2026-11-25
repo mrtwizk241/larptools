@@ -1,0 +1,3329 @@
+[
+  {
+    "id": "aggression",
+    "name": "Aggression",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Two back-to-back weapon, claw, or bite attacks, each at +25 damage."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Two back-to-back weapon, claw, or bite attacks, each at +50 damage."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Two back-to-back weapon, claw, or bite attacks, each at +100 damage."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Blade Fury: gain two 100 damage weapon, claw, or bite attacks at once; each one comes back after a 100 count. Lasts the encounter or until death."
+      }
+    },
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "back-strike",
+    "name": "Back Strike",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "One melee attack from behind at +50 damage, or +25 to one ranged weapon, Relic, or frontal melee attack."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "One melee attack from behind at +100 damage, or +50 to one ranged weapon, Relic, or frontal melee attack."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "One melee attack from behind at +250 damage, or +100 to one ranged weapon, Relic, or frontal melee attack."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Rogues Cunning: a 200 point damage pool spent in 50 point steps on melee attacks from behind. A 100 count refills 50, a 200 count refills it all, and you may walk (not run) while refilling. Lasts the encounter or until death."
+      }
+    },
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "bash",
+    "name": "Bash",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Two-handed axe or two-handed hammer/club; swing no faster than once per second",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "One weapon attack that deals Crush damage."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Three weapon attacks during this encounter deal Crush damage."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "One weapon attack called as \"Crushing Delimb X\", where X is right arm, left arm, right leg, or left leg."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Every weapon attack you make deals Crush for the encounter."
+      }
+    },
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "battle-tactics",
+    "name": "Battle Tactics",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 5 minutes forming a Battle Unit of you plus one person per level of this skill; each member gets +1 Passive Weapon or +1 Passive Relic Damage while within 15 feet of you. Lasts the encounter; a person can be in one unit at a time and only the founder spends Battle Tactics uses for it."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Plan with the unit for at least 10 seconds before combat; each member gets one use of a skill they already have for the encounter."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "When forming the unit the bonus becomes +2 and the Expert planning benefit is included."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "While fighting with the unit, give each member in range two skill restores by calling \"Battle Unit, Restore Skill. Battle Unit, Restore Skill.\""
+      }
+    },
+    "derived": [
+      {
+        "at": "basic",
+        "stat": "battleUnitSize",
+        "perLevel": 1,
+        "note": "Members besides yourself"
+      }
+    ],
+    "source": "Rulebook p.91"
+  },
+  {
+    "id": "disarm",
+    "name": "Disarm",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Weapon delivered disarm: \"Weaponstrike Disarm - 10 seconds\" (see Calls to Know: Disarm)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Sunder Claw: disarm claws and bites for 10 seconds with \"Weaponstrike Sunder Claw - 10 seconds\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Weapon delivered \"Shatter Armor\", dropping the target's Armor Points to 0."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Three weapon delivered \"Shatter Armor\" attacks during the encounter."
+      }
+    },
+    "source": "Rulebook p.91-92"
+  },
+  {
+    "id": "evoke-fear",
+    "name": "Evoke Fear",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Delivery: packet for 1 use. Effect unlocked: \"Fear - 10 Seconds\"."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Delivery: weapon, \"Weapon Strike - Fear <X>\", for 2 uses. Effect unlocked: \"Fear - Weakness\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Delivery: \"Front Cone - Fear <X>\" for 3 uses. Effect unlocked: \"Fear - Destruction\"."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Delivery: \"Voice Radius - Fear <X>\" for 4 uses. Effect unlocked: \"Fear - Stun 10 Seconds\"."
+      }
+    },
+    "notes": "Pick any fear effect whose Technique you own, then pay the use cost of the delivery method you choose (packet 1, weapon 2, frontal cone 3, voice radius 4). Example: a Grandmaster can packet a \"Fear - Stun 10 Seconds\" for 1 use.",
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "finesse",
+    "name": "Finesse",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Edged weapon or claws/bite",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "One weapon, claw, or bite attack for Vorpal damage."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Three weapon, claw, or bite attacks this encounter deal Vorpal damage."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "One \"Weapon Strike - Destruction\" with weapon, claw, or bite; unless resisted the target takes double damage from everything until removed or the encounter ends."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "All weapon, claw, and bite damage is Vorpal for the encounter."
+      }
+    },
+    "grants": [
+      {
+        "at": "expert",
+        "grant": "dual-wield-long-short",
+        "source": "Rulebook p.65"
+      },
+      {
+        "at": "master",
+        "grant": "dual-wield-long-long",
+        "source": "Rulebook p.65"
+      }
+    ],
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "knockback",
+    "name": "Knockback",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "One weapon attack calling \"Knockback - 10 Steps\"."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Three weapon attacks this encounter deal \"Knockback - 10 Steps\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Push back everyone around you: \"Lash Knockback - 10 Steps\"."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "The next 10 weapon attacks each carry the call \"Knockback - 10 Steps\"."
+      }
+    },
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "nerve-pinch",
+    "name": "Nerve Pinch",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "One melee weapon attack from behind with Sleep as the effect."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "One melee weapon attack with Sleep as the effect from any direction."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "One \"Weapon Strike - Sleep\" with a weapon."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "One weapon delivered \"Sleep Strike - Death\"."
+      }
+    },
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "precision",
+    "name": "Precision",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "For the encounter: +2 Passive Damage on melee attacks from behind and +1 Passive Damage with a ranged weapon or Relic. Uses stack."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Always +2 Passive Damage on melee attacks from behind and +1 with a ranged weapon or Relic."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +2 Passive Damage on melee attacks from behind and +1 with a ranged weapon or Relic."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +2 Passive Damage on melee attacks from behind and +1 with a ranged weapon or Relic."
+      }
+    },
+    "passives": [
+      {
+        "at": "expert",
+        "stat": "passiveDamageBehind",
+        "amount": 2
+      },
+      {
+        "at": "expert",
+        "stat": "passiveDamageRanged",
+        "amount": 1
+      },
+      {
+        "at": "expert",
+        "stat": "passiveDamageRelic",
+        "amount": 1
+      },
+      {
+        "at": "master",
+        "stat": "passiveDamageBehind",
+        "amount": 2
+      },
+      {
+        "at": "master",
+        "stat": "passiveDamageRanged",
+        "amount": 1
+      },
+      {
+        "at": "master",
+        "stat": "passiveDamageRelic",
+        "amount": 1
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamageBehind",
+        "amount": 2
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamageRanged",
+        "amount": 1
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamageRelic",
+        "amount": 1
+      }
+    ],
+    "grants": [
+      {
+        "at": "expert",
+        "grant": "dual-wield-long-short",
+        "source": "Rulebook p.65"
+      },
+      {
+        "at": "master",
+        "grant": "dual-wield-long-long",
+        "source": "Rulebook p.65"
+      }
+    ],
+    "source": "Rulebook p.92"
+  },
+  {
+    "id": "relic-proficiency",
+    "name": "Relic Proficiency",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend a use for +2 Passive Relic Damage for the encounter; uses stack up to the Passive Damage Cap."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "+1 Passive Relic Damage."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +1 Passive Relic Damage."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +1 Passive Relic Damage."
+      }
+    },
+    "passives": [
+      {
+        "at": "expert",
+        "stat": "passiveDamageRelic",
+        "amount": 1
+      },
+      {
+        "at": "master",
+        "stat": "passiveDamageRelic",
+        "amount": 1
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamageRelic",
+        "amount": 1
+      }
+    ],
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "speed-of-blade",
+    "name": "Speed of Blade",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "A weapon attack that auto-hits: call \"Speed of Blade <Effect>\"; the target must be within your weapon's reach."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Three \"Speed of Blade\" weapon attacks during this encounter."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Press: beat the target's defense against your attack. Once per weapon attack; it presses the whole effect."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Double Press: Press twice on one weapon attack (3 uses for the first Press, then 1 more use for the second)."
+      }
+    },
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "strength",
+    "name": "Strength",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Break yourself or another free of a Pin or Web on an uninterruptible 3 count: \"I Rip Free 1, I Rip Free 2, I Rip Free 3\"."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "+1 Passive Damage with one-handed weapons and +2 with two-handed weapons."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Passive: every weapon deals +1 damage."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +1 Passive Damage with one-handed weapons and +2 with two-handed weapons."
+      }
+    },
+    "passives": [
+      {
+        "at": "expert",
+        "stat": "passiveDamage1h",
+        "amount": 1
+      },
+      {
+        "at": "expert",
+        "stat": "passiveDamage2h",
+        "amount": 2
+      },
+      {
+        "at": "master",
+        "stat": "passiveDamageWeapon",
+        "amount": 1
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamage1h",
+        "amount": 1
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamage2h",
+        "amount": 2
+      }
+    ],
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "stun",
+    "name": "Stun",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "One weapon attack calling \"Stun - 5 Seconds\". Some bosses may resist it more over time."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Three weapon attacks this encounter deal \"Stun - 5 Seconds\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "One attack as \"Frontal Cone, Stun - 10 Seconds\"."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Five weapon attacks this encounter deal \"Stun - 10 Seconds\"."
+      }
+    },
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "taunt",
+    "name": "Taunt",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Land a legal weapon hit and call \"Taunt - 10 Seconds\"; one enemy focuses on you for 10 seconds."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Land a legal weapon hit and call \"Taunt - 20 Seconds\"; one enemy focuses on you for 20 seconds and you gain +20 Temporary Life Points."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Call \"Lash, Taunt Enemies - 20 Seconds\"; a group focuses on you for 20 seconds and you gain +20 Temporary Life Points."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Call \"Voice Radius, Taunt Enemies - 30 Seconds\"; all nearby enemies focus on you for 30 seconds and you gain +50 Temporary Life Points."
+      }
+    },
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "weapon-proficiency",
+    "name": "Weapon Proficiency",
+    "category": "offensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend a use for +1 Passive Weapon Damage for the encounter; uses stack up to the Passive Damage Cap."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "+1 Passive Damage with one-handed weapons and +2 with two-handed weapons."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "+1 Passive Damage on all weapon attacks."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +1 Passive Damage with one-handed weapons and +2 with two-handed weapons."
+      }
+    },
+    "passives": [
+      {
+        "at": "expert",
+        "stat": "passiveDamage1h",
+        "amount": 1
+      },
+      {
+        "at": "expert",
+        "stat": "passiveDamage2h",
+        "amount": 2
+      },
+      {
+        "at": "master",
+        "stat": "passiveDamageWeapon",
+        "amount": 1
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamage1h",
+        "amount": 1
+      },
+      {
+        "at": "grandmaster",
+        "stat": "passiveDamage2h",
+        "amount": 2
+      }
+    ],
+    "grants": [
+      {
+        "at": "expert",
+        "grant": "dual-wield-long-short",
+        "source": "Rulebook p.65"
+      },
+      {
+        "at": "master",
+        "grant": "dual-wield-long-long",
+        "source": "Rulebook p.65"
+      }
+    ],
+    "source": "Rulebook p.93"
+  },
+  {
+    "id": "assassinate",
+    "name": "Assassinate",
+    "category": "offensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "back-strike",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "nerve-pinch",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "requirement": "Every Assassinate attack must come from behind the target, or be paired with a skill that removes the from-behind need",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Melee weapon, claw, or bite attack calling \"Slay\"."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Melee weapon, claw, or bite attack calling \"Bleed\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Melee weapon, claw, or bite attack calling \"Assassinate\"."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Assassin's Cunning: gain one \"Bleed\" use (from behind) at once, renewable with a 100 count while walking (not running). Lasts the encounter or until death."
+      }
+    },
+    "source": "Rulebook p.94"
+  },
+  {
+    "id": "flash",
+    "name": "Flash",
+    "category": "offensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "blink",
+            "technique": "master"
+          },
+          {
+            "skill": "evoke-fear",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "precision",
+            "technique": "master"
+          },
+          {
+            "skill": "back-strike",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "prereqsPrinted": "Blink -OR- Evoke Fear + Precision -OR- Backstrike",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Call \"Flash X\" on one target; for the encounter your base damage (cap 20) against X counts as from behind."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Use one ability as if behind the target by adding \"Flash\" before its normal call."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Use the Basic Flash ability without limit for the encounter (base damage counts as from behind)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Use the Basic and Expert Flash abilities without limit for the encounter."
+      }
+    },
+    "source": "Rulebook p.94"
+  },
+  {
+    "id": "frenzy",
+    "name": "Frenzy",
+    "category": "offensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "weapon-proficiency",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "strength",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Call \"Frenzy\" for 3 attacks in a row at double passive damage (cap 20), or at +5 damage each."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Frenzy becomes 4 attacks with a cap of 30."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Frenzy becomes 5 attacks with no cap."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Frenzy becomes 5 attacks, each at +10 damage added after the passive is doubled."
+      }
+    },
+    "source": "Rulebook p.94"
+  },
+  {
+    "id": "pierce",
+    "name": "Pierce",
+    "category": "offensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "weapon-proficiency",
+            "technique": "master"
+          },
+          {
+            "skill": "precision",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "aggression",
+            "technique": "master"
+          },
+          {
+            "skill": "back-strike",
+            "technique": "master"
+          },
+          {
+            "skill": "finesse",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "prereqsPrinted": "Weapon Proficiency -OR- Precision + Aggression -OR- Backstrike -OR- Finesse + Ranged Weapon",
+    "requirement": "Ranged weapon only",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "One ranged weapon attack dealing your passive damage as \"Vorpal Crush\"."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Three ranged weapon attacks in a row dealing your passive damage as \"Vorpal Crush\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "One ranged weapon attack as \"Vorpal Crush\"."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "For the encounter, your passive damage ranged weapon attacks become \"Vorpal Crush\"."
+      }
+    },
+    "source": "Rulebook p.94"
+  },
+  {
+    "id": "slay",
+    "name": "Slay",
+    "category": "offensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "aggression",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "stun",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Weapon, claw, or bite attack calling \"Slay\"."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Weapon, claw, or bite attack calling \"Bleed\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Weapon, claw, or bite attack calling \"Deathblow\"."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Slay Fury: gain two Slay uses at once, each renewable with a 100 count. Lasts the encounter or until death."
+      }
+    },
+    "source": "Rulebook p.94"
+  },
+  {
+    "id": "deflection",
+    "name": "Deflection",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "A weapon able to block, or a shield, in hand. Usable for anyone within your melee range.",
+    "defenseType": "avoidance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Call \"Deflect\" to reduce the damage of a numeric weapon or physical attack."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Call \"Block\" to negate all of a numeric weapon or physical attack."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Call \"Parry\" to negate any weapon or physical attack."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Call \"Riposte\" to negate all of any weapon or physical attack and send it back at the attacker."
+      }
+    },
+    "source": "Rulebook p.95"
+  },
+  {
+    "id": "delay-effect",
+    "name": "Delay Effect",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Call \"Delay Effect\" to push one status effect to the end of the encounter, when you take it in full once and cannot negate it. Only one effect type can be delayed at a time; more uses keep delaying repeat hits of that same type."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Delay (or, with the Master Technique, use Status Resilience on) a second, different effect. After that, 1 use calls \"Delay Effect\" against either delayed effect."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Status Resilience for the encounter: repeat hits of a delayed effect cost no uses, but you still call \"Delay Effect\". Passive: bleed to death count is 120 seconds instead of 60."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Unlimited Delay Death for the encounter: delays instant death effects such as Deathblow, Assassinate, or Killing Blows, but not death by damage or bleeding out. Passive: bleed to death count is 300 seconds instead of 120."
+      }
+    },
+    "passives": [
+      {
+        "at": "master",
+        "stat": "bleedOutSeconds",
+        "op": "set",
+        "amount": 120
+      },
+      {
+        "at": "grandmaster",
+        "stat": "bleedOutSeconds",
+        "op": "set",
+        "amount": 300
+      }
+    ],
+    "source": "Rulebook p.95"
+  },
+  {
+    "id": "endurance",
+    "name": "Endurance",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Within 5 seconds of dropping to 0 or -1 Life Points, call \"Endurance\" to heal (Clockworks: repair) yourself to 1 Life Point."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Endurance heals or repairs you to 50 Life Points instead of 1; if your maximum is under 50, the rest comes as Temporary Life Points."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Quick Healing: on a 3 count, \"Quick Heal 1, Quick Heal 2, Quick Heal 3, Full Heal!\", restore yourself to full Life Points (Clockworks say repair)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Quick Healing with no count: full Life Points, +20 Temporary Life Points, and lost limbs restored. Passive: immune to Aging effects."
+      }
+    },
+    "grants": [
+      {
+        "at": "grandmaster",
+        "grant": "immune-aging"
+      }
+    ],
+    "source": "Rulebook p.95"
+  },
+  {
+    "id": "evasion",
+    "name": "Evasion",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "defenseType": "avoidance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "When hit by a non-AoE effect with a number in the call, call \"Sidestep\" to halve the number (round down, minimum 1)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "When hit by a non-AoE effect with a number in the call, call \"Evade\" to negate it."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "When hit by any non-AoE effect (AoE means Lash, Frontal Cone, Voice Radius and similar), call \"Dodge\" to negate it."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "When hit by any effect, call \"Phase\" to negate it and become immune to all effects for 3 seconds or until you act offensively."
+      }
+    },
+    "source": "Rulebook p.95-96"
+  },
+  {
+    "id": "intercept",
+    "name": "Intercept",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Call \"Intercept\" to take an effect aimed at a willing target within 5 feet. Not usable on touch effects."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "The intercepted effect is also reduced: call \"Intercept, Reduced\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Intercept, reduce, and push back the attacker: call \"Intercept, Reduced, Knockback - 5 Steps\" (a Point Knockback)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Call \"Bodyguard <target>\"; for the encounter you may Intercept (Basic) for that target at no further use cost, calling \"Intercept\"."
+      }
+    },
+    "source": "Rulebook p.96"
+  },
+  {
+    "id": "resilience",
+    "name": "Resilience",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "defenseType": "resistance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "When taking a numeric damaging effect, call \"Reduced\"."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "When taking a numeric damaging effect, call \"Resist Pain\" to negate it."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "When taking any damaging effect, call \"Resist Damage\" to negate it."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "When taking any effect, call \"Resist Effect\" to negate it."
+      }
+    },
+    "source": "Rulebook p.96"
+  },
+  {
+    "id": "resist-elements",
+    "name": "Resist Elements",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "defenseType": "resistance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "When struck by an effect with an element in the call, call \"Resist Elements\" to negate it."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Boon Element: negate a numeric elemental effect and instead heal (Clockworks: Life Repair) by its amount, calling \"Healed By <element>\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Resist Magic: call \"Resist Magic\" to negate any magical effect."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Reflect Magic: call \"Reflect Magic\" to send any elemental or magical effect back at its source."
+      }
+    },
+    "notes": "Elements: Earth, Essence, Fire, Harm, Ice, Lightning.",
+    "source": "Rulebook p.96"
+  },
+  {
+    "id": "resist-fear",
+    "name": "Resist Fear",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "defenseType": "resistance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "When hit by a Fear effect, call \"Resist Fear\" to negate it."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "When you see a Fear effect used, call \"Counter Fear\" to negate the whole effect."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Fear effects have no effect on you for the encounter."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Touch a target and call \"Grant Fear Immunity\"; lasts the encounter or until they lose sight of you for over 10 seconds."
+      }
+    },
+    "source": "Rulebook p.96"
+  },
+  {
+    "id": "toughness",
+    "name": "Toughness",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "After a 10 count, gain +10 Life Points for the encounter, or +25 Temporary Life Points that last until used or removed. Uses stack up to the Life Point cap."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "+20 Life Points (20 total from Techniques)."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +20 Life Points (40 total)."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +20 Life Points (60 total)."
+      }
+    },
+    "passives": [
+      {
+        "at": "expert",
+        "stat": "lifePoints",
+        "amount": 20
+      },
+      {
+        "at": "master",
+        "stat": "lifePoints",
+        "amount": 20
+      },
+      {
+        "at": "grandmaster",
+        "stat": "lifePoints",
+        "amount": 20
+      }
+    ],
+    "source": "Rulebook p.96"
+  },
+  {
+    "id": "wear-armor",
+    "name": "Wear Armor",
+    "category": "defensive",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Basic ability needs at least three locations of armor phys rep worn",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "After a 10 count, gain +10 Armor Points for the encounter, or +25 Temporary Armor Points that last until used or removed. Uses stack up to the Armor Point cap."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "+20 Armor Points (20 total from Techniques)."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +20 Armor Points (40 total)."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Another +20 Armor Points (60 total)."
+      }
+    },
+    "passives": [
+      {
+        "at": "expert",
+        "stat": "armorPoints",
+        "amount": 20
+      },
+      {
+        "at": "master",
+        "stat": "armorPoints",
+        "amount": 20
+      },
+      {
+        "at": "grandmaster",
+        "stat": "armorPoints",
+        "amount": 20
+      }
+    ],
+    "source": "Rulebook p.96"
+  },
+  {
+    "id": "defensive-stance",
+    "name": "Defensive Stance",
+    "category": "defensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "endurance",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "toughness",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "defenseType": "resistance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Plant your feet; every non-surging damaging effect that hits you is reduced. Ends if you use another skill or ability or move your feet."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Name one foot as a pivot and turn on it without ending the stance."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "The stance also works against surging effects."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "You may use defensive abilities without ending the stance."
+      }
+    },
+    "source": "Rulebook p.97"
+  },
+  {
+    "id": "energy-absorption",
+    "name": "Energy Absorption",
+    "category": "defensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "resist-elements",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "intercept",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "defenseType": "resistance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "When a willing target in melee reach is hit by a packet effect, call \"Absorb\" to intercept and resist it."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "When a frontal cone effect hits you, \"Absorb\" it so only you are affected, then you may use a suitable defense against it."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Same as Expert for a lash effect."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Same as Expert for a voice radius effect."
+      }
+    },
+    "source": "Rulebook p.97"
+  },
+  {
+    "id": "flee",
+    "name": "Flee",
+    "category": "defensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "evasion",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "blink",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "requirement": "Only while running away and using no other skills (attacking and blocking included)",
+    "defenseType": "avoidance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Gain 1 Evade for the encounter, usable only while fleeing."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Flee grants 3 Evades for the encounter."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Flee grants 3 Dodges for the encounter."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Flee grants 3 Dodges for the encounter and reduces all damage you take while fleeing."
+      }
+    },
+    "source": "Rulebook p.97"
+  },
+  {
+    "id": "surge-shield",
+    "name": "Surge Shield",
+    "category": "defensive",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "deflection",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "delay-effect",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "prereqsPrinted": "Deflection + Delay Effect + Shield use",
+    "requirement": "Shield use (a physical shield)",
+    "defenseType": "avoidance",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "After a 10 count call \"Surge Shield\"; the next surging effect (positive or negative) striking your physical shield is negated by calling \"Surge Shield\". Lasts one encounter; one active at a time."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Surge Shield covers 2 effects."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Surge Shield covers the next 3 effects, or one effect of your choice. Passive: it can be raised with a 5 count."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Gain one \"Resist Effect\" (E) that lasts until re-pop or use; it can stand in for any resist in the game and fully negates the effect, even ones that need several defenses such as Assassinate."
+      }
+    },
+    "source": "Rulebook p.97"
+  },
+  {
+    "id": "animal-ken",
+    "name": "Animal Ken",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Packet one \"Charm - Pacify Animal\"."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Packet a \"Lash Charm - Pacify Animals\". Passive: call \"Speak with Animals\" to talk with animals for the encounter (they gain no extra intelligence)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Packet one \"Charm - Befriend Animal\"; it helps with one non-combat task or up to 2 minutes of combat (unless you phys rep it), then leaves. Passive: gain a special second Familiar of the Animal type at Expert level, unaffected by Familiar Elixirs except the Retraining Elixir."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Packet one \"Charm - Pacify Monster\", or \"Lash Charm - Befriend Animals\", or \"Voice Radius - Charm Pacify Animals\". Passive: either raise the special Familiar to Grandmaster, or gain another special Familiar as at Master."
+      }
+    },
+    "grants": [
+      {
+        "at": "expert",
+        "grant": "speak-with-animals"
+      },
+      {
+        "at": "master",
+        "grant": "special-animal-familiar",
+        "note": "Expert level, Animal type"
+      },
+      {
+        "at": "grandmaster",
+        "grant": "special-animal-familiar-upgrade-or-extra",
+        "note": "Choice: upgrade to Grandmaster level or one more special familiar"
+      }
+    ],
+    "notes": "Animal means Monster Manual type Animal or Insect. Monster means Animal, Insect, Lycan, Magical Beast, or Monster.",
+    "source": "Rulebook p.98"
+  },
+  {
+    "id": "augury",
+    "name": "Augury",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Ask a GM one simple yes or no question (single focus, no conjunctions) and get a true answer. A Scry Shield on the subject blocks it and the GM says so."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Ask a simple question and get a one word answer; overly complex questions may need rephrasing."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Ask any question and get up to one sentence in reply."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Ask any question and get a detailed answer, usually as a vision."
+      }
+    },
+    "source": "Rulebook p.98"
+  },
+  {
+    "id": "blink",
+    "name": "Blink",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Call \"I portal\" to pass through a standard portal instantly, or call \"Blink\" with a hand over your head to move freely and safely for 3 seconds, immune to all effects (not usable after the fact to stop an effect). People need not move aside and you are not invisible."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Passwall: hand on a wall up to 10 feet thick, count \"I Passwall 1, I Passwall 2, I Passwall 3\", then go out of game and appear on the other side."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Portal: hang a roughly person-sized cloth to open a portal for 5 minutes (closed by Disenchant or your 10 count) to a familiar Sylvaris location named at creation. Entering and exiting take a 3 count each and travel takes at least 1 minute."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Call \"Immaterial\" with hands over your head or crossed over your face for 10 seconds: visible, cannot interact or use skills, cannot run, immune to all but Solidify, and may pass through people by calling \"Immaterial\"."
+      }
+    },
+    "derived": [
+      {
+        "at": "basic",
+        "stat": "familiarLocations",
+        "perLevel": 1,
+        "note": "Each level familiarizes one location for portaling"
+      }
+    ],
+    "source": "Rulebook p.98-99"
+  },
+  {
+    "id": "disarm-trap",
+    "name": "Disarm Trap",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged and phys repped Disarm Trap Tools",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Resist one effect from a trap. Most traps keep firing if not disarmed."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Instantly disarm any trap within 5 feet."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "For the encounter you can disarm traps with a 100 count."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "For the encounter you are immune to traps and can disarm them with a 60 count."
+      }
+    },
+    "source": "Rulebook p.99"
+  },
+  {
+    "id": "disenchant",
+    "name": "Disenchant",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Touch the target and call \"Magic Disenchant\". Touching still exposes you to the target's own effects."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Deliver it by weapon, \"Weapon Strike - Magic Disenchant\", or by packet, \"Magic Disenchant\"."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "\"Lash, Magic Disenchant\" centered on you or on a thrown packet, or \"Banish Elemental\" by weapon strike or packet."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "\"Banish Elemental\" by weapon strike or packet twice this encounter, or \"Voice Radius, Magic Disenchant\"."
+      }
+    },
+    "source": "Rulebook p.99"
+  },
+  {
+    "id": "harvesting",
+    "name": "Harvesting",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Harvesting Tool for the active use",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Check-in: 2 Basic Components per level, plus the bonus of your highest Technique. Active: harvest plot collectables with a 100 count; may also yield components or materials at GM discretion."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Check-in: 3 more Basic Components."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Check-in: 6 more Basic Components."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Check-in: 2 Exotic Components (or 1 Master Building Material instead), and you may trade that check-in's Basic Components at 4 to 1 for Exotics, to at most 6 Exotics total."
+      }
+    },
+    "checkIn": {
+      "techniqueRule": "highest-only",
+      "perLevel": {
+        "basicComponents": 2
+      },
+      "byTechnique": {
+        "expert": {
+          "basicComponents": 3
+        },
+        "master": {
+          "basicComponents": 6
+        },
+        "grandmaster": {
+          "exoticComponents": 2,
+          "alternative": {
+            "masterBuildingMaterials": 1
+          },
+          "trade": {
+            "basicPerExotic": 4,
+            "maxExoticTotal": 6
+          }
+        }
+      }
+    },
+    "source": "Rulebook p.99"
+  },
+  {
+    "id": "healing",
+    "name": "Healing",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Passive: touch, call \"Begin Healing\", 60 count, then \"Heal 5\"; the bleed out timer pauses while you heal, and you may ask a willing target diagnostic questions such as \"Healing - Are you Dead?\". Active: same process ending in \"Heal 100\" (up to their maximum)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Touch plus 3 count and \"Cure Ailments\" removes all standard negative status effects, or touch, \"Begin Raise Dead\", 100 count, \"Raise Dead\" returns the dead at half Life Points (over 5 minutes dead costs a Spirit Fragment; none left means failure). Passive: the free heal may remove one status effect instead of healing 5."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "After a 60 count, \"Lash, Heal 100\". Passive: the Basic use may instead give \"Regenerate Limbs\" or \"Remove Aging\"."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "For the encounter, every Healing use, passive included, may go out as a Frontal Cone. Passive: the free heal becomes \"Heal 10\"."
+      }
+    },
+    "source": "Rulebook p.100"
+  },
+  {
+    "id": "hide",
+    "name": "Hide",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "A stationary object about your size to hide behind",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Hide instantly, arms crossed in an X over your chest. Anyone who watched you hide can reveal you freely; moving or speaking above a whisper ends it."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Call \"Hop\" to move up to 10 seconds or 10 steps to another hiding spot. Passive: Basic Hide is free with a 100 count."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Make one melee or ranged attack from hiding without breaking it, calling \"Unseen <attack effect>\"; it ignores from-behind limits. Passive: Hop costs 1 use, and free Basic Hide takes a 60 count."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Call \"Invisible\" (arms crossed) to vanish even while watched, up to 30 seconds; attacking, using a skill, or revealing yourself ends it, and ending in a hiding spot leaves you hidden. Passive: Basic Hide calls \"Lesser Invisible\" so watchers cannot find your exact spot."
+      }
+    },
+    "source": "Rulebook p.100-101"
+  },
+  {
+    "id": "knowledge",
+    "name": "Knowledge",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Talk a skill over with someone else for 10 seconds to give them +1 level in it until re-pop (E); you must have the skill and they must be able to learn it. Granted levels are spent first. Passive: one extra standard language read and written per named level."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Affect up to 3 targets with the same skill."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Affect up to 6 targets with the same skill."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Give +2 levels of the same skill to up to 6 targets."
+      }
+    },
+    "passives": [
+      {
+        "at": "basic",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      },
+      {
+        "at": "expert",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      },
+      {
+        "at": "master",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      },
+      {
+        "at": "grandmaster",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      }
+    ],
+    "source": "Rulebook p.101"
+  },
+  {
+    "id": "manipulate-magic",
+    "name": "Manipulate Magic",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Grant an Enhancement Slot, or move an enhancement from one willing target's slot to another target's open slot while touching both. Passive: touch an object for a 10 count to learn if it is magical."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Give an effect in an Enhancement Slot one more use or effect (max two per slot; passive parts unaffected). Passive: identify magic items with a 100 count in a safe place or 300 count elsewhere."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Focus on a magic item for 5 minutes to renew all its Augments as at re-pop. Not for Artifacts, Familiars, or Calling augment slots; counts as a skill renewal."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Grant an Amplified Armor Enhancement Slot, which amplifies refittable armor enhancements placed in it. Passive: one more Magic Item Attunement Slot."
+      }
+    },
+    "passives": [
+      {
+        "at": "grandmaster",
+        "stat": "attunementSlots",
+        "amount": 1
+      }
+    ],
+    "source": "Rulebook p.101"
+  },
+  {
+    "id": "merchanting",
+    "name": "Merchanting",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Check-in: per level, collect 5 Copper or cover 2 Silver of your own upkeep, plus the bonus of your highest Technique only."
+      },
+      "expert": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Check-in: 10 Copper or 1 Expert Trade Item."
+      },
+      "master": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Check-in: 20 Copper, or 1 Master Trade Item, or a mix worth 20 Copper with at most 1 item."
+      },
+      "grandmaster": {
+        "uses": 0,
+        "kind": "passive",
+        "summary": "Check-in: 30 Copper, or 1 Grandmaster Trade Item, or a mix worth 30 Copper with at most 1 item. Example: at level 10 that is 50 Copper plus the Grandmaster bonus."
+      }
+    },
+    "checkIn": {
+      "techniqueRule": "highest-only",
+      "perLevel": {
+        "choice": [
+          {
+            "copper": 5
+          },
+          {
+            "ownUpkeepSilver": 2
+          }
+        ]
+      },
+      "byTechnique": {
+        "expert": {
+          "choice": [
+            {
+              "copper": 10
+            },
+            {
+              "tradeItem": "expert"
+            }
+          ]
+        },
+        "master": {
+          "choice": [
+            {
+              "copper": 20
+            },
+            {
+              "tradeItem": "master"
+            },
+            {
+              "mixCopperValue": 20,
+              "maxItems": 1
+            }
+          ]
+        },
+        "grandmaster": {
+          "choice": [
+            {
+              "copper": 30
+            },
+            {
+              "tradeItem": "grandmaster"
+            },
+            {
+              "mixCopperValue": 30,
+              "maxItems": 1
+            }
+          ]
+        }
+      }
+    },
+    "source": "Rulebook p.101"
+  },
+  {
+    "id": "performance",
+    "name": "Performance",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Performance Record holding the Performance Notes you know",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Perform a Basic Performance."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Perform an Expert Performance."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Perform a Master Performance."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Perform a Grandmaster Performance."
+      }
+    },
+    "source": "Rulebook p.101, p.107-109"
+  },
+  {
+    "id": "rally",
+    "name": "Rally",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Point at one target and call \"Point, Remove Fear\" to clear all Fear effects."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Call \"Point, Remove Fear, Grant Resist Fear\" to also give a Resist Fear (E)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Call \"Point, Grant <X> Immunity\" to remove Charm, Destruction, Fear, Stun, or Sleep and give immunity to it for the encounter."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Use any Rally ability as a Voice Radius."
+      }
+    },
+    "source": "Rulebook p.101-102"
+  },
+  {
+    "id": "research",
+    "name": "Research",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Make Research Notes for a Basic Spell Copy, non-advanced Basic Recipe, or Basic Performance Notes (report via Check-Out Form; tagged item next event), or ask a yes or no question about the current encounter that books could answer. Passive: one extra standard language read and written per named level."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Research Notes for an Expert Spell Copy, non-advanced Expert Recipe, or Expert Performance Notes. Also produce a Basic Ritual Script that expires at the end of the re-pop."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Research Notes for a Master Spell Copy, non-advanced Master Recipe, Basic Advanced Recipe, or Master Performance Note. Also submit a written simple question to the GMs about an event, creature, or item, usually answered between events."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Research Notes for a Grandmaster Spell Copy, non-advanced Grandmaster Recipe, Expert Advanced Recipe, or Grandmaster Performance Notes. Also produce a Ritual Script up to Master level that expires at the end of the re-pop."
+      }
+    },
+    "passives": [
+      {
+        "at": "basic",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      },
+      {
+        "at": "expert",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      },
+      {
+        "at": "master",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      },
+      {
+        "at": "grandmaster",
+        "stat": "languages",
+        "amount": 1,
+        "basis": "level"
+      }
+    ],
+    "source": "Rulebook p.102"
+  },
+  {
+    "id": "search",
+    "name": "Search",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Call \"Search\" and roleplay searching a 10 by 10 foot area; staff tell you what you find. If staff give you a blacklight, one use lights it for 10 seconds to collect blacklight items."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "For the encounter, Search every area you move slowly through and sense (not pinpoint) hidden people nearby; blacklight use is at will while moving slowly."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "After an encounter, with a GM, find one random remaining hidden item (uses spent either way), or point and call \"Reveal\" on a Hidden or Invisible target."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "See the Unseen for the encounter: see spirits (orange headband), check for disguise with a quiet 5 count and \"Detect Disguise?\", and get 3 Reveals, more at 1 Search use each."
+      }
+    },
+    "source": "Rulebook p.102-103"
+  },
+  {
+    "id": "urban-knowledge",
+    "name": "Urban Knowledge",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Cover one PC's upkeep up to 2 Silver, or ask a basic question about an urban event or place, or find a teacher for a non-advanced skill (1 use per named level of the teacher, capped at your level in this skill). Passive: learn a lock's level with a 30 count."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Pick Lock: with lockpicks, open a lock up to your highest named level in this skill on a 100 count."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Fence Goods: spend 10 minutes to sell one stable item at market value up to 1 Gold, or find a Basic teacher for an advanced skill. Passive: Hideout for you and up to 4 others (10 minutes to use), only while you visit it."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Hire an NPC to use up to Master level of a non-combat skill for a price, or skip an urban encounter, or \"Lash, Charm - Befriend Urban Thugs\", or find an Expert teacher for an advanced skill."
+      }
+    },
+    "grants": [
+      {
+        "at": "master",
+        "grant": "hideout"
+      }
+    ],
+    "source": "Rulebook p.103"
+  },
+  {
+    "id": "wilderness-knowledge",
+    "name": "Wilderness Knowledge",
+    "category": "utility",
+    "advanced": false,
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Basic Tracking, or a simple yes or no question about a plant or animal."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Guide up to 10 people to Quick Travel in half the usual time, or Expert Tracking. Passive: a one-person hidden Lair (10 minutes to reach); if the GM rules it known, you lose it for months while building a new one."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Ask a simple question about something native to the Prime Material Plane for a one word answer, or Master Tracking."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "\"Lash, Grant Planar Asylum - X\" protects a small group from natural exposure to plane X, or Grandmaster Tracking. Passive: you have Planar Asylum to all primary planes."
+      }
+    },
+    "grants": [
+      {
+        "at": "expert",
+        "grant": "lair"
+      },
+      {
+        "at": "grandmaster",
+        "grant": "planar-asylum-all-primary"
+      }
+    ],
+    "source": "Rulebook p.103-104"
+  },
+  {
+    "id": "energy-theft",
+    "name": "Energy Theft",
+    "category": "utility",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "disenchant",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "manipulate-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "prereqsPrinted": "Disenchant + Magic Manipulation",
+    "requirement": "Not on a PC, a PC's static magic, or a PC's item without GM approval",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Touch a magic item or static magic (barrier, wall, circle) and call \"Magic Energy Theft\": it is disenchanted until re-pop, cannot be thieved again that re-pop, and you regain one Basic skill use. Touching still exposes you to its effects."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Deliver it by weapon strike or ranged attack against enemies; unless missed or resisted you regain one Basic skill use."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "On success regain a Basic skill use, restore your armor to full, and gain an Enhancement Slot, or restore one renewable augment."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Spend 4 uses to release Stored Energy on yourself or another: 1 point restores a Basic skill use, 2 points an advanced skill use. Passive: each Energy Theft at any level also stores 1 point, up to 10; it survives re-pop but is lost on death, at event end, or when released."
+      }
+    },
+    "derived": [
+      {
+        "at": "grandmaster",
+        "stat": "storedEnergyMax",
+        "amount": 10
+      }
+    ],
+    "source": "Rulebook p.105"
+  },
+  {
+    "id": "monster-ken",
+    "name": "Monster Ken",
+    "category": "utility",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "animal-ken",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "wilderness-knowledge",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Call \"Voice Radius Stun Monsters - 5 Seconds\". Passive: call \"Speak with Monsters\" to talk with monsters for the encounter."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Minor Monster Trait until re-pop, pick one: +20 Armor Points (E), +20 Life Points (E), or +1 Passive Damage (E, several can share one slot). Passive: gain claws (dual wield size, base 2) or a bite (great claw, base 3) unless you already have them."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Packet one \"Charm - Befriend Monster\"; it helps with one non-combat task or up to 2 minutes of combat, then leaves. Passive: Planar Asylum to the Nature Plane and all its subrealms."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Major Monster Trait for the encounter, pick one: Regeneration (Claw, Bite, Edge, and Blunt damage reduced), Magic Infusion (Frontal Cone 100 Magic three times and claws or bite deal Magic), Armored Shell (refittable armor becomes 100), or Beast Claws (claws or bite base 10)."
+      }
+    },
+    "grants": [
+      {
+        "at": "basic",
+        "grant": "speak-with-monsters"
+      },
+      {
+        "at": "expert",
+        "grant": "claws-or-bite",
+        "note": "Claws base 2 (dual wield size) or bite base 3 (great claw); no effect if already present"
+      },
+      {
+        "at": "master",
+        "grant": "planar-asylum-nature"
+      }
+    ],
+    "notes": "Monster means Animal, Insect, Lycan, Magical Beast, or Monster.",
+    "source": "Rulebook p.105-106"
+  },
+  {
+    "id": "rifting",
+    "name": "Rifting",
+    "category": "utility",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "blink",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "manipulate-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "requirement": "Destination must be familiar to you and on the same plane",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Rift yourself to a familiar location on a 10 count."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Rift yourself and up to 4 willing targets within 5 feet on a 10 count."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Rift yourself only on a 5 count."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Rift yourself and up to 4 willing targets in line of sight on a 5 count."
+      }
+    },
+    "derived": [
+      {
+        "at": "basic",
+        "stat": "familiarLocations",
+        "perLevel": 1,
+        "note": "One more familiarization location per level, up to the location cap"
+      }
+    ],
+    "notes": "The same count is used to rift out and in. Rifting out can be interrupted and only the Rifter counts; rifting in cannot be interrupted, you count as Stunned, and every target counts on their own. Willingness is the player's choice.",
+    "source": "Rulebook p.106"
+  },
+  {
+    "id": "air-magic",
+    "name": "Air Magic",
+    "category": "magic",
+    "advanced": false,
+    "school": "air",
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to cast a Basic Air spell from your Spellbook (needs the matching Technique and the spell copy). Each level of the skill also lets you familiarize one more location for Portal travel (20 locations total cap, Rulebook p.85)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to cast an Expert Air spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to cast a Master Air spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to cast a Grandmaster Air spell from your Spellbook (needs the matching Technique and the spell copy)."
+      }
+    },
+    "derived": [
+      {
+        "at": "basic",
+        "stat": "familiarLocations",
+        "perLevel": 1,
+        "note": "Each level familiarizes one more Portal location, up to the location cap."
+      }
+    ],
+    "source": "Rulebook p.110, p.114"
+  },
+  {
+    "id": "death-magic",
+    "name": "Death Magic",
+    "category": "magic",
+    "advanced": false,
+    "school": "death",
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to cast a Basic Death spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to cast an Expert Death spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to cast a Master Death spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to cast a Grandmaster Death spell from your Spellbook (needs the matching Technique and the spell copy)."
+      }
+    },
+    "source": "Rulebook p.110, p.114"
+  },
+  {
+    "id": "destruction-magic",
+    "name": "Destruction Magic",
+    "category": "magic",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "death-magic",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "fire-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Turn the element of one spell into Destruction (25 Fire becomes 25 Destruction)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Double the packet count of a spell that has a fixed number of packets. Does not work on Storm spells."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Destruction Storm: feet planted, throw repeated \"Storm 10 Destruction\" packets until you move, take any effect, use another skill, or the encounter ends."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Destruction Maelstrom: like the Storm (10 Destruction per packet) but you may move up to 20 steps in total before it ends."
+      }
+    },
+    "source": "Rulebook p.115"
+  },
+  {
+    "id": "earth-magic",
+    "name": "Earth Magic",
+    "category": "magic",
+    "advanced": false,
+    "school": "earth",
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to cast a Basic Earth spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to cast an Expert Earth spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to cast a Master Earth spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to cast a Grandmaster Earth spell from your Spellbook (needs the matching Technique and the spell copy)."
+      }
+    },
+    "source": "Rulebook p.110, p.114"
+  },
+  {
+    "id": "fire-magic",
+    "name": "Fire Magic",
+    "category": "magic",
+    "advanced": false,
+    "school": "fire",
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to cast a Basic Fire spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to cast an Expert Fire spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to cast a Master Fire spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to cast a Grandmaster Fire spell from your Spellbook (needs the matching Technique and the spell copy)."
+      }
+    },
+    "source": "Rulebook p.110, p.114"
+  },
+  {
+    "id": "life-magic",
+    "name": "Life Magic",
+    "category": "magic",
+    "advanced": false,
+    "school": "life",
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to cast a Basic Life spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to cast an Expert Life spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to cast a Master Life spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to cast a Grandmaster Life spell from your Spellbook (needs the matching Technique and the spell copy)."
+      }
+    },
+    "source": "Rulebook p.110, p.114"
+  },
+  {
+    "id": "nature-magic",
+    "name": "Nature Magic",
+    "category": "magic",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "air-magic",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "earth-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Awaken one plant for the encounter so it can talk, or instantly remove corruption from a target. Passive: you may turn any spell's element into Nature."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Grow one Passion Flower (expires at re-pop): a 60 count use gives a target an Amplified Life Enhancement Slot, or it doubles the servings of an Herbalism ingredient recipe (that item then expires next re-pop). Passive: remove corruption on a 60 count for free."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Rest 10 minutes in an uncorrupted natural area to regain 2 uses of Air Magic and 2 uses of Earth Magic."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Voice Radius remove corruption, or a Nature Storm of repeated \"Storm 25 Nature Snare\" packets (feet planted). If the Storm lasts to the end of the encounter, two Passion Flowers bloom."
+      }
+    },
+    "source": "Rulebook p.111, p.115"
+  },
+  {
+    "id": "protection-magic",
+    "name": "Protection Magic",
+    "category": "magic",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "earth-magic",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "water-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Give one target within 5 ft an Amplified Armor Enhancement Slot (refittable armor placed there is amplified). Passive: your armor refits are Hastened."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Give three targets within 5 ft an Amplified Armor Enhancement Slot each."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Amplify a spell you cast that takes an Enhancement Slot so it carries two extra uses."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Circle of Protection up to 10 ft across that nothing crosses without your leave; one at a time, no nesting. A 100 count adds a Resist Disenchant (max 2). Lasts to re-pop or an unresisted Disenchant."
+      }
+    },
+    "source": "Rulebook p.111, p.115-116"
+  },
+  {
+    "id": "radiance-magic",
+    "name": "Radiance Magic",
+    "category": "magic",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "life-magic",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "fire-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Turn a damage spell into Radiance; you may spellstrike it with your Radiance Weapon. Passive: a 30 second focus lets any weapon you wield deal Radiance for the encounter."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "One Radiance Slay, or two consecutive +50 attacks with your Radiance Weapon."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "One Radiance Bleed attack with your Radiance Weapon."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Radiance Fury: two Radiance Slays at once, each reset by a 100 count, until the encounter ends or you die."
+      }
+    },
+    "source": "Rulebook p.111, p.116"
+  },
+  {
+    "id": "ritualism",
+    "name": "Ritualism",
+    "category": "magic",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 2,
+        "of": [
+          {
+            "skill": "air-magic",
+            "technique": "master"
+          },
+          {
+            "skill": "death-magic",
+            "technique": "master"
+          },
+          {
+            "skill": "earth-magic",
+            "technique": "master"
+          },
+          {
+            "skill": "fire-magic",
+            "technique": "master"
+          },
+          {
+            "skill": "life-magic",
+            "technique": "master"
+          },
+          {
+            "skill": "water-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Cast a Basic ritual. Also for 1 use: a 5 minute meditation in a safe space (or guided meditation on someone else) that returns the uses of a spell that missed every target with no effect this re-pop (not if avoided, resisted, or immune)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Cast an Expert ritual."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Cast a Master ritual."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Cast a Grandmaster ritual."
+      }
+    },
+    "source": "Rulebook p.111, p.116, p.126"
+  },
+  {
+    "id": "spirit-magic",
+    "name": "Spirit Magic",
+    "category": "magic",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "life-magic",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "death-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Give a target Spirit Sight for the encounter, or weapon/packet an Unavoidable Solidify, or help a willing spirit pass on. Passive: you have Spirit Sight."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Gain a 200 point spirit pool until re-pop (E), spent in 10 point steps: 10 points for a 5 heal by packet, or 10 Harm, or 10 Essence by packet or spiritstrike. Passive: grant Spirit Sight on a 100 count for free."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Weapon or packet one Banish. Passive: on a 100 count ready one weapon/packet Unavoidable Solidify (hold only one)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "both",
+        "summary": "Take spirit form for up to 10 seconds: immune to everything without \"spirit\" or \"Solidify\", may pass through walls and people on a 1 count. Passive: hold up to 3 Unavoidable Solidify."
+      }
+    },
+    "source": "Rulebook p.111, p.116-117"
+  },
+  {
+    "id": "time-magic",
+    "name": "Time Magic",
+    "category": "magic",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "air-magic",
+            "technique": "master"
+          }
+        ]
+      },
+      {
+        "need": 1,
+        "of": [
+          {
+            "skill": "water-magic",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "For the encounter, you need no spell incants and all your actions are Hastened."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "both",
+        "summary": "Place one Contingency on a target (E): Life (on death, clear effects and rise at half Life Points within 1 minute), Precognition (ignore one named status effect once), or Escape (sent to a safe place, default the tavern, if captured or last one alive). Passive: a 100 count removes one level of unnatural aging."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "both",
+        "summary": "Give one target one use of Dodge (Master Evasion) (E). Passive: immune to aging."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Time Vault (E), once per target per re-pop: the target stores up to 4 unused skill uses, returned at next re-pop or if the Vault is removed. On the last re-pop of an event it acts as a 4 use skill renewal. Never carries uses between events."
+      }
+    },
+    "source": "Rulebook p.110, p.117"
+  },
+  {
+    "id": "water-magic",
+    "name": "Water Magic",
+    "category": "magic",
+    "advanced": false,
+    "school": "water",
+    "prereqs": [],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to cast a Basic Water spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to cast an Expert Water spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to cast a Master Water spell from your Spellbook (needs the matching Technique and the spell copy)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to cast a Grandmaster Water spell from your Spellbook (needs the matching Technique and the spell copy)."
+      }
+    },
+    "source": "Rulebook p.110, p.114"
+  },
+  {
+    "id": "alchemy",
+    "name": "Alchemy",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Alchemy recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Alchemy recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Alchemy recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Alchemy recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "aqua-mortis",
+    "name": "Aqua Mortis",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Aqua Mortis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Aqua Mortis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Aqua Mortis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Aqua Mortis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "armorsmithing",
+    "name": "Armorsmithing",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Spend 1 use to craft a Basic Armorsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space). Passive: restore a shattered weapon or shield until the encounter ends (or it shatters again) with an unbroken 100 count, or fully repair it with 5 minutes in a crafting space."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Armorsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Armorsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Armorsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "artificing",
+    "name": "Artificing",
+    "category": "crafting",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 2,
+        "of": [
+          {
+            "skill": "armorsmithing",
+            "technique": "master"
+          },
+          {
+            "skill": "tinkering",
+            "technique": "master"
+          },
+          {
+            "skill": "weaponsmithing",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Artificing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Artificing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Artificing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Artificing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.132"
+  },
+  {
+    "id": "enchanting",
+    "name": "Enchanting",
+    "category": "crafting",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 2,
+        "of": [
+          {
+            "skill": "mystic-weaving",
+            "technique": "master"
+          },
+          {
+            "skill": "relic-crafting",
+            "technique": "master"
+          },
+          {
+            "skill": "terra-artis",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Enchanting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Enchanting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Enchanting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Enchanting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.132"
+  },
+  {
+    "id": "flesh-crafting",
+    "name": "Flesh Crafting",
+    "category": "crafting",
+    "advanced": true,
+    "prereqs": [
+      {
+        "need": 2,
+        "of": [
+          {
+            "skill": "alchemy",
+            "technique": "master"
+          },
+          {
+            "skill": "aqua-mortis",
+            "technique": "master"
+          },
+          {
+            "skill": "herbalism",
+            "technique": "master"
+          }
+        ]
+      }
+    ],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "aliases": ["Flesh Craft"],
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Flesh Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Flesh Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Flesh Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Flesh Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.132"
+  },
+  {
+    "id": "herbalism",
+    "name": "Herbalism",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Herbalism recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Herbalism recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Herbalism recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Herbalism recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "mystic-weaving",
+    "name": "Mystic Weaving",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Mystic Weaving recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Mystic Weaving recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Mystic Weaving recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Mystic Weaving recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "relic-crafting",
+    "name": "Relic Crafting",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Relic Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Relic Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Relic Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Relic Crafting recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "terra-artis",
+    "name": "Terra Artis",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Terra Artis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Terra Artis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Terra Artis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Terra Artis recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "tinkering",
+    "name": "Tinkering",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "active",
+        "summary": "Spend 1 use to craft a Basic Tinkering recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Tinkering recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Tinkering recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Tinkering recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  },
+  {
+    "id": "weaponsmithing",
+    "name": "Weaponsmithing",
+    "category": "crafting",
+    "advanced": false,
+    "prereqs": [],
+    "requirement": "Tagged tools for this craft and a crafting space (Rulebook p.129)",
+    "levels": {
+      "basic": {
+        "uses": 1,
+        "kind": "both",
+        "summary": "Spend 1 use to craft a Basic Weaponsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space). Passive: restore a shattered weapon or shield until the encounter ends (or it shatters again) with an unbroken 100 count, or fully repair it with 5 minutes in a crafting space."
+      },
+      "expert": {
+        "uses": 2,
+        "kind": "active",
+        "summary": "Spend 2 uses to craft an Expert Weaponsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "master": {
+        "uses": 3,
+        "kind": "active",
+        "summary": "Spend 3 uses to craft a Master Weaponsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      },
+      "grandmaster": {
+        "uses": 4,
+        "kind": "active",
+        "summary": "Spend 4 uses to craft a Grandmaster Weaponsmithing recipe from your Crafting Journal (needs the matching Technique, tools, and a crafting space)."
+      }
+    },
+    "source": "Rulebook p.131"
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "rules": {
+    "maxPerPc": 1,
+    "sources": ["adventure", "flesh-craft-elixir", "ritual"],
+    "unstableLeavesAtEventEnd": true,
+    "hasLifeOrArmor": false,
+    "trickSlotsByQuality": {
+      "mundane": 0,
+      "basic": 1,
+      "expert": 2,
+      "master": 3,
+      "grandmaster": 4
+    },
+    "maxTrickSlots": 4,
+    "skillTricks": {
+      "allowedNote": "Non-magic, non-crafting skills; a racial skill only if it is one of the owner's racial skills.",
+      "levelBySlots": [
+        {
+          "slots": 1,
+          "level": "basic"
+        },
+        {
+          "slots": 2,
+          "level": "expert",
+          "needsTechnique": "expert"
+        }
+      ],
+      "maxSlotsPerSkill": 2,
+      "usesPerRepopEqualsSlots": true,
+      "constantPassivesGranted": false
+    },
+    "skillSpecials": [
+      {
+        "skill": "performance",
+        "summary": "Pick one specific performance; it affects a single target only."
+      },
+      {
+        "skill": "merchanting",
+        "summary": "10 Copper at check-in per trick slot used.",
+        "checkInCopperPerSlot": 10
+      },
+      {
+        "skill": "harvesting",
+        "summary": "2 Basic Components at check-in per trick slot used; cannot harvest on plots but Hastens the owner's harvesting.",
+        "checkInBasicComponentsPerSlot": 2
+      }
+    ],
+    "retrainingNote": "A Retraining Elixir empties 1 Trick Slot; new tricks are trained between events by email to the GM team.",
+    "physRepNote": "Approved phys rep needed before gaining the Familiar; commonly a plush of at least 4 inches.",
+    "source": "Rulebook p.84, p.85"
+  },
+  "specialTricks": [
+    {
+      "id": "fam-scouting",
+      "name": "Scouting",
+      "summary": "A GM or Narrator gives a little information about what it sees.",
+      "frequency": "other",
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-breath-weapon",
+      "name": "Breath Weapon",
+      "summary": "A Frontal Cone of either 25 <element> damage or 10 healing.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-assist",
+      "name": "Assist",
+      "summary": "Assist the owner (Hastened count) with a chosen action: Refit Armor, Tracking, Crafting, Healing, or non-group performances.",
+      "choice": ["refit-armor", "tracking", "crafting", "healing", "non-group-performance"],
+      "frequency": "passive",
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-use-consumable",
+      "name": "Use a Consumable",
+      "summary": "Use a consumable for the owner hands-free.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-deliver",
+      "name": "Deliver",
+      "summary": "Deliver a small item or note to a named person.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-detect-poison-disease",
+      "name": "Detect Poison or Disease",
+      "summary": "Detect Poison or Disease by scent on a 10-count.",
+      "frequency": "passive",
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-distraction",
+      "name": "Distraction",
+      "summary": "Distract a foe, allowing an attack from any angle.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-speak-with-dead",
+      "name": "Speak with Dead",
+      "summary": "Speak with Dead as the spell, but a one-word answer.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-slick-snare",
+      "name": "Slick or Snare",
+      "summary": "Slick/Snare.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-resist-element",
+      "name": "Resist Element",
+      "summary": "Resist a chosen element (earth, air, fire, water, harm, essence).",
+      "choice": ["earth", "air", "fire", "water", "harm", "essence"],
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-knockback",
+      "name": "Knockback 10",
+      "summary": "Knockback 10.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-glide-jump",
+      "name": "Glide or Jump",
+      "summary": "Glide or Jump.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    },
+    {
+      "id": "fam-water-breathing",
+      "name": "Water Breathing",
+      "summary": "Water Breathing for the encounter.",
+      "frequency": "per-repop",
+      "uses": 1,
+      "source": "Rulebook p.85"
+    }
+  ],
+  "source": "Rulebook p.84, p.85"
+}

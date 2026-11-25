@@ -7,7 +7,7 @@
 // - Players on a real character: the level, and a + that sends a learning request.
 import { useState } from 'react';
 import { Minus, Plus } from 'lucide-react';
-import { maxLevelOf, preview } from '../../../../engine/index.ts';
+import { maxLevelOf, preview, type Command } from '../../../../engine/index.ts';
 import type { SkillPart } from '../../../../engine/model.ts';
 import { IconButton, useToast } from '../../../components/index.ts';
 import { useCommand } from '../../../data/engineHooks.ts';
@@ -39,12 +39,32 @@ export function SkillControls({ view, skill }: { view: CharacterView; skill: Ski
   const requestable = canRequest(view) ? requestableParts(view, skill) : [];
   const parts = controlParts(view, skill);
 
+  /** A test build's refund of the top level of a part (no reason to type). */
+  function refundCommand(part: SkillPart): Command {
+    return { type: 'refundSkill', skillId: skill.id, part, reason: TEST_BUILD_REFUND_REASON };
+  }
+
+  /**
+   * "Assault level 4" for the level a raise buys (`step` 1) or a lower takes back (`step` 0),
+   * or just "Assault Adept" for a part with one level.
+   */
+  function stepName(part: SkillPart, step: 0 | 1): string {
+    const label = partLabel(ruleset, skill, part);
+    const def = skill.parts[part];
+    if (def && maxLevelOf(ruleset, def.costKind) === 1) return label;
+    const level = (ownedPart(owned, part)?.level ?? 0) + step;
+    return `${label} level ${level}`;
+  }
+
   async function raise(part: SkillPart) {
     if (!testBuild || needsArchetypeChoice(sheet, skill)) {
       setDialog({ kind: 'learn', part });
       return;
     }
-    const outcome = await command.run({ type: 'learnSkill', skillId: skill.id, part });
+    const outcome = await command.run(
+      { type: 'learnSkill', skillId: skill.id, part },
+      { success: `Learned ${stepName(part, +1)}.`, undo: refundCommand(part) },
+    );
     if (!outcome.ok) toast.show(outcome.errors.map((e) => e.message).join(' '));
   }
 
@@ -53,11 +73,9 @@ export function SkillControls({ view, skill }: { view: CharacterView; skill: Ski
       setDialog({ kind: 'refund', part });
       return;
     }
-    const outcome = await command.run({
-      type: 'refundSkill',
-      skillId: skill.id,
-      part,
-      reason: TEST_BUILD_REFUND_REASON,
+    const outcome = await command.run(refundCommand(part), {
+      success: `Took back ${stepName(part, 0)}.`,
+      undo: { type: 'learnSkill', skillId: skill.id, part },
     });
     if (!outcome.ok) toast.show(outcome.errors.map((e) => e.message).join(' '));
   }

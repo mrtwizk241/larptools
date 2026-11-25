@@ -1,0 +1,351 @@
+/* Skills list and skill detail. */
+
+.tabBody {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.tabBody > :global(*) {
+  min-width: 0;
+}
+
+/* Points on one mono line: "XP 85 · CXP 20". Full wording is visually hidden. */
+.points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.points > li {
+  white-space: nowrap;
+}
+
+.points > li + li::before {
+  margin-right: var(--space-2);
+  color: var(--color-text-muted);
+  content: '·' / '';
+}
+
+.pointValue {
+  font-weight: var(--weight-bold);
+}
+
+.pointOver {
+  color: var(--color-danger);
+}
+
+/* Search and "Owned only" share a row where there is room; they stack under 360px. */
+.searchRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-2) var(--space-4);
+}
+
+.search {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+@media (max-width: 359.98px) {
+  .search {
+    flex-basis: 100%;
+  }
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  cursor: pointer;
+}
+
+.check input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.count,
+.hint {
+  color: var(--color-text-muted);
+}
+
+/* List rows: name on top, level, Techniques, and marks below. */
+.rowMain {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  flex: 1;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.rowName {
+  font-weight: var(--weight-semibold);
+  overflow-wrap: anywhere;
+}
+
+.rowMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.level {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Technique and mark badges: text with an outline, never color alone. */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 26px;
+  padding: 0 var(--space-2);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  /* One line at normal sizes; wraps instead of widening the page at 200% text (a11y A-4). */
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.tagStrong {
+  border-color: var(--color-primary);
+  background: var(--color-secondary);
+  color: var(--color-on-secondary);
+}
+
+.tagIcon {
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* Player rows: the skill link and a "+ Request" button. */
+.rowWithAdd {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rowWithAdd > :first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.addButton {
+  flex: none;
+}
+
+/* Detail page */
+.detail {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.detail > :global(*) {
+  min-width: 0;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap);
+  justify-self: start;
+}
+
+.backIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  overflow-wrap: anywhere;
+}
+
+.metaLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.block {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.block > :global(*) {
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-2) var(--space-3);
+}
+
+/* Unlocked or locked, met or missing: icon plus text. */
+.state {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-weight: var(--weight-semibold);
+}
+
+.stateIcon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+}
+
+.ok .stateIcon {
+  color: var(--color-success);
+}
+
+.missing .stateIcon {
+  color: var(--color-danger);
+}
+
+.stateText {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.plainList {
+  display: grid;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.plainList > li {
+  min-width: 0;
+}
+
+.records {
+  display: grid;
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.record {
+  display: grid;
+  gap: var(--space-1);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.records > li:last-child .record {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.recordHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--weight-semibold);
+}
+
+.choices {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.choices legend {
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-semibold);
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  cursor: pointer;
+}
+
+.radio input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.rowItem {
+  min-width: 0;
+}
+
+/* Level controls in the no-login builds (as on Rustwater): one group per part, the part name
+   above "(-) 2 (+)". */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+}
+
+.control {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.controlLabel {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.controlValue {
+  min-width: 3ch;
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+}
+
+.circle svg {
+  width: 20px;
+  height: 20px;
+}

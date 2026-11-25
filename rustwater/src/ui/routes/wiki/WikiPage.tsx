@@ -147,8 +147,9 @@ function ArticleView({ article }: { article: Article }) {
         {article.list ? (
           <>
             <p>
-              From the rules data this app uses, so it matches the character sheet. Tap an entry to
-              open it.
+              {article.list === 'effects'
+                ? 'Our short summary of the rulebook pages. Tap an entry to open it.'
+                : 'From the rules data this app uses, so it matches the character sheet. Tap an entry to open it.'}
             </p>
             <ReferenceList list={article.list} ruleset={ruleset} />
           </>

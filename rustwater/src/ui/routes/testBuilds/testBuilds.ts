@@ -1,7 +1,12 @@
 // Test builds (ADR 0007): pure helpers for the roster sections, the copy picker, and the
 // Add or remove points control (CXP or PXP). Tested in testBuilds.test.ts.
 import type { CharacterEntry } from '../../../api/contract.ts';
-import { deriveSheet, type AdjustPointsCommand, type Ruleset } from '../../../engine/index.ts';
+import {
+  deriveSheet,
+  type AdjustPointsCommand,
+  type Ruleset,
+  type Sheet,
+} from '../../../engine/index.ts';
 
 /** The reason recorded for CXP or PXP added or removed in a test build. */
 export const TEST_BUILD_REASON = 'Test build';
@@ -111,4 +116,37 @@ export function overspendText(
         `${plural(buy.capPerEvent ?? 1, 'purchase', 'purchases')} an event).`
       : '.')
   );
+}
+
+/** PXP the most one event can give a player: NPC time at its cap, plus Shinies bought as PXP. */
+export function pxpPerEvent(ruleset: Ruleset): number {
+  const npc = ruleset.awards.npcTime;
+  const buy = ruleset.awards.shinyPurchases.find((p) =>
+    p.grants?.some((g) => g.currency === 'pxp'),
+  );
+  const perBuy = buy?.grants?.find((g) => g.currency === 'pxp')?.amount ?? 0;
+  return npc.maxHours * npc.pxpPerHour + perBuy * (buy?.capPerEvent ?? 0);
+}
+
+/**
+ * The line under the points when a test build has spent past its CXP or PXP: about how many
+ * more events would earn the rest, taking the currency that needs the most. null when not over.
+ * "Over: about 2 more events would earn this build (75 CXP an event; up to 6 PXP an event from
+ * NPCing and Shinies)."
+ */
+export function eventsEstimateText(ruleset: Ruleset, sheet: Sheet): string | null {
+  const cxpOver = Math.max(0, -sheet.points.cxp.available);
+  const pxpOver = Math.max(0, -sheet.points.pxp.available);
+  if (cxpOver === 0 && pxpOver === 0) return null;
+  const cxpEach = ruleset.ruleset.eventCxp;
+  const pxpEach = pxpPerEvent(ruleset);
+  const events = Math.max(
+    cxpOver > 0 ? Math.ceil(cxpOver / cxpEach) : 0,
+    pxpOver > 0 && pxpEach > 0 ? Math.ceil(pxpOver / pxpEach) : 0,
+  );
+  const rates = [
+    cxpOver > 0 ? `${cxpEach} CXP an event` : null,
+    pxpOver > 0 ? `up to ${pxpEach} PXP an event from NPCing and Shinies` : null,
+  ].filter(Boolean);
+  return `Over: about ${plural(events, 'more event', 'more events')} would earn this build (${rates.join('; ')}).`;
 }

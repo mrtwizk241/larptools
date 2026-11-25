@@ -1,0 +1,160 @@
+.page {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.page > :global(*) {
+  min-width: 0;
+}
+
+.stack {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.stack > :global(*) {
+  min-width: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+.modeLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.note {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.pinInput {
+  max-width: 12rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.2em;
+}
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+  border: 2px solid var(--color-danger);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.alertText {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-2) 0;
+  overflow-wrap: anywhere;
+}
+
+.alertText ul {
+  padding-left: var(--space-5);
+}
+
+.alertTitle {
+  font-weight: var(--weight-semibold);
+}
+
+.summary {
+  padding-left: var(--space-5);
+  font-variant-numeric: tabular-nums;
+}
+
+.conflicts {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  margin-bottom: var(--space-1);
+  padding: 0;
+  font-weight: var(--weight-semibold);
+}
+
+/* Checkbox rows: the whole label is a 44px target. */
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  cursor: pointer;
+}
+
+.check input {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.facts {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.facts > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+}
+
+.facts dt {
+  min-width: 8rem;
+  font-weight: var(--weight-semibold);
+}
+
+.external {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  justify-self: start;
+  min-height: var(--tap);
+}
+
+.externalIcon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Backup actions a restore would add, as on the roster's import confirm. */
+.added {
+  display: grid;
+  gap: var(--space-3);
+  padding-left: var(--space-5);
+}
+
+.added li {
+  overflow-wrap: anywhere;
+}
+
+.addedLabel {
+  font-weight: var(--weight-semibold);
+}
+
+.meta {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  overflow-wrap: anywhere;
+}
+
+.subheading {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+}

@@ -1,0 +1,1551 @@
+[
+  {
+    "id": "aeshu",
+    "name": "Aeshu",
+    "summary": "Seafaring desert people from a glowing island city on the southern coast; gem traders who prize freedom.",
+    "makeup": "Ocean blue, cloud white, or sea green swirls or markings on the face.",
+    "lifespan": "long",
+    "size": "medium",
+    "language": "aeshu",
+    "choices": [],
+    "innate": [
+      {
+        "id": "aeshu-innate-passive",
+        "kind": "passive",
+        "summary": "May dual wield two long weapons. If the PC already has that ability, gain +1 damage while dual wielding instead.",
+        "effects": [
+          {
+            "stat": "passiveDamageDualWield",
+            "amount": 1,
+            "when": "already able to dual wield two long weapons"
+          }
+        ],
+        "grants": ["dual-wield-long-long"]
+      },
+      {
+        "id": "aeshu-innate-active",
+        "kind": "active",
+        "summary": "Use Evasion once (Basic ability).",
+        "uses": 1,
+        "frequency": "per-encounter",
+        "grantsSkillUse": "evasion"
+      }
+    ],
+    "skills": [
+      {
+        "id": "acrobatics",
+        "name": "Acrobatics",
+        "category": "racial",
+        "raceId": "aeshu",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Resist a Slick, Slow, or Pin; also take half damage from a fall or trap."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "After 10 seconds of focus, gain Levitate (as the Air spell) or Serpent's Strike: an unslotted encounter buff with 3 charges, each usable as one Evasion or one Backstrike. Only one active at a time; no stacking."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "After 10 seconds of focus, tumble forward up to 10 steps; any dodgeable effect that hits during the tumble may be dodged as per Dodge."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Call \"Evasive Maneuvers\": a free Sidestep against every valid effect that hits you. No attacks or offensive abilities while active. Ends when you choose, attack, are movement-impaired, or the encounter ends."
+          }
+        },
+        "source": "Rulebook p.21"
+      },
+      {
+        "id": "weapon-flourish",
+        "name": "Weapon Flourish",
+        "category": "racial",
+        "raceId": "aeshu",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Weapon or Relic",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "One weapon or Relic attack at +5 Vorpal damage."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Three consecutive weapon or Relic attacks at +5 Vorpal damage each."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "One weapon attack as \"Weapon Strike - Destruction\", or one Relic attack as X Destruction where X is your passive damage."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Call \"Dance of the Desert\": +5 passive damage (up to the Passive Damage Cap) on weapon and Relic attacks. Ends after 20 seconds without attacking an enemy."
+          }
+        },
+        "source": "Rulebook p.21"
+      }
+    ],
+    "source": "Rulebook p.16, p.19 to 21, p.64"
+  },
+  {
+    "id": "beast-kin",
+    "name": "Beast-Kin",
+    "summary": "Part animal, part humanoid folk who appeared after the Astral Fountain was destroyed; guardians of the wild who meet every ten years at the Great Moot.",
+    "makeup": "Real-world animal features beyond light makeup (tail, ears, horns, and so on). No mythical animals; avoid Lizard-Kin and Butterfly-Kin; Snake-Kin and Frog-Kin need GM approval.",
+    "lifespan": "short",
+    "size": "choice",
+    "language": "common",
+    "choices": [
+      {
+        "id": "animal",
+        "label": "Animal type",
+        "kind": "text",
+        "summary": "Real-world animal the PC is -Kin with; also sets size (small, medium, or large) with GM sense."
+      },
+      {
+        "id": "natural-weapon",
+        "label": "Natural weapon",
+        "kind": "pick",
+        "options": ["short-claws", "bite"]
+      },
+      {
+        "id": "size",
+        "label": "Size",
+        "kind": "pick",
+        "options": ["small", "medium", "large"],
+        "summary": "Pick a size that fits the chosen type."
+      }
+    ],
+    "innate": [
+      {
+        "id": "beast-kin-innate-passive",
+        "kind": "passive",
+        "summary": "Short Claws (base 2 damage) or Bite (Greatclaw, base 3 damage), chosen at creation.",
+        "naturalWeapon": {
+          "choiceId": "natural-weapon",
+          "options": [
+            {
+              "id": "short-claws",
+              "baseDamage": 2
+            },
+            {
+              "id": "bite",
+              "baseDamage": 3,
+              "greatclaw": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "beast-kin-innate-active",
+        "kind": "active",
+        "summary": "One use of the Animal Ken skill, or Beast Speech with animals of your own kind.",
+        "uses": 1,
+        "frequency": "per-encounter",
+        "grantsSkillUse": "animal-ken"
+      }
+    ],
+    "skills": [
+      {
+        "id": "guardian-of-sylvaris",
+        "name": "Guardian of Sylvaris",
+        "category": "racial",
+        "raceId": "beast-kin",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Resist one Age, Corruption, Disease, or Drain effect."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Immune to one of Age, Corruption, Disease, or Drain for the encounter."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Immune to Age, Corruption, and Disease for the encounter; also remove Age, Corruption, or Disease from others on a 30-count."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "Grant a group immunity to Age, Corruption, Disease, or Drain for the encounter. Passive: one extra Lesser Boon Slot."
+          }
+        },
+        "passives": [
+          {
+            "at": "grandmaster",
+            "stat": "lesserBoonSlots",
+            "amount": 1
+          }
+        ],
+        "source": "Rulebook p.24"
+      },
+      {
+        "id": "wrath-of-sylvaris",
+        "name": "Wrath of Sylvaris",
+        "category": "racial",
+        "raceId": "beast-kin",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Beast-Kin claws or bite",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Call \"Wrath of Sylvaris\": three claw or bite attacks this encounter at +10 Nature damage."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "As Basic, at +25 Nature damage."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "As Basic, at +50 Nature damage."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "As Basic, at +100 Nature damage."
+          }
+        },
+        "source": "Rulebook p.24"
+      }
+    ],
+    "source": "Rulebook p.16, p.22 to 24, p.64"
+  },
+  {
+    "id": "clockwork",
+    "name": "Clockwork",
+    "summary": "Gnome-built automatons with their own will, loyal to Gnomes and valued by all.",
+    "makeup": "Metallic skin and at least 2 visible gears on the face (makeup or prosthetic).",
+    "lifespan": "extra-long",
+    "size": "medium",
+    "language": "gnomish",
+    "choices": [],
+    "innate": [
+      {
+        "id": "clockwork-innate-passive",
+        "kind": "passive",
+        "summary": "+10 innate Armor Points.",
+        "effects": [
+          {
+            "stat": "armorPoints",
+            "amount": 10
+          }
+        ]
+      },
+      {
+        "id": "clockwork-innate-active",
+        "kind": "active",
+        "summary": "Use Intercept once (Basic ability).",
+        "uses": 1,
+        "frequency": "per-encounter",
+        "grantsSkillUse": "intercept"
+      }
+    ],
+    "skills": [
+      {
+        "id": "armor-plating",
+        "name": "Armor Plating",
+        "category": "racial",
+        "raceId": "clockwork",
+        "advanced": false,
+        "prereqs": [],
+        "replacesSkill": "wear-armor",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "After a 10-count, gain +10 Armor Points for the encounter or +25 Temporary Armor Points until used. The Clockwork's shell counts as a Basic quality suit of armor with 1 Augment Slot that needs no Attunement Slot."
+          },
+          "expert": {
+            "uses": 0,
+            "kind": "passive",
+            "summary": "+20 Armor Points; the shell becomes Expert quality armor."
+          },
+          "master": {
+            "uses": 0,
+            "kind": "passive",
+            "summary": "+20 more Armor Points (40 total); the shell becomes Master quality armor."
+          },
+          "grandmaster": {
+            "uses": 0,
+            "kind": "passive",
+            "summary": "+20 more Armor Points (60 total); the shell becomes Grandmaster quality armor."
+          }
+        },
+        "passives": [
+          {
+            "at": "expert",
+            "stat": "armorPoints",
+            "amount": 20
+          },
+          {
+            "at": "master",
+            "stat": "armorPoints",
+            "amount": 20
+          },
+          {
+            "at": "grandmaster",
+            "stat": "armorPoints",
+            "amount": 20
+          }
+        ],
+        "builtInArmor": {
+          "qualityByTechnique": {
+            "basic": "basic",
+            "expert": "expert",
+            "master": "master",
+            "grandmaster": "grandmaster"
+          },
+          "usesAttunementSlot": false
+        },
+        "source": "Rulebook p.27"
+      },
+      {
+        "id": "clockwork-protector",
+        "name": "Protector",
+        "category": "racial",
+        "raceId": "clockwork",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Touch a target: your normal armor takes 10 damage; they gain 10 Temporary Armor Points and the next hit on them deals minimal damage."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Your normal armor takes 10 damage; target gains 20 Temporary Armor Points and cannot have counted actions interrupted while it lasts."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Your normal armor takes 10 damage; target gains 30 Temporary Armor Points and may call \"Minimal\" on one attack while it lasts."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Your normal armor takes 10 damage; target gains 50 Temporary Armor Points, one \"Minimal\", and no interruption of counted actions while it lasts."
+          }
+        },
+        "source": "Rulebook p.27, p.28"
+      }
+    ],
+    "sheetFlags": {
+      "healingImmune": true,
+      "lifeRestoredByRefit": true,
+      "separateArmorAndLifeRefit": true
+    },
+    "notes": [
+      "Immune to normal Healing; Life Points are restored by repair or refit like armor.",
+      "Two refittable pools: Armor Points (outer shell) and Life Points (inner gears). A repair or refit effect applies to one pool only; excess does not carry over.",
+      "Armor Plating replaces the Wear Armor skill for Clockworks."
+    ],
+    "source": "Rulebook p.16, p.25 to 28, p.64"
+  },
+  {
+    "id": "dragonborn",
+    "name": "Dragonborn",
+    "summary": "Dragon-like humanoids bound to one element by scale color; strong in both magic and melee.",
+    "makeup": "Skin in the element's base color with scale patterns in another color, plus wings (15\" span minimum) and/or a tail.",
+    "lifespan": "extra-long",
+    "size": "medium",
+    "language": "draconic",
+    "choices": [
+      {
+        "id": "element",
+        "label": "Element",
+        "kind": "pick",
+        "options": ["air", "death", "earth", "fire", "life", "water"]
+      },
+      {
+        "id": "natural-weapon",
+        "label": "Natural weapon",
+        "kind": "pick",
+        "options": ["short-claws", "bite"]
+      }
+    ],
+    "elements": [
+      {
+        "id": "air",
+        "baseColor": "Silver",
+        "effect": "Lightning",
+        "advancedEffect": "Dream"
+      },
+      {
+        "id": "death",
+        "baseColor": "Purple",
+        "effect": "Harm",
+        "advancedEffect": "Spirit"
+      },
+      {
+        "id": "earth",
+        "baseColor": "Green",
+        "effect": "Earth",
+        "advancedEffect": "Nature"
+      },
+      {
+        "id": "fire",
+        "baseColor": "Gold",
+        "effect": "Fire",
+        "advancedEffect": "Destruction",
+        "breathUsesSecondNumber": true
+      },
+      {
+        "id": "life",
+        "baseColor": "White",
+        "effect": "Healing",
+        "advancedEffect": "Radiance",
+        "breathUsesSecondNumber": true
+      },
+      {
+        "id": "water",
+        "baseColor": "Blue",
+        "effect": "Ice",
+        "advancedEffect": "Magic"
+      }
+    ],
+    "innate": [
+      {
+        "id": "dragonborn-innate-passive",
+        "kind": "passive",
+        "summary": "Short Claws (base 2 damage) or Bite (Greatclaw, base 3 damage), chosen at creation.",
+        "naturalWeapon": {
+          "choiceId": "natural-weapon",
+          "options": [
+            {
+              "id": "short-claws",
+              "baseDamage": 2
+            },
+            {
+              "id": "bite",
+              "baseDamage": 3,
+              "greatclaw": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "dragonborn-innate-active",
+        "kind": "active",
+        "summary": "Innate cast of one Basic spell of your element; no spellbook needed.",
+        "uses": 1,
+        "frequency": "per-encounter"
+      }
+    ],
+    "skills": [
+      {
+        "id": "breath-weapon",
+        "name": "Breath Weapon",
+        "category": "racial",
+        "raceId": "dragonborn",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Throw one breath packet for 25 of your element's effect (10 for Fire and Life, which use the second number)."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Frontal Cone for 100 of your element's effect (25 for Fire and Life)."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Frontal Cone for 100 of your element's advanced effect (25 for Fire and Life)."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Plant your feet and throw a stream of \"Breath\" packets for 25 (10 for Fire and Life) of effect or advanced effect. Ends if you use another skill, take any effect, or move more than five steps."
+          }
+        },
+        "source": "Rulebook p.31"
+      },
+      {
+        "id": "elements-gift",
+        "name": "<Element>'s Gift",
+        "category": "racial",
+        "raceId": "dragonborn",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Innate cast a Basic spell of your element."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Innate cast an Expert spell of your element."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Innate cast a Master spell of your element."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Innate cast a Grandmaster spell of your element."
+          }
+        },
+        "source": "Rulebook p.31, p.32"
+      }
+    ],
+    "notes": [
+      "Element is fixed by base skin color; scales must be a different color.",
+      "Breath numbers are written as X/Y; Fire and Life use the second number (Y)."
+    ],
+    "source": "Rulebook p.16, p.29 to 32, p.64"
+  },
+  {
+    "id": "dwarf",
+    "name": "Dwarf",
+    "summary": "Stubborn, long-lived, dependable smiths and fighters known for great beards.",
+    "makeup": "Full beard reaching past the neck, or long hair in several beaded braids.",
+    "lifespan": "long",
+    "size": "medium",
+    "language": "dwarven",
+    "choices": [],
+    "innate": [
+      {
+        "id": "dwarf-innate-passive",
+        "kind": "passive",
+        "summary": "+10 Armor Points while wearing physical armor.",
+        "effects": [
+          {
+            "stat": "armorPoints",
+            "amount": 10,
+            "when": "wearing physical armor"
+          }
+        ]
+      },
+      {
+        "id": "dwarf-innate-active",
+        "kind": "active",
+        "summary": "Use Weapon Proficiency once (Basic ability).",
+        "uses": 1,
+        "frequency": "per-encounter",
+        "grantsSkillUse": "weapon-proficiency"
+      }
+    ],
+    "skills": [
+      {
+        "id": "dwarven-built",
+        "name": "Dwarven-Built",
+        "category": "racial",
+        "raceId": "dwarf",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Give a weapon, shield, or suit of armor 1 Resist Shatter for the re-pop."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "On a 10-count, make a shattered weapon or shield usable for the encounter (or until shattered again), or on a 100-count give a weapon +1 passive damage for the encounter (stacks once per named level of this skill)."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "both",
+            "summary": "Give a weapon or armor Immunity to Shatter for the encounter, or double an item's Augment Slots for the encounter. Passive: your armor refits and weapon restores are Hastened."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "Refit your armor on a 3-count and, if it completes, gain 50 Temporary Armor Points. Passive: weapons and shields you wield are immune to Shatter."
+          }
+        },
+        "source": "Rulebook p.34"
+      },
+      {
+        "id": "dwarven-persistence",
+        "name": "Dwarven Persistence",
+        "category": "racial",
+        "raceId": "dwarf",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Resist one Disease, Fear, Charm, or Poison."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Immune to one of Disease, Fear, Charm, or Poison for the encounter."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Resist any status effect."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Immune to all status effects for the encounter."
+          }
+        },
+        "source": "Rulebook p.34"
+      }
+    ],
+    "notes": [
+      "The p.17 cost example calls a Dwarf racial skill \"Dwarven Resolve\"; the race section names it Dwarven Persistence."
+    ],
+    "source": "Rulebook p.16, p.17, p.33, p.34, p.64"
+  },
+  {
+    "id": "elf",
+    "name": "Elf",
+    "summary": "Poised, aloof, long-lived people whose wisdom runs deeper than their looks suggest.",
+    "makeup": "Pointed ears.",
+    "lifespan": "extra-long",
+    "size": "medium",
+    "language": "elven",
+    "choices": [
+      {
+        "id": "bonus-language",
+        "label": "Extra language",
+        "kind": "language"
+      }
+    ],
+    "innate": [
+      {
+        "id": "elf-innate-passive",
+        "kind": "passive",
+        "summary": "One extra language. Touch an item for a 10-count to learn if it is magical; study it for 5 minutes to learn its powers.",
+        "effects": [
+          {
+            "stat": "languages",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "elf-innate-active",
+        "kind": "active",
+        "summary": "Innate cast of one Basic air, earth, fire, or water spell; no spellbook needed.",
+        "uses": 1,
+        "frequency": "per-encounter"
+      }
+    ],
+    "skills": [
+      {
+        "id": "ancient-magic",
+        "name": "Ancient Magic",
+        "category": "racial",
+        "raceId": "elf",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Spellbook",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Cast a Basic elemental spell from your spellbook."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Cast an Expert elemental spell from your spellbook."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Cast a Master elemental spell from your spellbook."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Cast a Grandmaster elemental spell from your spellbook."
+          }
+        },
+        "source": "Rulebook p.37"
+      },
+      {
+        "id": "friend-of-the-forest",
+        "name": "Friend of the Forest",
+        "category": "racial",
+        "raceId": "elf",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Packet a \"Charm - Ignore Plant\"."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Packet a \"Charm - Befriend Plant\"."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Treewalk: on a 3-count enter a tree larger than you and later leave from a familiar tree, like the Blink Master Technique but self only. You may familiarize one tree per level of this skill."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Tree Portal: as Treewalk, but opens a 5-minute portal anyone can use on a 3-count."
+          }
+        },
+        "derived": [
+          {
+            "at": "master",
+            "stat": "familiarTrees",
+            "perLevel": 1,
+            "note": "One familiar tree per level; trees count toward the location cap (Q-RACE-9)."
+          }
+        ],
+        "source": "Rulebook p.37"
+      }
+    ],
+    "notes": ["Friend of the Forest tracks familiar trees: one per level of the skill."],
+    "source": "Rulebook p.16, p.35 to 37, p.64"
+  },
+  {
+    "id": "erid",
+    "name": "Erid",
+    "summary": "Island people who speak with the dead and read the stars and the spirit realm.",
+    "makeup": "Face patterns or designs in white, gray, or black.",
+    "lifespan": "long",
+    "size": "medium",
+    "language": "erid",
+    "choices": [],
+    "innate": [
+      {
+        "id": "erid-innate-passive",
+        "kind": "passive",
+        "summary": "Heal 5 Life Points on a 60-count; Hastened if the PC has the Healing skill."
+      },
+      {
+        "id": "erid-innate-active",
+        "kind": "active",
+        "summary": "Innate cast of one Basic death spell; no spellbook needed.",
+        "uses": 1,
+        "frequency": "per-encounter"
+      }
+    ],
+    "skills": [
+      {
+        "id": "celestial-guidance",
+        "name": "Celestial Guidance",
+        "category": "racial",
+        "raceId": "erid",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Aries: \"Resist Charm\", or Virgo: packet a \"Charm - Pacify\"."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Scorpio: coat a weapon with Deadly Poison (the Expert Aqua Mortis recipe)."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Pisces: gain insight on an issue, as the Augury Master Technique."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "All constellations: grant Inspiration and restore four uses of one skill to yourself or another."
+          }
+        },
+        "source": "Rulebook p.40"
+      },
+      {
+        "id": "life-and-death",
+        "name": "Life & Death",
+        "category": "racial",
+        "raceId": "erid",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Killing Blow a living creature to heal yourself 50 Life Points."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "As Basic, and restore one use of a single skill."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "As Expert, and gain one \"Resist Death\" for the encounter."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Killing Blow a living creature to heal 100 Life Points, restore one skill use, and gain Death immunity for the encounter; or Killing Blow one and Spellstrike or touch-cast \"Raise Dead\" on another living creature."
+          }
+        },
+        "source": "Rulebook p.40"
+      }
+    ],
+    "source": "Rulebook p.16, p.38 to 40, p.64"
+  },
+  {
+    "id": "fae",
+    "name": "Fae",
+    "summary": "Forest tricksters who love nature in both life and decay and seek adventure.",
+    "makeup": "Pick two: sparkly skin, gossamer or butterfly wings (15\" span minimum), small horns, hoofed feet.",
+    "lifespan": "extra-long",
+    "size": "choice",
+    "language": "elven",
+    "choices": [
+      {
+        "id": "fae-type",
+        "label": "Fae type",
+        "kind": "text",
+        "summary": "Type of Fae (for example pixie or satyr); sets size."
+      },
+      {
+        "id": "size",
+        "label": "Size",
+        "kind": "pick",
+        "options": ["small", "medium", "large"],
+        "summary": "Pick a size that fits the chosen type."
+      }
+    ],
+    "innate": [
+      {
+        "id": "fae-innate-passive",
+        "kind": "passive",
+        "summary": "In the wilderness, Hide takes only a 5-count."
+      },
+      {
+        "id": "fae-innate-active",
+        "kind": "active",
+        "summary": "Innate cast of one Basic earth or air spell; no spellbook needed.",
+        "uses": 1,
+        "frequency": "per-encounter"
+      }
+    ],
+    "skills": [
+      {
+        "id": "fae-blessing",
+        "name": "Fae Blessing",
+        "category": "racial",
+        "raceId": "fae",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Grant an Enhancement Slot."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Grant an Enhancement Slot holding a resist against a status effect."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Grant an Enhancement Slot holding another skill you have, up to its Expert Technique."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "Grant an Amplified Life Enhancement Slot, or use the Expert ability on four targets as a group. Passive: immune to Aging effects."
+          }
+        },
+        "grants": [
+          {
+            "at": "grandmaster",
+            "grant": "immune-aging"
+          }
+        ],
+        "source": "Rulebook p.43"
+      },
+      {
+        "id": "trickery-of-the-fae",
+        "name": "Trickery of the Fae",
+        "category": "racial",
+        "raceId": "fae",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Disguise an item up to breadbox size for the encounter (roleplay only), or after 10 seconds of talk deliver \"Point, Charm - Attack <target> 5 Seconds\"."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "A target who eats or drinks what you offer takes \"Unavoidable, Charm - Corruption\", or move an Augment between two touched items for the re-pop (other PC's item only if willing)."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Call \"Displacement\" (Dodge plus Blink)."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Redirect any non-area effect that targets you."
+          }
+        },
+        "source": "Rulebook p.43"
+      }
+    ],
+    "source": "Rulebook p.16, p.41 to 43, p.64"
+  },
+  {
+    "id": "gargoyle",
+    "name": "Gargoyle",
+    "summary": "Stoic stone guardians, some in revolt against their former masters, fiercely loyal to friends.",
+    "makeup": "Gray skin with cracks, plus leathery wings (15\" span minimum) and/or horns.",
+    "lifespan": "long",
+    "size": "large",
+    "language": "gargoyle",
+    "choices": [],
+    "innate": [
+      {
+        "id": "gargoyle-innate-passive",
+        "kind": "passive",
+        "summary": "+1 weapon damage.",
+        "effects": [
+          {
+            "stat": "passiveDamageWeapon",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "gargoyle-innate-active",
+        "kind": "active",
+        "summary": "Use Endurance once (Basic ability).",
+        "uses": 1,
+        "frequency": "per-encounter",
+        "grantsSkillUse": "endurance"
+      }
+    ],
+    "skills": [
+      {
+        "id": "broken-shackles",
+        "name": "Broken Shackles",
+        "category": "racial",
+        "raceId": "gargoyle",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Resist one Charm or Weakness effect."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Charm and Weakness have no effect on you for the encounter."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Resist any magical effect."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "When hit by a packet effect, send it at another target by packet or weapon strike as your very next call; otherwise it is simply resisted."
+          }
+        },
+        "source": "Rulebook p.46"
+      },
+      {
+        "id": "hewn-of-earth",
+        "name": "Hewn of Earth",
+        "category": "racial",
+        "raceId": "gargoyle",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Cast a Basic earth spell without a spellbook."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Take Minimal from a numeric damage effect, or resist a Knockback or Taunt."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Gain a Stoneskin, or reveal a hidden target (as Master Search)."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Enter Statue Form (not as a reaction) for up to 5 minutes: cannot move or be moved or use avoidance defenses; immune to damage, disease, and Killing Blows; disease cured; bleed and poison counts paused; heal 100 Life Points after 60 seconds. Uses no Enhancement Slot and cannot be Disenchanted."
+          }
+        },
+        "source": "Rulebook p.46"
+      }
+    ],
+    "source": "Rulebook p.16, p.44 to 46, p.64"
+  },
+  {
+    "id": "gnome",
+    "name": "Gnome",
+    "summary": "Curious, inventive tinkerers who built the Clockworks.",
+    "makeup": "Bright, unnatural hair color (pink, turquoise, purple, orange, lime green, and so on).",
+    "lifespan": "long",
+    "size": "small",
+    "language": "gnomish",
+    "choices": [],
+    "innate": [
+      {
+        "id": "gnome-innate-passive",
+        "kind": "passive",
+        "summary": "One extra Attunement Slot that may hold only a tool.",
+        "effects": [
+          {
+            "stat": "attunementSlotsToolOnly",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "gnome-innate-active",
+        "kind": "active",
+        "summary": "Hasten any Hastenable action.",
+        "uses": 1,
+        "frequency": "per-encounter"
+      }
+    ],
+    "skills": [
+      {
+        "id": "gnomish-intellect",
+        "name": "Gnomish Intellect",
+        "category": "racial",
+        "raceId": "gnome",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "On a 100-count read up to one page of any standard language, or describe a major world location so well that portal users treat it as familiar for 10 minutes this encounter."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Make any Basic non-advanced crafted item on a 10-count; it falls apart at the end of the encounter."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Use a consumable a second time within 10 seconds."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Build a one-shot device: Shielding Device (+50 Temporary Armor), Fire Sprayer (\"Frontal Cone 100 Fire\"), or Boom! Stick (\"50 Vorpal Crush\")."
+          }
+        },
+        "source": "Rulebook p.49"
+      },
+      {
+        "id": "let-me-help-with-that",
+        "name": "Let Me Help with That",
+        "category": "racial",
+        "raceId": "gnome",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Help another crafter: their item or research notes cost one fewer use. One per project."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "The help counts as one use and one Basic Component."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "The help counts as two uses and one Basic Component."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "The help counts as two uses and either two Basic Components or one Exotic Component."
+          }
+        },
+        "source": "Rulebook p.49"
+      }
+    ],
+    "source": "Rulebook p.16, p.47 to 49, p.64"
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "summary": "Small, cheerful cooks and tavern keepers who are welcome everywhere.",
+    "makeup": "At least two of: freckles, rosy cheeks, sideburns.",
+    "lifespan": "moderate",
+    "size": "small",
+    "language": "dwarven",
+    "choices": [],
+    "innate": [
+      {
+        "id": "halfling-innate-passive",
+        "kind": "passive",
+        "summary": "Food or drink you prepare and serve restores the recipient to full Life Points after a full 60-count in a safe place such as the tavern."
+      },
+      {
+        "id": "halfling-innate-active",
+        "kind": "active",
+        "summary": "One \"Resist Fear\".",
+        "uses": 1,
+        "frequency": "per-encounter"
+      }
+    ],
+    "skills": [
+      {
+        "id": "friend-to-all",
+        "name": "Friend to All",
+        "category": "racial",
+        "raceId": "halfling",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "When a damaging effect hits you (you must take it), \"Retaliate, Charm - Ignore\" its source."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "When damaged, \"Retaliate, Charm - Pacify\"."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "When damaged, \"Lash, Charm - Pacify\"."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "For the encounter, every time you take damage you may \"Retaliate, Charm - Ignore\" the source."
+          }
+        },
+        "source": "Rulebook p.52"
+      },
+      {
+        "id": "halfling-agility",
+        "name": "Halfling Agility",
+        "category": "racial",
+        "raceId": "halfling",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "No physical armor worn (Dex Armor)",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "After 10 seconds of stretching gain +25 Temporary Armor (Dex Armor). Does not work while wearing physical armor; stacks with itself up to the Passive Cap."
+          },
+          "expert": {
+            "uses": 0,
+            "kind": "passive",
+            "summary": "+20 Dex Armor at all times, refit by 60 seconds of stretching. The book also lists an unlabeled passive: the Basic use may instead give +10 refittable Dex Armor for the encounter or +25 Temporary Dex Armor."
+          },
+          "master": {
+            "uses": 0,
+            "kind": "passive",
+            "summary": "+20 more Dex Armor at all times, refit by 60 seconds of stretching."
+          },
+          "grandmaster": {
+            "uses": 0,
+            "kind": "passive",
+            "summary": "+20 more Dex Armor at all times, refit by 60 seconds of stretching."
+          }
+        },
+        "passives": [
+          {
+            "at": "expert",
+            "stat": "armorPoints",
+            "amount": 20,
+            "when": "no physical armor worn",
+            "pool": "dex"
+          },
+          {
+            "at": "master",
+            "stat": "armorPoints",
+            "amount": 20,
+            "when": "no physical armor worn",
+            "pool": "dex"
+          },
+          {
+            "at": "grandmaster",
+            "stat": "armorPoints",
+            "amount": 20,
+            "when": "no physical armor worn",
+            "pool": "dex"
+          }
+        ],
+        "source": "Rulebook p.52"
+      }
+    ],
+    "notes": [
+      "Halfling Agility has an extra unlabeled passive bullet between Expert and Master; placed under Expert here (Q-RACE-4)."
+    ],
+    "source": "Rulebook p.16, p.50 to 52, p.64"
+  },
+  {
+    "id": "human",
+    "name": "Human",
+    "summary": "Adaptable people found in every trade, from scholars to soldiers to mages.",
+    "makeup": "Nothing required.",
+    "lifespan": "moderate",
+    "size": "medium",
+    "language": "common",
+    "choices": [],
+    "innate": [
+      {
+        "id": "human-innate-passive",
+        "kind": "passive",
+        "summary": "One extra Silver at every event check-in.",
+        "effects": [
+          {
+            "stat": "checkInSilver",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "human-innate-active",
+        "kind": "active",
+        "summary": "One \"Charm - Ignore Me\".",
+        "uses": 1,
+        "frequency": "per-encounter"
+      }
+    ],
+    "skills": [
+      {
+        "id": "i-know-a",
+        "name": "I Know A...",
+        "category": "racial",
+        "raceId": "human",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Over 10 minutes, reach a contact who uses one Basic skill for you. Items gained this way expire at the end of the event."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "The contact uses three Basic skills for you."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "The contact uses one Expert skill for you."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "The contact uses two Expert skills for you."
+          }
+        },
+        "source": "Rulebook p.55"
+      },
+      {
+        "id": "quick-learner",
+        "name": "Quick Learner",
+        "category": "racial",
+        "raceId": "human",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Learn a new skill or Technique without the teacher demonstrating it."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Teach yourself the next Technique of a skill you have, if you have seen it used."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Blend into a crowd: you do not count toward group limits for one effect."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Amplify Effect: double one effect that targets you. Cannot amplify an already amplified effect."
+          }
+        },
+        "source": "Rulebook p.55"
+      }
+    ],
+    "notes": [
+      "Quick Learner Expert lets a Human self-teach a Technique; the sheet may want a teaching-source option \"Quick Learner\" on Technique purchases."
+    ],
+    "source": "Rulebook p.16, p.53 to 55, p.64"
+  },
+  {
+    "id": "orc",
+    "name": "Orc",
+    "summary": "Strong, family-minded warriors with a taste for battle.",
+    "makeup": "Either green skin with tusks, or horns.",
+    "lifespan": "short",
+    "size": "large",
+    "language": "orcish",
+    "choices": [],
+    "innate": [
+      {
+        "id": "orc-innate-passive",
+        "kind": "passive",
+        "summary": "+1 damage with melee weapons.",
+        "effects": [
+          {
+            "stat": "passiveDamageMelee",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "id": "orc-innate-active",
+        "kind": "active",
+        "summary": "One use of Aggression.",
+        "uses": 1,
+        "frequency": "per-encounter",
+        "grantsSkillUse": "aggression"
+      }
+    ],
+    "skills": [
+      {
+        "id": "mmmm-tasty",
+        "name": "Mmmm Tasty",
+        "category": "racial",
+        "raceId": "orc",
+        "advanced": false,
+        "prereqs": [],
+        "requirement": "Something edible",
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Call \"Mmmm Tasty\" and eat something: heal 50 Life Points and ignore any other effects of the food."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "As Basic, plus +25 Temporary Life Points."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "As Expert, plus restore one use of another skill you have."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "Heal 100 Life Points, gain +50 Temporary Life Points, and restore two uses of another skill you have."
+          }
+        },
+        "source": "Rulebook p.58"
+      },
+      {
+        "id": "orcish-anger",
+        "name": "Orcish Anger",
+        "category": "racial",
+        "raceId": "orc",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Resist one movement-impairing effect."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "For the encounter: +10 Life Points and +1 Passive Damage."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "Movement-impairing effects have no effect on you for the encounter."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "For the encounter, Basic offensive skills (from the Offensive Skills section) cost one less use each (minimum 1)."
+          }
+        },
+        "source": "Rulebook p.58"
+      }
+    ],
+    "source": "Rulebook p.16, p.56 to 58, p.64"
+  },
+  {
+    "id": "totemic",
+    "name": "Totemic",
+    "summary": "Hardy people guided by ancient animal totems, able to thrive anywhere.",
+    "makeup": "A totem mark on the face (paw print or animal shape) that makes the revered animal clear.",
+    "lifespan": "moderate",
+    "size": "large",
+    "language": "common",
+    "choices": [
+      {
+        "id": "totem",
+        "label": "Totem animal",
+        "kind": "text"
+      }
+    ],
+    "innate": [
+      {
+        "id": "totemic-innate-passive",
+        "kind": "passive",
+        "summary": "+10 Life Points.",
+        "effects": [
+          {
+            "stat": "lifePoints",
+            "amount": 10
+          }
+        ]
+      },
+      {
+        "id": "totemic-innate-active",
+        "kind": "active",
+        "summary": "One use of Resilience.",
+        "uses": 1,
+        "frequency": "per-encounter",
+        "grantsSkillUse": "resilience"
+      }
+    ],
+    "skills": [
+      {
+        "id": "live-off-the-land",
+        "name": "Live off the Land",
+        "category": "racial",
+        "raceId": "totemic",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Resist one air, earth, fire, or water effect."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "both",
+            "summary": "In a plot with collectable items, harvest them on a 100-count (may also yield components at GM discretion). Passive at check-in: 3 Basic Components and your basic upkeep is covered."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "On a 100-count find a herb that gives you an Amplified Life Enhancement Slot."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "both",
+            "summary": "Mark a 10-foot circle (phys rep needed): everyone inside gets Sidestep against every effect that hits them while inside. Passive: environmental effects of the Prime Material Plane do not affect you."
+          }
+        },
+        "passives": [
+          {
+            "at": "expert",
+            "stat": "checkInBasicComponents",
+            "amount": 3
+          },
+          {
+            "at": "expert",
+            "stat": "upkeepCovered",
+            "amount": 1
+          }
+        ],
+        "source": "Rulebook p.61"
+      },
+      {
+        "id": "totem-power",
+        "name": "Totem Power",
+        "category": "racial",
+        "raceId": "totemic",
+        "advanced": false,
+        "prereqs": [],
+        "levels": {
+          "basic": {
+            "uses": 1,
+            "kind": "active",
+            "summary": "Your weapon deals air, earth, fire, or water damage (choose one) for the encounter."
+          },
+          "expert": {
+            "uses": 2,
+            "kind": "active",
+            "summary": "Double the next Healing effect you receive, or heal another 50 Life Points on a 30-count."
+          },
+          "master": {
+            "uses": 3,
+            "kind": "active",
+            "summary": "After using an ability, call \"Totem Mimic\" to use it a second time."
+          },
+          "grandmaster": {
+            "uses": 4,
+            "kind": "active",
+            "summary": "On a 60-count summon your totem for the encounter (50 Life, 50 Armor, dual 10 Claw, two uses of Dodge or Resist Damage, three uses of +20 damage on one attack; you supply the phys rep). Without a phys rep, become its avatar instead: +50 Temporary Life Points and +2 Passive Damage with a 1-handed weapon or Relic, or +3 with a 2-handed weapon."
+          }
+        },
+        "source": "Rulebook p.61, p.62"
+      }
+    ],
+    "source": "Rulebook p.16, p.59 to 62, p.64"
+  }
+]

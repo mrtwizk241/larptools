@@ -1,0 +1,766 @@
+{
+  "rules": {
+    "maxArtifactsPerPc": 1,
+    "slotsPerPowerEqualsTier": true,
+    "maxPowersTier4Plus": 1,
+    "powerSlotCostAxp": 0,
+    "removePowersPerYear": 1,
+    "fillOnlyBetweenEvents": true,
+    "fillNoticeDaysBeforeEvent": 3,
+    "reshapePerYear": 1,
+    "reshapeNeedsGmApproval": true,
+    "summary": "Awaken for 5 AXP (1st slot) once the PC has 500 XP; each further slot costs 5 AXP, up to 10. A power of Tier N fills N slots. Only one Tier 4+ power at a time. Remove powers once a year; fill empty slots between events with 3 days notice.",
+    "source": "Rulebook p.79, p.80"
+  },
+  "allowedConditions": [
+    {
+      "id": "charm-befriend",
+      "label": "Charm - Befriend"
+    },
+    {
+      "id": "charm-enslave",
+      "label": "Charm - Enslave"
+    },
+    {
+      "id": "charm-ignore",
+      "label": "Charm - Ignore"
+    },
+    {
+      "id": "charm-pacify",
+      "label": "Charm - Pacify"
+    },
+    {
+      "id": "confine",
+      "label": "Confine"
+    },
+    {
+      "id": "corruption",
+      "label": "Corruption"
+    },
+    {
+      "id": "destruction",
+      "label": "Destruction (the debuff)"
+    },
+    {
+      "id": "disease",
+      "label": "Disease"
+    },
+    {
+      "id": "fear",
+      "label": "Fear (duration-based)"
+    },
+    {
+      "id": "pin",
+      "label": "Pin"
+    },
+    {
+      "id": "poison",
+      "label": "Poison (not venom)"
+    },
+    {
+      "id": "silence",
+      "label": "Silence"
+    },
+    {
+      "id": "slick-snare",
+      "label": "Slick/Snare"
+    },
+    {
+      "id": "slow",
+      "label": "Slow"
+    },
+    {
+      "id": "taunt",
+      "label": "Taunt"
+    },
+    {
+      "id": "web",
+      "label": "Web"
+    },
+    {
+      "id": "weakness",
+      "label": "Weakness"
+    }
+  ],
+  "allowedConditionsSource": "Rulebook p.82",
+  "powers": [
+    {
+      "id": "art-basic-skill-use",
+      "name": "Basic Skill Use",
+      "tier": 1,
+      "summary": "Use a chosen Basic skill once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-craft-basic-unstable",
+      "name": "Craft Basic Unstable Item",
+      "tier": 1,
+      "summary": "Create a chosen Basic unstable crafted consumable from a starting crafting skill once per re-pop.",
+      "choice": "recipe",
+      "frequency": "per-repop",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-language",
+      "name": "Read and Write a Language",
+      "tier": 1,
+      "summary": "Read and write a chosen rulebook language.",
+      "choice": "language",
+      "frequency": "passive",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-race-friend",
+      "name": "Race or Group Friend",
+      "tier": 1,
+      "summary": "Marks you as a friend of a race or group (GM approval).",
+      "choice": "text",
+      "gmApproval": true,
+      "frequency": "passive",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-death-count-plus-1",
+      "name": "Longer Death Count",
+      "tier": 1,
+      "summary": "Death count lasts 1 minute longer.",
+      "frequency": "passive",
+      "effects": [
+        {
+          "stat": "deathCountMinutes",
+          "amount": 1
+        }
+      ],
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-ritual-base-magic",
+      "name": "Ritual Base Magic",
+      "tier": 1,
+      "summary": "Count as having a chosen Base Magic skill you lack when casting a Ritual.",
+      "choice": "element",
+      "choiceOptions": ["air", "death", "earth", "fire", "life", "water"],
+      "frequency": "passive",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-store-basic-performance",
+      "name": "Store Basic Performance",
+      "tier": 1,
+      "summary": "Store a Basic Performance performed into the Artifact until used.",
+      "frequency": "other",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-perform-basic-performance",
+      "name": "Perform Basic Performance",
+      "tier": 1,
+      "summary": "Perform a chosen Basic Performance once per re-pop.",
+      "choice": "performance",
+      "frequency": "per-repop",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-store-basic-skill-use",
+      "name": "Store Basic Skill Use",
+      "tier": 1,
+      "summary": "Store one Basic skill use cast on the Artifact until the wielder uses it.",
+      "frequency": "other",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-hasten-basic-healing",
+      "name": "Hasten Basic Healing",
+      "tier": 1,
+      "summary": "The wielder's Basic Healing action is Hastened.",
+      "frequency": "passive",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-hasten-refits-on-wielder",
+      "name": "Hasten Refits on Wielder",
+      "tier": 1,
+      "summary": "All armor refits done on the wielder are Hastened.",
+      "frequency": "passive",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-locate",
+      "name": "Locate Artifact",
+      "tier": 1,
+      "summary": "Sense direction and rough distance to the Artifact after 10 seconds of focus.",
+      "frequency": "passive",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-conjured-gear",
+      "name": "Conjured Gear",
+      "tier": 1,
+      "summary": "On a 10-count conjure an unstable weapon, shield, or Relic (your own legal phys rep; Enhancement Slot effect). It vanishes if it leaves you.",
+      "frequency": "other",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-whispering-wind",
+      "name": "Whispering Wind",
+      "tier": 1,
+      "summary": "Cast Whispering Wind or Amplify Whispering Wind (1 minute two-way talk or a 50-word message) once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-enhancement-slot",
+      "name": "Extra Enhancement Slot",
+      "tier": 1,
+      "summary": "Once per re-pop, gain one extra Enhancement Slot.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-detect-lie",
+      "name": "Detect Lie",
+      "tier": 1,
+      "summary": "Detect Lie, once each re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.80"
+    },
+    {
+      "id": "art-touch-to-packet",
+      "name": "Touch to Packet",
+      "tier": 1,
+      "summary": "Change an ability's range from Touch to Packet once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-extra-divination-witness",
+      "name": "Extra Divination Witness",
+      "tier": 1,
+      "summary": "One more person may witness your Divinations.",
+      "frequency": "passive",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-living-or-familiar",
+      "name": "Living Artifact or Familiar",
+      "tier": 1,
+      "summary": "The Artifact becomes a living creature, or your Familiar becomes your Artifact (fills both roles with both sets of powers).",
+      "frequency": "passive",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-condition-immunity-event",
+      "name": "Condition Immunity (once per event)",
+      "tier": 1,
+      "summary": "Immunity to a chosen allowed condition for the encounter, once per event.",
+      "choice": "condition",
+      "frequency": "per-event",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-armor-20",
+      "name": "20 Armor Points",
+      "tier": 1,
+      "summary": "Once per re-pop: +20 Armor Points on self, held in an Enhancement Slot.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-life-20",
+      "name": "20 Life Points",
+      "tier": 1,
+      "summary": "Once per re-pop: +20 Life Points on self, held in an Enhancement Slot.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-relic",
+      "name": "Elemental Relic",
+      "tier": 1,
+      "summary": "The Artifact works as a Relic of a chosen element.",
+      "choice": "element",
+      "choiceOptions": ["air", "death", "earth", "fire", "life", "water"],
+      "frequency": "passive",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-basic-skill-expert",
+      "name": "Basic Skill at Expert",
+      "tier": 2,
+      "summary": "Use a chosen Basic non-crafting skill with its Expert Technique once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-adv-magic-basic",
+      "name": "Advanced Magic at Basic",
+      "tier": 2,
+      "summary": "Use a chosen Advanced magic skill at Basic once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-craft-expert-unstable",
+      "name": "Craft Expert Unstable Item",
+      "tier": 2,
+      "summary": "Create a chosen Expert unstable crafted consumable from a starting crafting skill once per re-pop.",
+      "choice": "recipe",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-armor-suit",
+      "name": "Suit of Armor",
+      "tier": 2,
+      "summary": "The Artifact counts as a suit of armor covering four locations (no other locations may be added).",
+      "frequency": "passive",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-frontal-cone",
+      "name": "Frontal Cone",
+      "tier": 2,
+      "summary": "Make a damaging ability Frontal Cone once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-self-portal",
+      "name": "Self Portal",
+      "tier": 2,
+      "summary": "Open a self-only Portal to a chosen location once per re-pop.",
+      "choice": "location",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-transfer-status",
+      "name": "Transfer Status Effects",
+      "tier": 2,
+      "summary": "Move all status effects from one target onto yourself once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-transfer-life",
+      "name": "Transfer Life Points",
+      "tier": 2,
+      "summary": "Give your Life Points to another in 5-point steps as Healing (excess becomes Temporary Life) once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-bleed-timer-plus-1",
+      "name": "Longer Bleed-Out Timer",
+      "tier": 2,
+      "summary": "Bleed-out timer lasts 1 minute longer.",
+      "frequency": "passive",
+      "effects": [
+        {
+          "stat": "bleedOutSeconds",
+          "amount": 60
+        }
+      ],
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-store-expert-performance",
+      "name": "Store Expert Performance",
+      "tier": 2,
+      "summary": "Store an Expert Performance performed into the Artifact until used.",
+      "frequency": "other",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-perform-expert-performance",
+      "name": "Perform Expert Performance",
+      "tier": 2,
+      "summary": "Perform a chosen Expert Performance (no frequency stated).",
+      "choice": "performance",
+      "frequency": "other",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-store-expert-skill-use",
+      "name": "Store Expert Skill Use",
+      "tier": 2,
+      "summary": "Store one Expert skill use cast on the Artifact until the wielder uses it.",
+      "frequency": "other",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-hasten-refits-by-wielder",
+      "name": "Hasten Refits by Wielder",
+      "tier": 2,
+      "summary": "All armor refits done by the wielder are Hastened.",
+      "frequency": "passive",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-summon-artifact",
+      "name": "Summon Artifact",
+      "tier": 2,
+      "summary": "Once per re-pop: a 10-count calls the Artifact to your hand.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-meld",
+      "name": "Meld Artifact",
+      "tier": 2,
+      "summary": "A 30-count merges the Artifact into your body or brings it back out; it is not adorned while merged.",
+      "frequency": "other",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-renew-magic-item",
+      "name": "Renew Magic Item",
+      "tier": 2,
+      "summary": "Once per re-pop: a 100-count restores one use of a magic item.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-renew-familiar-power",
+      "name": "Renew Familiar Power",
+      "tier": 2,
+      "summary": "Once per re-pop: a 100-count restores one Familiar power.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-condition-immunity-repop",
+      "name": "Condition Immunity (once per re-pop)",
+      "tier": 2,
+      "summary": "Immunity to a chosen allowed condition for the encounter, once per re-pop.",
+      "choice": "condition",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-quick-refit",
+      "name": "Quick Refit",
+      "tier": 2,
+      "summary": "Once per re-pop: refit your own armor with a 3-count.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-short-claws",
+      "name": "Short Claws",
+      "tier": 2,
+      "summary": "Grow a pair of Short Claws, base 2 damage.",
+      "frequency": "passive",
+      "naturalWeapon": {
+        "baseDamage": 2
+      },
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-passive-weapon-damage",
+      "name": "+1 Passive Weapon Damage",
+      "tier": 3,
+      "summary": "+1 Passive Weapon Damage.",
+      "frequency": "passive",
+      "effects": [
+        {
+          "stat": "passiveDamageWeapon",
+          "amount": 1
+        }
+      ],
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-passive-relic-damage",
+      "name": "+1 Passive Relic Damage",
+      "tier": 3,
+      "summary": "+1 Passive Relic Damage.",
+      "frequency": "passive",
+      "effects": [
+        {
+          "stat": "passiveDamageRelic",
+          "amount": 1
+        }
+      ],
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-basic-skill-master",
+      "name": "Basic Skill at Master",
+      "tier": 3,
+      "summary": "Use a chosen Basic non-crafting skill with its Master Technique once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-adv-magic-expert",
+      "name": "Advanced Magic at Expert",
+      "tier": 3,
+      "summary": "Use a chosen Advanced magic skill with its Expert Technique once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-craft-master-unstable",
+      "name": "Craft Master Unstable Item",
+      "tier": 3,
+      "summary": "Create a chosen Master unstable crafted consumable from a starting crafting skill once per re-pop.",
+      "choice": "recipe",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-craft-basic-stable",
+      "name": "Craft Basic Stable Item",
+      "tier": 3,
+      "summary": "Create a chosen Basic stable crafted consumable from a starting crafting skill once per re-pop.",
+      "choice": "recipe",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-group-enhancement",
+      "name": "Group Enhancement",
+      "tier": 3,
+      "summary": "Make an Enhancement Slot ability affect a group once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-amplified-life-slot",
+      "name": "Amplified Life Slot",
+      "tier": 3,
+      "summary": "One extra Enhancement Slot of the Amplified Life kind.",
+      "frequency": "passive",
+      "effects": [
+        {
+          "stat": "amplifiedLifeSlots",
+          "amount": 1
+        }
+      ],
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-amplified-armor-slot",
+      "name": "Amplified Armor Slot",
+      "tier": 3,
+      "summary": "One extra Enhancement Slot of the Amplified Armor kind.",
+      "frequency": "passive",
+      "effects": [
+        {
+          "stat": "amplifiedArmorSlots",
+          "amount": 1
+        }
+      ],
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-lash",
+      "name": "Lash",
+      "tier": 3,
+      "summary": "Make a damaging ability Lash once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-portal-1-minute",
+      "name": "One-Minute Portal",
+      "tier": 3,
+      "summary": "Open a 1-minute Portal to a chosen location once per re-pop.",
+      "choice": "location",
+      "frequency": "per-repop",
+      "source": "Rulebook p.81"
+    },
+    {
+      "id": "art-amplify-healing",
+      "name": "Amplify Healing",
+      "tier": 3,
+      "summary": "Amplify all Healing on you.",
+      "frequency": "passive",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-hasten-counted-actions",
+      "name": "Hasten Counted Actions",
+      "tier": 3,
+      "summary": "The Artifact assists your counted actions, Hastening them.",
+      "frequency": "passive",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-condition-immunity",
+      "name": "Permanent Condition Immunity",
+      "tier": 3,
+      "summary": "Permanent immunity to a chosen allowed condition. Only one of this power.",
+      "choice": "condition",
+      "frequency": "passive",
+      "maxPerArtifact": 1,
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-attune-person",
+      "name": "Attune Person or Item",
+      "tier": 3,
+      "summary": "On a 100-count attune a willing person or person-sized item; summon them on a 3-count once per re-pop (may fail if they are far away).",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-packet-to-point",
+      "name": "Packet to Point",
+      "tier": 3,
+      "summary": "Change an ability's range from Packet to Point (up to three packets) once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-basic-skill-grandmaster",
+      "name": "Basic Skill at Grandmaster",
+      "tier": 4,
+      "summary": "Use a chosen Basic non-crafting skill with its Grandmaster Technique once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-adv-magic-master",
+      "name": "Advanced Magic at Master",
+      "tier": 4,
+      "summary": "Use a chosen Advanced magic skill with its Master Technique once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-craft-grandmaster-unstable",
+      "name": "Craft Grandmaster Unstable Item",
+      "tier": 4,
+      "summary": "Create a chosen Grandmaster unstable crafted consumable from a starting crafting skill once per re-pop.",
+      "choice": "recipe",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-craft-expert-stable",
+      "name": "Craft Expert Stable Item",
+      "tier": 4,
+      "summary": "Create a chosen Expert stable crafted consumable from a starting crafting skill once per re-pop.",
+      "choice": "recipe",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-self-lash-enhancement",
+      "name": "Self-Centered Lash",
+      "tier": 4,
+      "summary": "Make an Enhancement Slot ability or spell a Lash centered on you once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-voice-radius-damage",
+      "name": "Voice Radius Damage",
+      "tier": 4,
+      "summary": "Make a damaging ability Voice Radius once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-rift-self",
+      "name": "Rift to the Tavern",
+      "tier": 4,
+      "summary": "Once per re-pop: a 3-count Rift takes you to the tavern.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-protection",
+      "name": "Protection",
+      "tier": 4,
+      "summary": "Declare a target under your protection: Reduced damage from damaging effects for the encounter while within 5 feet of you, once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-reduce-status-durations",
+      "name": "Shorter Status Effects",
+      "tier": 4,
+      "summary": "Once per re-pop: shorten every status effect duration for the encounter.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-do-over",
+      "name": "Artifact Do-Over",
+      "tier": 4,
+      "summary": "Call \"Artifact Do-Over\" to redo something from the last 10 seconds (non-combat intent, GM has final say) once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-adv-magic-grandmaster",
+      "name": "Advanced Magic at Grandmaster",
+      "tier": 5,
+      "summary": "Use a chosen Advanced magic skill with its Grandmaster Technique once per re-pop.",
+      "choice": "skill",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-craft-master-stable",
+      "name": "Craft Master Stable Item",
+      "tier": 5,
+      "summary": "Create a chosen Master stable crafted consumable from a starting crafting skill once per re-pop.",
+      "choice": "recipe",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-voice-radius-enhancement",
+      "name": "Voice Radius Enhancement",
+      "tier": 5,
+      "summary": "Make an Enhancement Slot ability Voice Radius once per re-pop.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-rift-group",
+      "name": "Group Rift to the Tavern",
+      "tier": 5,
+      "summary": "Once per re-pop: a 3-count Rift takes you and everyone touching you to the tavern.",
+      "frequency": "per-repop",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-reduce-all-damage",
+      "name": "Reduce All Damage",
+      "tier": 5,
+      "summary": "Take Reduced damage from everything for the encounter, once per event.",
+      "frequency": "per-event",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-delay-death",
+      "name": "Delay Death",
+      "tier": 5,
+      "summary": "Delay all status and death effects until the encounter ends, once per event. A delayed death makes you a Manifested Spirit at once and costs 2 Spirit Fragments; a Spirit Puzzle can win one back.",
+      "frequency": "per-event",
+      "source": "Rulebook p.82"
+    },
+    {
+      "id": "art-phoenix-rising",
+      "name": "Phoenix Rising",
+      "tier": 5,
+      "summary": "Cast Phoenix Rising on a spirit: they return at full Life and do not lose a Spirit Fragment, once per event.",
+      "frequency": "per-event",
+      "source": "Rulebook p.82"
+    }
+  ],
+  "source": "Rulebook p.79 to 82"
+}

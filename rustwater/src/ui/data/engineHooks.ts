@@ -74,6 +74,8 @@ export function useSheet(characterId: string): SheetState {
 export interface CommandOptions {
   /** Toast text when the command succeeds, for example "Profile saved." */
   success?: string;
+  /** With `success`: the opposite change, run by an Undo button on that toast. */
+  undo?: Command;
 }
 
 export type CommandOutcome =
@@ -106,9 +108,26 @@ export function useCommand(characterId: string): CommandApi {
   const [errors, setErrors] = useState<RuleError[]>([]);
   const [notices, setNotices] = useState<Notice[]>([]);
   const role = settings?.mode ?? 'player';
+  // The latest run(), for an Undo button on a success toast.
+  const runRef = useRef<CommandApi['run'] | null>(null);
 
   const run = useCallback(
     async (command: Command, options: CommandOptions = {}): Promise<CommandOutcome> => {
+      const showSuccess = () => {
+        if (!options.success) return;
+        const undo = options.undo;
+        toast.show(
+          options.success,
+          undo
+            ? {
+                onUndo: () =>
+                  void runRef.current?.(undo).then((o) => {
+                    if (!o.ok) toast.show(o.errors.map((e) => e.message).join(' '));
+                  }),
+              }
+            : {},
+        );
+      };
       const fail = (list: RuleError[]): CommandOutcome => {
         setErrors(list);
         setNotices([]);
@@ -147,7 +166,7 @@ export function useCommand(characterId: string): CommandApi {
           publishCharacterSaved(repository, saved);
           setErrors([]);
           setNotices(result.notices);
-          if (options.success) toast.show(options.success);
+          showSuccess();
           return { ok: true, character: saved, notices: result.notices };
         }
 
@@ -166,7 +185,7 @@ export function useCommand(characterId: string): CommandApi {
         publishCharacterSaved(repository, saved);
         setErrors([]);
         setNotices(result.notices);
-        if (options.success) toast.show(options.success);
+        showSuccess();
         for (const notice of result.notices) toast.show(notice.message);
         return { ok: true, character: saved, notices: result.notices };
       } catch (error) {
@@ -178,6 +197,10 @@ export function useCommand(characterId: string): CommandApi {
     },
     [repository, characterId, ruleset, role, toast],
   );
+
+  useEffect(() => {
+    runRef.current = run;
+  }, [run]);
 
   const clear = useCallback(() => {
     setErrors([]);

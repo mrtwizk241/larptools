@@ -91,9 +91,32 @@ main.wide {
   max-width: 72rem;
 }
 
-.home {
-  color: inherit;
+/* Button back to the LARP Tools hub, at the top of the band. */
+.band .hub-row {
+  margin-bottom: 0.5rem;
+}
+
+.hub-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border: 1px solid rgb(219 188 154 / 45%);
+  border-radius: 999px;
+  color: var(--band-text);
+  font-size: 0.875rem;
+  font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.hub-button:hover {
+  background: rgb(255 248 241 / 12%);
+}
+
+.hub-button svg {
+  flex: none;
 }
 
 .lede {

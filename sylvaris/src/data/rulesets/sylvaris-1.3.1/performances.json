@@ -1,0 +1,164 @@
+[
+  {
+    "id": "opening-act",
+    "name": "Opening Act",
+    "level": "basic",
+    "uses": 1,
+    "enhancement": false,
+    "summary": "Gives each listener a Regular Enhancement Slot: \"Voice Radius - Charm - Grant Enhancement Slot\".",
+    "source": "Rulebook p.108"
+  },
+  {
+    "id": "restful-lullaby",
+    "name": "Restful Lullaby",
+    "level": "basic",
+    "uses": 1,
+    "enhancement": false,
+    "summary": "After at least 4 hours of sleep, listeners recover all Life Points and gain +1 level in one skill of their choice; once per person per re-pop. \"Voice Radius - Charm - Restful Lullaby\".",
+    "source": "Rulebook p.108"
+  },
+  {
+    "id": "performance-of-courage",
+    "name": "Performance of Courage",
+    "level": "basic",
+    "uses": 1,
+    "enhancement": true,
+    "summary": "Gives one Resist Fear (E): \"Voice Radius - Charm - Grant Resist Fear\".",
+    "source": "Rulebook p.108"
+  },
+  {
+    "id": "performance-of-shared-vision",
+    "name": "Performance of Shared Vision",
+    "level": "basic",
+    "uses": 1,
+    "enhancement": false,
+    "summary": "The results of one chosen person's next 3 divinations this encounter show in illusory color for all present. Aimed at a Safe Hearth, it lasts on that area until disenchanted or re-pop and lets Manifested Spirits there talk normally (update the Safe Hearth Notes).",
+    "source": "Rulebook p.108"
+  },
+  {
+    "id": "performance-of-forgotten-knowledge",
+    "name": "Performance of Forgotten Knowledge",
+    "level": "basic",
+    "uses": 1,
+    "enhancement": false,
+    "summary": "Clears Knowledge enhancements from listeners' slots so the slots can be reused: \"Voice Radius - Charm - Remove Knowledge Enhancements\".",
+    "source": "Rulebook p.108"
+  },
+  {
+    "id": "performance-of-anger",
+    "name": "Performance of Anger",
+    "level": "expert",
+    "uses": 2,
+    "enhancement": true,
+    "summary": "Gives one use of Aggression (E): \"Voice Radius - Charm - Grant Aggression\".",
+    "source": "Rulebook p.108"
+  },
+  {
+    "id": "performance-of-restoration",
+    "name": "Performance of Restoration",
+    "level": "expert",
+    "uses": 2,
+    "enhancement": false,
+    "summary": "Heals 50 Life Points: \"Voice Radius - Charm - Heal 50 Life\".",
+    "source": "Rulebook p.108"
+  },
+  {
+    "id": "performance-of-shrouding",
+    "name": "Performance of Shrouding",
+    "level": "expert",
+    "uses": 2,
+    "enhancement": false,
+    "summary": "While you keep performing, the area is shielded from most scrying: \"Voice Radius - Charm - Shroud Scrying\". Aimed at a Safe Hearth, it lasts there until disenchanted or re-pop (update the Safe Hearth Notes).",
+    "source": "Rulebook p.108-109"
+  },
+  {
+    "id": "performance-of-speed",
+    "name": "Performance of Speed",
+    "level": "expert",
+    "uses": 2,
+    "enhancement": true,
+    "summary": "Gives one use of Blink (E): \"Voice Radius - Charm - Grant Blink\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-mana",
+    "name": "Performance of Mana",
+    "level": "master",
+    "uses": 3,
+    "enhancement": false,
+    "summary": "Renews one use of a Basic Magic skill: \"Voice Radius - Charm - Renew One Use of a Basic Magic Skill\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-mental-endurance",
+    "name": "Performance of Mental Endurance",
+    "level": "master",
+    "uses": 3,
+    "enhancement": true,
+    "summary": "Gives one Resist Charm or Resist Sleep (E); using it also makes the user immune to that effect for the encounter. \"Voice Radius - Charm - Mental Endurance\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-crafting",
+    "name": "Performance of Crafting",
+    "level": "master",
+    "uses": 3,
+    "enhancement": false,
+    "summary": "Listeners regain one crafting skill use. Call: \"Voice Radius - Charm - Renew One Use of a Crafting Skill\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-meditative-comfort",
+    "name": "Performance of Meditative Comfort",
+    "level": "master",
+    "uses": 3,
+    "enhancement": false,
+    "summary": "Listeners may rest and meditate 10 minutes to renew one skill use spent in their last encounter. Aimed at a Safe Hearth, it lasts there until disenchanted or re-pop, usable once per person after each encounter (update the Safe Hearth Notes).",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-renewed-knowledge",
+    "name": "Performance of Renewed Knowledge",
+    "level": "master",
+    "uses": 3,
+    "enhancement": false,
+    "summary": "Renews all used Knowledge-granted skill uses in one enhancement slot per target: \"Voice Radius - Charm - Renew Knowledge Enhancement\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-battle",
+    "name": "Performance of Battle",
+    "level": "grandmaster",
+    "uses": 4,
+    "enhancement": true,
+    "summary": "Gives +1 Passive Weapon and Relic damage for the next encounter (E): \"Voice Radius - Charm - Grant +1 Passive Damage for the Next Encounter\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-inspiration",
+    "name": "Performance of Inspiration",
+    "level": "grandmaster",
+    "uses": 4,
+    "enhancement": false,
+    "summary": "Listeners regain one use of any skill. Call: \"Voice Radius - Charm - Renew One Use of a Skill\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-purification",
+    "name": "Performance of Purification",
+    "level": "grandmaster",
+    "uses": 4,
+    "enhancement": false,
+    "summary": "Removes one named status effect: \"Voice Radius - Charm - Remove <Status Effect>\".",
+    "source": "Rulebook p.109"
+  },
+  {
+    "id": "performance-of-safe-hearth",
+    "name": "Performance of Safe Hearth",
+    "level": "grandmaster",
+    "uses": 4,
+    "enhancement": false,
+    "summary": "The building becomes a Safe Hearth: healing counts act as if Amplify Healing applied, poison and bleed out counts pause, diseases are suppressed, and hostile portals or dimensional travel are blocked. Write a Safe Hearth Notes sheet afterwards.",
+    "source": "Rulebook p.109"
+  }
+]

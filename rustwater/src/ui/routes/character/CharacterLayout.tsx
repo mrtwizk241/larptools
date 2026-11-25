@@ -29,6 +29,7 @@ import { Screen } from '../../Screen.tsx';
 import { BackLink } from '../PlaceholderPage.tsx';
 import { RouteFallback } from '../RouteFallback.tsx';
 import { OverspendNotice } from '../testBuilds/OverspendNotice.tsx';
+import { eventsEstimateText } from '../testBuilds/testBuilds.ts';
 import { TestBuildBanner } from '../testBuilds/TestBuildBanner.tsx';
 import { ancestryLine } from './format.ts';
 import { CharacterNotFound } from './CharacterNotFound.tsx';
@@ -158,7 +159,7 @@ export function CharacterLayout() {
       ]}
     >
       <div className={styles.page}>
-        <CharacterHeader sheet={state.sheet} ruleset={state.ruleset} />
+        <CharacterHeader sheet={state.sheet} ruleset={state.ruleset} testBuild={testBuild} />
         {meta ? <ReviewBanner meta={meta} isStaff={view.isStaff} /> : null}
         {testBuild ? <TestBuildBanner view={view} /> : null}
         {testBuild ? <OverspendNotice key={id} view={view} /> : null}
@@ -266,9 +267,19 @@ function archetypePoints(
   });
 }
 
-function CharacterHeader({ sheet, ruleset }: { sheet: Sheet; ruleset: Ruleset }) {
+function CharacterHeader({
+  sheet,
+  ruleset,
+  testBuild,
+}: {
+  sheet: Sheet;
+  ruleset: Ruleset;
+  /** A test build can overspend CXP and PXP; a line under the points says what earns it. */
+  testBuild: boolean;
+}) {
   const { profile, ancestry, points } = sheet;
   const name = profile.characterName.trim() || UNNAMED_CHARACTER;
+  const estimate = testBuild ? eventsEstimateText(ruleset, sheet) : null;
   const line = [
     ancestry ? `${ancestryLine(ancestry.ancestryName, ancestry.subtypeName)}.` : null,
     profile.playerName ? `Player: ${profile.playerName}` : null,
@@ -292,6 +303,7 @@ function CharacterHeader({ sheet, ruleset }: { sheet: Sheet; ruleset: Ruleset })
           <PointsStat key={ap.id} label={ap.label} value={ap.available} total={ap.earned} />
         ))}
       </ul>
+      {estimate ? <p className={styles.estimate}>{estimate}</p> : null}
     </header>
   );
 }

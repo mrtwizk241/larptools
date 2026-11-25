@@ -1,0 +1,457 @@
+{
+  "attendance": [
+    {
+      "id": "player",
+      "name": "Player",
+      "grants": [
+        {
+          "currency": "xp",
+          "amount": 60,
+          "kind": "event"
+        },
+        {
+          "currency": "cxp",
+          "amount": 5,
+          "kind": "event"
+        },
+        {
+          "currency": "axp",
+          "amount": 1,
+          "kind": "event"
+        }
+      ],
+      "source": "Rulebook p.10, p.11"
+    },
+    {
+      "id": "npc-unpaid",
+      "name": "Full event NPC (unpaid)",
+      "npcTimeMax": true,
+      "grants": [
+        {
+          "currency": "xp",
+          "amount": 60,
+          "kind": "event"
+        },
+        {
+          "currency": "axp",
+          "amount": 1,
+          "kind": "event"
+        }
+      ],
+      "note": "Event XP plus NPC time at its maximum (5 XP, 5 CXP, 500 MT) plus 1 AXP, as printed.",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "npc-paid",
+      "name": "Full event NPC (paid)",
+      "npcTimeMax": true,
+      "grants": [
+        {
+          "currency": "xp",
+          "amount": 60,
+          "kind": "event"
+        },
+        {
+          "currency": "axp",
+          "amount": 1,
+          "kind": "event"
+        }
+      ],
+      "paidChoice": {
+        "options": ["skills", "silver"],
+        "silverPerXp": 150,
+        "note": "Either use of Crafting, Check-in, or Research skills, or 1 Silver per 150 XP (total XP / 150, rounded down, Q-PTS-3 default)."
+      },
+      "note": "As unpaid NPC, plus the paid choice.",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "gm-staff",
+      "name": "Full event GM-level staff",
+      "grants": [
+        {
+          "currency": "xp",
+          "amount": 60,
+          "kind": "event"
+        },
+        {
+          "currency": "xp",
+          "amount": 10,
+          "kind": "staff"
+        },
+        {
+          "currency": "cxp",
+          "amount": 10,
+          "kind": "staff"
+        },
+        {
+          "currency": "mt",
+          "amount": 500,
+          "kind": "staff"
+        },
+        {
+          "currency": "axp",
+          "amount": 1,
+          "kind": "event"
+        }
+      ],
+      "silver": 5,
+      "source": "Rulebook p.12"
+    }
+  ],
+  "npcTime": {
+    "xpPerHour": 1,
+    "cxpPerHour": 1,
+    "maxHours": 5,
+    "mtPerHourAfterMax": 50,
+    "mtCap": 500,
+    "ledgerKind": "npc-time",
+    "source": "Rulebook p.12"
+  },
+  "extras": [
+    {
+      "id": "check-in-assist",
+      "name": "Check-in assistance",
+      "npcHours": 2,
+      "maxPerEvent": 1,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "marshal-medic",
+      "name": "Marshal or Medic",
+      "grants": [
+        {
+          "currency": "mt",
+          "amount": 50,
+          "kind": "extra"
+        }
+      ],
+      "maxPerEvent": 1,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "sunday-cleanup",
+      "name": "Sunday clean up",
+      "grants": [
+        {
+          "currency": "mt",
+          "amount": 100,
+          "kind": "extra"
+        }
+      ],
+      "maxPerEvent": 1,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "friday-setup",
+      "name": "Friday setup",
+      "grants": [
+        {
+          "currency": "mt",
+          "amount": 50,
+          "kind": "extra"
+        }
+      ],
+      "maxPerEvent": 1,
+      "source": "Rulebook p.12"
+    }
+  ],
+  "awayRoles": [
+    {
+      "id": "gm-staff",
+      "name": "GM-level staff",
+      "per": "month",
+      "grants": [
+        {
+          "currency": "cxp",
+          "amount": 5,
+          "kind": "away-role"
+        },
+        {
+          "currency": "mt",
+          "amount": 500,
+          "kind": "away-role"
+        }
+      ],
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "narrator",
+      "name": "Narrator (non-GM)",
+      "per": "month-with-event",
+      "grants": [
+        {
+          "currency": "cxp",
+          "amount": 2,
+          "kind": "away-role"
+        },
+        {
+          "currency": "mt",
+          "amount": 200,
+          "kind": "away-role"
+        }
+      ],
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "logistics",
+      "name": "Logistics",
+      "per": "month-with-event",
+      "grants": [
+        {
+          "currency": "cxp",
+          "amount": 2,
+          "kind": "away-role"
+        },
+        {
+          "currency": "mt",
+          "amount": 200,
+          "kind": "away-role"
+        }
+      ],
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "production",
+      "name": "Production",
+      "per": "month-with-event",
+      "grants": [
+        {
+          "currency": "cxp",
+          "amount": 2,
+          "kind": "away-role"
+        },
+        {
+          "currency": "mt",
+          "amount": 200,
+          "kind": "away-role"
+        }
+      ],
+      "source": "Rulebook p.12"
+    }
+  ],
+  "otherMtSources": [
+    {
+      "id": "plot-writing",
+      "name": "Plot writing (accepted plot)",
+      "per": "plot",
+      "mtMin": 50,
+      "mtMax": 200,
+      "kind": "plot-writing",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "donation",
+      "name": "Donations",
+      "per": "dollar",
+      "mtPerUnit": 10,
+      "kind": "donation",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer help",
+      "per": "hour",
+      "mtPerUnit": 50,
+      "kind": "volunteer",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "grade-a",
+      "name": "Grade A / 4.0",
+      "per": "grade",
+      "mtPerUnit": 100,
+      "reportWithinYears": 1,
+      "kind": "grades",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "grade-b",
+      "name": "Grade B / 3.0",
+      "per": "grade",
+      "mtPerUnit": 50,
+      "reportWithinYears": 1,
+      "kind": "grades",
+      "source": "Rulebook p.12"
+    }
+  ],
+  "mtPurchases": [
+    {
+      "id": "xp",
+      "name": "1 XP",
+      "mtCost": 50,
+      "grants": [
+        {
+          "currency": "xp",
+          "amount": 1
+        }
+      ],
+      "capPerEvent": 10,
+      "backBuy": true,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "cxp",
+      "name": "1 CXP",
+      "mtCost": 50,
+      "grants": [
+        {
+          "currency": "cxp",
+          "amount": 1
+        }
+      ],
+      "capPerEvent": 5,
+      "backBuy": true,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "basic-component",
+      "name": "Basic Component",
+      "mtCost": 25,
+      "items": {
+        "basicComponents": 1
+      },
+      "capPerEvent": 10,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "exotic-component",
+      "name": "Exotic Component",
+      "mtCost": 100,
+      "items": {
+        "exoticComponents": 1
+      },
+      "capPerEvent": 1,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "uncut-gem",
+      "name": "Random Uncut Gem",
+      "mtCost": 25,
+      "items": {
+        "uncutGems": 1
+      },
+      "capPerEvent": 2,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "copper",
+      "name": "1 Copper",
+      "mtCost": 10,
+      "items": {
+        "copper": 1
+      },
+      "capPerEvent": 20,
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "spell-enhancement",
+      "name": "Spell Enhancement",
+      "mtByNamedLevel": {
+        "basic": 50,
+        "expert": 100,
+        "master": 150
+      },
+      "capPerEvent": 2,
+      "note": "Applied automatically at the start of each re-pop of that event (Q-PTS-4 default for named-level prices).",
+      "source": "Rulebook p.12"
+    },
+    {
+      "id": "teaching-normal",
+      "name": "Teaching (normal skill)",
+      "mtByNamedLevel": {
+        "basic": 100,
+        "expert": 300,
+        "master": 600,
+        "grandmaster": 1000
+      },
+      "capPerEvent": 1,
+      "capGroup": "teaching",
+      "source": "Rulebook p.12, p.13"
+    },
+    {
+      "id": "teaching-advanced",
+      "name": "Teaching (advanced skill)",
+      "mtByNamedLevel": {
+        "basic": 700,
+        "expert": 1000,
+        "master": 1300,
+        "grandmaster": 1600
+      },
+      "capPerEvent": 1,
+      "capGroup": "teaching",
+      "source": "Rulebook p.12, p.13"
+    },
+    {
+      "id": "stable-consumable",
+      "name": "Stable Consumable",
+      "mtByNamedLevel": {
+        "basic": 100,
+        "expert": 200,
+        "master": 300
+      },
+      "capPerYear": 5,
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "renewing-augment",
+      "name": "Stable Renewing Augment",
+      "mtByNamedLevel": {
+        "basic": 1000,
+        "expert": 2000,
+        "master": 3000
+      },
+      "capPerYear": 1,
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "missed-event-xp",
+      "name": "Missed Event XP",
+      "mtCost": 500,
+      "grants": [
+        {
+          "currency": "xp",
+          "amount": 60
+        }
+      ],
+      "condition": "missed-event",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "alt-character-event-xp",
+      "name": "Alternate Character Event XP",
+      "mtCost": 500,
+      "grants": [
+        {
+          "currency": "xp",
+          "amount": 60
+        }
+      ],
+      "capPerYear": 3,
+      "condition": "alt-character",
+      "source": "Rulebook p.13"
+    }
+  ],
+  "conditions": [
+    {
+      "id": "missed-event",
+      "text": "The PC has no credit for that event, the player attended another event that calendar year, and the event is in the current year or season.",
+      "source": "Rulebook p.13"
+    },
+    {
+      "id": "alt-character",
+      "text": "Event XP for a second character of the player at an event the player attended. The player must attend one event in that calendar year for each use.",
+      "source": "Rulebook p.13"
+    }
+  ],
+  "totalSpendCap": {
+    "perEvent": null,
+    "huntersLodge": {
+      "basic": 750,
+      "expert": 1500,
+      "master": null
+    },
+    "note": "No base total is stated (Q-PTS-1 default: no total cap, per-item caps only). The Hunters' Lodge town building sets 750 (Basic), 1500 (Expert), or no limit (Master).",
+    "source": "Rulebook p.165, p.166"
+  }
+}

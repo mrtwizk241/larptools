@@ -229,6 +229,54 @@ test('test builds are backed up to a file and restored from it', async ({ page }
   expect(problems).toEqual([]);
 });
 
+test("a test build row's menu copies, exports, and deletes it", async ({ page }) => {
+  // Force the download path: the share sheet cannot be driven in a test.
+  await page.addInitScript(() => {
+    Object.defineProperty(Navigator.prototype, 'canShare', { value: undefined });
+  });
+  const problems = await watch(page);
+  await makeTestBuild(page, 'Menu Build');
+  await page.goto('./#/test-builds');
+  await page.reload(); // clears the toast before the checks
+  const more = (name: string) =>
+    main(page).getByRole('button', { name: `More for ${name}`, exact: true });
+  const actions = (name: string) => main(page).getByRole('list', { name: `Actions for ${name}` });
+
+  // Opens and closes; Escape puts focus back on the button.
+  await more('Menu Build').click();
+  await expect(more('Menu Build')).toHaveAttribute('aria-expanded', 'true');
+  const results = await new AxeBuilder({ page }).analyze();
+  expect(results.violations.map((v) => v.id)).toEqual([]);
+  await page.keyboard.press('Escape');
+  await expect(actions('Menu Build')).toHaveCount(0);
+  await expect(more('Menu Build')).toBeFocused();
+
+  // Copy.
+  await more('Menu Build').click();
+  await actions('Menu Build').getByRole('button', { name: 'Copy' }).click();
+  await expect(page.getByText('Copied Menu Build as Menu Build (copy).')).toBeVisible();
+  await expect(main(page).getByRole('link', { name: /Menu Build \(copy\)/ })).toBeVisible();
+
+  // Export: a backup file with only that build.
+  await more('Menu Build (copy)').click();
+  const download = page.waitForEvent('download');
+  await actions('Menu Build (copy)').getByRole('button', { name: 'Export' }).click();
+  const file = JSON.parse(readFileSync(await (await download).path(), 'utf8')) as {
+    characters: { id: string }[];
+  };
+  expect(file.characters).toHaveLength(1);
+
+  // Delete, behind a confirm.
+  await more('Menu Build (copy)').click();
+  await actions('Menu Build (copy)').getByRole('button', { name: 'Delete' }).click();
+  const confirm = page.getByRole('dialog', { name: 'Delete Menu Build (copy)?' });
+  await confirm.getByRole('button', { name: 'Delete test build' }).click();
+  await expect(page.getByText('Deleted Menu Build (copy).')).toBeVisible();
+  await expect(main(page).getByRole('link', { name: /Menu Build \(copy\)/ })).toHaveCount(0);
+  await expect(main(page).getByRole('link', { name: /Menu Build/ })).toHaveCount(1);
+  expect(problems).toEqual([]);
+});
+
 test('the calculator opens from the header, with Totals and Character tabs', async ({ page }) => {
   const problems = await watch(page);
   await page.goto('./#/test-builds');

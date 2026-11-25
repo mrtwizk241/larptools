@@ -1,6 +1,6 @@
 // `#/test-builds` on the public site (docs/PUBLIC-SITE-PLAN.md): the visitor's test builds saved in
 // this browser. The calculator is the start page (`#/`). No sign-in, nothing sent anywhere.
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { ChevronRight, Plus } from 'lucide-react';
 import { TEST_BUILD_LIMIT } from '../../../api/contract.ts';
@@ -9,6 +9,7 @@ import { useRepository } from '../../data/hooks.ts';
 import { summarizeCharacter, type CharacterSummary } from '../../data/summary.ts';
 import { Screen } from '../../Screen.tsx';
 import styles from '../RosterPage.module.css';
+import { TestBuildMenu } from './TestBuildMenu.tsx';
 
 type Builds =
   | { status: 'loading' }
@@ -34,9 +35,15 @@ function ancestryText(ancestry: string, subtype: string): string {
 export function PublicHomePage() {
   const repository = useRepository();
   const [builds, setBuilds] = useState<Builds>({ status: 'loading' });
+  // Bumped after a copy or a delete from a row's menu, to read the list again.
+  const [version, setVersion] = useState(0);
+  const reload = useCallback(() => setVersion((v) => v + 1), []);
 
   useEffect(() => {
     void askToKeepStorage();
+  }, []);
+
+  useEffect(() => {
     let cancelled = false;
     repository
       .listCharacters()
@@ -58,7 +65,7 @@ export function PublicHomePage() {
     return () => {
       cancelled = true;
     };
-  }, [repository]);
+  }, [repository, version]);
 
   const count = builds.status === 'ready' ? builds.rows.length : 0;
   const full = count >= TEST_BUILD_LIMIT;
@@ -120,6 +127,12 @@ export function PublicHomePage() {
                     </span>
                     <ChevronRight aria-hidden="true" className={styles.chevron} />
                   </Link>
+                  <TestBuildMenu
+                    id={row.id}
+                    name={row.characterName}
+                    count={count}
+                    onChanged={reload}
+                  />
                 </li>
               ))}
             </ul>

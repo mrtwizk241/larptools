@@ -118,7 +118,7 @@ describe('log', () => {
     await user.type(within(dialog).getByLabelText(/Reason/), 'Awarded twice');
     await user.click(within(dialog).getByRole('button', { name: 'Save correction' }));
     expect(await screen.findByText('Correction saved: -10 CXP.')).toBeInTheDocument();
-    await waitFor(() => expect(chips()).toHaveTextContent('CXP 250 left'));
+    await waitFor(() => expect(chips()).toHaveTextContent('CXP 250 / 250 left'));
     const last = repository.data.characters.get(mira().id)?.actions.at(-1);
     expect(last?.type).toBe('points.adjusted');
     expect(last?.payload).toMatchObject({ currency: 'cxp', amount: -10, reason: 'Awarded twice' });
@@ -131,7 +131,7 @@ describe('log', () => {
       settings: STAFF,
     });
     await user.click(await screen.findByRole('tab', { name: 'All actions' }));
-    await waitFor(() => expect(chips()).toHaveTextContent('CXP 300 left'));
+    await waitFor(() => expect(chips()).toHaveTextContent('CXP 300 / 300 left'));
     await user.click(
       screen.getByRole('button', { name: /Correct this: Checked in to Spring Thaw/ }),
     );
@@ -144,7 +144,7 @@ describe('log', () => {
     await user.type(within(dialog).getByLabelText(/Reason/), 'Checked in the wrong character');
     await user.click(within(dialog).getByRole('button', { name: 'Void check-in' }));
     expect(await screen.findByText('Check-in to Spring Thaw voided.')).toBeInTheDocument();
-    await waitFor(() => expect(chips()).toHaveTextContent('CXP 250 left'));
+    await waitFor(() => expect(chips()).toHaveTextContent('CXP 250 / 250 left'));
     const list = screen.getByRole('list', { name: 'Actions, newest first' });
     expect(list).toHaveTextContent(
       'Voided check-in to Spring Thaw: Checked in the wrong character.',
@@ -251,7 +251,7 @@ describe('check-in', () => {
       'href',
       `#/c/${mira().id}/log`,
     );
-    await waitFor(() => expect(chips()).toHaveTextContent('CXP 328 left'));
+    await waitFor(() => expect(chips()).toHaveTextContent('CXP 328 / 328 left'));
     expect(chips()).toHaveTextContent('FP 1');
     expect(chips()).toHaveTextContent('Shinies 80');
     expect(repository.data.events.get('2026-04-18-spring-thaw')?.name).toBe('Spring Thaw');
@@ -306,7 +306,7 @@ describe('points', () => {
     await user.selectOptions(within(card).getByLabelText('Kind'), 'staff');
     await user.click(within(card).getByRole('button', { name: 'Award points' }));
     expect(await screen.findByText('Awarded 5 CXP.')).toBeInTheDocument();
-    await waitFor(() => expect(chips()).toHaveTextContent('CXP 255 left'));
+    await waitFor(() => expect(chips()).toHaveTextContent('CXP 255 / 255 left'));
   });
 
   it('spend Shinies: shows price and cap left, and blocks going over the per-event cap', async () => {

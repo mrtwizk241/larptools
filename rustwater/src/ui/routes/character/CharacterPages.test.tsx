@@ -50,7 +50,7 @@ describe('character overview', () => {
       'FP',
       'Shinies',
     ]);
-    expect(items.slice(5)).toEqual(['Magic AP 3', 'Crafting AP 1']);
+    expect(items.slice(5)).toEqual(['Magic AP 3 / 3 left', 'Crafting AP 1 / 1 left']);
   });
 
   it('shows the header, chips, cards, and staff controls', async () => {
@@ -58,14 +58,20 @@ describe('character overview', () => {
     expect(await screen.findByRole('heading', { level: 1, name: 'Mira Voss' })).toBeVisible();
     expect(screen.getByText('Elf, Windwalker. Player: Sam Hollis')).toBeInTheDocument();
     const chips = screen.getByRole('list', { name: 'Points' });
-    expect(chips).toHaveTextContent('CXP 250 left');
-    expect(chips).toHaveTextContent('LXP 1 left');
+    expect(chips).toHaveTextContent('CXP 250 / 250 left');
+    expect(chips).toHaveTextContent('LXP 1 / 1 left');
     // Five stat tiles, each read out in full; no AP chips while no AP is earned.
     expect(
       within(chips)
         .getAllByRole('listitem')
         .map((li) => li.textContent),
-    ).toEqual(['CXP 250 left', 'LXP 1 left', 'PXP 0 left', 'FP 0', 'Shinies 0']);
+    ).toEqual([
+      'CXP 250 / 250 left',
+      'LXP 1 / 1 left',
+      'PXP 0 / 0 left',
+      'FP 0 / 0 left',
+      'Shinies 0',
+    ]);
     for (const title of [
       'Profile',
       'Infection',
@@ -274,7 +280,7 @@ describe('create wizard', () => {
       'skill.learned',
       'skill.learned',
     ]);
-    expect(screen.getByRole('list', { name: 'Points' })).toHaveTextContent('CXP 230 left');
+    expect(screen.getByRole('list', { name: 'Points' })).toHaveTextContent('CXP 230 / 260 left');
   });
 
   it('allows zero starting skills with a warning on Review', async () => {

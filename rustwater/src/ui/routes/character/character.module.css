@@ -28,8 +28,9 @@
   overflow-wrap: anywhere;
 }
 
-/* Header points. Phones and tablets: five stat tiles in a 3 column grid, all visible without
-   scrolling. From 900px: chips in a wrapped row, as PointsChip draws them. */
+/* Header points: each tile has the name on top and "99 / 250 left" under it. Phones and tablets:
+   a 3 column grid, all visible without scrolling. From 900px: tiles sized to fit, in a wrapped
+   row. */
 .points {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -44,7 +45,7 @@
   align-content: start;
   gap: 2px;
   min-width: 0;
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-2);
   border-radius: var(--radius);
   background: var(--color-surface-2);
   color: var(--color-text);
@@ -74,8 +75,9 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Smaller on phones so "250 / 250 left" fits on one line in a third of the width. */
 .pointSuffix {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
 }
 
 .pointWarn {
@@ -104,27 +106,11 @@
   }
 
   .point {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0 var(--space-2);
-    min-height: 36px;
     padding: var(--space-1) var(--space-4);
-    border-radius: var(--radius-pill);
+  }
+
+  .pointSuffix {
     font-size: var(--text-sm);
-  }
-
-  .pointLabel {
-    font-size: inherit;
-  }
-
-  .pointAmount {
-    display: inline-flex;
-    gap: 0 var(--space-2);
-  }
-
-  .pointValue {
-    font-size: inherit;
   }
 }
 

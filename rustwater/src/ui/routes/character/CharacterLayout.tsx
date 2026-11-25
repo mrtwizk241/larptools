@@ -216,17 +216,18 @@ function ReviewBanner({ meta, isStaff }: { meta: CharacterMeta; isStaff: boolean
  * below); from 900px it is a chip in a wrapped row. A negative value adds a warning icon and the
  * word "over" (never color alone). Spaces between the parts keep the read-out "CXP 45 left".
  */
-function PointsStat({ label, value, suffix }: { label: string; value: number; suffix?: string }) {
+/** One header tile: the name on top, then "99 / 250 left" (left, then the total received). */
+function PointsStat({ label, value, total }: { label: string; value: number; total?: number }) {
   const over = value < 0;
   return (
     <li className={over ? `${styles.point} ${styles.pointOver}` : styles.point}>
       <span className={styles.pointLabel}>{label}</span>{' '}
       <span className={styles.pointAmount}>
         <span className={styles.pointValue}>{value}</span>
-        {suffix ? (
+        {total !== undefined ? (
           <>
             {' '}
-            <span className={styles.pointSuffix}>{suffix}</span>
+            <span className={styles.pointSuffix}>/ {total} left</span>
           </>
         ) : null}
       </span>
@@ -247,11 +248,18 @@ function PointsStat({ label, value, suffix }: { label: string; value: number; su
 function archetypePoints(
   ruleset: Ruleset,
   sheet: Sheet,
-): { id: string; label: string; available: number }[] {
+): { id: string; label: string; available: number; earned: number }[] {
   return ruleset.archetypes.flatMap((archetype) => {
     const pool = sheet.points.ap[archetype.id];
     return pool && pool.earned > 0
-      ? [{ id: archetype.id, label: `${archetype.name} AP`, available: pool.available }]
+      ? [
+          {
+            id: archetype.id,
+            label: `${archetype.name} AP`,
+            available: pool.available,
+            earned: pool.earned,
+          },
+        ]
       : [];
   });
 }
@@ -273,13 +281,13 @@ function CharacterHeader({ sheet, ruleset }: { sheet: Sheet; ruleset: Ruleset })
       </div>
       {line ? <p className={styles.line}>{line}</p> : null}
       <ul className={styles.points} aria-label="Points">
-        <PointsStat label="CXP" value={points.cxp.available} suffix="left" />
-        <PointsStat label="LXP" value={points.lxp.available} suffix="left" />
-        <PointsStat label="PXP" value={points.pxp.available} suffix="left" />
-        <PointsStat label="FP" value={points.fp.available} />
+        <PointsStat label="CXP" value={points.cxp.available} total={points.cxp.total} />
+        <PointsStat label="LXP" value={points.lxp.available} total={points.lxp.total} />
+        <PointsStat label="PXP" value={points.pxp.available} total={points.pxp.total} />
+        <PointsStat label="FP" value={points.fp.available} total={points.fp.total} />
         <PointsStat label="Shinies" value={points.shinies.balance} />
         {archetypePoints(ruleset, sheet).map((ap) => (
-          <PointsStat key={ap.id} label={ap.label} value={ap.available} />
+          <PointsStat key={ap.id} label={ap.label} value={ap.available} total={ap.earned} />
         ))}
       </ul>
     </header>
